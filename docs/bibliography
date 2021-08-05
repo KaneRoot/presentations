@@ -1,0 +1,13 @@
+%K lenses
+%A Brian Marick
+%T Lenses for the Mere Mortal
+%D 2018
+%I Lean Publishing
+
+%K learnhaskell
+# \o = following symbols are overlapping in the same space
+# \[ah] = caron accent
+%A Miran Lipova\o'c\[ah]'a
+%T Learn You a Haskell for Great Good!
+%D 2011
+%I No Starch Press
