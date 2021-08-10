@@ -1,175 +1,7 @@
-.\" .RP = report document
-.\" .RP
-.nr PO 0.5i   \" page offset default 1i
-.nr LL 7.5i   \" line length default 6i
-.nr FM 0.5i   \" page foot margin default 1i
-.\" .nr FF 1
-.R1
-no-label-in-reference
-accumulate
-.R2
-.nr DI 0
-.nr FN 0
-.de FOOTNOTE1
-\*{[\\n(FN]\*}
-.FS \*{[\\n(FN]\*}
-..
-.de FOOTNOTE2
-.FE
-.\" increment our footnote counter
-.nr FN +1
-..
-.de BELLOWEXPLANATION1
-.sp 0.5
-.ps 7
-.vs 8p
-..
-.de BELLOWEXPLANATION2
-.ps 9
-.vs 11p
-..
-.de ENDBULLET
-.in -2
-..
-.defcolor darkgreen rgb 0.1 0.5 0.2
-.defcolor darkblue  rgb 0.3 0.3 0.7
-.defcolor darkred   rgb 0.7 0.3 0.3
-.de CONSTRUCTOR
-.gcolor darkred
-.ps 8
-.ft CW
-\\$1
-.ft R
-.gcolor
-.ps
-..
-.de TYPE
-.gcolor darkgreen
-.ps 8
-.ft CW
-\\$1
-.ft R
-.gcolor
-.ps
-..
-.de MODULE
-.gcolor darkblue
-.ps 8
-.ft CW
-\\$1
-.ft R
-.gcolor
-.ps
-..
-.de MODULEX
-.MODULE "\\$1,"
-..
-.de RESETFOOTNOTES
-.nr FN 0
-..
-.de TBD
-.ft B
-To be defined or to finish.
-.ft R
-..
-\# Bullet points
-.de BULLET
-.IP \(bu 2
-..
-.
-\# Begin code box
-.de b1
-.B1
-.sp 0.2
-.ft CW
-..
-.
-\# End code box
-.de b2
-.sp 0.5
-.B2
-.ft
-..
-.TL
-Haskell, Purescript and functional programming - my notes
-.AU
-Philippe P.
-.\" .AI
-.\" University
-.AB no
-.\" .LP
-.\" .DS B
-Haskell is a well-known functional programming language combining a unique set of features.
-Purescript is another language, very close to Haskell, designed to be compiled into javascript code for web developement.
-Both these languages will be presented in this document, as well as some of the core concepts of functional programming in general.
-
-This document is a collection of notes about these languages and some of their helper libraries.
-This is not intended for a large public.
-.\" .DE
-.AE
+.so haskelltut/macros.ms
+.so haskelltut/header.ms
 .2C
-.NH 1
-Functional programming
-.PP
-FP can be seen as an
-.ft I
-"everything is a function"
-.ft R
-paradigm.
-This can be seen as an attempt to create programs as single mathematical expressions.
-In that regard, each line of code is intended to provide the
-.UL intent
-of the developer more than
-.I "how to perform stuff" .
-
-.NH 2
-A few examples
-.PP
-Just to get started on how to write a program with a functional programming language, I'll provide a few examples.
-Please do read books on it if you want to know more.
-.[
-Learn You a Haskell
-.]
-
-First example:
-.B fibonacci .
-.\" A space in necessary (otherwise, everything is single-lined)
-.SOURCE Haskell
-fib :: Int -> Int
-fib 0 = 1
-fib 1 = 1
-fib x = fib (x-1) + fib (x-2)
-.SOURCE
-. .BELLOWEXPLANATION1
-. In this sequence, we see the Fibonacci sequence expressed in a very simple way.
-. .BELLOWEXPLANATION2
-
-A few notes on what is happening:
-.BULLET
-The first line is the type of the function: it accepts an
-.I Int
-as its first (and only) argument and returns another
-.I Int .
-.BULLET
-The body of the function changes depending on the argument value.
-.BULLET
-Finally, if the parameter isn't 0 or 1, it performs
-.BX "fib (x-1) + fib (x-2)"
-, which can be read as the mathematical expression of the Fibonacci sequence.
-.ENDBULLET
-
-Compared to an imperative programming language, the code for this function is considerably
-.UL smaller
-and more
-.UL readable .
-This can be explained in several points:
-.BULLET
-Recursion:
-.BULLET
-Pattern matching and 
-.ENDBULLET
-.
-.
+.so haskelltut/intro.ms
 .NH 1
 To the point
 .PP
@@ -297,7 +129,7 @@ This is a bit like Java interfaces on steroids.
 Notes: quick and dirty
 .PP
 A list of the most used operators:
-.SOURCE Haskell
+.SOURCE Haskell ps=8 vs=9p
  ($)   ::                (a -> b) ->   a ->   b
  (<$>) :: Functor f =>   (a -> b) -> f a -> f b
  (<*>) :: Functor f => f (a -> b) -> f a -> f b
@@ -518,11 +350,17 @@ T}
 See also
 
 .PP
-A few functional programming languages worth mentionning:
+Here is a list of things that got my attention and may be useful to you, too.
 
+.NH 2
+A few FP languages worth mentionning
+
+.PP
 .BULLET
 Haskell: FP without annoying parenthesis,
 a lot of modules available,
+purity,
+conciseness,
 laziness,
 great compiler debugging capabilities,
 etc.
@@ -537,12 +375,209 @@ Great for games, video and audio applications, etc.
 
 .NH 2
 Modules
-
 .PP
+Here are some interesting modules, either for wide adoption in any kind of applications or in specific contexts.
+Some already are included in base Haskell distributions.
+
+What you need to know to use most of these modules:
+.UL Functors ,
+.UL Applicatives ,
+.UL Monads .
+
 .BULLET
-ByteString: a replacement for
+Data.ByteString: a replacement for
 .MODULE String
-focused on performances.
+focused on performances and binary representations.
+It comes in two varieties: strict and lazy.
+.TBD
+.BULLET
+Data.Text: another replacement for
+.MODULE String
+but focused on Unicode text (contrary to
+.MODULE String
+which accepts any
+.MODULE Char
+input).
+It comes in two varieties: strict and lazy, such as
+.MODULE ByteString.
+.BULLET
+prettyprinter: a simple way to create pretty outputs for your types.
+.TBD
+.BULLET
+MegaParsec: a library to create compilers.
+There are many other libraries like this one,
+but this is a nice balance between functionalities, performances and simplicity.
+
+.BULLET
+.TBD
+.BULLET
+.TBD
+.ENDBULLET
+
+.NH 2
+Books, website and tutorials
+
+.LP
+For absolute beginners:
+.BULLET
+Learn you a Haskell for Greater Good!
+.[
+Learn You a Haskell
+.]
+Good book about Haskell, for beginners.
+There are a few examples to easily understand functions like
+.UL zip ,
+.UL zipWith ,
+.UL sort ,
+etc.
+And the book presents a good part of what's actually in this document in a little more verbose way.
+.ENDBULLET
+
+Once you understand concepts presented in this document:
+.BULLET
+Haskell wiki and its
+.UL TypeClassOPedia
+which helps understand type classes and how to use them.
+There are many examples, great source to learn.
+.BULLET
+Lenses for the mere Mortal
+.[
+lenses
+.]
+Great learning resource on lenses, with many explanations and examples.
+.BULLET
+Nokomprendo:
+.UL nokomprendo.gitlab.io ,
+great tutorials on Haskell, in French.
+The author also has a youtube channel I recommand.
+.ENDBULLET
+
+.NH 1
+A bunch of classes
+.NH 2
+Functor
+.LP
+A type
+.I f
+is a
+.MODULE Functor
+if it provides a function
+.I fmap
+which, given any types
+.I a
+and
+.I b
+lets you apply any function from
+.I "(a -> b)"
+to turn an
+.I "f a"
+into an
+.I "f b,"
+preserving the structure of
+.I f .
+
+.NH 2
+Applicative
+
+.NH 2
+Alternative
+.PP
+The
+.MODULE Alternative
+class helps chaining function calls and takes the first valid value returned by these functions.
+
+.LP
+The definition of the
+.MODULE Alternative
+class:
+.b1
+.SOURCE Haskell ps=9 vs=10p
+class Applicative f => Alternative f where
+  --The identity of '<|>'
+  empty :: f a
+
+  --An associative binary operation
+  (<|>) :: f a -> f a -> f a
+.SOURCE
+.b2
+.BELLOWEXPLANATION1
+In the
+.MODULE Alternative
+type class, two functions are defined:
+.I empty
+and
+.BX "<|>" .
+.BELLOWEXPLANATION2
+
+The instance for the "Maybe" type:
+.b1
+.SOURCE Haskell ps=9 vs=10p
+instance Alternative Maybe where
+  empty = Nothing
+
+  Nothing <|> r = r
+  l       <|> _ = l
+.SOURCE
+.b2
+.BELLOWEXPLANATION1
+First, our value if nothing is matched:
+.CONSTRUCTOR Nothing.
+Then, either the first parameter is invalid so the second is given, or the first parameter is valid and it is used.
+.BELLOWEXPLANATION2
+
+In practice: let's use the module
+.MODULE Parsec
+to parse an URL scheme with this logic:
+.b1
+.SOURCE Haskell ps=9 vs=10p
+pScheme :: Parser Text
+pScheme
+  =   string "file"
+  <|> string "ftp"
+  <|> string "https"
+  <|> string "irc"
+  <|> string "mailto"
+.SOURCE
+.b2
+.BELLOWEXPLANATION1
+In case you were wondering:
+.I string
+is a Parsec function testing a string at the current index location of the parsed data.
+In this case, the function tests for the scheme in the URL.
+.BELLOWEXPLANATION2
+
+.\" KS/KE: Keep this text preserved from any cut (page break, etc.)
+.KS
+The main difference between
+.MODULE Alternative
+and a simple
+.I or
+statement in an imperative or object-oriented programming language is the type: the
+.UL semantic
+.FOOTNOTE1
+Ok, maybe not
+.UL exactly
+the "semantic" but mostly the type, which is already a big step forward.
+.FOOTNOTE2
+is preserved.
+In an imperative language, this is valid:
+.b1
+.SOURCE Python
+if True or 1 or some_structure:
+	serious(fuckingsly)
+
+# or, in some languages:
+
+val = True or 1 or some_structure
+.SOURCE
+.b2
+.BELLOWEXPLANATION1
+Both examples are valid in Python.
+.BELLOWEXPLANATION2
+.KE
+
+.so haskelltut/annex_type-classes.ms
+.so haskelltut/annex_vocabulary.ms
 
 .\" Hello this is a paragraph.
 .\" 

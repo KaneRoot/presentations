@@ -23,8 +23,25 @@ GHIGHLIGHT = ghighlight $(GHIGHLIGHT_OPTS)
 VIEWER_OPTS = -
 VIEWER = zathura $(VIEWER_OPTS)
 
+SOELIM_OPTS =
+SOELIM = soelim $(SOELIM_OPTS)
+
+# GH_INTRO: instructions before each source code provided by source-highlight
+# GH_OUTRO: ------------ after  ---- ------ ---- -------- -- ----------------
+# GH_INTRO/GH_OUTRO: values are separated by ';'
+
+GH_INTRO = .nr DI 0;.DS I;.fam C
+GH_OUTRO = .fam;.DE
+export GH_INTRO
+export GH_OUTRO
+
+# SHOPTS: cmd line parameter given to source-highlight
+SHOPTS = --outlang-def=./.source-highlight_groff-output-definition
+export SHOPTS
+
+
 $(SRC).pdf:
-	cat $(SRC).ms | $(GHIGHLIGHT) | $(REFER) | $(GROFF) > $@
+	cat $(SRC).ms | $(SOELIM) | $(GHIGHLIGHT) | $(REFER) | $(GROFF) > $@
 
 run:
-	cat $(SRC).ms | $(GHIGHLIGHT) | $(REFER) | $(GROFF) | $(VIEWER)
+	cat $(SRC).ms | $(SOELIM) | $(GHIGHLIGHT) | $(REFER) | $(GROFF) | $(VIEWER)
