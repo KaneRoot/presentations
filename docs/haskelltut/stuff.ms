@@ -36,13 +36,11 @@ Otherwise, we should return
 .CONSTRUCTOR Nothing.
 
 Here is a first way (but too verbose):
-.b1
 .SOURCE Haskell
 foo :: Maybe Int -> Maybe Int
 foo Nothing = Nothing
 foo (Maybe x) = Just (x + 2)
 .SOURCE
-.b2
 .BELLOWEXPLANATION1
 We use pattern matching on the parameter, then apply the function (+2) on the Int contained in the Maybe Int.
 .BELLOWEXPLANATION2
@@ -486,7 +484,6 @@ class helps chaining function calls and takes the first valid value returned by 
 The definition of the
 .MODULE Alternative
 class:
-.b1
 .SOURCE Haskell ps=9 vs=10p
 class Applicative f => Alternative f where
   --The identity of '<|>'
@@ -495,7 +492,6 @@ class Applicative f => Alternative f where
   --An associative binary operation
   (<|>) :: f a -> f a -> f a
 .SOURCE
-.b2
 .BELLOWEXPLANATION1
 In the
 .MODULE Alternative
@@ -506,7 +502,6 @@ and
 .BELLOWEXPLANATION2
 
 The instance for the "Maybe" type:
-.b1
 .SOURCE Haskell ps=9 vs=10p
 instance Alternative Maybe where
   empty = Nothing
@@ -514,7 +509,6 @@ instance Alternative Maybe where
   Nothing <|> r = r
   l       <|> _ = l
 .SOURCE
-.b2
 .BELLOWEXPLANATION1
 First, our value if nothing is matched:
 .CONSTRUCTOR Nothing.
@@ -524,7 +518,6 @@ Then, either the first parameter is invalid so the second is given, or the first
 In practice: let's use the module
 .MODULE Parsec
 to parse an URL scheme with this logic:
-.b1
 .SOURCE Haskell ps=9 vs=10p
 pScheme :: Parser Text
 pScheme
@@ -534,7 +527,6 @@ pScheme
   <|> string "irc"
   <|> string "mailto"
 .SOURCE
-.b2
 .BELLOWEXPLANATION1
 In case you were wondering:
 .I string
@@ -557,7 +549,6 @@ the "semantic" but mostly the type, which is already a big step forward.
 .FOOTNOTE2
 is preserved.
 In an imperative language, this is valid:
-.b1
 .SOURCE Python
 if True or 1 or some_structure:
 	serious(fuckingsly)
@@ -566,7 +557,6 @@ if True or 1 or some_structure:
 
 val = True or 1 or some_structure
 .SOURCE
-.b2
 .BELLOWEXPLANATION1
 Both examples are valid in Python.
 .BELLOWEXPLANATION2

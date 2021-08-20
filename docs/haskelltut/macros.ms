@@ -61,6 +61,13 @@ accumulate
 .gcolor
 .ps
 ..
+.de SHINE
+.gcolor darkblue
+.ft B
+\\$1
+.ft R
+.gcolor
+..
 .de MODULEX
 .MODULE "\\$1,"
 ..

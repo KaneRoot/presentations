@@ -30,8 +30,8 @@ SOELIM = soelim $(SOELIM_OPTS)
 # GH_OUTRO: ------------ after  ---- ------ ---- -------- -- ----------------
 # GH_INTRO/GH_OUTRO: values are separated by ';'
 
-GH_INTRO = .nr DI 0;.DS I;.fam C
-GH_OUTRO = .fam;.DE
+GH_INTRO = .b1;.nr DI 0;.DS I;.fam C
+GH_OUTRO = .fam;.DE;.b2
 export GH_INTRO
 export GH_OUTRO
 
