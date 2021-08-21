@@ -556,7 +556,7 @@ f x =
 f = State $ \x ->
   let y = ... x ...
   in  y
---would have been not possible with 'where'.
+--wouldn't have been possible with 'where'.
 
 
 --However, writing this with 'let' would be painful
@@ -570,7 +570,7 @@ f x
 --but ultimately make it harder to write and to read)
 .SOURCE
 .BELLOWEXPLANATION1
-Chosing the right path comes with experience, nothing to worry about.
+Chosing the right one comes with experience, nothing to worry about.
 .BELLOWEXPLANATION2
 
 .NH 2
