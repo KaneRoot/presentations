@@ -28,7 +28,7 @@ Provide a few real-life examples.
 .ENDBULLET
 
 .NH 2
-Why Haskell?
+Why FP and Haskell?
 .LP
 
 .BULLET
@@ -64,17 +64,16 @@ Also, parenthesis aren't all over the place like in other FP languages (personal
 a function only needs its parameters to work, no global variables.
 A pure function called twice with the same parameters will always provide the same result.
 Some functions need to perform "unpure" actions, related to events outside the application (such as IO in general) and their type shows it.
-It is easy to investigate when an error occurs: only a fraction of the functions handles hazardous operations.
+Investigation is easy when an error occurs: only a fraction of the functions handles hazardous operations.
 .ENDBULLET
 
 .NH 2
 Sections
 .LP
-First, we'll talk about base concepts in FP and Haskell syntax, which will provide everything one need to getting started with both FP and Haskell.
-This includes an introduction to the type system, basic types available in any Haskell distribution, how to write a function, etc.
+First, we'll talk about base concepts in FP, which will provide everything one need to start with both FP and Haskell.
+This will be quick, there is very little theory in this document.
 
-Then, a few ways to create complex data structures will be presented.
-This includes a clever hack, some conventions to write data structures and the reuse of a generic data structure.
+Then the Haskell syntax: an introduction to the type system, basic types available in any Haskell distribution, how to write a function, etc.
 
 Usual type classes will be presented to get some sense of the default Haskell library.
 This includes the main classes such as Functor, Applicative and Monad, and many others.
@@ -93,15 +92,25 @@ a few functions around the
 .MODULE Text
 module and how to manage user interaction in general, etc.
 
+Then, a few ways to create complex data structures will be presented.
+This includes a clever hack (phantom type), some conventions to write data structures (tagless final, generalized algebraic data type) and the reuse of a generic data structure (Free monad).
+
 After these sections, a few advanced topics are very briefly introduced:
 .BULLET
 .UL Lenses ,
 to handle complex or nested data structures.
 This was one of the worst aspects of Haskell, until Lenses made nested structures so simple to manage that it became an asset.
 .BULLET
+.UL Networking ,
+to exchange packets with widespread protocols.
+.BULLET
 .UL "Profiling applications" ,
 to know what function actually takes time or memory to compute.
 As we will see, this is very empirical.
+.BULLET
+.UL "Performances" ,
+to gain massive computation boosts with some tips.
+This includes rewriting functions in an optimizable way or use proper types, for example.
 .BULLET
 .UL "Parallelism and concurrency" ,
 to either make several computations at the same time on different cores,
@@ -110,14 +119,11 @@ or switch between two computations that require pauses.
 For example, receiving network packets takes time, and a packet can be received only partially and requires to wait to retrieve the rest, and with concurrency the application can perform other actions while waiting for the packet to arrive.
 This improves performances by a large margin without even requiring parallelism.
 .FOOTNOTE2
-.BULLET
-.UL Networking ,
-to exchange packets with widespread protocols.
 .ENDBULLET
 
 Finally, this document provides a few pointers on useful documentations to dig more advanced concepts.
 
-.NH 3
+.SH
 How to read this document
 .LP
 The following presents a typical function declaration.

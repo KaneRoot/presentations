@@ -139,6 +139,11 @@ tmp = b * c
 a = tmp + g
 d = tmp * e
 .SOURCE
+.BELLOWEXPLANATION1
+In this example,
+.BX "b * c"
+is factored, but it works with any pure function.
+.BELLOWEXPLANATION2
 .ENDBULLET
 
 
@@ -353,6 +358,53 @@ not True  = False  --case where the parameter is True
 not _     = True   --any other case
 .SOURCE
 
+Pattern matching can destructure lists.
+.SOURCE haskell ps=8 vs=9p
+--Quick introduction to lists:
+[1,2,3] --list of integers
+1:[2,3] --add 1 to the head of the list [2,3]
+        --":" is an infix constructor taking
+        --a value and a list
+
+--len: computes the number of elements in a list
+len :: [a] -> Int
+len []     = 0          --empty list
+len (x:xs) = 1 + len xs --at least a value (x)
+.SOURCE
+.BELLOWEXPLANATION1
+Function
+.I len
+takes a list (of any type) and returns a number.
+First case, the function takes an empty list, its value is 0 (no element in the list).
+In case the list isn't empty, it can be destructured: a list can be seen as the infix constructor
+.BX :
+and a first value
+.I x
+followed by the rest of the list
+.I xs .
+So, once destructured, two informations are available:
+.I x
+(the head value of the list) and
+.I xs
+(the rest of list, potentially empty).
+.BELLOWEXPLANATION2
+
+Since the function
+.I len
+only has to compute the number of elements, the actual value of
+.I x
+isn't important, let's rewrite:
+.SOURCE haskell ps=8 vs=9p
+len :: [a] -> Int
+len []     = 0
+len (_:xs) = 1 + len xs   --x became '_'
+.SOURCE
+.BELLOWEXPLANATION1
+This time, the function doesn't name the list's head: it is explicitly ignored.
+.BELLOWEXPLANATION2
+
+Pattern matching on more complex types will be presented later.
+
 .NH 3
 Guards
 .LP
@@ -366,8 +418,10 @@ not v
   | otherwise = True
 .SOURCE
 .BELLOWEXPLANATION1
-Guards elegantly replace some conditional instructions at the start of imperative functions.
+Guards elegantly replace some conditional instructions (predicates) at the start of imperative functions.
 .BELLOWEXPLANATION2
+
+Predicates and function's body are clearly identified.
 
 .NH 3
 Case ... of
@@ -385,10 +439,21 @@ not v = case v of
 .NH 3
 Anonymous functions: lambdas
 .LP
+An anonymous function is created with the backslash character \\ followed by the parameters, then an arrow (->) and finally the body of the function.
+This anonymous function is called a
+.I lambda .
+.FOOTNOTE1
+Since the mathematical explanation of lambdas is completely overkill to understand how to use them, it is discarded in this document.
+You're welcome.
+.FOOTNOTE2
 .SOURCE haskell ps=8 vs=9p
 --add 5 to each element of a list
 map (\x -> x + 5) [1,2,3,4,5]
 --> [6,7,8,9,10]
+
+--sum both elements of each tuple
+map (\(x,y) -> x + y) [(1,2),(3,4),(5,6)]
+--> [3,7,11]
 .SOURCE
 .TBD
 
