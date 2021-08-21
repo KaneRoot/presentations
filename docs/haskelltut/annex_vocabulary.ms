@@ -127,4 +127,88 @@ Example:
 .SOURCE
 .KE
 
+.KS
+.BULLET
+.UL "Point free" :
+writing a function without explicit parameters.
+.br
+Example:
+.SOURCE haskell ps=8 vs=9p
+add1 = + 1          --no explicit integer param
+h = reverse . sort  --no explicit list param
+.SOURCE
+.KE
+
+.KS
+.BULLET
+.UL "Eta conversion" :
+making a function either more abstract (eta expansion) or less abstract (eta reduction).
+.br
+Example:
+.SOURCE Haskell
+\x -> abs x  --more abstract
+abs          --less abstract
+.SOURCE
+.BELLOWEXPLANATION1
+From the first to the second notation:
+.I "eta reduction" .
+From the second to the first notation:
+.I "eta expansion" .
+.BELLOWEXPLANATION2
+.KE
+
+.KS
+.BULLET
+.UL "Lambda lifting" :
+taking an inner function (in the
+.I where
+part of another function) and making it top-level.
+.br
+Example:
+.SOURCE Haskell
+--from
+f x y = g
+  where g = x + y
+--to
+f x y = g x y
+g x y = x + y
+.SOURCE
+.BELLOWEXPLANATION1
+.BELLOWEXPLANATION2
+.KE
+
+.KS
+.BULLET
+.UL "Free variable" :
+when a value doesn't come from the context of the function.
+A free variable is neither passed as parameter or computed within the function.
+.br
+Example:
+.SOURCE Haskell
+f x y = g
+  where g = x + y
+.SOURCE
+.TBD
+.BELLOWEXPLANATION1
+Function
+.I g
+contains two free variables:
+.I x
+and
+.I y .
+These values aren't parameters of the
+.I g
+function, they're from the function
+.I f .
+.BELLOWEXPLANATION2
+.KE
+
+.KS
+.BULLET
+.UL "Free expression" :
+an expression in which every variable is a Free variable. 
+.KE
+
+
+
 .ENDBULLET

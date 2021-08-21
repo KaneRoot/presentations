@@ -455,12 +455,123 @@ map (\x -> x + 5) [1,2,3,4,5]
 map (\(x,y) -> x + y) [(1,2),(3,4),(5,6)]
 --> [3,7,11]
 .SOURCE
-.TBD
+Lambdas are widespread in Haskell and in FP in general since this makes the code very concise.
+However, when possible, use partial function application (even more concise), by example:
+.SOURCE haskell ps=8 vs=9p
+map (\x -> x + 5) [1,2,3,4,5]
+    --could be written this way:
+map (+ 5) [1,2,3,4,5]
+.SOURCE
 
 .NH 3
 Where and let
 .LP
-.TBD
+Within the scope of a function, one can declare functions or constant values.
+.SOURCE haskell ps=8 vs=9p
+health :: Float -> Float -> String
+health height weight
+  | bmi < 18.5                = "underweight"
+  | bmi >= 18.5 && bmi < 25.0 = "normal weight"
+  | bmi >= 25.0 && bmi < 30.0 = "overweight"
+  | bmi >= 30.0               = "obesity"
+  where bmi = weight / (height * height)
+
+health 1.62 70
+--> "overweight"
+.SOURCE
+.BELLOWEXPLANATION1
+Function
+.I health
+uses the value
+.I bmi
+computed within the function, after the
+.I where
+keyword.
+The value
+.I bmi
+uses any available value within the context of the function
+.I health .
+In this case,
+.I bmi
+uses both
+.I height
+and
+.I weight .
+.BELLOWEXPLANATION2
+
+Besides indentation, functions within the context of a function aren't different from what the document shown before.
+They also can have an explicit type.
+.SOURCE haskell ps=8 vs=9p
+health height weight
+  -- [...]
+  where
+    bmi :: Float
+    bmi = weight / (height * height)
+.SOURCE
+.BELLOWEXPLANATION1
+Function
+.I bmi
+doesn't need parameters since it already has access to the relevant values (in the scope of the
+.I health
+function).
+.BELLOWEXPLANATION2
+
+The
+.I let
+notation can be put in any place where a statement is expected.
+That is the main difference with
+.I where .
+Example:
+.SOURCE haskell ps=8 vs=9p
+f :: s -> (a,s)
+f x =
+  let y = ... x ...
+  in  y
+.SOURCE
+.BELLOWEXPLANATION1
+.BELLOWEXPLANATION2
+
+.SH
+Let or where?
+.LP
+Chosing either
+.I let
+or
+.I where
+is mostly a matter of taste.
+Though, one could be prefered in some cases.
+Refactoring is easier with
+.I let
+when the declarations have to be put inside a lambda expression, for example.
+However,
+.I where
+is prefered when the same declaration should be shared between several expressions, which would imply some boilerplate with
+.I let .
+.SOURCE haskell ps=8 vs=9p
+--Refactoring this
+f x =
+  let y = ... x ...
+  in  y
+--into this
+f = State $ \x ->
+  let y = ... x ...
+  in  y
+--would have been not possible with 'where'.
+
+
+--However, writing this with 'let' would be painful
+f x
+  | cond1 x   = a
+  | cond2 x   = g a
+  | otherwise = f (h x a)
+  where
+    a = w x
+--(it could been mixed with 'case' to make it work,
+--but ultimately make it harder to write and to read)
+.SOURCE
+.BELLOWEXPLANATION1
+Chosing the right path comes with experience, nothing to worry about.
+.BELLOWEXPLANATION2
 
 .NH 2
 Haskell's type system
