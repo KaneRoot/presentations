@@ -209,6 +209,82 @@ function, they're from the function
 an expression in which every variable is a Free variable. 
 .KE
 
+.KS
+.BULLET
+.UL "Thunk" :
+unevaluated code in a non-strict environment.
+.SOURCE Haskell ps=8 vs=9p
+snd (undefined, 2)
+--> 2
+.SOURCE
+.BELLOWEXPLANATION1
+First element isn't evaluated since it isn't required.
+The value could have been the result of a very long and complex code, but since it isn't used, the code behind this value isn't evaluated.
+When the expression
+.BX "snd (undefined, 2)"
+is evaluated, the
+.I snd
+function takes the second element of the tuple, so the tuple itself is being evaluated, and the first element is dropped since it won't be useful later in the code.
+.BELLOWEXPLANATION2
+.KE
+
+.KS
+.BULLET
+.UL "Normal form" :
+fully evaluated value.
+.KE
+
+.KS
+.BULLET
+.UL "Weak head normal form" :
+partially evaluated expression.
+Any intermediate evaluation between a thunk and a normal form.
+.KE
+
+.KS
+.BULLET
+.UL "Persistence" :
+when a value is updated, older versions are still there, the update isn't
+.I "in place" .
+.KE
+
+.KS
+.BULLET
+.UL "Amortization" :
+distribute unequal running times across a sequence of operations.
+.TBD
+.KE
+
+.KS
+.BULLET
+.UL "Bottom (\[pp])" :
+a computation which never completes successfully.
+This notation isn't used in Haskell code, but rather in documentation to explain the behavior of a function.
+The code equivalent of \[pp] is
+.B undefined .
+.br
+Example:
+the function
+.I zip
+takes two list as parameters.
+When its left list is empty, the function works even if the right list can't be computed.
+However,
+.I zip
+crashes when its left list can't be computed.
+This can be said in the documentation this way:
+.b1
+.DS I
+.fam C
+.ps 8
+.vs 9p
+\m[darkred]remember: this is documentation, not code\m[]
+zip \m[darkred][]\m[] \m[darkgreen]\[pp]\m[] \m[darkred]=\m[] \m[darkred][]\m[]     
+zip \m[darkgreen]\[pp]\m[] \m[darkred][]\m[] \m[darkred]=\m[] error
+.vs
+.ps
+.fam
+.DE
+.b2
 
 
 .ENDBULLET

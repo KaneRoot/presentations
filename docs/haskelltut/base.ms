@@ -101,8 +101,12 @@ Functions can be given as parameters for other functions.
 --(* 2) is a function multiplying by two
 --a value given in parameter
 map (* 2) [1,2,3,4,5]
--->[2,4,6,8,10]
+--> [2,4,6,8,10]
 .SOURCE
+.BELLOWEXPLANATION1
+.BX map
+is a function taking another function as its first parameter, and applies it to each element of a list.
+.BELLOWEXPLANATION2
 
 .NH 2
 Referential transparency (Purity)
@@ -146,6 +150,39 @@ is factored, but it works with any pure function.
 .BELLOWEXPLANATION2
 .ENDBULLET
 
+.NH 2
+Laziness
+.PP
+Laziness means to compute a value only when necessary.
+Why calculate every element of a list when you only use the first one?
+
+.SOURCE Haskell
+--take 5 elements of an infinite list
+take 5 $ [1..]
+--> [1,2,3,4,5]
+.SOURCE
+
+Laziness is great for creating simpler programs.
+Algorithms can sometimes be expressed in a simpler way when infinite lists aren't a problem.
+
+In practice, we all encountered an example of laziness that makes programming easier: shells.
+.SOURCE sh ps=8 vs=9p
+find / |
+  grep -E "(foo|bar)" |
+  head -n 5 | # take only 5 elements
+  mail -s "5 foo bar stuff" somebody@example.com
+.SOURCE
+.BELLOWEXPLANATION1
+In this example, once 5 elements get to pass the
+.I grep
+filter, this script stops.
+Millions of files could be on this system, they won't be explored.
+Shell is lazy: a program stops when there the next program closes its input, not only when it finishes its task.
+.BELLOWEXPLANATION2
+
+However, laziness could be detrimental to performances, too.
+As with the shell, laziness has a cost.
+See the section on performances.
 
 .NH 1
 Introduction to Haskell
@@ -240,6 +277,7 @@ Before introducing syntax for functions, a quick overview of very simple types i
 True                  :: Bool
 "hello"               :: String
 ['w','o','r','l','d'] :: String (or [Char])
+("smth", 8)           :: (String, Int)  --tuple
 .SOURCE
 
 Some function types (details later).
@@ -576,40 +614,463 @@ Chosing the right one comes with experience, nothing to worry about.
 .NH 2
 Haskell's type system
 
-.NH 3
-Simple types
-.TBD
-.NH 3
-Type synonyms
-.TBD
-.NH 3
-Data
-.TBD
-.NH 3
-Summary: newtype, type and data
+.PP
+This document already introduced primitive types (integer, float and character) and a few others: Bool, tuples and lists.
+Functions also have their own type, and can be passed as function parameter as any other type of value.
+
+This section introduces a few aspects of the Haskell type system.
+First,
+.UL holes
+to ask the compiler what type is required at some point.
+Second, the multiple ways to
+.UL "create new structures"
+with the
+.I data
+keyword.
+Finally,
+.UL "type synonyms" ,
+with the
+.I type
+keyword, to make the code more understandable from other developers.
+Documentation through type names is both elegant and effective, even if this isn't sufficient by any mean.
+
 .NH 3
 What type should I use? Holes!
+.PP
+Haskell has a great type inference.
+When writing a function, the actual type of the missing code can be asked to the compiler by writing a
+.I hole
+in the code, which is any name starting with an interogation
+.B ? ) (
+character.
+.SOURCE haskell ps=8 vs=9p
+foo :: Int -> Int -> Int
+foo x y = x + ?a          --the hole is named 'a'
+.SOURCE
+.BELLOWEXPLANATION1
+For an unnamed hole, write an underscore.
+.BELLOWEXPLANATION2
+
 .NH 3
 Data structures
+.LP
+The
+.MODULE data
+keyword allows users to create their own structures.
+This section presents different ways to create structures, to declare values.
+
 .NH 4
 Sum
+.LP
+A sum type is a simple enumeration.
+.SOURCE haskell ps=8 vs=9p
+data Bool = False | True
+
+--how to create a Bool value
+isItTrue = True
+
+not :: Bool -> Bool
+not True = False
+not False = True
+.SOURCE
+.BELLOWEXPLANATION1
+A boolean value is either true or false, which is a sum type.
+Both
+.CONSTRUCTOR True
+and
+.CONSTRUCTOR False
+are constructors for the type
+.MODULE Bool.
+Pattern matching works on constructors.
+.BELLOWEXPLANATION2
+
+Check for non exhaustive patterns with
+.I "-fwarn-incomplete-patterns" .
+
 .NH 4
 Product
+.LP
+A product type is a type containing data.
+.SOURCE haskell ps=8 vs=9p
+data Figure = Rectangle Double Double
+
+--how to create a Figure
+myRectangle = Rectangle 10.0 30.0
+
+--pattern matching on Figure
+area :: Figure -> Double
+area (Rectangle height width) = height * width
+.SOURCE
+.BELLOWEXPLANATION1
+In this example,
+.CONSTRUCTOR Rectangle
+is a
+.I constructor
+to create a value of type
+.MODULE Figure
+and it contains two floating point numbers.
+Pattern matching works on constructors, and their parameters are named to be used in the function.
+.BELLOWEXPLANATION2
+
 .NH 4
 Record
+.LP
+Record type is a product type with named parameters.
+.SOURCE haskell ps=8 vs=9p
+data Figure = Rectangle { height :: Double
+                        , width  :: Double }
+
+--works as before
+myRectangle = Rectangle 10.0 30.0
+
+--works as before
+area :: Figure -> Double
+area (Rectangle height width) = height * width
+.SOURCE
+.BELLOWEXPLANATION1
+This time,
+.CONSTRUCTOR Rectangle
+has two named parameters:
+.I height
+and
+.I width .
+Creating a figure works as before, and pattern matching too.
+.BELLOWEXPLANATION2
+
+Naming parameters automatically creates functions with the same names to get their value from a figure.
+.FOOTNOTE1
+This forces developers to think about names, not to overlap with preexisting functions.
+.FOOTNOTE2
+.SOURCE haskell ps=8 vs=9p
+--compute area without pattern matching
+area :: Figure -> Double
+area f = height f * width f
+.SOURCE
+.BELLOWEXPLANATION1
+In this example, functions
+.I height
+and
+.I width
+were used instead of the pattern matching.
+.BELLOWEXPLANATION2
+
 .NH 4
 Algebraic
+.LP
+Algebraic type is both sum and product types.
+.SOURCE haskell ps=8 vs=9p
+data Figure
+  = Rectangle Double Double
+  | Disc Double
+
+myDisc = Disc 5.0
+myRectangle = Rectangle 5.0 10.0
+
+area :: Figure -> Double
+area (Rectangle h w) = h * w
+area (Disc r)        = pi * r ** 2
+.SOURCE
+.BELLOWEXPLANATION1
+Convenient: each figure has its own statement, any error become obvious and a missing case would be automatically detected.
+The equivalent in imperative programming is less readable.
+.BELLOWEXPLANATION2
+
 .NH 4
 Recursive
+.LP
+An algebraic data type is recursive if its declaration involves itself.
+This is common to describe lists, trees, etc.
+.SOURCE haskell ps=8 vs=9p
+data List
+  = Element Int List
+  | End
+
+someList :: List
+someList = Element 1 (Element 2 End)
+
+mult2 :: List -> List
+mult2 End              = End
+mult2 (Element x rest) = Element (x*2) (mult2 rest)
+.SOURCE
+.BELLOWEXPLANATION1
+Working with recursive types is a bit complicated.
+Any function working on all the elements of the list needs to be recursive, too.
+Well, for now at least.
+The
+.MODULE Functor
+type class will make it trivial.
+.BELLOWEXPLANATION2
+
 .NH 4
 Polymorphic
+.LP
+Types are
+.I polymorphic
+when they have type a parameter, meaning that the type of the values they contain isn't fixed.
+For example, a list may contain integers, strings or anything else, and that's still a list.
+Fixing the type of the values it contains would be arbitrary and very limiting.
+.SOURCE haskell ps=8 vs=9p
+data List a
+  = Element a (List a)
+  | End
+
+listInt = Element 1 (Element 2 End)
+listString = Element "Hello" (Element "world" End)
+
+--mult2, as before BUT with a constraint on 'a'
+mult2 :: Num a => List a -> List a
+mult2 End              = End
+mult2 (Element x rest) = Element (x*2) (mult2 rest)
+.SOURCE
+.BELLOWEXPLANATION1
+.MODULE List
+.I a
+is a list of values of
+.UL any
+type.
+However, its declaration implies that a list is composed of values of the same type, a list cannot contain both an integer and a string.
+.br
+Working with types like this may require to constrain the inner value types, as it is done in
+.I mult2
+with the
+.MODULE Num
+constraint (inner values have to be numbers).
+.BELLOWEXPLANATION2
+
 .NH 4
 Summary on data types
+.PP
+
+Let's recap the available data types in Haskell.
+.BULLET
+.UL "sum type" :
+simple enumerations.
+.BULLET
+.UL "product type" :
+data structure needs to store a value (not just the constructor).
+.UL "record type" :
+product type with names for the stored values.
+.UL "algebraic type" :
+sum of product values.
+This can be combined with recursive and polymorphic types.
+.BULLET
+.UL "recursive type" :
+data structure includes itself in its definition.
+.BULLET
+.UL "polymorphic type" :
+data structure needs to store a value without imposing the type.
+.ENDBULLET
+
+Haskell is built on these types, they all have a purpose and help describe different data structures.
+
+.NH 3
+Type synonyms
+.LP
+A floating point number can be a height, a length, a random number, or the average size of guinea pigs in a pet store.
+.SOURCE haskell ps=8 vs=9p
+--What does the surface function compute?
+--What are the parameters? Its returned value?
+surface :: Float -> Float -> Float
+.SOURCE
+Writing
+.MODULE Float
+as a parameter doesn't provide any
+.UL meaning .
+To that end, type synonyms help writing more meaningful function types.
+.SOURCE haskell ps=8 vs=9p
+type Height = Float
+type Width = Float
+type Area = Float
+surface :: Height -> Width -> Area
+.SOURCE
+.BELLOWEXPLANATION1
+There are probably better ways to name this function, but still, now its parameters and the return value are explicit.
+.BELLOWEXPLANATION2
+
+Type synonyms provide the
+.UL semantic
+behind the types.
 
 .NH 2
 Haskell's type classes
+.LP
+Types may be related to each other.
+An integer and a float, wheither their size, are both numbers, for example.
+A class of types is defined by the functions they implement.
+The class
+.MODULE Num
+(numbers) is defined by the functions related to numerical operations, such as
+.BX "+, -, *, /"
+and so on.
+
+In Haskell, many type classes are provided by default, and some will be introduced later.
+
+.SH
+Syntax
+.LP
+Let's see some parts of the Haskell standard library: the
+.MODULE Semigroup
+class.
+.I Semigroup
+is just a fancy word to say something really simple.
+It represents types with values that can be appended, joined, concatened to each other.
+.FOOTNOTE1
+There are plenty of other terms like "Semigroup" used in Haskell that actually aren't complicated.
+They will be translated for the mere mortals in due time, don't worry.
+.FOOTNOTE2
+The list type is part of the semigroup class:
+.BX [1,2]
+can be concatened to
+.BX [3,4]
+and produces
+.BX [1,2,3,4]
+(in this order).
+
+The following example shows the definition of
+.I Semigroup
+in the standard library, then implements an instance for the recursive and polymorphic data type
+.MODULE List
+.I a ,
+defined earlier (in the "polymorphic type" section).
+.SOURCE haskell ps=8 vs=9p
+class Semigroup a where
+   --Function to implement to be part of
+   --this type class.
+   (<>) :: a -> a -> a
+
+--instance for the "List a" type
+instance Semigroup (List a)
+  --Implementation time!
+  --'<>' operator: appending two lists.
+  End            <> End            = End
+  (Element x xs) <> End            = Element x xs
+  End            <> (Element y ys) = Element y ys
+  (Element x xs) <> (Element y ys)
+    = Element x (xs <> (Element y ys))
+.SOURCE
+.BELLOWEXPLANATION1
+To implement the
+.BX <>
+operator is very similar to create a new list.
+We should always start with the simpler case: both lists are empty, so the result is an empty list.
+In case one of the lists is empty, the result is the content of the other one.
+Finally, in case both lists have values, the result is a construction of a list with the values of the first list first.
+The concatenation of two lists, let's say
+.BX "[1, 2]"
+and
+.BX "[3, 4]"
+will result in
+.BX "[1, 2, 3, 4]"
+(in that order).
+.BELLOWEXPLANATION2
+
+.SH
+Laws
+.PP
+Sometimes, in order to have a meaninful type class, the behavior of the structure, given a function, has to be imposed.
+For example, the
+.BX <>
+function, from the
+.MODULE Semigroup
+type class,
+requires the data structure to be associative.
+.SOURCE haskell ps=8 vs=9p
+--associtivity is required for the operator '<>'
+(a <> b) <> c == a <> (b <> c)
+.SOURCE
+.BELLOWEXPLANATION1
+.I a
+associated with
+.I b
+THEN associated with
+.I c
+has to provide the same result as
+.I a
+associated with the result of
+.I b
+associated with
+.I c .
+.BELLOWEXPLANATION2
+
+Always verify that your structure satisfies the laws required by the type classes you implement.
+Otherwise the semantic of the type class will be broken and the behavior won't make sense.
+.FOOTNOTE1
+Furthermore, it could be completely legit to implement code optimizations to cut a few function calls, or rewrite some functions, based on these laws.
+.FOOTNOTE2
+
+.SH
+Summary
+.PP
+A type class regroups similar types, related to each other by the functions they can perform.
+Sometimes, they have to obey laws, such as
+.I associativity ,
+in order to ensure an expected behavior for all these types.
+
+Type classes maximize code reusability since functions are very generic, and can work not with types, but with classes of types.
+
+Type inference is simple, too.
+When writing a function, finding the required type classes only is searching for used functions in available type classes.
+Example: in the function
+.BX "blah x y = x + y"
+since
+.BX +
+is used on both
+.I x
+and
+.I y ,
+they both need to be in the type class
+.MODULE Num.
 
 .NH 2
+Kinds
+.LP
+A simple value (such as a number) and a polymorphic type without specified type parameters are not the same
+.UL kind
+of data.
+In the first case, a value is directly usable, in the second this is a way to create a value.
+.UL Kinds
+were introduced to mark this difference, and a
+.I kind
+can be seen as a type of types.
+
+The Kind
+.BX *
+means it is an actual, directly usable type.
+The Kind
+.BX "* -> *"
+means the type requires a parameter.
+Here is a list of examples:
+
+.SOURCE haskell ps=8 vs=9p
+Int :: *               --directly usable
+Maybe :: * -> *        --needs an argument
+Maybe Bool :: *        --directly usable
+Either :: * -> * -> *  --takes 2 arguments
+a -> a :: *            --function: directly usable
+[] :: * -> *           --empty list: lacks a type
+[Int] :: *             --list of integers: usable
+(->) :: * -> * -> *    --arrow operator needs 2 types
+.SOURCE
+.BELLOWEXPLANATION1
+Kinds of types can be verified with ghci by typing
+.BX ":kind"
+then the type to check.
+Example:
+.BX ":kind Maybe"
+.BELLOWEXPLANATION2
+
+.TBD
+
+.NH 2
+Conclusion on basic haskell syntax and concepts
+.LP
+
+.NH 2
+import, export, modules
+.LP
+.TBD
+
+.SH
 A simple note...
 .LP
 
@@ -625,10 +1086,3 @@ Same thing for (->) operator.
 (.) :: (b -> c) -> (a -> b) -> a -> c
 (.) f g = \x -> f (g x)
 .SOURCE
-
-.NH 2
-Conclusion on basic haskell syntax and concepts
-.LP
-
-.\".SOURCE haskell ps=8 vs=9p
-.\".SOURCE
