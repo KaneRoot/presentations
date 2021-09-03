@@ -5,9 +5,8 @@ FP can be seen as an
 .ft I
 "everything is a function"
 .ft R
-paradigm.
-This can be seen as an attempt to create programs as single mathematical expressions.
-In that regard, each line of code is intended to provide the
+paradigm, an attempt to create programs as single mathematical expressions.
+In that regard, each line of code represents the
 .UL intent
 of the developer more than
 .I "how to perform stuff" .
@@ -16,7 +15,7 @@ of the developer more than
 Why this document?
 .LP
 .BULLET
-FP is great, let's talk about it
+FP is great, let's talk about it.
 .BULLET
 Haskell is great because it helps express the code with more nuances than other languages, but is a bit overwhelming on first try, so let's summary stuff.
 .BULLET
@@ -34,9 +33,9 @@ Why FP and Haskell?
 .BULLET
 .UL Declarative :
 the language requires to write
-.UL "what is"
+.I "what is"
 instead of
-.UL "how to perform an action" .
+.I "how to perform an action" .
 This simplifies the code tremendously, in most cases.
 .BULLET
 .UL Simple :
@@ -53,7 +52,7 @@ Code reuse is (near?) optimal.
 .BULLET
 .UL "Concise" :
 functions can be
-.UL composed
+.I composed
 together, meaning that the result of a function is the parameter of another.
 In practice, this allows to write very short functions by removing unnecessary code.
 .FOOTNOTE1
@@ -63,8 +62,14 @@ Also, parenthesis aren't all over the place like in other FP languages (personal
 .UL "Purity (or referential transparency)" :
 a function only needs its parameters to work, no global variables.
 A pure function called twice with the same parameters will always provide the same result.
-Some functions need to perform "unpure" actions, related to events outside the application (such as IO in general) and their type shows it.
-Investigation is easy when an error occurs: only a fraction of the functions handles hazardous operations.
+Other
+functions (called
+.I unpure ),
+managing events outside the application (such as IO in general), have a distinctive type.
+Consequently, investigation is easy when an error occurs: only a fraction of the functions handles hazardous operations.
+Furthermore, pure functions are great candidates for
+.I memoization ,
+see the section on performances.
 .ENDBULLET
 
 .NH 2
@@ -120,6 +125,10 @@ For example, receiving network packets takes time, and a packet can be received 
 This improves performances by a large margin without even requiring parallelism.
 .FOOTNOTE2
 .ENDBULLET
+
+Then, a
+.I misc
+section, for everything that is useful but doesn't belong anywhere else.
 
 Finally, this document provides a few pointers on useful documentations to dig more advanced concepts.
 

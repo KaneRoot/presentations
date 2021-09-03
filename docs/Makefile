@@ -2,6 +2,7 @@ all: run
 
 SRC = haskelltut
 BIBLIOGRAPHY = bibliography
+ALLSRC = $(shell find . -name "*.ms")
 
 # -P      => move ponctuation after reference
 # -S      => label and bracket-label options
@@ -30,15 +31,15 @@ SOELIM = soelim $(SOELIM_OPTS)
 # GH_OUTRO: ------------ after  ---- ------ ---- -------- -- ----------------
 # GH_INTRO/GH_OUTRO: values are separated by ';'
 
-GH_INTRO = .b1;.nr DI 0;.DS I;.fam C
-GH_OUTRO = .fam;.DE;.b2
+GH_INTRO := .b1;.nr DI 0;.DS I;.fam C
+GH_OUTRO := .fam;.DE;.b2
+
 export GH_INTRO
 export GH_OUTRO
 
 # SHOPTS: cmd line parameter given to source-highlight
 SHOPTS = --outlang-def=./.source-highlight_groff-output-definition
 export SHOPTS
-
 
 $(SRC).pdf:
 	cat $(SRC).ms | $(SOELIM) | $(GHIGHLIGHT) | $(REFER) | $(GROFF) > $@

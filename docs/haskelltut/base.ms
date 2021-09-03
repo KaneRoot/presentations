@@ -4,11 +4,11 @@ Core concepts
 Functional programming brings some concepts that aren't present (or widespread) in other paradigms.
 This section presents some of these concepts:
 .I currying ,
-.I "Function composition" ,
-.I "High Order Functions"
+.I "function composition" ,
+.I "High Order Functions" ,
+.I "referential transparency" (purity)
 and
-.I "Referential transparency"
-(purity).
+.I "laziness" .
 
 .NH 2
 Currying
@@ -130,6 +130,8 @@ purity ensures that two computations produce the same result.
 Memory can be traded for computation speed.
 Pure functions can be called once for a given set of parameters, and their result can be stored in memory.
 There is a gain when the computation is longer to execute than a lookup in a table.
+
+Memoization can transform naive implementations of some recursive algorithms into legitimate solutions.
 .BULLET
 .UL "Common subexpression elimination" :
 the compiler can optimize the code by rewritting some expressions.
@@ -177,7 +179,7 @@ In this example, once 5 elements get to pass the
 .I grep
 filter, this script stops.
 Millions of files could be on this system, they won't be explored.
-Shell is lazy: a program stops when there the next program closes its input, not only when it finishes its task.
+Shell is lazy: a program stops when the next program in the pipeline closes its input, not only when it finishes its task.
 .BELLOWEXPLANATION2
 
 However, laziness could be detrimental to performances, too.
@@ -205,12 +207,11 @@ the Haskell
 .UL "type system" ,
 which includes basic types such as integers and characters, but also more advanced types such as sum, product and algebraic types;
 .BULLET
-the Haskell
-.UL "type classes" ,
-a gentle introduction to the categorization of types and why this is better than Java interfaces for example;
-.BULLET
-finally, a conclusion on the pros and cons of this approach.
+a gentle introduction to Haskell
+.UL "type classes" .
 .ENDBULLET
+
+And finally, a brief discussion on the Haskell language, functional programming in general and the rest of the document.
 
 .\"Please do read books on it if you want to know more.
 .\".[
@@ -253,7 +254,7 @@ and more
 This can be explained in several points:
 .BULLET
 Recursion: the function calls itself.
-Some algorithms are easier to write this way, there is no need for loops and maintaining a state (an index in this case).
+Some algorithms are easier to write this way, there is no need for loops and maintaining a state (an index and accumulators in this case).
 .BULLET
 Pattern matching: while there is no explicit conditions, the function actually provides a different implementation depending on the value of the parameter.
 The behavior of the function is trivial to read, less error-prone than with explicit conditions.
@@ -337,7 +338,7 @@ Haskell's syntax for functions
 Functions in imperative and functional languages are different concepts.
 
 In an imperative language, a function is a set of instructions to execute and are gathered and named to be called later, possibly several times or just to cut the code in more readable pieces.
-This is a more efficient than having to copy the same instructions each time they are needed: fewer lines of code, fewer potential errors, and the code is more readable.
+This is more efficient than having to copy the same instructions each time they are needed: fewer lines of code, fewer potential errors, and the code is more readable.
 
 In a functional language, the whole function is a declaration, a single expression,
 the content is what the function
@@ -355,10 +356,12 @@ The entire body of the function is the returned value.
 Functions can still be complex, and composed of several function calls.
 However, all these function calls are bounded together, by an operator for example.
 .FOOTNOTE1
-This will be explained in details later.
+This will be explained in details later (with
+.I monads ).
 .FOOTNOTE2
 
-The syntax for functions is rather extended in Haskell compared to an imperative language, and that is why it has its own section.
+The syntax for functions is rather extended in Haskell compared to an imperative language.
+Following sub-sections present different ways to create functions.
 
 .NH 3
 Pattern Matching
@@ -564,7 +567,8 @@ Example:
 f :: s -> (a,s)
 f x =
   let y = ... x ...
-  in  y
+      z = ... x ...
+  in  y/z
 .SOURCE
 .BELLOWEXPLANATION1
 .BELLOWEXPLANATION2
@@ -631,8 +635,10 @@ Finally,
 .UL "type synonyms" ,
 with the
 .I type
-keyword, to make the code more understandable from other developers.
+keyword, to make the code more understandable to other developers.
+.FOOTNOTE1
 Documentation through type names is both elegant and effective, even if this isn't sufficient by any mean.
+.FOOTNOTE2
 
 .NH 3
 What type should I use? Holes!
@@ -649,16 +655,18 @@ foo x y = x + ?a          --the hole is named 'a'
 .SOURCE
 .BELLOWEXPLANATION1
 For an unnamed hole, write an underscore.
+.br
+Holes also work in function types.
 .BELLOWEXPLANATION2
 
 .NH 3
 Data structures
 .LP
-The
+One of the big challenges of a developer is to create data structures.
+Once this part is done, related code almost writes itself.
+Following sub-sections present different ways to create structures with the
 .MODULE data
-keyword allows users to create their own structures.
-This section presents different ways to create structures, to declare values.
-
+keyword.
 .NH 4
 Sum
 .LP
@@ -793,6 +801,22 @@ mult2 End              = End
 mult2 (Element x rest) = Element (x*2) (mult2 rest)
 .SOURCE
 .BELLOWEXPLANATION1
+.I mult2
+takes a list and returns a list.
+When the list is empty, the return is an empty list.
+When the list isn't empty, it is destructured to see the current element and the
+.I rest
+of the elements (which is a list in our definition).
+The new list is created with the
+.CONSTRUCTOR Element
+constructor, with our current element
+.I x
+multiplied by 2 as our first parameter, and
+.BX "mult2 rest"
+as the rest of the list (the second parameter of the
+.CONSTRUCTOR Element
+constructor).
+
 Working with recursive types is a bit complicated.
 Any function working on all the elements of the list needs to be recursive, too.
 Well, for now at least.
@@ -848,8 +872,10 @@ simple enumerations.
 .BULLET
 .UL "product type" :
 data structure needs to store a value (not just the constructor).
+.BULLET
 .UL "record type" :
 product type with names for the stored values.
+.BULLET
 .UL "algebraic type" :
 sum of product values.
 This can be combined with recursive and polymorphic types.
@@ -995,7 +1021,7 @@ associated with
 Always verify that your structure satisfies the laws required by the type classes you implement.
 Otherwise the semantic of the type class will be broken and the behavior won't make sense.
 .FOOTNOTE1
-Furthermore, it could be completely legit to implement code optimizations to cut a few function calls, or rewrite some functions, based on these laws.
+Furthermore, it could be completely legit for the compiler to implement code optimizations to cut a few function calls, or rewrite some functions, based on these laws.
 .FOOTNOTE2
 
 .SH
@@ -1020,6 +1046,101 @@ and
 .I y ,
 they both need to be in the type class
 .MODULE Num.
+
+.NH 2
+Modules
+.LP
+Any non trivial program needs to split its code base into managable pieces.
+Each file will represent a
+.I module
+which can be imported (even partially) in other modules.
+
+.SH
+Module import
+.LP
+.SOURCE Haskell ps=8 vs=9p
+--somewhere on your system there is a file named
+--data/bytestring.hs
+import Data.ByteString
+.SOURCE
+.BELLOWEXPLANATION1
+Import all functions and types from the module.
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+import qualified Data.ByteString as B
+.SOURCE
+.BELLOWEXPLANATION1
+Import all functions and types from the module, but they all have to be prefixed by
+.I B .
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+import Data.ByteString (pack, unpack)
+.SOURCE
+.BELLOWEXPLANATION1
+Import only
+.I pack
+and
+.I unpack
+functions.
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+import Data.ByteString (ByteString)
+.SOURCE
+.BELLOWEXPLANATION1
+Import only the
+.I ByteString
+type (not its constructors).
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+import Data.ByteString (ByteString(..))
+.SOURCE
+.BELLOWEXPLANATION1
+Import the
+.I ByteString
+type and its constructors.
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+import Data.ByteString hiding (head)
+.SOURCE
+.BELLOWEXPLANATION1
+Import all functions and types except the function
+.I head .
+.BELLOWEXPLANATION2
+
+.SH
+Module declaration
+.LP
+.SOURCE Haskell ps=8 vs=9p
+--File: some/simple/module.hs
+module Some.Simple.Module where
+--followed by the module's code
+.SOURCE
+.BELLOWEXPLANATION1
+All functions and types in the module are exported by default.
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+--with explicit exports
+module Some.Simple.Module (
+    some, functions, or, Types(..), to, export
+  ) where
+.SOURCE
+
+.NH 2
+Discussion on Haskell and common concepts
+.LP
+
+.TBD
+
+.NH 1
+Misc
+.PP
+This section is a way to provide some unordered informations.
 
 .NH 2
 Kinds
@@ -1059,15 +1180,6 @@ Example:
 .BX ":kind Maybe"
 .BELLOWEXPLANATION2
 
-.TBD
-
-.NH 2
-Conclusion on basic haskell syntax and concepts
-.LP
-
-.NH 2
-import, export, modules
-.LP
 .TBD
 
 .SH

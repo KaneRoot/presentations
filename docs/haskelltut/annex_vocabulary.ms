@@ -1,6 +1,9 @@
 .NH 1
-Vocabulary
-.LP
+Annex: vocabulary
+.PP
+Browsing through different documentations of the Haskell language (and FP in general) can be really hard.
+The technical corpus one must know prior to the reading of some of the explanations is almost preposterous.
+So, in order to tackle this problem, here is a list of technical terms explained in a simple way.
 
 .KS
 .BULLET
@@ -23,16 +26,16 @@ for a
 .MODULE Bool.
 .KE
 
-.KS
-.BULLET
-.UL Method :
-function in a class.
-.br
-Example:
-.I fmap
-in the type class
-.MODULE Functor.
-.KE
+.\".KS
+.\".BULLET
+.\".UL Method :
+.\"function in a class.
+.\".br
+.\"Example:
+.\".I fmap
+.\"in the type class
+.\".MODULE Functor.
+.\".KE
 
 .KS
 .BULLET
@@ -188,7 +191,6 @@ Example:
 f x y = g
   where g = x + y
 .SOURCE
-.TBD
 .BELLOWEXPLANATION1
 Function
 .I g

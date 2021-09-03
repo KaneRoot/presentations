@@ -1,7 +1,7 @@
 .TL
 Haskell and functional programming: a love letter
 .AU
-Philippe P.
+Philippe Pittoli
 .\" .AI
 .\" University
 .AB no
@@ -17,14 +17,9 @@ However, a large part of it should be relevent for any FP and non-FP developer a
 Also, I think mathematical-ish explanations of the language are a massive obstacle to its actual comprehension for a developer, so this document will be almost exempt of it.
 .SHINE "You're welcome."
 
-.LP
-Lastly compiled the
-.SHINE \n(dy/\n(mo/2021 \" is \n(yr broken?
-(dd/mm/yyyy).
-
 Check out for newer versions on my website:
 .ft CW
-\h'15p' https://t.karchnu.fr/pub/haskelltut.pdf
+\h'15p' https://t.karchnu.fr/doc/haskelltut.pdf
 .ft
 .br
 And if you have questions:
@@ -32,4 +27,14 @@ And if you have questions:
 \h'88p' karchnu@karchnu.fr
 .ft
 .\" .DE
+
+.LP
+Lastly compiled the
+.SHINE \n(dy/\n(mo/2021 \" is \n(yr broken?
+(day/month/year, you know, like in any sane civilization).
+.br
+.UL Status :
+sections 1 and 2 are about done.
+Section 3 is almost done, needs a review and conclusion.
+Others: WIP.
 .AE
