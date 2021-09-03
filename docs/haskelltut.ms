@@ -12,5 +12,6 @@
 .so haskelltut/performances.ms
 .so haskelltut/parallelism.ms
 .so haskelltut/stuff.ms
+.so haskelltut/misc.ms
 .so haskelltut/annex_type-classes.ms
 .so haskelltut/annex_vocabulary.ms

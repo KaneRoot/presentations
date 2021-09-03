@@ -34,7 +34,6 @@ Lastly compiled the
 (day/month/year, you know, like in any sane civilization).
 .br
 .UL Status :
-sections 1 and 2 are about done.
-Section 3 is almost done, needs a review and conclusion.
+sections 1, 2 and 3 are about done.
 Others: WIP.
 .AE
