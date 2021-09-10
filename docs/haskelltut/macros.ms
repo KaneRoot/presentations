@@ -97,3 +97,14 @@ To be defined or to finish.
 .B2
 .ft
 ..
+.de HORIZONTALLINE
+\l'15'
+..
+.de SMALLFONT
+.ps 8
+.vs 9p
+..
+.de NORMALFONT
+.vs
+.ps
+..

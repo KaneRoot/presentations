@@ -3,6 +3,12 @@ Annex: vocabulary
 .PP
 Browsing through different documentations of the Haskell language (and FP in general) can be really hard.
 The technical corpus one must know prior to the reading of some of the explanations is almost preposterous.
+.FOOTNOTE1
+And sometimes you get pure garbage descriptions.
+What's an applicative functor?
+According to the Haskell wiki: "An applicative functor has more structure than a functor but less than a monad.".
+Seriously, is this trolling at an academic level?
+.FOOTNOTE2
 So, in order to tackle this problem, here is a list of technical terms explained in a simple way.
 
 .KS
@@ -55,7 +61,7 @@ instance  Functor Maybe  where
 .UL Prelude :
 standard library, available by default in every distribution of Haskell.
 Even included by default in any Haskell code without any
-.UL import
+.I import
 statement.
 .KE
 
@@ -268,7 +274,7 @@ The code equivalent of \[pp] is
 Example:
 the function
 .I zip
-takes two list as parameters.
+takes two lists as parameters.
 When its left list is empty, the function works even if the right list can't be computed.
 However,
 .I zip

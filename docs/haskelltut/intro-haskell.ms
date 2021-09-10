@@ -731,7 +731,8 @@ behind the types.
 
 .NH 2
 Haskell's type classes
-.LP
+.PP
+
 Types may be related to each other.
 An integer and a float, wheither their size, are both numbers, for example.
 A class of types is defined by the functions they implement.
@@ -956,7 +957,8 @@ Fortunately, there is no point trying to document every extension: the core of t
 .B "in decades" .
 
 To understand idiomatic Haskell code, to understand functionnal programming and to be able to write any non trivial program,
-.UL "the next two sections are necessary" .
-The first presents the usual type classes, found in almost every non trivial code.
+.UL "the next three sections are necessary" .
+The first presents some very widespread data structures.
+The second presents the usual type classes, found in almost every non trivial code.
 This includes type classes used to structure the code (chaining function calls for example) and an introduction to unpure functions.
-And the second presents the usual functions used in Haskell code.
+And the third section presents the usual functions used in Haskell code.
