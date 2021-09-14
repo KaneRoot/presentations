@@ -1,8 +1,10 @@
-.so haskelltut/macros.ms
+.so macros.ms
 .so haskelltut/header.ms
 .2C
 .so haskelltut/intro.ms
-.so haskelltut/base.ms
+.so haskelltut/core-concepts.ms
+.so haskelltut/intro-haskell.ms
+.so haskelltut/usual-data-structures.ms
 .so haskelltut/usual-type-classes.ms
 .so haskelltut/useful-functions.ms
 .so haskelltut/complex-data-structures.ms
@@ -13,5 +15,6 @@
 .so haskelltut/parallelism.ms
 .so haskelltut/stuff.ms
 .so haskelltut/misc.ms
+.so haskelltut/annex_code-deduplication.ms
 .so haskelltut/annex_type-classes.ms
 .so haskelltut/annex_vocabulary.ms

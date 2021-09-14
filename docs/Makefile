@@ -1,6 +1,5 @@
-all: run
-
 SRC = haskelltut
+SRC_RC = randomcommands
 BIBLIOGRAPHY = bibliography
 ALLSRC = $(shell find . -name "*.ms")
 
@@ -27,6 +26,9 @@ VIEWER = zathura $(VIEWER_OPTS)
 SOELIM_OPTS =
 SOELIM = soelim $(SOELIM_OPTS)
 
+PIC_OPTS =
+PIC = pic $(PIC_OPTS)
+
 # GH_INTRO: instructions before each source code provided by source-highlight
 # GH_OUTRO: ------------ after  ---- ------ ---- -------- -- ----------------
 # GH_INTRO/GH_OUTRO: values are separated by ';'
@@ -42,7 +44,9 @@ SHOPTS = --outlang-def=./.source-highlight_groff-output-definition
 export SHOPTS
 
 $(SRC).pdf:
-	cat $(SRC).ms | $(SOELIM) | $(GHIGHLIGHT) | $(REFER) | $(GROFF) > $@
+	cat $(SRC).ms | $(SOELIM) | $(GHIGHLIGHT) | $(PIC) | $(REFER) | $(GROFF) > $@
 
-run:
-	cat $(SRC).ms | $(SOELIM) | $(GHIGHLIGHT) | $(REFER) | $(GROFF) | $(VIEWER)
+$(SRC_RC).pdf:
+	cat $(SRC).ms | $(SOELIM) | $(GHIGHLIGHT) | $(PIC) | $(REFER) | $(GROFF) > $@
+
+include Makefile.custom

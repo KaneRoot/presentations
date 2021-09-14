@@ -16,3 +16,13 @@
 %A Graham Hutton
 %T A tutorial on the universality and expressiveness of fold
 %D 1999
+
+%K Elliott2019-convolution-extended
+%A Conal Elliott
+%T Generalized convolution and efficient language recognition (extended version)
+%I = CoRR
+#mon     = mar,
+%D 2019
+#volume  = {abs/1903.10677},
+#url     = {https://arxiv.org/abs/1903.10677}
+}

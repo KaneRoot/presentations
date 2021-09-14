@@ -12,9 +12,12 @@ accumulate
 .nr FN 0
 .de FOOTNOTE1
 \*{[\\n(FN]\*}
-.FS \*{[\\n(FN]\*}
+.FS
+.ll +.6i
+\*{[\\n(FN]\*}
 ..
 .de FOOTNOTE2
+.ll
 .FE
 .\" increment our footnote counter
 .nr FN +1
@@ -25,6 +28,7 @@ accumulate
 .vs 8p
 ..
 .de BELLOWEXPLANATION2
+
 .ps 9
 .vs 11p
 ..
@@ -107,4 +111,19 @@ To be defined or to finish.
 .de NORMALFONT
 .vs
 .ps
+..
+.de COMMAND1
+.b1
+..
+.de COMMAND2
+.b2
+..
+.de COMMANDNAME
+.I "\\$1"
+..
+.de FUNCTION
+.I "\\$1" "\\$2"
+..
+.de TYPECLASS
+.I "\\$1" "\\$2"
 ..

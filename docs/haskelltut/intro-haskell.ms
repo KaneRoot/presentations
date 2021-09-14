@@ -803,6 +803,8 @@ will result in
 (in that order).
 .BELLOWEXPLANATION2
 
+Plenty of examples are provided in the section on usual type classes.
+
 .SH
 Laws
 .PP
@@ -834,7 +836,7 @@ associated with
 Always verify that your structure satisfies the laws required by the type classes you implement.
 Otherwise the semantic of the type class will be broken and the behavior won't make sense.
 .FOOTNOTE1
-Furthermore, it could be completely legit for the compiler to implement code optimizations to cut a few function calls, or rewrite some functions, based on these laws.
+Furthermore, it could be completely legitimate for the compiler to implement code optimizations to cut a few function calls, or rewrite some functions, based on these laws.
 .FOOTNOTE2
 
 .SH
