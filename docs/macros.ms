@@ -127,3 +127,6 @@ To be defined or to finish.
 .de TYPECLASS
 .I "\\$1" "\\$2"
 ..
+.de OPERATOR
+.I "\\$1" "\\$2"
+..

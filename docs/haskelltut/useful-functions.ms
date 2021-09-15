@@ -87,5 +87,5 @@ Functions on tuples
 zip and zipWith
 
 .SOURCE Haskell ps=8 vs=9p
-fib x = 0 : 1 : zipWith (+) (fib (x-2)) (fib (x-1))
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 .SOURCE

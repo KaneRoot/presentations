@@ -58,18 +58,41 @@ The
 type class represents all types that can be tested for equality.
 It is based on the
 .MODULE Bool
-data type, and requires only to define a single function:
-.FUNCTION (==)
-
+data type, and requires only to define a single function to test for equality.
+Here is the definition:
 .SOURCE Haskell ps=8 vs=9p
---Let's implement a data structure
---which will be an instance of Eq
+class  Eq a  where
+  (==), (/=) :: a -> a -> Bool
+
+  x /= y     = not (x == y)
+  x == y     = not (x /= y)
+.SOURCE
+.BELLOWEXPLANATION1
+Either the operator
+.OPERATOR (==)
+is defined or its opposite
+.OPERATOR (/=) .
+The other will be derived from the implemented one, see the default implementations.
+.BELLOWEXPLANATION2
+
+An example of data structure, part of the Eq type class:
+.SOURCE Haskell ps=8 vs=9p
 data Room = Room Int --a room has a number
 
 instance Eq Room where
+  --Rooms are "equal" if they have the same number.
   (Room x) == (Room y) = x == y
+.SOURCE
+.BELLOWEXPLANATION1
+The Room data structure represents a room with a number in an hostel, for example.
+This example shows how to implement an instance of the
+.TYPECLASS Eq
+type class.
+.BELLOWEXPLANATION2
 
---In GHCi
+.KS
+Then, the code can be tested in GHCi:
+.SOURCE Haskell ps=8 vs=9p
 r1 = Room 4
 r2 = Room 4
 r3 = Room 8
@@ -78,47 +101,309 @@ r1 == r2
 r1 == r3
 > False
 .SOURCE
-.BELLOWEXPLANATION1
-The Room data structure, representing a room with a number in an hostel for example, allows to show how to implement an instance of the
-.TYPECLASS Eq
-type class.
-.BELLOWEXPLANATION2
+.KE
 
+Before switching to another type class, here is the implementation of the
+.TYPECLASS Eq
+type class for the
+.MODULE Maybe
+data structure.
+.SOURCE Haskell ps=8 vs=9p
+data  Maybe a  =  Nothing | Just a
+  deriving (Eq, Ord)
+.SOURCE
+.BELLOWEXPLANATION1
+The actual implementation doesn't even exist: it is derived automatically.
+This way of deriving implementations of type classes from data structures won't be covered right now.
+See later sections.
+.BELLOWEXPLANATION2
 
 .NH 2
 Ord: types that can be sorted
 .PP
+The
+.TYPECLASS Ord
+type class represents all types that can be sorted (is a value smaller or equal than another).
+The type class introduces the following data structure and function.
 .SOURCE Haskell ps=8 vs=9p
+--data structure to compare values
 data Ordering = LT | EQ | GT
+
+--Ord depends on the class Eq: any sortable
+--value has to be part of the Eq type class
+class Eq a => Ord a where
+  --only function to implement
+  compare :: a -> a -> Ordering
 .SOURCE
 
-.NH 2
-Functor
-.LP
-A type
-.I f
-is a
-.MODULE Functor
-if it provides a function
-.I fmap
-which, given any types
-.I a
+Here is an implementation of the type class for the previous
+.MODULE Room
+data structure.
+.SOURCE Haskell ps=8 vs=9p
+instance Ord Room where
+  --'compare' already exists for integer values
+  compare (Room x) (Room y) = compare x y
+.SOURCE
+
+Now the
+.MODULE Room
+data structure is part of the
+.TYPECLASS Ord
+type class, a list of rooms can be sorted.
+.SOURCE Haskell ps=8 vs=9p
+import Data.List (sort)
+sort [Room 2, Room 3, Room 1]
+--> [Room 1, Room 2, Room 3]
+.SOURCE
+
+As you can expect, many functions require their parameter to allow sorting.
+Sorting functions, sure, but also
+.FUNCTION min
 and
-.I b
-lets you apply any function from
-.I "(a -> b)"
-to turn an
-.I "f a"
-into an
-.I "f b,"
-preserving the structure of
-.I f .
+.FUNCTION max
+functions for example.
+
+Some data structures allow to sort any sortable value they contain, which is the case for
+.MODULE Maybe
+and
+.MODULE Either
+for example.
+.SOURCE Haskell ps=8 vs=9p
+sort [Right 2, Right 1]
+--> [Right 1, Right 2]
+.SOURCE
+.BELLOWEXPLANATION1
+Either is part of the Ord type class, and integers too.
+Nothing fancy.
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+--but this also works with nested structures
+sort [Right (Just 2), Right (Just 2)]
+--> [Right (Just 1), Right (Just 2)]
+
+--like, for real
+sort [ Right (Just (Right (Room 2)))
+     , Right (Just (Right (Room 1)))
+     ]
+--> [ Right (Just (Right (Room 1)))
+  , Right (Just (Right (Room 2)))
+  ]
+.SOURCE
+.BELLOWEXPLANATION1
+Let's break the last example.
+The
+.FUNCTION sort
+function allows to sort a very nested structure.
+.I How ?
+The
+.MODULE Room
+structure is part of
+.TYPECLASS Ord
+so it can be sorted.
+.MODULE Either
+too, so
+.BX "Right (Room 1)"
+is sortable.
+Since this can be sorted and that
+.MODULE Maybe
+is part of the
+.TYPECLASS Ord
+typeclass, then
+.BX "Just (Right (Room 1))"
+also can be sorted, etc.
+.BELLOWEXPLANATION2
+And we just touched something really interesting with Haskell.
+Despite its simplity, code is generic and reusability is great!
 
 .NH 2
-Applicative
+Functor: applying a function in a structure
+.PP
+A functor is a type allowing to apply a function to its inner value(s), through a
+.FUNCTION fmap
+function.
+The following code represents the
+.MODULE Functor
+type class and the only required function.
+.SOURCE Haskell ps=8 vs=9p
+class Functor a where
+  fmap :: (a -> b) -> f a -> f b
+.SOURCE
+.BELLOWEXPLANATION1
+fmap takes a function (from
+.I a
+to
+.I b )
+and a functor (such as a list) containing values of type
+.I a .
+The fmap function produces a functor with values of type
+.I b .
+.BELLOWEXPLANATION2
+
+.FUNCTION fmap
+and
+.FUNCTION map
+functions are synonyms for a list.
+Here is an example.
+.SOURCE Haskell ps=8 vs=9p
+fmap (+3) [1,2,3]
+--> [4,5,6]
+.SOURCE
+.BELLOWEXPLANATION1
+The
+.FUNCTION fmap
+function for lists applies a function to each element of that list, and returns a new list.
+.BELLOWEXPLANATION2
+
+And as we saw with the type of the
+.FUNCTION fmap
+function, the returned functor can have a different inner type.
+Example:
+.SOURCE Haskell ps=8 vs=9p
+fmap show [1,2,3]
+--> ["1","2","3"]
+.SOURCE
+.BELLOWEXPLANATION1
+The
+.FUNCTION show
+function takes a value and provides a string representation.
+.BELLOWEXPLANATION2
+
+Lists aren't the only functors.
+Any type containing data
+.I "product data type" ) (
+can be a functor.
+.MODULE Maybe
+and
+.MODULE Either
+are functors, too.
+So it is possible to apply a function to their inner values.
+.SOURCE Haskell ps=8 vs=9p
+fmap (+3) (Just 3)
+--> Just 6
+fmap (+3) (Nothing)
+--> Nothing
+.SOURCE
+.BELLOWEXPLANATION1
+In case the
+.MODULE Maybe
+functor contains a value, the function is applied.
+Otherwise, it just returns
+.CONSTRUCTOR Nothing.
+.BELLOWEXPLANATION2
+
+.SOURCE Haskell ps=8 vs=9p
+fmap (+3) (Right 3)
+--> Right 6
+fmap (+3) (Left "error")
+--> Left "error"
+.SOURCE
+.BELLOWEXPLANATION1
+The behavior of the
+.MODULE Either
+functor is similar to
+.MODULE Maybe.
+In case there is a value (read: a
+.CONSTRUCTOR Right
+value), the function is applied to it.
+In case there is an error (read: a
+.CONSTRUCTOR Left
+value), the function is ignored.
+.BELLOWEXPLANATION2
+The general idea is the same behind both the Maybe and the Either functor implementations:
+either the value is valid and the function is applied to it, otherwise the error value is returned.
+This isn't exactly the same as the list functor, where the data type doesn't represent any possible "error".
+The implementation of the
+.TYPECLASS Functor
+type class actually is dependent of the
+.UL semantic
+of the data type.
+.\"A type
+.\".I f
+.\"is a
+.\".MODULE Functor
+.\"if it provides a function
+.\".I fmap
+.\"which, given any types
+.\".I a
+.\"and
+.\".I b
+.\"lets you apply any function from
+.\".I "(a -> b)"
+.\"to turn an
+.\".I "f a"
+.\"into an
+.\".I "f b,"
+.\"preserving the structure of
+.\".I f .
+
+To further demystify the
+.TYPECLASS Functor
+type class, here is the implementation for the
+.MODULE Maybe
+data type.
+.SOURCE Haskell ps=8 vs=9p
+instance  Functor Maybe  where
+  fmap _ Nothing       = Nothing
+  fmap f (Just a)      = Just (f a)
+.SOURCE
+
+Finally, the
+.FUNCTION fmap
+function has a synonym: the infix operator
+.BX "<$>"
+.SOURCE Haskell ps=8 vs=9p
+(+1) <$> Just 1
+--> Just 2
+.SOURCE
+.BELLOWEXPLANATION1
+This may not seem much right now, but Haskell is often all about chaining expressions.
+Operators are very common, and often add readability with complex code.
+This operator
+.ft CW
+<$>
+.ft
+actually is relevant for the next sections and to write idiomatic Haskell code.
+.BELLOWEXPLANATION2
+
+.SH
+Conclusion
+.PP
+The functor type class allows a great code abstraction.
+First, it applies a function to a whole data structure with a single and simple function call.
+There is no need for loops, and it is generic (works the same way for many types).
+Second, it follows a general and expected behavior: the function only applies when relevent, depending on the
+.UL semantic
+of the data structure.
+The function isn't propagated when the data type conveys an error (such as a
+.CONSTRUCTOR Left
+value in an Either data type).
+
+The Functor type class is the basis for understanding the following two sub-sections on Applicatives and Monads.
 
 .NH 2
-Monad
+Applicative: applying parameters to a functor
+.PP
+A functor is a type containing data that can be changed through the
+.FUNCTION fmap
+function.
+The applied function may require several arguments, and applying it to a single argument creates another function.
+Example:
+.SOURCE Haskell ps=8 vs=9p
+--remember, <$> is an infix `fmap`
+(+) <$> (Just 3)
+--> Just (+3)
+.SOURCE
+.BELLOWEXPLANATION1
+Unfortunatelly, GHCi cannot print functions this way, but this is the right result.
+.br
+In functional programming, a data can be a function, as any other value.
+The Maybe functor now contains a function, lacking an argument.
+.BELLOWEXPLANATION2
+An applicative functor is a way to provide a parameter to a functor.
+
+.NH 2
+Monad: binding functions
 .PP
 Functional programming, and particularly in Haskell, a function is a single expression.
 However, one may want to perform multiple function calls in this single expression.
@@ -221,7 +506,7 @@ they are operators (simple functions) binding function calls.
 .FOOTNOTE1
 Also, monads are more generic than
 .I "try and catch"
-and do not require a compiler-supported mechanism.
+since the behavior can be changed (it depends on the monad) and do not require a compiler-supported mechanism.
 .FOOTNOTE2
 In practice, a Monad is defined by three functions:
 .I (>>=)
@@ -394,8 +679,8 @@ move right
 "Either monad: function1 >> function2 >>= function3"
 .PE
 
-.NH 3
-Implement a monad
+.NH 2
+The IO monad
 .PP
 
 .NH 3

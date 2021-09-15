@@ -100,6 +100,10 @@ Tools I never (or not often) used but seem fine
 .BULLET
 .UL "Enlightment Foundation Libraries (EFL)"
 .BULLET
+.UL openscad :
+3d modeling with a language similar to
+.I pic .
+.BULLET
 .UL "Seeks and searx" ,
 to replace search engines.
 .BULLET
@@ -147,7 +151,7 @@ Work behind my first video
 .LP
 Not even counting the work about the subject itself (Zig).
 .NH 2
-tmux
+tmux and vis: code presentation
 .LP
 .BULLET
 .UL "switching between sessions" :
@@ -158,7 +162,7 @@ and
 .UL "moving and renaming windows"
 .ENDBULLET
 .NH 2
-ffmpeg
+ffmpeg: recordings and multimedia manipulations
 .LP
 .BULLET
 .UL "record audio"
@@ -181,7 +185,7 @@ from wav to opus for instance
 .NH 2
 scrot: taking a few screenshots
 .NH 2
-Kdenlive
+Kdenlive: video editing
 .LP
 .BULLET
 .UL "cut and mix video"
@@ -201,13 +205,13 @@ to censor my pseudo, for example
 mute noises, lower audio volume when speaking too loudly, that sort of things
 .ENDBULLET
 .NH 2
-pointtools
+pointtools: presentation
 .NH 2
 vt animations
 .LP
 To print a beer animation, unix style.
 .NH 2
-Krita
+Krita: banner and thumbnail
 .BULLET
 .UL "insert image and text"
 .BULLET
