@@ -12,20 +12,20 @@ accumulate
 .nr FN 0
 .de FOOTNOTE1
 \*{[\\n(FN]\*}
-.FS
-.ll +.6i
+.FS        \" start footnote
+.ll +.6i   \" line length
 \*{[\\n(FN]\*}
 ..
 .de FOOTNOTE2
-.ll
-.FE
+.ll        \" line length
+.FE        \" end of footnote
 .\" increment our footnote counter
 .nr FN +1
 ..
 .de BELLOWEXPLANATION1
 .sp 0.5
-.ps 7
-.vs 8p
+.ps 7     \" point size (~= font size)
+.vs 8p    \" vertical spacing between lines
 ..
 .de BELLOWEXPLANATION2
 
@@ -33,7 +33,7 @@ accumulate
 .vs 11p
 ..
 .de ENDBULLET
-.in -2
+.in -2   \" indent
 ..
 .defcolor darkgreen rgb 0.1 0.5 0.2
 .defcolor darkblue  rgb 0.3 0.3 0.7
@@ -129,4 +129,8 @@ To be defined or to finish.
 ..
 .de OPERATOR
 .I "\\$1" "\\$2"
+..
+.de QUESTION
+.I "\\$1" "\\$2"
+\h'5p'
 ..
