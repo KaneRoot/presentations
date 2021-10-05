@@ -71,13 +71,13 @@ Plenty of examples will be presented later.
 Function composition
 .LP
 Function composition is the act of pipelining the result of one function, to the input of another.
-This is almost like in shell but the order is reversed, and typed.
-.FOOTNOTE1
+This is almost like in shell but the order is reversed, and typed\*[*].
+.FS
 Data isn't just serialized in strings like in shell (for the most part).
 And each output type of a function
 .UL must
 be the input type of the following function in the composition.
-.FOOTNOTE2
+.FE
 
 .SOURCE haskell ps=8 vs=9p
 --the '.' operator is used to compose functions

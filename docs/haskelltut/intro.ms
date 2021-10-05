@@ -54,10 +54,10 @@ Code reuse is (near?) optimal.
 functions can be
 .I composed
 together, meaning that the result of a function is the parameter of another.
-In practice, this allows to write very short functions by removing unnecessary code.
-.FOOTNOTE1
+In practice, this allows to write very short functions by removing unnecessary code\*[*].
+.FS
 Also, parenthesis aren't all over the place like in other FP languages (personal preference).
-.FOOTNOTE2
+.FE
 .BULLET
 .UL "Purity (or referential transparency)" :
 a function only needs its parameters to work, no global variables.
@@ -119,11 +119,11 @@ This includes rewriting functions in an optimizable way or use proper types, for
 .BULLET
 .UL "Parallelism and concurrency" ,
 to either make several computations at the same time on different cores,
-or switch between two computations that require pauses.
-.FOOTNOTE1
+or switch between two computations that require pauses\*[*].
+.FS
 For example, receiving network packets takes time, and a packet can be received only partially and requires to wait to retrieve the rest, and with concurrency the application can perform other actions while waiting for the packet to arrive.
 This improves performances by a large margin without even requiring parallelism.
-.FOOTNOTE2
+.FE
 .ENDBULLET
 
 Then, a

@@ -2,13 +2,13 @@
 Annex: vocabulary
 .PP
 Browsing through different documentations of the Haskell language (and FP in general) can be really hard.
-The technical corpus one must know prior to the reading of some of the explanations is almost preposterous.
-.FOOTNOTE1
+The technical corpus one must know prior to the reading of some of the explanations is almost preposterous\*[*].
+.FS
 And sometimes you get pure garbage descriptions.
 What's an applicative functor?
 According to the Haskell wiki: "An applicative functor has more structure than a functor but less than a monad.".
 Seriously, is this trolling at an academic level?
-.FOOTNOTE2
+.FE
 So, in order to tackle this problem, here is a list of technical terms explained in a simple way.
 
 .KS

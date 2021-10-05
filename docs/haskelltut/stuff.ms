@@ -66,8 +66,8 @@ Our second example is based on the
 operator (which is an infix version of
 .I fmap ).
 This operator is well-known and designed for this purpose:
-.UL "apply when semantically valid" .
-.FOOTNOTE1
+.UL "apply when semantically valid" \*[*].
+.FS
 One may refer to the
 .I fmap
 function is a
@@ -77,7 +77,7 @@ It takes a pure function
 .BX "(a -> b)"
 and lift it to be valid in a functor context
 .BX "(f a -> f b)"
-.FOOTNOTE2
+.FE
 
 The semantic of the
 .BX <$>
@@ -113,10 +113,10 @@ We only changed the type of the function.
 Compare this to what you would have written in an imperative language.
 .BELLOWEXPLANATION2
 
-In this last version, our function is valid for many functors.
-.FOOTNOTE1
+In this last version, our function is valid for many functors\*[*].
+.FS
 This is a bit like Java interfaces on steroids.
-.FOOTNOTE2
+.FE
 .
 .
 .NH 1
@@ -130,8 +130,8 @@ A list of the most used operators:
 .SOURCE
 .ps 9
 
-And how to use them
-.FOOTNOTE1
+And how to use them\*[*]:
+.FS
 Remember:
 .I Maybe
 is a functor, and parameters
@@ -140,8 +140,7 @@ and
 .I b
 are simple types, such as
 .I Integer .
-.FOOTNOTE2
-:
+.FE
 .ps 8
 .SOURCE Haskell
  fun :: Maybe (Int -> Int)
@@ -240,15 +239,15 @@ is transformed into a function
 , and we say that the function is
 .UL lifted
 into
-.I f .
-.FOOTNOTE1
+.I f \*[*].
+.FS
 There are a lot of functors classes:
 .MODULEX Applicative
 .MODULEX Monad
 .MODULEX Bifunctor
 etc.
 .TBD
-.FOOTNOTE2
+.FE
 .
 .
 .NH 2
@@ -261,12 +260,12 @@ to
 
 Whereas in Haskell, one can think of a
 .MODULE Functor
-as containing or producing values, a contravariant functor is a functor that can be thought of as consuming values.
-.FOOTNOTE1
+as containing or producing values, a contravariant functor is a functor that can be thought of as consuming values\*[*].
+.FS
 This is a citation from the Haskell documentation on
 .MODULE Data.Functor.Contravariant
 and it deserves a read.
-.FOOTNOTE2
+.FE
 
 In Haskell, the
 .MODULE Data.Functor.Contravariant

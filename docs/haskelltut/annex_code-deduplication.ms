@@ -36,15 +36,15 @@ The function takes a parameter with a class implementing the right
 .I method
 (in our case, the
 .I plus
-function).
-.FOOTNOTE1
+function)\*[*].
+.FS
 The class can be
 .I abstract
 or an
 .I interface ,
 in which case the actual implementation comes from another class that inherits from this one.
 Naming conventions vary depending on the language, but the idea is more or less the same.
-.FOOTNOTE2
+.FE
 .SOURCE cpp ps=8 vs=9p
 class Sumable {
 public:
@@ -62,14 +62,14 @@ Actual object passed to the
 .I sum
 function is an instance of the class
 .MODULE Sumable
-or from a class that inherits from it.
-.FOOTNOTE1
+or from a class that inherits from it\*[*].
+.FS
 OOP requires
 .I "multiple inheritance"
 (C++) or
 .I interfaces
 (Java), otherwise classes would need to duplicate a lot of code.
-.FOOTNOTE2
+.FE
 
 .HORIZONTALLINE
 
@@ -225,10 +225,10 @@ However, code is constantly duplicated, and the tools at our disposal to make it
 OOP allows some code deduplication.
 A function can ask for its parameter to comply with a list of methods (a class).
 However, a function cannot ask for many more criteria, which forces to create new classes or interfaces.
-The code is more complex than it has to be.
-.FOOTNOTE1
+The code is more complex than it has to be\*[*].
+.FS
 Actually, OOP is broken beyond repair, never have been a great solution and never will be, but this deserves its own document.
-.FOOTNOTE2
+.FE
 
 FP 
 The language allows to write code without caring for the 

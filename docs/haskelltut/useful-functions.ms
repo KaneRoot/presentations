@@ -36,10 +36,15 @@ move
 move
 move
 "Last"
-line <- -> from A.nw + (0,0.2) to A.ne + (0,0.2)
-line <- -> from B.nw + (0,0.2) to D.ne + (0,0.2)
-line <- -> from A.sw + (0,-0.2) to C.se + (0,-0.2)
-line <- -> from D.sw + (0,-0.2) to D.se + (0,-0.2)
+LINE_HEAD: line <- -> from A.nw + (0,0.2) to A.ne + (0,0.2)
+LINE_TAIL: line <- -> from B.nw + (0,0.2) to D.ne + (0,0.2)
+LINE_INIT: line <- -> from A.sw + (0,-0.2) to C.se + (0,-0.2)
+LINE_LAST: line <- -> from D.sw + (0,-0.2) to D.se + (0,-0.2)
+
+line from LINE_HEAD.end + (0,-0.1) to \
+          LINE_HEAD.end + (0, 0.1)
+line from LINE_INIT.end + (0,-0.1) to \
+          LINE_INIT.end + (0, 0.1)
 ."line from HEAD.s + (0,-0.1) to A.nw
 ."line from HEAD.s + (0,-0.1) to A.ne
 ."line from TAIL.s + (0,-0.1) to B.nw
@@ -88,4 +93,15 @@ zip and zipWith
 
 .SOURCE Haskell ps=8 vs=9p
 fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+.SOURCE
+
+.NH 2
+String manipulation
+
+.NH 3
+chr and ord
+
+.SOURCE Haskell ps=8 vs=9p
+chr :: Int  -> Char
+ord :: Char -> Int
 .SOURCE

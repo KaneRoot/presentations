@@ -185,16 +185,15 @@ takes a function to modify the selected value.
 .BELLOWEXPLANATION2
 
 Handling complex structures is one of the few parts of FP where introducing operators is essential to keep the code clean.
-Lenses introduce an overwhelming amount of operators
-.FOOTNOTE1
+Lenses introduce an overwhelming amount of operators\*[*], only a very few are necessary for a start and for most operations.
+.FS
 The
 .MODULE lens
 module currently has 109 operators.
 Apparently there is never enough!
 Again, no need to feel overwhelm, most of it is very specialized and you won't need it.
 Also, a lot of them are related to each other, there is a logic behind it.
-.FOOTNOTE2
-, only a very few are necessary for a start and for most operations.
+.FE
 Chaining operations is easy, and the more operations there is, the simpler it is compared to other programmation paradigms.
 
 .SOURCE Haskell ps=8 vs=9p

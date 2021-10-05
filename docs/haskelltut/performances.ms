@@ -166,10 +166,10 @@ Our
 function follows the
 .I fold
 pattern, walking a full list and returning a single value.
-So, let's use it, it even has a strict variant!
-.FOOTNOTE1
+So, let's use it, it even has a strict variant\*[*]!
+.FS
 Remember, conventionaly a function with an apostrophe is a strict variant in the standard Haskell API.
-.FOOTNOTE2
+.FE
 .SOURCE Haskell ps=8 vs=9p
 import Data.List
 len = foldl' (\acc _ -> 1 + acc) 0

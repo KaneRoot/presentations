@@ -2,16 +2,16 @@
 Usual Haskell type classes
 .PP
 A type class represents a property of a data type.
-For example, a type that can be sorted (Ord), isn't empty (NonEmpty), or that can be serialized in a printable string format on the terminal (Show).
+For example, a type that isn't empty (NonEmpty), or that can be serialized in a printable string format on the terminal (Show).
 Type classes allow developers to focus on an abstraction of the types they work with;
-a function can express constraints on its parameters instead of actual types.
-.FOOTNOTE1
+a function can express constraints on its parameters instead of actual types\*[*].
+.FS
 And
 .I abstract
 code isn't in any way a synonym of
 .I slowness .
 This idea will be destroyed in the section on performances.
-.FOOTNOTE2
+.FE
 
 The section introducing Haskell summarized type classes as a set of functions.
 A type needs to implement them to be part of the type class.
@@ -156,14 +156,15 @@ sort [Room 2, Room 3, Room 1]
 --> [Room 1, Room 2, Room 3]
 .SOURCE
 
-As you can expect, many functions require their parameter to allow sorting.
+As you can expect, some functions require their parameter to allow sorting.
 Sorting functions, sure, but also
 .FUNCTION min
 and
 .FUNCTION max
 functions for example.
 
-Some data structures allow to sort any sortable value they contain, which is the case for
+Some widespread types and data structures are part of the Ord typeclass, such as
+.MODULE Int,
 .MODULE Maybe
 and
 .MODULE Either
@@ -173,12 +174,11 @@ sort [Right 2, Right 1]
 --> [Right 1, Right 2]
 .SOURCE
 .BELLOWEXPLANATION1
-Either is part of the Ord type class, and integers too.
 Nothing fancy.
 .BELLOWEXPLANATION2
 
+This also works with nested structures.
 .SOURCE Haskell ps=8 vs=9p
---but this also works with nested structures
 sort [Right (Just 2), Right (Just 2)]
 --> [Right (Just 1), Right (Just 2)]
 
@@ -337,6 +337,9 @@ of the data type.
 .\"preserving the structure of
 .\".I f .
 
+.SH
+Maybe implementation
+.LP
 To further demystify the
 .TYPECLASS Functor
 type class, here is the implementation for the
@@ -347,7 +350,71 @@ instance  Functor Maybe  where
   fmap _ Nothing       = Nothing
   fmap f (Just a)      = Just (f a)
 .SOURCE
+.BELLOWEXPLANATION1
+In case the maybe has no value, this returns nothing.
+Otherwise, this creates a new
+.MODULE Maybe
+with
+.BX "f a"
+as the value.
+.BELLOWEXPLANATION2
 
+.SH
+Imperative vs functional structure manipulation
+.PP
+Functors are a way to manipulate data structures.
+
+The following figure compares a list manipulation from C and Haskell perspectives.
+
+.PS
+reset
+.defcolor lightgreen rgb 0.9 1.0 0.9
+.defcolor lightblue  rgb 0.9 0.9 1.0
+.defcolor bloatcode  rgb 1.0 0.1 0.1
+down
+boxht=0.2
+boxwid=0.4
+CLANG: "C"
+move; left; move; move; down
+"\fIst = ...\f[]" ljust
+move 0.2
+FORLOOP: "for (int i = 0; i<= \fIst\f[].len; i++) {" ljust outline "bloatcode"
+move 0.1; move right; down
+CBOX: box "..." shaded "lightgreen"
+move to FORLOOP + (0,-0.4)
+"}" outline "bloatcode"
+move to CLANG + (1.4,0)
+Haskell: "Haskell"
+move; move left 0.2; down
+FMAP: "fmap" rjust
+move to FMAP.c + (0.3,boxht/2)
+FMAPBOX: box "..." shaded "lightgreen"
+move to FMAPBOX.e + (0.3,0)
+"\fIstructure\f[]"
+line from CLANG + (0.8,0) to CLANG + (0.8,-1)
+.\" Title
+move to CLANG + (0.8,-1.3)
+"manual structure manipulation vs fmap"
+.PE
+.BELLOWEXPLANATION1
+(Bloat) code required in C to loop over the data in red.
+Green boxes represent code for data manipulation.
+Manipulated structure is in italics.
+.BELLOWEXPLANATION2
+.QUESTION "Why is this interesting" ?
+First, mindless code should be removed from the source.
+In this example, writing code to browse a list is a \fBvery common\f[] pattern, it should be abstracted\*[*].
+.FS
+Less code means less ways to screw everything, and more focus on the actual problem to solve.
+That's a rule of thumb everybody should try to follow: write less code unless it makes the code cryptic.
+.FE
+Second, having an abstraction on "browsing a structure" allows to change the structure at no cost.
+What if the structure wasn't a simple list anymore?
+The C code should be rewritten completely.
+
+.SH
+Synonym: infix <$> operator
+.PP
 Finally, the
 .FUNCTION fmap
 function has a synonym: the infix operator
@@ -367,7 +434,7 @@ actually is relevant for the next sections and to write idiomatic Haskell code.
 .BELLOWEXPLANATION2
 
 .SH
-Conclusion
+Conclusion on functors
 .PP
 The functor type class allows a great code abstraction.
 First, it applies a function to a whole data structure with a single and simple function call.
@@ -379,7 +446,7 @@ The function isn't propagated when the data type conveys an error (such as a
 .CONSTRUCTOR Left
 value in an Either data type).
 
-The Functor type class is the basis for understanding the following two sub-sections on Applicatives and Monads.
+And keep in mind the <$> operator!
 
 .NH 2
 Applicative: applying parameters to a functor
@@ -391,7 +458,7 @@ The applied function may require several arguments, and applying it to a single 
 Example:
 .SOURCE Haskell ps=8 vs=9p
 --remember, <$> is an infix `fmap`
-(+) <$> (Just 3)
+(+) <$> Just 3
 --> Just (+3)
 .SOURCE
 .BELLOWEXPLANATION1
@@ -401,6 +468,93 @@ In functional programming, a data can be a function, as any other value.
 The Maybe functor now contains a function, lacking an argument.
 .BELLOWEXPLANATION2
 An applicative functor is a way to provide a parameter to a functor.
+The Applicative type class introduces the infix operator
+.OPERATOR <*>
+to
+.I apply
+a new parameter to a functor.
+.SOURCE Haskell ps=8 vs=9p
+(+) <$> Just 3 <*> Just 2
+--> Just 5
+.SOURCE
+.BELLOWEXPLANATION1
+The (+) function gains a first argument with
+.FUNCTION fmap
+(<$>). and creates the
+.BX "Just (+3)"
+value (which is (+3) in the
+.MODULE Maybe
+functor).
+Then, the function
+.I "(+3)"
+is passed to the
+.BX "Just 2"
+value via the <*> operator.
+And this completes the function call and the result is
+.BX "Just 5"
+.BELLOWEXPLANATION2
+
+.QUESTION "Why is this a thing?"
+Applicative functors present a way to handle a common code structure.
+
+.TBD
+
+.PS
+reset
+.defcolor lightgreen rgb 0.9 1.0 0.9
+.defcolor lightblue  rgb 0.9 0.9 1.0
+.defcolor bloatcode  rgb 1.0 0.1 0.1
+down
+boxht=0.2
+CTITLE: "C"
+move
+move right 0.1
+down
+linesep=0.20
+define cfun { [
+	R: $1 ljust outline "bloatcode"
+	right
+	move to R.e + (0.4,0)
+	box $2 shaded "lightgreen"
+	move to R
+	down
+	move linesep
+	$3 ljust outline "bloatcode"
+	move linesep
+	move right 0.3
+	box "..." shaded "lightblue"
+	down
+	move linesep
+] }
+cfun("ret1 = ", "function1()", "if (ret1 == ...)")
+cfun("ret2 = ", "function2()", "if (ret2 == ...)")
+move down 0.05
+box "function3 (ret1, ret2)" wid 1.3 shaded "lightgreen"
+move to CTITLE + (1.6,0)
+HASKELL: "Haskell"
+move
+moveht=0.1
+box "function3" shaded "lightgreen"
+move; circle "<$>" rad 0.13; move
+box "function1" shaded "lightgreen"
+move; circle "<*>" rad 0.13; move
+box "function2" shaded "lightgreen"
+line from CTITLE + (0.8,0) to CTITLE + (0.8,-2.3)
+.\" Title
+move to CTITLE + (0.8,-2.5)
+"getting \fIfunction3\f[] parameters ready, then call it"
+.PE
+.BELLOWEXPLANATION1
+Code required in C to check for errors is in red, error managment is in blue, function calls are in green.
+.BELLOWEXPLANATION2
+
+.SH
+Conclusion on applicative functors
+.PP
+Functors and Applicative functors encourage to create functions with a similar way of handling data or errors, by using data structures such as
+.MODULE Maybe
+or
+.MODULE Either.
 
 .NH 2
 Monad: binding functions
@@ -409,11 +563,11 @@ Functional programming, and particularly in Haskell, a function is a single expr
 However, one may want to perform multiple function calls in this single expression.
 A
 .MODULE Monad
-is about binding these function calls together.
-.FOOTNOTE1
+is about binding these function calls together\*[*].
+.FS
 It is frightening that nobody just says this to explain monads.
 The mathematical explaination is incredibly useless when talking to developers, stop even trying.
-.FOOTNOTE2
+.FE
 
 Binding function calls is like a
 .I "try and catch"
@@ -502,23 +656,31 @@ This greatly improves readability with multiple function calls.
 
 Monads are simpler than
 .I "try and catch" :
-they are operators (simple functions) binding function calls.
-.FOOTNOTE1
+they are operators (simple functions) binding function calls\*[*].
+.FS
 Also, monads are more generic than
 .I "try and catch"
 since the behavior can be changed (it depends on the monad) and do not require a compiler-supported mechanism.
-.FOOTNOTE2
+.FE
 In practice, a Monad is defined by three functions:
-.I (>>=)
-which computes the first function and give the result to the second (as its last argument),
-.I (>>)
-which computes the first function and ignore the result, and
-.I return
+.BULLET
+.I (>>=) ,
+also known as the
+.I bind
+operator, which computes the first function and give the result to the second (as its last argument);
+.BULLET
+.I (>>) ,
+also known as the
+.I then
+operator, which computes the first function and drop the result then computes the second;
+.BULLET
+.I return ,
 which takes a value and puts it in the context of the monad (as the
 .I pure
 function in the
 .MODULE Applicative
 type class).
+.ENDBULLET
 The implementation of these operators depends on the monad.
 The following examples, with
 .MODULE Maybe
@@ -679,6 +841,9 @@ move right
 "Either monad: function1 >> function2 >>= function3"
 .PE
 
+.SH
+Conclusion on monads
+
 .NH 2
 The IO monad
 .PP
@@ -797,13 +962,13 @@ The main difference between
 and a simple
 .I or
 statement in an imperative or object-oriented programming language is the type: the
-.UL semantic
-.FOOTNOTE1
+.UL semantic \*[*]
+is preserved.
+.FS
 Ok, maybe not
 .UL exactly
 the "semantic" but mostly the type, which is already a big step forward.
-.FOOTNOTE2
-is preserved.
+.FE
 In an imperative language, this is valid:
 .SOURCE Python ps=8 vs=9p
 if True or 1 or some_structure:

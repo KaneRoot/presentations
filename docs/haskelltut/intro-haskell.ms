@@ -154,8 +154,8 @@ This is more efficient than having to copy the same instructions each time they 
 
 In a functional language, the whole function is a declaration, a single expression,
 the content is what the function
-.UL means .
-.FOOTNOTE1
+.UL means \*[*].
+.FS
 And since the function carries a
 .UL meaning ,
 there is little to no place to add unrelated instructions in a function in FP.
@@ -163,14 +163,14 @@ This may seem like a curse, but this is actually a bless in disguise.
 One can write any debugging code without interfering with the actual useful code,
 debug has to be separated from the rest.
 Also, functions in the standard library are almost always one-liners.
-.FOOTNOTE2
+.FE
 The entire body of the function is the returned value.
 Functions can still be complex, and composed of several function calls.
-However, all these function calls are bounded together, by an operator for example.
-.FOOTNOTE1
+However, all these function calls are bounded together, by an operator for example\*[*].
+.FS
 This will be explained in details later (with
 .I monads ).
-.FOOTNOTE2
+.FE
 
 The syntax for functions is rather extended in Haskell compared to an imperative language.
 Following sub-sections present different ways to create functions.
@@ -256,6 +256,17 @@ len (_:xs) = 1 + len xs   --x became '_'
 This time, the function doesn't name the list's head: it is explicitly ignored.
 .BELLOWEXPLANATION2
 
+Also,
+.I {}
+can be used to pattern match on the constructor regardless of the content of the type.
+
+.SOURCE Haskell ps=8 vs=9p
+data Foo = Bar | Baz Int
+g :: Foo -> Bool
+g Bar {} = True
+g Baz {} = False
+.SOURCE
+
 Pattern matching on more complex types will be presented later.
 
 .NH 3
@@ -294,11 +305,11 @@ Anonymous functions: lambdas
 .LP
 An anonymous function is created with the backslash character \\ followed by the parameters, then an arrow (->) and finally the body of the function.
 This anonymous function is called a
-.I lambda .
-.FOOTNOTE1
+.I lambda \*[*].
+.FS
 Since the mathematical explanation of lambdas is completely overkill to understand how to use them, it is discarded in this document.
 You're welcome.
-.FOOTNOTE2
+.FE
 .SOURCE haskell ps=8 vs=9p
 --add 5 to each element of a list
 map (\x -> x + 5) [1,2,3,4,5]
@@ -447,10 +458,10 @@ Finally,
 .UL "type synonyms" ,
 with the
 .I type
-keyword, to make the code more understandable to other developers.
-.FOOTNOTE1
+keyword, to make the code more understandable to other developers\*[*].
+.FS
 Documentation through type names is both elegant and effective, even if this isn't sufficient by any mean.
-.FOOTNOTE2
+.FE
 
 .NH 3
 What type should I use? Holes!
@@ -557,10 +568,10 @@ and
 Creating a figure works as before, and pattern matching too.
 .BELLOWEXPLANATION2
 
-Naming parameters automatically creates functions with the same names to get their value from a figure.
-.FOOTNOTE1
+Naming parameters automatically creates functions with the same names to get their value from a figure\*[*].
+.FS
 This forces developers to think about names, not to overlap with preexisting functions.
-.FOOTNOTE2
+.FE
 .SOURCE haskell ps=8 vs=9p
 --compute area without pattern matching
 area :: Figure -> Double
@@ -752,11 +763,11 @@ Let's see some parts of the Haskell standard library: the
 class.
 .I Semigroup
 is just a fancy word to say something really simple.
-It represents types with values that can be appended, joined, concatened to each other.
-.FOOTNOTE1
+It represents types with values that can be appended, joined, concatened to each other\*[*].
+.FS
 There are plenty of other terms like "Semigroup" used in Haskell that actually aren't complicated.
 They will be translated for the mere mortals in due time, don't worry.
-.FOOTNOTE2
+.FE
 The list type is part of the semigroup class:
 .BX [1,2]
 can be concatened to
@@ -834,10 +845,10 @@ associated with
 .BELLOWEXPLANATION2
 
 Always verify that your structure satisfies the laws required by the type classes you implement.
-Otherwise the semantic of the type class will be broken and the behavior won't make sense.
-.FOOTNOTE1
+Otherwise the semantic of the type class will be broken and the behavior won't make sense\*[*].
+.FS
 Furthermore, it could be completely legitimate for the compiler to implement code optimizations to cut a few function calls, or rewrite some functions, based on these laws.
-.FOOTNOTE2
+.FE
 
 .SH
 Summary
