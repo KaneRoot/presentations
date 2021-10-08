@@ -1,6 +1,6 @@
 .so macros.ms
 .so haskelltut/header.ms
-.2C
+.TWO_COLUMNS
 .so haskelltut/intro.ms
 .so haskelltut/core-concepts.ms
 .so haskelltut/intro-haskell.ms
