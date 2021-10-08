@@ -70,6 +70,3 @@ $(SRC).pdf:
 export SOELIM_OPTS PRECONV_OPTS EQN_OPTS GHIGHLIGHT_OPTS GRAP_OPTS PIC_OPTS REFER_OPTS
 serve:
 	find . -name "*.ms" | entr gmake -B $(SRC).pdf
-
-# VIEWER_OPTS = -
-# VIEWER = zathura $(VIEWER_OPTS)
