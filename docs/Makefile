@@ -1,4 +1,4 @@
-SRC ?= haskelltut # randomcommands misc
+SRC ?= haskelltut
 
 ODIR ?= .
 
@@ -73,5 +73,3 @@ serve:
 
 # VIEWER_OPTS = -
 # VIEWER = zathura $(VIEWER_OPTS)
-
-include Makefile.custom
