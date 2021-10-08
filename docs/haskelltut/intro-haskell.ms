@@ -585,6 +585,27 @@ and
 were used instead of the pattern matching.
 .BELLOWEXPLANATION2
 
+Since constructor parameters are named, this is possible:
+.SOURCE haskell ps=8 vs=9p
+--Naming constructor values on declaration.
+myRectangle = Rectangle { height = 5.0
+                        , width = 10.0 }
+
+--Getting only a subset of constructor values.
+h (Rectangle {height=v}) = v
+.SOURCE
+.BELLOWEXPLANATION1
+Naming constructor parameters is \(if better than only passing arguments by value.
+.br
+The function
+.I h
+takes a
+.CONSTRUCTOR Rectangle
+as parameter, but the parameters of the constructor aren't mentionned.
+The actual useful value (height) can be obtained directly.
+This way, data structure can evolve without breaking anything.
+.BELLOWEXPLANATION2
+
 .NH 4
 Algebraic
 .LP
