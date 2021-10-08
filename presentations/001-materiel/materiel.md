@@ -105,8 +105,13 @@ caractéristiques
 
 ## Périphériques USB
 
-clavier / souris / manette
-stockage externe
+## clavier
+
+## souris
+
+## manettes
+
+## stockage externe
 
 ## Périphériques audio
 
