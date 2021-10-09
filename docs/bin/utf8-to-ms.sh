@@ -1,14 +1,15 @@
 #!/bin/sh
 
 # This program isn't by any mean complete.
-# Most of the accents are handled, however, nothing else currently is.
+# Most of text markers, accents and ligatures are handled.
+# However, nothing else currently is.
 # Please, do provide more translations.
 
 # Convert input into hexadecimal and a single byte per line.
-to_hex_one_column()           xxd -p -c 1
+to_hex_one_column()  xxd -p -c 1
 
 # Reverse hexadecimal to original value.
-from_hex()                    xxd -p -r
+from_hex()           xxd -p -r
 
 regroup_lines() awk '
 	BEGIN {
@@ -34,7 +35,7 @@ regroup_lines() awk '
 	}
 	'
 
-hexutf8_to_hexms() sed \
+accents() sed \
 	-e "s/c3 81/5c 5b 27 41 5d/g"\
 	-e "s/c3 89/5c 5b 27 45 5d/g"\
 	-e "s/c3 8d/5c 5b 27 49 5d/g"\
@@ -94,5 +95,47 @@ hexutf8_to_hexms() sed \
 	-e "s/c5 bd/5c 5b 76 5a 5d/g"\
 	-e "s/c5 be/5c 5b 76 7a 5d/g"
 
+# Ligatures.
+ligatures() sed \
+	-e "s/ef ac 80/5c 5b 66 66 5d/g"\
+	-e "s/ef ac 81/5c 5b 66 69 5d/g"\
+	-e "s/ef ac 82/5c 5b 66 6c 5d/g"\
+	-e "s/ef ac 83/5c 5b 46 69 5d/g"\
+	-e "s/ef ac 84/5c 5b 46 6c 5d/g"\
+	-e "s/c5 81/5c 5b 2f 4c 5d/g"\
+	-e "s/c5 82/5c 5b 2f 6c 5d/g"\
+	-e "s/c3 98/5c 5b 2f 4f 5d/g"\
+	-e "s/c3 b8/5c 5b 2f 6f 5d/g"\
+	-e "s/c3 86/5c 5b 41 45 5d/g"\
+	-e "s/c3 a6/5c 5b 61 65 5d/g"\
+	-e "s/c5 92/5c 5b 4f 45 5d/g"\
+	-e "s/c5 93/5c 5b 6f 65 5d/g"\
+	-e "s/c4 b2/5c 5b 49 4a 5d/g"\
+	-e "s/c4 b3/5c 5b 69 6a 5d/g"\
+	-e "s/c4 b1/5c 5b 2e 69 5d/g"\
+	-e "s/c8 b7/5c 5b 2e 6a 5d/g"
+
+# Text markers.
+text_markers() sed \
+	-e "s/e2 97 8b/5c 5b 63 69 5d/g"\
+	-e "s/e2 80 a2/5c 5b 62 75 5d/g"\
+	-e "s/e2 80 a1/5c 5b 64 64 5d/g"\
+	-e "s/e2 80 a0/5c 5b 64 67 5d/g"\
+	-e "s/e2 97 8a/5c 5b 6c 7a 5d/g"\
+	-e "s/e2 96 a1/5c 5b 73 71 5d/g"\
+	-e "s/c2 b6/5c 5b 70 73 5d/g"\
+	-e "s/c2 a7/5c 5b 73 63 5d/g"\
+	-e "s/e2 98 9c/5c 5b 6c 68 5d/g"\
+	-e "s/e2 98 9e/5c 5b 72 68 5d/g"\
+	-e "s/e2 86 b5/5c 5b 43 52 5d/g"\
+	-e "s/e2 9c 93/5c 5b 4f 4b 5d/g"
+
+# These markers shouldn't be automatically translated in ms macros.
+# @ "s/40/5c 5b 61 74 5d/g"
+# # "s/23/5c 5b 73 68 5d/g"
+
+hexutf8_to_hexms() {
+	text_markers | accents | ligatures
+}
 
 to_hex_one_column | regroup_lines | hexutf8_to_hexms | from_hex
