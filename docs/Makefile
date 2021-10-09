@@ -8,7 +8,7 @@ ALLSRC = $(shell find . -name "*.ms")
 SOELIM_OPTS ?=
 SOELIM = soelim $(SOELIM_OPTS)
 
-SPECHAR = specialchar2ms.sh
+SPECHAR = ./bin/utf8-to-ms.sh
 
 PRECONV_OPTS ?= -e utf-8
 PRECONV = preconv $(PRECONV_OPTS)
