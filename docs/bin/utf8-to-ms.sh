@@ -134,8 +134,14 @@ text_markers() sed \
 # @ "s/40/5c 5b 61 74 5d/g"
 # # "s/23/5c 5b 73 68 5d/g"
 
+# Legal symbols.
+legal_symbols() sed \
+	-e "s/c2 a9/5c 5b 63 6f 5d/g"\
+	-e "s/c2 ae/5c 5b 72 67 5d/g"\
+	-e "s/e2 84 a2/5c 5b 74 6d 5d/g"
+
 hexutf8_to_hexms() {
-	text_markers | accents | ligatures
+	text_markers | accents | ligatures | legal_symbols
 }
 
 to_hex_one_column | regroup_lines | hexutf8_to_hexms | from_hex
