@@ -25,4 +25,9 @@
 %D 2019
 #volume  = {abs/1903.10677},
 #url     = {https://arxiv.org/abs/1903.10677}
-}
+
+%K Hughes2000GeneralisingMT
+%T Generalising monads to arrows
+%A John Hughes
+%I Sci. Comput. Program.
+%D 2000
