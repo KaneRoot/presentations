@@ -13,6 +13,7 @@
 .so haskelltut/profiling.ms
 .so haskelltut/performances.ms
 .so haskelltut/parallelism.ms
+.so haskelltut/advanced-concepts.ms
 .so haskelltut/stuff.ms
 .so haskelltut/misc.ms
 .so haskelltut/annex_code-deduplication.ms
