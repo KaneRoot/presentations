@@ -29,7 +29,6 @@ Provide a few real-life examples.
 .NH 2
 Why FP and Haskell?
 .LP
-
 .BULLET
 .UL Declarative :
 the language requires to write
@@ -71,6 +70,11 @@ Furthermore, pure functions are great candidates for
 .I memoization ,
 see the section on performances.
 .ENDBULLET
+
+.CITATION1
+The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise.
+.CITATION2
+.NAMECITATION Edsger W. Dijkstra
 
 .NH 2
 Sections

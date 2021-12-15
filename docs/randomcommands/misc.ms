@@ -41,6 +41,11 @@ Usage
 .COMMAND2
 
 .NH 2
+Faster key inputs
+.PP
+xset r rate 200 50
+
+.NH 2
 sxiv: image viewer
 
 .NH 2

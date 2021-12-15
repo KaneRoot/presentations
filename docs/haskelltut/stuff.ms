@@ -349,20 +349,17 @@ Here is a list of things that got my attention and may be useful to you, too.
 A few FP languages worth mentionning
 
 .PP
-.BULLET
-Haskell: FP without annoying parenthesis,
+.BULLET Haskell: FP without annoying parenthesis,
 a lot of modules available,
 purity,
 conciseness,
 laziness,
 great compiler debugging capabilities,
 etc.
-.BULLET
-PureScript: (mostly) Haskell for the web, without the laziness.
+.BULLET PureScript: (mostly) Haskell for the web, without the laziness.
 Syntax and concepts are the same, base modules are mostly identical, etc.
 PureScript also provides a very simple way of interacting with JavaScript.
-.BULLET
-carp: statically typed lisp, no garbage collector and focused on performances.
+.BULLET carp: statically typed lisp, no garbage collector and focused on performances.
 Great for games, video and audio applications, etc.
 .ENDBULLET
 
@@ -377,14 +374,12 @@ What you need to know to use most of these modules:
 .UL Applicatives ,
 .UL Monads .
 
-.BULLET
-Data.ByteString: a replacement for
+.BULLET Data.ByteString: a replacement for
 .MODULE String
 focused on performances and binary representations.
 It comes in two varieties: strict and lazy.
 .TBD
-.BULLET
-Data.Text: another replacement for
+.BULLET Data.Text: another replacement for
 .MODULE String
 but focused on Unicode text (contrary to
 .MODULE String
@@ -393,16 +388,12 @@ which accepts any
 input).
 It comes in two varieties: strict and lazy, such as
 .MODULE ByteString.
-.BULLET
-prettyprinter: a simple way to create pretty outputs for your types.
+.BULLET prettyprinter: a simple way to create pretty outputs for your types.
 .TBD
-.BULLET
-MegaParsec: a library to create compilers.
+.BULLET MegaParsec: a library to create compilers.
 There are many other libraries like this one,
 but this is a nice balance between functionalities, performances and simplicity.
-
-.BULLET
-.TBD
+.BULLET PyF: a library to format strings, as the "f" operator in Python.
 .ENDBULLET
 
 .NH 2
@@ -410,8 +401,7 @@ Books, website and tutorials
 
 .LP
 For absolute beginners:
-.BULLET
-Learn you a Haskell for Greater Good!
+.BULLET Learn you a Haskell for Greater Good!
 .[
 Learn You a Haskell
 .]
@@ -425,19 +415,16 @@ And the book presents a good part of what's actually in this document in a littl
 .ENDBULLET
 
 Once you understand concepts presented in this document:
-.BULLET
-Haskell wiki and its
+.BULLET Haskell wiki and its
 .UL TypeClassOPedia
 which helps understand type classes and how to use them.
 There are many examples, great source to learn.
-.BULLET
-Lenses for the mere Mortal
+.BULLET Lenses for the mere Mortal
 .[
 lenses
 .]
 Great learning resource on lenses, with many explanations and examples.
-.BULLET
-Nokomprendo:
+.BULLET Nokomprendo:
 .UL nokomprendo.gitlab.io ,
 great tutorials on Haskell, in French.
 The author also has a youtube channel I recommand.

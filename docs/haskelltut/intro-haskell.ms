@@ -1,6 +1,5 @@
 .NH 1
 Introduction to Haskell
-
 .PP
 Functional and imperative programming languages are differents on many levels.
 This section provides an overview on those differences.
@@ -981,7 +980,6 @@ module Some.Simple.Module (
 .NH 2
 Discussion on Haskell and common concepts
 .PP
-
 This section shown most of the common ways to create functions and data structures in Haskell.
 This is a boring but non avoidable part of the journey to learn the language, and this only scratched the surface.
 

@@ -185,4 +185,3 @@ Shell is lazy: a program stops when the next program in the pipeline closes its 
 However, laziness could be detrimental to performances, too.
 As with the shell, laziness has a cost.
 See the section on performances.
-
