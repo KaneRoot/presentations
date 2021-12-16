@@ -148,9 +148,10 @@ print("string: {s}\n", .{hello});
 
 
 
-// Slices = pointer + size
-//        = arrays without compile-time known size
-//        = runtime out-of-band verifications
+// Slices.
+
+// Slices are pointer + size, arrays without compile-time known size.
+// They have runtime out-of-band verifications.
 
 const array = {1,2,3,4,5};
 const slice = array[0..array.len];
@@ -221,21 +222,23 @@ const Error = error {
     Authentication,
 };
 
-// "some_function" can either return an error or nothing.
-fn some_function() Error!void {
+// "some_function" can either return an error or an integer.
+fn some_function() Error!u8 {
     return Error.UnExpected; // It returns an error.
 }
 
-// It is possible to directly "catch" an error, without intermediate variable.
-some_function() catch |err| switch(err) {
+// Errors can be "catch" without intermediate variable.
+var value = some_function() catch |err| switch(err) {
     Error.UnExpected => return err, // Returns the error.
     Error.Authentication => unreachable, // Not expected, ever. Crashes the program.
     else => unreachable,
 };
 
 
-// Shortcut for catch |err| return err.
-try some_function();
+// "try" is a very handy shortcut for "catch |err| return err".
+var value = try some_function();
+// If "some_function" fails, the current function stops and returns the error.
+// "value" can only have a valid value, the error already is handled with "try".
 
 
 // Structures.
@@ -281,40 +284,116 @@ const Point = struct {
 
 
 // How to access a structure public constant.
+// The value isn't accessed from an "instance" of the structure, but from the
+// constant representing the structure definition (Point).
 print("constant: {}\n", .{Point.some_constant});
 
+// Having an "init" function is rather idiomatic in the standard library.
+// More on that later.
 var p = Point.init();
 print("p.x: {}\n", .{p.x}); // p.x = 0
 print("p.y: {}\n", .{p.y}); // p.y = 0
 
 
 /// TODO
-
+// Structures often have functions to modify their state, which is very similar
+// to object-oriented programming.
 const Point = struct {
-    const Self = @This(); // refer to its own type
+    const Self = @This(); // Refers to its own type (later called "Point").
 
     x: u32,
     y: u32,
 
+    // Take a look at the signature.
+    // First argument is of type *Self, meaning that the "self" variable is
+    // a pointer on the instance of the structure.
+    // This allows the same "dot" notation as in OOP, like "instance.set(x,y)",
+    // see the following example.
     pub fn set(self: *Self, x: u32, y: u32) void {
         self.x = x;
         self.y = y;
     }
 };
 
+// Let's use the previous structure.
+var p = Point{ .x = 0, .y = 0 }; // "p" variable is a Point.
 
-var p = Point{ .x = 0, .y = 0 };
+p.set(10, 30); // x and y attributes of "p" are modified via the "set" function.
+print("p.x: {}\n", .{p.x}); // 10
+print("p.y: {}\n", .{p.y}); // 30
 
-p.set(10, 30);
-// In C: point_set(p, 10, 30);
+// In C:
+//   1. we would have written something like: point_set(p, 10, 30);
+//   2. since all functions are in the same namespace, it would have been
+//      very cumbersome to create functions with different names for different
+//      structures. Many long names, painful to read.
+//
+// In Zig, structures provide namespaces for their own functions. Two different
+// structures can have the same names for their functions, which brings clarity.
 
-print("p.x: {}\n", .{p.x});
-print("p.y: {}\n", .{p.y});
+
+
+// Defer and errdefer.
+// Make sure that an action (single instruction or block of code) is
+// executed before the end of the scope (function, block of code).
+// Even on error, that action will be executed.
+// Useful for memory allocations, and resource management in general.
+
+pub fn main() void {
+    // should be executed at the end of the function
+    defer print("third!\n", .{});
+
+    {
+        // last element of its scope: will be executed right away
+        defer print("first!\n", .{});
+    }
+
+    print("second!\n", .{});
+}
+
+fn hello_world() void {
+    defer print("end of function\n", .{}); // after "hello world!"
+
+    print("hello world!\n", .{});
+}
+
+// errdefer executes the instruction (or block of code) only on error.
+fn second_hello_world() !void {
+    errdefer print("2. something went wrong!\n", .{}); // if "foo" fails.
+    defer print("1. second hello world\n", .{}); // executed after "foo"
+
+    try foo();
+}
+// Defer statements can be seen as stacked: first one is executed last.
 
 
 
 // Memory allocators.
+
+// Memory isn't managed directly in the standard library, instead an "allocator"
+// is asked every time an operation on memory is required.
+// Thus, the standard library lets developers handle memory as they need,
+// through structures called "allocators", handling all memory operations.
+
+// In this example I chose a page allocator.
+var allocator = std.heap.page_allocator;
+
+// "list" is an ArrayList of 8-bit unsigned integers.
+// An ArrayList is a contiguous, growable list of elements in memory.
+var list = try ArrayList(u8).initAllocated(allocator);
+defer list.deinit(); // Free the memory at the end of the scope. Can't leak.
+
+list.add(5);
+
+for (list.items) |item| {
+    std.debug.print("item: {}\n", .{item});
+}
+
+
+
+
 /// TODO
+/// NOT IN THE RIGHT PLACE
 
 const std = @import("std");
 const Allocator = std.mem.Allocator;
@@ -348,50 +427,6 @@ fn List(comptime T: type) type {
 }
 
 
-pub fn main() !void {
-
-    var allocator = std.heap.page_allocator;
-
-    var list = try List(u8).initAllocated(allocator);
-    defer list.deinit();
-
-    list.add(5);
-
-    for (list.items) |it| {
-        std.debug.print("item: {}\n", .{it});
-    }
-}
-
-
-const std = @import("std");
-const print = std.debug.print;
-
-
-
-pub fn main() void {
-
-    defer print("third!\n", .{});
-
-    {
-        defer print("first!\n", .{});
-    }
-
-    print("second!\n", .{});
-
-}
-
-fn hello_world() void {
-    defer print("end of function\n", .{});
-
-    print("hello world!\n", .{});
-}
-
-fn second_hello_world() !void {
-    errdefer print("2. oops something went wrong\n", .{});
-    defer print("1. second hello world\n", .{});
-
-    try some_function();
-}
 
 
 // Memory allocation.
