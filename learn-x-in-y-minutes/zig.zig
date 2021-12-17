@@ -17,8 +17,7 @@
 // Simple comment.
 
 
-
-// Hello world.
+/// Hello world.
 
 // Import standard library, reachable through the "std" constant.
 const std = @import("std");
@@ -27,6 +26,7 @@ const std = @import("std");
 const info = std.log.info;
 
 // Usual hello world.
+// syntax: [pub] fn <function-name>(<arguments>) <return-type> { <body> }
 pub fn main() void {
     // Contrary to C functions, Zig functions have a fixed number of arguments.
     // In C: "printf" takes any number of arguments.
@@ -34,6 +34,7 @@ pub fn main() void {
     info("hello world", .{});
 }
 
+/// Booleans, integers and float.
 
 // Booleans.
 // Keywords are prefered to operators for boolean operations.
@@ -56,7 +57,6 @@ print("7.0 / 3.0 = {}\n", .{seven_div_three});
 var myvar: u10 = 5;
 // Useful for example to read network packets, or arbitrary complex binary formats.
 
-
 // Number representation is greatly improved compared to C.
 const one_billion = 1_000_000_000;
 const binary_mask = 0b1_1111_1111;
@@ -70,7 +70,8 @@ i  -= 1; // runtime overflow error (unsigned value should always be positive)
 i -%= 1; // okay (wrapping operator), i == 255
 
 
-// Arrays: well-defined structures with a length attribute (len).
+/// Arrays.
+// Arrays are a well-defined structures with a length attribute (len).
 
 // 5-byte array with undefined content (stack garbage).
 var array: [5]u8 = undefined;
@@ -104,8 +105,6 @@ for (array) |*item, index| {
     // item is now a pointer
 }
 
-
-
 // Modifying and accessing arrays content.
 
 // Array of 10 32-bit undefined integers.
@@ -130,8 +129,7 @@ try some_integers[i]; // runtime error 'index out of bounds'
                       // More on that later.
 
 
-
-// Strings.
+/// Strings.
 
 // Simple string constant.
 const hello = "hello";
@@ -189,7 +187,8 @@ if (x) |value| {  // In case "some_function" returned a value.
 }
 
 
-// Errors.
+
+/// Errors.
 
 // Zig provides an unified way to express errors.
 // Errors are defined in error enumerations, example:
@@ -222,7 +221,7 @@ const Error = error {
     Authentication,
 };
 
-// "some_function" can either return an error or an integer.
+// "some_function" can either return an "Error" or an integer.
 fn some_function() Error!u8 {
     return Error.UnExpected; // It returns an error.
 }
@@ -241,8 +240,9 @@ var value = try some_function();
 // "value" can only have a valid value, the error already is handled with "try".
 
 
-// Structures.
+/// Structures.
 
+/// TODO
 ///////// var List_u8 = struct {
 /////////     items: []u8,
 /////////     // ...
@@ -313,6 +313,16 @@ const Point = struct {
         self.x = x;
         self.y = y;
     }
+
+    // Again, look at the signature.
+    // First argument is of type Self, not *Self.
+    // This parameter now is a simple reference to the instance of the structure.
+    pub fn getx(self: Self) u32 {
+        return self.x;
+    }
+
+    // (PS: two previous functions may be somewhat useless, attributes can be changed
+    //      directly, no need for accessor functions. It was just an example.)
 };
 
 // Let's use the previous structure.
@@ -333,7 +343,8 @@ print("p.y: {}\n", .{p.y}); // 30
 
 
 
-// Defer and errdefer.
+/// Defer and errdefer.
+
 // Make sure that an action (single instruction or block of code) is
 // executed before the end of the scope (function, block of code).
 // Even on error, that action will be executed.
@@ -368,76 +379,71 @@ fn second_hello_world() !void {
 
 
 
-// Memory allocators.
+/// Memory allocators.
 
 // Memory isn't managed directly in the standard library, instead an "allocator"
 // is asked every time an operation on memory is required.
 // Thus, the standard library lets developers handle memory as they need,
 // through structures called "allocators", handling all memory operations.
 
-// In this example I chose a page allocator.
-var allocator = std.heap.page_allocator;
+// NOTE: The choice of the allocator isn't in the scope of this document.
+//       However, here are a few allocators, to get an idea of what you can expect:
+//       - page_allocator
+//         Allocate a whole page of memory each time we ask for some memory.
+//         Very simple, very dumb, very wasteful.
+//       - GeneralPurposeAllocator
+//         Get some memory first and manage some buckets of memory in order to
+//         reduce the number of allocations.
+//         A bit complex. Can be combined with other allocators.
+//         Can detect leaks and provide useful information to find them.
+//       - FixedBufferAllocator
+//         Use a fixed buffer to get its memory, don't ask for memory to the kernel.
+//         Very simple, limited use and wasteful (can't deallocate), very fast.
+//       - ArenaAllocator
+//         Allow to free all allocted memory at once.
+//         To use in combinaison with another allocator.
+//         Very simple way of avoiding leaks.
 
-// "list" is an ArrayList of 8-bit unsigned integers.
-// An ArrayList is a contiguous, growable list of elements in memory.
-var list = try ArrayList(u8).initAllocated(allocator);
-defer list.deinit(); // Free the memory at the end of the scope. Can't leak.
+// A first example.
 
-list.add(5);
+// "!void" means the function doesn't return any value except for errors.
+// In this case we try to allocate memory, and this may fail.
+fn foo() !void {
+    // In this example we use a page allocator.
+    var allocator = std.heap.page_allocator;
 
-for (list.items) |item| {
-    std.debug.print("item: {}\n", .{item});
+    // "list" is an ArrayList of 8-bit unsigned integers.
+    // An ArrayList is a contiguous, growable list of elements in memory.
+    var list = try ArrayList(u8).initAllocated(allocator);
+    defer list.deinit(); // Free the memory at the end of the scope. Can't leak.
+    // Thanks to "defer", memory is both allocated and deallocated at the same time,
+    // regardless of the complexity of the function (loops, conditions, etc.).
+
+    list.add(5); // Some memory is allocated here, with the provided allocator.
+
+    for (list.items) |item| {
+        std.debug.print("item: {}\n", .{item});
+    }
 }
 
 
-
-
-/// TODO
-/// NOT IN THE RIGHT PLACE
-
-const std = @import("std");
-const Allocator = std.mem.Allocator;
-
-fn List(comptime T: type) type {
-    return struct {
-        const Self = @This();
-
-        items: []T,
-        nb: usize,
-        allocator: *Allocator,
-
-        pub fn initAllocated(allocator: *Allocator) !Self {
-            return Self{
-                .allocator = allocator,
-                .items = try allocator.alloc(T, 1),
-                .nb = 0,
-            };
-        }
-
-        pub fn add(self: *Self, a : T) void {
-            self.items[self.nb] = a;
-            self.nb += 1;
-            self.allocator.resize(self.items, self.nb);
-        }
-
-        pub fn deinit(self: *Self) void {
-            self.allocator.free(self.items);
-        }
-    };
-}
-
-
-
-
-// Memory allocation.
+/// Memory allocation combined with error management and defer.
 
 fn some_memory_allocation_example() !void {
+
+    // Memory allocation may fail, so we "try" to allocate the memory and
+    // in case there is an error, the current function returns it.
     var buf = try page_allocator.alloc(u8, 10);
+    // Right after a successful allocation, we indicate to free the memory
+    // BEFORE THE END OF THE FUNCTION, which may be before returning AN ERROR.
     defer page_allocator.free(buf);
 
+    // Second allocation.
+    // In case of a failure, the first allocation is correctly deallocated.
     var buf2 = try page_allocator.alloc(u8, 10);
     defer page_allocator.free(buf2);
 
+    // In case of a failure in the following, both allocations are correctly deallocated.
     try foo();
     try bar();
 
@@ -445,13 +451,16 @@ fn some_memory_allocation_example() !void {
 }
 
 
-// Memory allocation.
+/// Memory allocators: a taste of the standard library.
 
-
-const std = @import("std");
-const page_allocator = std.heap.page_allocator;
-const print = std.debug.print;
-
+/// TODO
+fn playing_with_a_slice(slice: []u8) void {
+    slice[0] = 0;
+    slice[1] = 1;
+    for (slice) |item, i| {
+        std.debug.print("val {}: {}\n", .{i, item});
+    }
+}
 
 // Allocators: 4 main functions to know
 
@@ -461,30 +470,20 @@ const print = std.debug.print;
 //   slice = alloc (type, size)
 //           free (slice)
 
-
+// Page Allocator
 fn page_allocator_fn() !void {
-    print("page allocator\n", .{});
+    var slice = try std.heap.page_allocator.alloc(u8, 3);
+    defer std.heap.page_allocator.free(slice);
 
-    var slice = try page_allocator.alloc(u8, 3);
-    defer page_allocator.free(slice);
-
-
-    slice[0] = 0;
-    slice[1] = 1;
-
-    for (slice) |item, i| {
-        print("val {}: {}\n", .{i, item});
-    }
+    playing_with_a_slice(slice);
 }
 
-
-const GeneralPurposeAllocator = std.heap.GeneralPurposeAllocator;
-
+// GeneralPurposeAllocator
 fn general_purpose_allocator_fn() !void {
-    print("general purpose allocator\n", .{});
-
+    // GeneralPurposeAllocator has to be configured.
+    // In this case, we want to track down memory leaks.
     const config = .{.safety = true};
-    var gpa = GeneralPurposeAllocator(config){};
+    var gpa = std.heap.GeneralPurposeAllocator(config){};
     defer _ = gpa.deinit();
 
     const allocator = &gpa.allocator;
@@ -492,174 +491,85 @@ fn general_purpose_allocator_fn() !void {
     var slice = try allocator.alloc(u8, 3);
     defer allocator.free(slice);
 
-    slice[0] = 0;
-    slice[1] = 1;
-
-    print("value: {} => len: {}\n", .{slice, slice.len});
-    for (slice) |item, i| {
-        print("val {}: {}\n", .{i, item});
-    }
+    playing_with_a_slice(slice);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const FixedBufferAllocator = std.heap.FixedBufferAllocator;
-
+// FixedBufferAllocator
 fn fixed_buffer_allocator_fn() !void {
-    print("fixed buffer allocator\n", .{});
-
-    // var buffer: [1000]u8 = undefined;
-    var buffer = [_]u8{0} ** 1000;
-    var fba = FixedBufferAllocator.init(buffer[0..]);
+    var buffer = [_]u8{0} ** 1000; // array of 1000 u8, each item is initialized at zero
+    var fba = std.heap.FixedBufferAllocator.init(buffer[0..]);
+    // Side note: buffer[0..] is a way to create a slice from an array.
+    //            Since the function takes a slice and not an array, this makes the
+    //            type system happy.
 
     var allocator = &fba.allocator;
 
-    var value = try allocator.create(u64);
-    defer allocator.destroy(value);
+    var slice = try allocator.alloc(u8, 3);
+    // No need for "free", memory cannot be freed with a fixed buffer allocator.
+    // defer allocator.free(slice);
 
-    value.* = 8;
-    print("value.*: {}\n", .{value.*});
+    playing_with_a_slice(slice);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const arena_allocator = std.heap.ArenaAllocator;
-
+// ArenaAllocator
 fn arena_allocator_fn() !void {
-    print("arena allocator\n", .{});
-
-    var arena = arena_allocator.init(page_allocator);
-    defer arena.deinit(); // end of function = no more allocs
+    // Reminder: arena doesn't allocate memory, it uses an inner allocator to do so.
+    // In this case, we combine the arena allocator with the page allocator.
+    var arena = std.heap.arena_allocator.init(std.heap.page_allocator);
+    defer arena.deinit(); // end of function = all allocations are freed.
 
     var allocator = &arena.allocator;
 
-    const value = try allocator.create(u8);
     const slice = try allocator.alloc(u8, 3);
+    // No need for "free", memory will be freed anyway.
 
-    value.* = 8;
-
-    print("value: {} => {}\n", .{value, value.*});
-
-    slice[0] = 0;
-    slice[1] = 1;
-
-    for (slice) |item, i| {
-        print("val {}: {}\n", .{i, item});
-    }
+    playing_with_a_slice(slice);
 }
 
 
-
-pub fn main() !void {
-    try page_allocator_fn();
-    try general_purpose_allocator_fn();
-    try fixed_buffer_allocator_fn();
-    try arena_allocator_fn();
-    try gpa_arena_allocator_fn();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Combining the general purpose and arena allocators.
+// Both are very useful, and their combinaison should be in everyone's favorite cookbook.
 fn gpa_arena_allocator_fn() !void {
-    print("gpa arena allocator\n", .{});
-
     const config = .{.safety = true};
-    var gpa = GeneralPurposeAllocator(config){};
+    var gpa = std.heap.GeneralPurposeAllocator(config){};
     defer _ = gpa.deinit();
 
-    const gpa_alloc = &gpa.allocator;
+    const gpa_allocator = &gpa.allocator;
 
-    var arena = arena_allocator.init(gpa_alloc);
+    var arena = arena_allocator.init(gpa_allocator);
     defer arena.deinit();
 
     const allocator = &arena.allocator;
 
-    const value = try allocator.create(u8);
-    const array = try allocator.alloc(u8, 3);
+    var slice = try allocator.alloc(u8, 3);
+    defer allocator.free(slice);
 
-    value.* = 8;
-
-    print("value: {} => {}\n", .{value, value.*});
-    for (array) |it| {
-        print("it: {}\n", .{it});
-    }
+    playing_with_a_slice(slice);
 }
 
 
+/// Comptime.
+
+// Comptime is a way to avoid the pre-processor.
+// The idea is simple: run code at compilation.
 
 inline fn max(comptime T: type, a: T, b: T) T {
-	return if (a > b) a else b;
+    return if (a > b) a else b;
 }
-
 
 var res = max(u64, 1, 2);
 var res = max(f32, 10.50, 32.19);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Comptime: avoiding the pre-processor.
-// 
+// Comptime: creating generic structures.
 
 fn List(comptime T: type) type {
     return struct {
         items: []T,
+
+        fn init()   ... { ... }
+        fn deinit() ... { ... }
+        fn do()     ... { ... }
     };
 }
 
@@ -680,18 +590,11 @@ list.items[0] = 10;
 
 var my_array = ArrayList(i32).init();
 
+/// TODO
+var x = if (condition) { x } else if (condition) { x } else { y };
 
 
-
-
-
-
-
-
-
-
-
-// Conditional compilation
+/// Conditional compilation
 
 const available_os = enum { OpenBSD, Linux };
 const myos = available_os.OpenBSD;
@@ -730,3 +633,40 @@ pub fn some_function() bool {
 test "returns true" {
     expect(false == some_function());
 }
+
+
+/// TODO
+/// NOT IN THE RIGHT PLACE
+
+const std = @import("std");
+const Allocator = std.mem.Allocator;
+
+fn List(comptime T: type) type {
+    return struct {
+        const Self = @This();
+
+        items: []T,
+        nb: usize,
+        allocator: *Allocator,
+
+        pub fn initAllocated(allocator: *Allocator) !Self {
+            return Self{
+                .allocator = allocator,
+                .items = try allocator.alloc(T, 1),
+                .nb = 0,
+            };
+        }
+
+        pub fn add(self: *Self, a : T) void {
+            self.items[self.nb] = a;
+            self.nb += 1;
+            self.allocator.resize(self.items, self.nb);
+        }
+
+        pub fn deinit(self: *Self) void {
+            self.allocator.free(self.items);
+        }
+    };
+}
+
+
