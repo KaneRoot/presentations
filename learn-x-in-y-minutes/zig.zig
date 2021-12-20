@@ -240,6 +240,122 @@ var value = try some_function();
 // "value" can only have a valid value, the error already is handled with "try".
 
 
+
+/// Control flow.
+
+// Conditional branching.
+
+if (condition) {
+    ...
+}
+else {
+    ...
+}
+
+if (condition) x else y;
+var x = if (condition) x else y;
+
+// If "a" contains a value.
+if (a) |value| {
+    print("value: {}\n", .{value});
+}
+
+
+
+// Loop.
+
+// Simple "while" loop.
+while (i < 10) { i += 1; }
+
+// While loop with a continue expression (expression executed as
+// the last expression of the loop).
+while (i < 10) : (i += 1) { ... }
+// Same, with a more complex continue expression (block of code).
+while (i * j < 2000) : ({ i *= 2; j *= 3; }) { ... }
+
+// To iterate over a portion of a slice, reslice.
+for (items[0..1]) |value| { sum += value; }
+
+// Iterate over a slice and get pointers on values instead of copies.
+for (items) |*value| { value.* += 1; }
+
+// Iterate with an index.
+for (items) |value, i| { print("val[{}] = {}\n", .{i, value}); }
+
+/// TODO
+for (i: u8 = 0 ; i < 10 ; i++) {
+}
+
+
+// Break and continue are supported.
+for (items) |value| {
+    if (value == 0)  { continue; }
+    if (value >= 10) { break;    }
+    // ...
+}
+
+// For loops can also be used as expressions.
+// Similar to while loops, when you break from a for loop,
+// the else branch is not evaluated.
+var sum: i32 = 0;
+// The "for" loop has to provide a value, which will be the "else" value.
+const result = for (items) |value| {
+    if (value != null) {
+        sum += value.?; // "result" will be the last "sum" value.
+    }
+} else 0;                  // Last value.
+
+// Labels.
+
+// Labels are a way to name an instruction, a location in the code.
+// Labels can be used to "continue" or "break" in a nested loop.
+outer: for ([_]i32{ 1, 2, 3, 4, 5, 6, 7, 8 }) |_| {
+    for ([_]i32{ 1, 2, 3, 4, 5 }) |_| {
+        count += 1;
+        continue :outer; // "continue" for the first loop.
+    }
+} // count = 8
+outer: for ([_]i32{ 1, 2, 3, 4, 5, 6, 7, 8 }) |_| {
+    for ([_]i32{ 1, 2, 3, 4, 5 }) |_| {
+        count += 1;
+        break :outer; // "break" for the first loop.
+    }
+} // count = 1
+
+
+// Labels can also be used to return a value from a block.
+var y: i32 = 5;
+const x = blk: {
+    y += 1;
+    break :blk y; // Now "x" equals 6.
+};
+// This is relevant mostly in the "for else" expression
+// (read on, they are explained in the following).
+
+// For loops can be used as expressions.
+// When you break from a for loop, the else branch is not evaluated.
+// WARNING: counter-intuitive.
+//          The "for" loop will run, then the "else" block will run.
+//          The "else" keyword has to be followed by the value to give to
+//          "result". See later for another form.
+var sum: u8 = 0;
+const result = for (items) |value| {
+    sum += value;
+} else 8; // result = 8
+
+// In this case, the "else" keyword is followed by a value, too.
+// However, the syntax is different: it is labeled.
+// Instead of a value, there is a label followed by a block of code,
+// which allows to do stuff before returning the value
+// (see the "break" invocation).
+const result = for (items) |value| { // First: loop.
+    sum += value;
+} else blk: {                            // Second: "else" block.
+    std.log.info("executed AFTER the loop!", .{});
+    break :blk sum; // The "sum" value will replace the label "blk".
+};
+
+
 /// Structures.
 
 /// TODO
@@ -387,6 +503,7 @@ fn second_hello_world() !void {
 // through structures called "allocators", handling all memory operations.
 
 // NOTE: The choice of the allocator isn't in the scope of this document.
+//       A whole book could be written about it.
 //       However, here are a few allocators, to get an idea of what you can expect:
 //       - page_allocator
 //         Allocate a whole page of memory each time we ask for some memory.
@@ -398,7 +515,7 @@ fn second_hello_world() !void {
 //         Can detect leaks and provide useful information to find them.
 //       - FixedBufferAllocator
 //         Use a fixed buffer to get its memory, don't ask for memory to the kernel.
-//         Very simple, limited use and wasteful (can't deallocate), very fast.
+//         Very simple, limited use and wasteful (can't deallocate), but very fast.
 //       - ArenaAllocator
 //         Allow to free all allocted memory at once.
 //         To use in combinaison with another allocator.
