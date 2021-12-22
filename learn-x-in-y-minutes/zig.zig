@@ -64,10 +64,17 @@ const permissions = 0o7_5_5;
 const big_address = 0xFF80_0000_0000_0000;
 
 
-// Overflow operators: tell your compiler when it's okay to overflow.
+// Overflow operators: tell the compiler when it's okay to overflow.
 var i: u8 = 0;
 i  -= 1; // runtime overflow error (unsigned value should always be positive)
 i -%= 1; // okay (wrapping operator), i == 255
+
+// Saturation operators: values with lower and upper bounds.
+var i: u8 = 200;
+try expect(i  +| 100 == 255); // u8: won't go higher than 255
+try expect(i  -| 300 == 0);   // unsigned, won't go lower than 0
+try expect(i  *| 2   == 255); // u8: won't go higher than 255
+try expect(i <<| 8   == 255); // u8: won't go higher than 255
 
 
 /// Arrays.
@@ -85,7 +92,6 @@ var array2 = [_]u8{ 1, 2, 3, 4, 5 };
 // The content is provided by the "foo" function.
 var array3 = [_]u8{foo()} ** 1000; // another way
 // array3.len == 1000
-
 
 // Loop over arrays.
 
@@ -124,25 +130,46 @@ var z = some_integers[20]; // index > array size, compilation error
 // At runtime, we loop over the elements of "some_integers" with an index.
 // Index i = 20, then we try:
 try some_integers[i]; // runtime error 'index out of bounds'
-                      // "try" keyword is necessary when accessing an array with an index,
-                      // since there is a potential runtime error.
+                      // "try" keyword is necessary when accessing an array with
+                      // an index, since there is a potential runtime error.
                       // More on that later.
 
+
+/// Multidimensional arrays.
+
+const mat4x4 = [4][4]f32{
+    [_]f32{ 1.0, 0.0, 0.0, 0.0 },
+    [_]f32{ 0.0, 1.0, 0.0, 1.0 },
+    [_]f32{ 0.0, 0.0, 1.0, 0.0 },
+    [_]f32{ 0.0, 0.0, 0.0, 1.0 },
+};
+
+// Access the 2D array then the inner array through indexes.
+try expect(mat4x4[1][1] == 1.0);
+
+// Here we iterate with for loops.
+for (mat4x4) |row, row_index| {
+    for (row) |cell, column_index| {
+        // ...
+    }
+}
+                                                                    }
 
 /// Strings.
 
 // Simple string constant.
-const hello = "hello";
-// Equivalent to:
-const hello: *const [5:0]u8 = "hello";
-// In words: hello is a constant, a pointer on a constant array of 5 elements
-// (8-bit unsigned integers), with an extra '0' (sentinel value) at the end.
+const greetings = "hello";
+// ... which is equivalent to:
+const greetings: *const [5:0]u8 = "hello";
+// In words: "greetings" is a constant value, a pointer on a constant array of 5
+// elements (8-bit unsigned integers), with an extra '0' (sentinel value) at
+// the end.
 
 print("string: {s}\n", .{hello});
 
 // This represents rather faithfully C strings.
 // Although, Zig strings are structures, no need for "strlen" to know their size.
-// hello.len == 5
+// greetings.len == 5
 
 
 
@@ -164,14 +191,20 @@ const string: [:0]const u8 = "hello";
 
 // Pointers.
 
+// Pointer on a value can be created with "&".
 const x: i32 = 1;
-const pointer: *i32 = &x;
+const pointer: *i32 = &x;  // "pointer" is a pointer on the i32 var "x".
 print("1 = {}, {}\n", .{x, pointer});
 
-// .* is used to reach the content of the pointed memory.
+// Pointer values are accessed and modified with ".*".
 if (pointer.* == 1) {
     print("x value == {}\n", .{pointer.*});
 }
+
+// ".?" is a shortcut for "orelse unreachable".
+const foo = pointer.?; // if "pointer" is a pointer on a value, get the
+                       // pointed value, otherwise crash.
+
 
 // Optional values (?<type>).
 
@@ -213,6 +246,11 @@ mylife = SuccessStory.ReadABook;
 // Now mylife is an enum.
 
 
+// Zig ships with many pre-defined errors, check if yours aren't already
+// in the list before creating new ones. Example:
+const value: anyerror!u32 = error.Broken;
+
+
 // Handling errors.
 
 // Some error examples.
@@ -233,6 +271,8 @@ var value = some_function() catch |err| switch(err) {
     else => unreachable,
 };
 
+// An error can be "catch" without giving it a name.
+const unwrapped = value catch 1234; // "unwrapped" = 1234
 
 // "try" is a very handy shortcut for "catch |err| return err".
 var value = try some_function();
@@ -252,14 +292,25 @@ else {
     ...
 }
 
-if (condition) x else y;
-var x = if (condition) x else y;
+// Ternary.
+var value = if (condition) x else y;
 
-// If "a" contains a value.
+// Shortcut for "if (x) x else 0"
+var value = x orelse 0;
+
+// If "a" is an optional, which may contain a value.
 if (a) |value| {
     print("value: {}\n", .{value});
 }
+else {
+    print("'a' is null\n", .{});
+}
 
+/// TODO
+// To get a pointer on the value if it exists.
+if (a) |*value| {
+    // access the value with "value.?" and modify it with "value.*"
+}
 
 
 // Loop.
@@ -354,6 +405,33 @@ const result = for (items) |value| { // First: loop.
     std.log.info("executed AFTER the loop!", .{});
     break :blk sum; // The "sum" value will replace the label "blk".
 };
+
+
+/// TODO
+// Switch.
+
+// As a switch in C.
+// Syntax:
+//   switch (value) {
+//       pattern => expression,
+//       pattern => expression,
+//       else    => expression
+//   };
+var x = switch(value) {
+    Error.UnExpected     => return err,
+    Error.Authentication => unreachable,
+    else                 => unreachable,
+};
+
+/// Enumerations.
+
+// Declaration.
+const Type = enum { ok, not_ok };
+// Enums aren't integers, they have to be converted.
+@enumToInt(Value.zero) == 0)
+
+// Enumerations are like structures: they can have functions.
+
 
 
 /// Structures.
@@ -707,9 +785,6 @@ list.items[0] = 10;
 
 var my_array = ArrayList(i32).init();
 
-/// TODO
-var x = if (condition) { x } else if (condition) { x } else { y };
-
 
 /// Conditional compilation
 
@@ -786,4 +861,27 @@ fn List(comptime T: type) type {
     };
 }
 
+
+/// A few "not yourself in the foot" measures in the Zig language.
+// - enumerations aren't integers.
+//   Enumerations have to be converted before test.
+// - Explicit casts, coercion exists but is limited.
+//   Types are slightly more enforced than in C, just a taste:
+//     Pointers aren't integers, explicit conversion is necessary.
+//     You won't lose precision by accident, implicit coercions are only
+//     authorized in case no precision can be lost.
+//     Unions cannot be reinterpreted (in an union with an integer and a
+//     float, one cannot take a value for another by accident).
+//     Etc.
+// - Removing most of the C undefined behaviors (UBs), and when the
+//   compiler encounters one, it stops.
+// - Slice and Array structures are prefered to pointers.
+//   Types enforced by the compiler are less prone to errors than
+//   pointer manipulations.
+// - Numerical overflows produce an error, unless explicitly accepted
+//   using wrapping operators.
+// - Try and catch mechanism.
+//   It's both handy, trivially implemented (simple error enumeration),
+//   and it takes almost no space nor computation time.
+// - Unused variables are considered as errors by the compiler.
 
