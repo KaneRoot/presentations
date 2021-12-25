@@ -7,7 +7,7 @@
 //          You've been warned.
 
 // Zig aims to be a replacement for the C programming language.
-// Prior knowledge of C is strongly recommended.
+// Prior knowledge of C is recommended.
 
 
 //! Top-level documentation.
@@ -15,6 +15,7 @@
 /// Documentation comment.
 
 // Simple comment.
+
 
 
 /// Hello world.
@@ -34,6 +35,7 @@ pub fn main() void {
     info("hello world", .{});
 }
 
+
 /// Booleans, integers and float.
 
 // Booleans.
@@ -46,35 +48,34 @@ print("{}\n{}\n{}\n", .{
 
 // Integers.
 const one_plus_one: i32 = 1 + 1;
-print("1 + 1 = {}\n", .{one_plus_one});
+print("1 + 1 = {}\n", .{one_plus_one}); // 2
 
 // Floats.
 const seven_div_three: f32 = 7.0 / 3.0;
-print("7.0 / 3.0 = {}\n", .{seven_div_three});
+print("7.0 / 3.0 = {}\n", .{seven_div_three}); // 2.33333325e+00
 
 // Integers have arbitrary value lengths.
-// Here is a 10-bit unsigned integer:
-var myvar: u10 = 5;
+var myvar: u10 = 5; // 10-bit unsigned integer
 // Useful for example to read network packets, or arbitrary complex binary formats.
 
 // Number representation is greatly improved compared to C.
-const one_billion = 1_000_000_000;
-const binary_mask = 0b1_1111_1111;
-const permissions = 0o7_5_5;
-const big_address = 0xFF80_0000_0000_0000;
+const one_billion = 1_000_000_000;          // Decimal.
+const binary_mask = 0b1_1111_1111;          // Binary.   Example: network mask.
+const permissions = 0o7_5_5;                // Octal.    Example: Unix permissions.
+const big_address = 0xFF80_0000_0000_0000;  // Hexa.     Example: link-local IPv6 address.
 
 
 // Overflow operators: tell the compiler when it's okay to overflow.
-var i: u8 = 0;
-i  -= 1; // runtime overflow error (unsigned value should always be positive)
-i -%= 1; // okay (wrapping operator), i == 255
+var i: u8 = 0;  // "i" is an unsigned 8-bit integer
+i  -= 1;        // runtime overflow error (unsigned value should always be positive)
+i -%= 1;        // okay (wrapping operator), i == 255
 
-// Saturation operators: values with lower and upper bounds.
-var i: u8 = 200;
-try expect(i  +| 100 == 255); // u8: won't go higher than 255
-try expect(i  -| 300 == 0);   // unsigned, won't go lower than 0
-try expect(i  *| 2   == 255); // u8: won't go higher than 255
-try expect(i <<| 8   == 255); // u8: won't go higher than 255
+// Saturation operators: values will stick to their lower and upper bounds.
+var i: u8 = 200;   // "i" is an unsigned 8-bit integer (possible values: from 0 to 255)
+i  +| 100 == 255   // u8: won't go higher than 255
+i  -| 300 == 0     // unsigned, won't go lower than 0
+i  *| 2   == 255   // u8: won't go higher than 255
+i <<| 8   == 255   // u8: won't go higher than 255
 
 
 /// Arrays.
@@ -173,12 +174,12 @@ print("string: {s}\n", .{hello});
 
 
 
-// Slices.
+/// Slices.
 
-// Slices are pointer + size, arrays without compile-time known size.
-// They have runtime out-of-band verifications.
+// A slice is a pointer and a size, an array without compile-time known size.
+// Slices have runtime out-of-band verifications.
 
-const array = {1,2,3,4,5};
+const array = [_]u8{1,2,3,4,5}; // [_] = array with compile-time known size.
 const slice = array[0..array.len];
 // slice[10] gives an error
 
@@ -189,7 +190,7 @@ const string: [:0]const u8 = "hello";
 // string[5] == 0
 
 
-// Pointers.
+/// Pointers.
 
 // Pointer on a value can be created with "&".
 const x: i32 = 1;
@@ -206,7 +207,7 @@ const foo = pointer.?; // if "pointer" is a pointer on a value, get the
                        // pointed value, otherwise crash.
 
 
-// Optional values (?<type>).
+/// Optional values (?<type>).
 
 // "optional_value" can either be "null" or an unsigned 32-bit integer.
 var optional_value: ?u32 = null; // optional_value == null
@@ -313,7 +314,15 @@ if (a) |*value| {
 }
 
 
-// Loop.
+// Loops.
+
+// Syntax examples:
+//   while (condition) statement
+//   while (condition) : (end-of-iteration-statement) statement
+//
+//   for (iterable) statement
+//   for (iterable) |capture| statement
+//   for (iterable) statement else statement
 
 // Simple "while" loop.
 while (i < 10) { i += 1; }
@@ -334,7 +343,7 @@ for (items) |*value| { value.* += 1; }
 for (items) |value, i| { print("val[{}] = {}\n", .{i, value}); }
 
 /// TODO
-for (i: u8 = 0 ; i < 10 ; i++) {
+for (i: u8 = 0; i < 10 ; i++) {
 }
 
 
@@ -408,29 +417,30 @@ const result = for (items) |value| { // First: loop.
 
 
 /// TODO
-// Switch.
+/// Switch.
 
-// As a switch in C.
+// As a switch in C, but slightly more advanced.
 // Syntax:
 //   switch (value) {
 //       pattern => expression,
 //       pattern => expression,
 //       else    => expression
 //   };
+
+// A switch only checking for simple values.
 var x = switch(value) {
     Error.UnExpected     => return err,
     Error.Authentication => unreachable,
     else                 => unreachable,
 };
 
-/// Enumerations.
-
-// Declaration.
-const Type = enum { ok, not_ok };
-// Enums aren't integers, they have to be converted.
-@enumToInt(Value.zero) == 0)
-
-// Enumerations are like structures: they can have functions.
+// A slightly more advanced switch, accepting a range of values:
+const foo: i32 = 0;
+const bar = switch (foo) {
+  0                        => "zero",
+  1...std.math.maxInt(i32) => "positive",
+  else                     => "negative",
+};
 
 
 
@@ -446,6 +456,17 @@ const Type = enum { ok, not_ok };
 /////////         };
 /////////     }
 ///////// };
+// Structure containing a single value.
+const Full = struct {
+    number: u16,
+};
+// Packed structure, with guaranteed in-memory layout.
+const Divided = packed struct {
+    half1: u8,
+    quarter3: u4,
+    quarter4: u4,
+};
+
 
 // Point is now a constant representing a structure.
 // This structure contains two u32, x and y.
@@ -537,11 +558,93 @@ print("p.y: {}\n", .{p.y}); // 30
 
 
 
+/// Tuples.
+
+const foo = .{ "hello", true, 42 };
+// foo.len == 3
+
+
+
+/// Enumerations.
+
+const Type = enum { ok, not_ok };
+// Enums aren't integers, they have to be converted.
+// @enumToInt(Value.zero) == 0
+
+const CardinalDirections = enum { North, South, East, West };
+const direction: CardinalDirections = .North;
+const x = switch (direction) {
+  // shorthand for CardinalDirections.North
+  .North => true,
+  else => false
+};
+
+// Switch statements need exhaustiveness.
+// WARNING: won't compile, East and West are missing.
+const x = switch (direction) {
+  .North => true,
+  .South => true,
+};
+
+
+// Switch statements need exhaustiveness.
+// Won't compile: East and West are missing.
+const x = switch (direction) {
+  .North => true,
+  .South => true,
+  .East,          // Its value is the same as the following pattern: false.
+  .West => false,
+};
+
+
+// Enumerations are like structures: they can have functions.
+
+/// Unions
+
+const Bar = union {
+  boolean: bool,
+  int: i16,
+  float: f32,
+};
+
+// Both syntaxes are equivalent.
+const foo = Bar{ .int = 42 };
+const foo: Bar = .{ .int = 42 };
+
+
+/// Tagged unions
+
+// Unions can be declared with an enum tag type, allowing them to be used in switch expressions.
+
+const MaybeEnum = enum {
+    success,
+    failure,
+};
+
+const Maybe = union(MaybeEnum) {
+    success: u8,
+    failure: []const u8,
+};
+
+// First value: success!
+const yay = Maybe{ .success = 42 };
+switch (yay) {
+    .success => |value|           std.log.info("success: {}", .{value}),
+    .failure => |what_went_wrong| std.log.info("failure: {}", .{what_went_wrong}),
+}
+
+// Second value: failure! :(
+const nay = Maybe{ .failure = "I was too lazy" };
+switch (nay) {
+    .success => |value|           std.log.info("success: {}", .{value}),
+    .failure => |what_went_wrong| std.log.info("failure: {}", .{what_went_wrong}),
+}
+
+
 /// Defer and errdefer.
 
-// Make sure that an action (single instruction or block of code) is
-// executed before the end of the scope (function, block of code).
-// Even on error, that action will be executed.
+// Make sure that an action (single instruction or block of code) is executed before the end of the scope
+// (function, block of code). Even on error, that action will be executed.
 // Useful for memory allocations, and resource management in general.
 
 pub fn main() void {
@@ -587,8 +690,7 @@ fn second_hello_world() !void {
 //         Allocate a whole page of memory each time we ask for some memory.
 //         Very simple, very dumb, very wasteful.
 //       - GeneralPurposeAllocator
-//         Get some memory first and manage some buckets of memory in order to
-//         reduce the number of allocations.
+//         Get some memory first and manage some buckets of memory in order to reduce the number of allocations.
 //         A bit complex. Can be combined with other allocators.
 //         Can detect leaks and provide useful information to find them.
 //       - FixedBufferAllocator
@@ -862,14 +964,33 @@ fn List(comptime T: type) type {
 }
 
 
+/// Compiler built-ins.
+
+// The compiler has special functions called "built-ins", starting with an "@".
+// There are more than a hundred built-ins, allowing very low-level stuff:
+// - compile-time errors, logging, verifications
+// - type coercion and convertion, even in an unsafe way
+// - alignment management
+// - memory tricks (such as getting the byte offset of a field in a struct)
+// - calling functions at compile-time
+// - including C headers to transparently call C functions
+// - atomic operations
+// - embed files into the executable (@embedFile)
+// - frame manipulations (for async functions, for example)
+// ...
+
+/// TODO
+// An example
+
+
 /// A few "not yourself in the foot" measures in the Zig language.
-// - enumerations aren't integers.
-//   Enumerations have to be converted before test.
+// - Namespaces: names conflicts are easily avoided.
+//   In practice, that means an unified API between different structures (data types).
+// - Enumerations aren't integers. Comparing an enumeration to an integer requires a conversion.
 // - Explicit casts, coercion exists but is limited.
 //   Types are slightly more enforced than in C, just a taste:
 //     Pointers aren't integers, explicit conversion is necessary.
-//     You won't lose precision by accident, implicit coercions are only
-//     authorized in case no precision can be lost.
+//     You won't lose precision by accident, implicit coercions are only authorized in case no precision can be lost.
 //     Unions cannot be reinterpreted (in an union with an integer and a
 //     float, one cannot take a value for another by accident).
 //     Etc.
@@ -884,4 +1005,27 @@ fn List(comptime T: type) type {
 //   It's both handy, trivially implemented (simple error enumeration),
 //   and it takes almost no space nor computation time.
 // - Unused variables are considered as errors by the compiler.
+// - Many pointer types exist in order to represent what is pointed.
+//   Example: is this a single value or an array, is the length known, etc.
+// - Simple access to SIMD.
+//     Simple data representation through vectors (which are just arrays).
+//     Intuitive operations on vectors (basic maths: + - * /).
+// - ... and basically all low-level features we missed in C and that were
+//   provided though compiler extensions, such as packed structures for instance.
+// - Soon: new syntax to represent different parts of memory: EEPROM, flash, etc.
+//   Could be an excellent idiom to have for embedded software.
+// - Structures need a value for their attributes, and it still is possible to give an undefined
+//   value (stack garbage), but at least it is explicitely undefined.
 
+
+/// Quick summary: Zig compared to C
+// - syntax is mostly the same
+// - namespaces
+// - pointers aren't nearly as used as before and
+//   * the type system allows to express way more nuances
+//     to distinguish between a pointer to a single value, or multiple values, etc.
+//   * slices are prefered, which is a structure with a pointer and a runtime known size,
+//     which characterizes most uses of pointers in the first place.
+// - most of the C undefined behaviors (UBs) are fixed
+// - some arbitrary limitations are removed
+//   For example, enumerations, structures and unions can have functions.
