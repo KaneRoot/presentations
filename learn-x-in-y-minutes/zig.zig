@@ -10,6 +10,30 @@
 // Prior knowledge of C is recommended.
 
 
+/// Quick overview: Zig compared to C
+
+// - Syntax is mostly the same, with some improvements (less ambiguity).
+// - Namespaces.
+// - Try and catch mechanism, which is both convenient, efficient and optional.
+// - Raw pointers are safer to use and aren't nearly as used as before
+//   * The type system allows to express way more nuances to distinguish between a pointer to
+//     a single value, or multiple values, etc.
+//   * Slices are prefered, which is a structure with a pointer and a runtime known size,
+//     which characterizes most uses of pointers in the first place.
+// - Most of the C undefined behaviors (UBs) are fixed.
+// - Some arbitrary limitations are removed.
+//   For example, enumerations, structures and unions can have functions.
+// - Simple access to SIMD.
+//     Simple data representation through vectors (which are just arrays).
+//     Intuitive operations on vectors (basic maths: + - * /).
+// - Zig provides both low-level features of C and the one provided through compiler extensions.
+//   For example: packed structures.
+// - An extensive standard library, including data structures and algorithms.
+// - Cross-compilation capability is provided by default, without any dependency.
+//   Different libc are provided to ease the process.
+//   Cross-compilation works from, and to, any operating system and architecture.
+
+
 //! Top-level documentation.
 
 /// Documentation comment.
@@ -32,7 +56,7 @@ pub fn main() void {
     // Contrary to C functions, Zig functions have a fixed number of arguments.
     // In C: "printf" takes any number of arguments.
     // In Zig: std.log.info takes a format and a list of elements to print.
-    info("hello world", .{});
+    info("hello world", .{});  // .{} is an empty anonymous tuple.
 }
 
 
@@ -79,38 +103,24 @@ i <<| 8   == 255   // u8: won't go higher than 255
 
 
 /// Arrays.
-// Arrays are a well-defined structures with a length attribute (len).
+// An array is a well-defined structure with a length attribute (len).
 
 // 5-byte array with undefined content (stack garbage).
-var array: [5]u8 = undefined;
-// array.len == 5
+var array1: [5]u8 = undefined;
 
 // 5-byte array with defined content.
-var array2 = [_]u8{ 1, 2, 3, 4, 5 };
-// array2.len == 5
+var array2 = [_]u8{ 1, 2, 3, 4, 5 };  // [_] means the compiler knows the length at compile-time.
 
-// 1000-byte array with defined content.
-// The content is provided by the "foo" function.
-var array3 = [_]u8{foo()} ** 1000; // another way
-// array3.len == 1000
+// 1000-byte array with defined content (0).
+var array3 = [_]u8{0} ** 1000;
 
-// Loop over arrays.
+// Another 1000-byte array with defined content.
+// The content is provided by the "foo" function, called at compile-time and allows complex initializations.
+var array4 = [_]u8{foo()} ** 1000;
 
-// Loop over every item.
-for (array) |item| {
-    // do something with 'item'
-}
+// In any case, array.len gives the length of the array,
+// array1.len and array2.len produce 5, array3.len and array4.len produce 1000.
 
-// Loop over every item with an index.
-for (array) |item, index| {
-    // do something with 'item', indexed at 'index'
-}
-
-// As before, but "*item" is a pointer over the element.
-// You can then modify the content of the array.
-for (array) |*item, index| {
-    // item is now a pointer
-}
 
 // Modifying and accessing arrays content.
 
@@ -119,18 +129,18 @@ var some_integers: [10]i32 = undefined;
 
 some_integers[0] = 30; // first element of the array is now 30
 
-var x = some_integers[0]; // x now equals to 30, its type is infered
-var y = some_integers[1]; // second element of the array isn't defined
-                          // y got a stack garbage value (no runtime error)
+var x = some_integers[0]; // "x" now equals to 30, its type is infered.
+var y = some_integers[1]; // Second element of the array isn't defined.
+                          // "y" got a stack garbage value (no runtime error).
 
 // Array of 10 32-bit undefined integers.
 var some_integers: [10]i32 = undefined;
 
-var z = some_integers[20]; // index > array size, compilation error
+var z = some_integers[20]; // index > array size, compilation error.
 
 // At runtime, we loop over the elements of "some_integers" with an index.
 // Index i = 20, then we try:
-try some_integers[i]; // runtime error 'index out of bounds'
+try some_integers[i]; // Runtime error 'index out of bounds'.
                       // "try" keyword is necessary when accessing an array with
                       // an index, since there is a potential runtime error.
                       // More on that later.
@@ -163,10 +173,9 @@ const greetings = "hello";
 // ... which is equivalent to:
 const greetings: *const [5:0]u8 = "hello";
 // In words: "greetings" is a constant value, a pointer on a constant array of 5
-// elements (8-bit unsigned integers), with an extra '0' (sentinel value) at
-// the end.
+// elements (8-bit unsigned integers), with an extra '0' (sentinel value) at the end.
 
-print("string: {s}\n", .{hello});
+print("string: {s}\n", .{greetings});
 
 // This represents rather faithfully C strings.
 // Although, Zig strings are structures, no need for "strlen" to know their size.
@@ -179,15 +188,9 @@ print("string: {s}\n", .{hello});
 // A slice is a pointer and a size, an array without compile-time known size.
 // Slices have runtime out-of-band verifications.
 
-const array = [_]u8{1,2,3,4,5}; // [_] = array with compile-time known size.
-const slice = array[0..array.len];
-// slice[10] gives an error
-
-
-// Slices can have sentinel values, too.
-const string: [:0]const u8 = "hello";
-// string.len == 5
-// string[5] == 0
+const array = [_]u8{1,2,3,4,5};     // [_] = array with compile-time known size.
+const slice = array[0..array.len];  // "slice" represents the whole array.
+                                    // slice[10] gives a runtime error.
 
 
 /// Pointers.
@@ -203,28 +206,28 @@ if (pointer.* == 1) {
 }
 
 // ".?" is a shortcut for "orelse unreachable".
-const foo = pointer.?; // if "pointer" is a pointer on a value, get the
-                       // pointed value, otherwise crash.
+const foo = pointer.?; // Get the pointed value, otherwise crash.
 
 
 /// Optional values (?<type>).
+// An optional is a value than can be of any type or null.
 
-// "optional_value" can either be "null" or an unsigned 32-bit integer.
+// Example: "optional_value" can either be "null" or an unsigned 32-bit integer.
 var optional_value: ?u32 = null; // optional_value == null
 optional_value = 42;             // optional_value != null
 
-
 // "some_function" returns ?u32
 var x = some_function();
-if (x) |value| {  // In case "some_function" returned a value.
-    // do something with 'value'
+if (x) |value| {
+    // In case "some_function" returned a value.
+    // Do something with 'value'.
 }
 
 
 
 /// Errors.
-
 // Zig provides an unified way to express errors.
+
 // Errors are defined in error enumerations, example:
 const Error = error {
     WatchingAnyNetflixTVShow,
@@ -247,8 +250,7 @@ mylife = SuccessStory.ReadABook;
 // Now mylife is an enum.
 
 
-// Zig ships with many pre-defined errors, check if yours aren't already
-// in the list before creating new ones. Example:
+// Zig ships with many pre-defined errors. Example:
 const value: anyerror!u32 = error.Broken;
 
 
@@ -267,13 +269,13 @@ fn some_function() Error!u8 {
 
 // Errors can be "catch" without intermediate variable.
 var value = some_function() catch |err| switch(err) {
-    Error.UnExpected => return err, // Returns the error.
-    Error.Authentication => unreachable, // Not expected, ever. Crashes the program.
-    else => unreachable,
+    Error.UnExpected     => return err,     // Returns the error.
+    Error.Authentication => unreachable,    // Not expected, ever. Crashes the program.
+    else                 => unreachable,
 };
 
 // An error can be "catch" without giving it a name.
-const unwrapped = value catch 1234; // "unwrapped" = 1234
+const unwrapped = some_function() catch 1234; // "unwrapped" = 1234
 
 // "try" is a very handy shortcut for "catch |err| return err".
 var value = try some_function();
@@ -307,11 +309,8 @@ else {
     print("'a' is null\n", .{});
 }
 
-/// TODO
-// To get a pointer on the value if it exists.
-if (a) |*value| {
-    // access the value with "value.?" and modify it with "value.*"
-}
+// Get a pointer on the value (if it exists).
+if (a) |*value| { value.* += 1; }
 
 
 // Loops.
@@ -324,11 +323,12 @@ if (a) |*value| {
 //   for (iterable) |capture| statement
 //   for (iterable) statement else statement
 
+// Note: loops work the same way over arrays or slices.
+
 // Simple "while" loop.
 while (i < 10) { i += 1; }
 
-// While loop with a continue expression (expression executed as
-// the last expression of the loop).
+// While loop with a continue expression (expression executed as the last expression of the loop).
 while (i < 10) : (i += 1) { ... }
 // Same, with a more complex continue expression (block of code).
 while (i * j < 2000) : ({ i *= 2; j *= 3; }) { ... }
@@ -336,15 +336,17 @@ while (i * j < 2000) : ({ i *= 2; j *= 3; }) { ... }
 // To iterate over a portion of a slice, reslice.
 for (items[0..1]) |value| { sum += value; }
 
-// Iterate over a slice and get pointers on values instead of copies.
+// Loop over every item of an array (or slice).
+for (items) |value| { sum += value; }
+
+// Iterate and get pointers on values instead of copies.
 for (items) |*value| { value.* += 1; }
 
 // Iterate with an index.
 for (items) |value, i| { print("val[{}] = {}\n", .{i, value}); }
 
-/// TODO
-for (i: u8 = 0; i < 10 ; i++) {
-}
+// Iterate with pointer and index.
+for (items) |*value, i| { print("val[{}] = {}\n", .{i, value}); value.* += 1; }
 
 
 // Break and continue are supported.
@@ -365,7 +367,9 @@ const result = for (items) |value| {
     }
 } else 0;                  // Last value.
 
-// Labels.
+
+
+/// Labels.
 
 // Labels are a way to name an instruction, a location in the code.
 // Labels can be used to "continue" or "break" in a nested loop.
@@ -389,15 +393,14 @@ const x = blk: {
     y += 1;
     break :blk y; // Now "x" equals 6.
 };
-// This is relevant mostly in the "for else" expression
-// (read on, they are explained in the following).
+// This is relevant in cases like the "for else" expression (explained in the following).
 
 // For loops can be used as expressions.
 // When you break from a for loop, the else branch is not evaluated.
 // WARNING: counter-intuitive.
 //          The "for" loop will run, then the "else" block will run.
-//          The "else" keyword has to be followed by the value to give to
-//          "result". See later for another form.
+//          The "else" keyword has to be followed by the value to give to "result".
+//          See later for another form.
 var sum: u8 = 0;
 const result = for (items) |value| {
     sum += value;
@@ -406,17 +409,15 @@ const result = for (items) |value| {
 // In this case, the "else" keyword is followed by a value, too.
 // However, the syntax is different: it is labeled.
 // Instead of a value, there is a label followed by a block of code,
-// which allows to do stuff before returning the value
-// (see the "break" invocation).
+// which allows to do stuff before returning the value (see the "break" invocation).
 const result = for (items) |value| { // First: loop.
     sum += value;
-} else blk: {                            // Second: "else" block.
+} else blk: {                        // Second: "else" block.
     std.log.info("executed AFTER the loop!", .{});
     break :blk sum; // The "sum" value will replace the label "blk".
 };
 
 
-/// TODO
 /// Switch.
 
 // As a switch in C, but slightly more advanced.
@@ -446,20 +447,11 @@ const bar = switch (foo) {
 
 /// Structures.
 
-/// TODO
-///////// var List_u8 = struct {
-/////////     items: []u8,
-/////////     // ...
-/////////     pub fn init(allocator : *std.mem.Allocator) !List_u8 {
-/////////         return List_u8{
-/////////             .items = try allocator.alloc(u8, 10)
-/////////         };
-/////////     }
-///////// };
 // Structure containing a single value.
 const Full = struct {
     number: u16,
 };
+
 // Packed structure, with guaranteed in-memory layout.
 const Divided = packed struct {
     half1: u8,
@@ -467,10 +459,8 @@ const Divided = packed struct {
     quarter4: u4,
 };
 
-
-// Point is now a constant representing a structure.
-// This structure contains two u32, x and y.
-// x has a default value, which wasn't possible in C.
+// Point is a constant representing a structure containing two u32, "x" and "y".
+// "x" has a default value, which wasn't possible in C.
 const Point = struct {
     x: u32 = 1, // default value
     y: u32,
@@ -510,9 +500,7 @@ print("p.x: {}\n", .{p.x}); // p.x = 0
 print("p.y: {}\n", .{p.y}); // p.y = 0
 
 
-/// TODO
-// Structures often have functions to modify their state, which is very similar
-// to object-oriented programming.
+// Structures often have functions to modify their state, similar to object-oriented programming.
 const Point = struct {
     const Self = @This(); // Refers to its own type (later called "Point").
 
@@ -520,24 +508,24 @@ const Point = struct {
     y: u32,
 
     // Take a look at the signature.
-    // First argument is of type *Self, meaning that the "self" variable is
-    // a pointer on the instance of the structure.
-    // This allows the same "dot" notation as in OOP, like "instance.set(x,y)",
-    // see the following example.
+    // First argument is of type *Self: "self" is a pointer on the instance of the structure.
+    // This allows the same "dot" notation as in OOP, like "instance.set(x,y)".
+    // See the following example.
     pub fn set(self: *Self, x: u32, y: u32) void {
         self.x = x;
         self.y = y;
     }
 
     // Again, look at the signature.
-    // First argument is of type Self, not *Self.
-    // This parameter now is a simple reference to the instance of the structure.
+    // First argument is of type Self (not *Self), this isn't a pointer.
+    // In this case, "seln" refers to the instance of the structure, but can't be modified.
     pub fn getx(self: Self) u32 {
         return self.x;
     }
 
-    // (PS: two previous functions may be somewhat useless, attributes can be changed
-    //      directly, no need for accessor functions. It was just an example.)
+    // PS: two previous functions may be somewhat useless.
+    //     Attributes can be changed directly, no need for accessor functions.
+    //     It was just an example.
 };
 
 // Let's use the previous structure.
@@ -548,17 +536,18 @@ print("p.x: {}\n", .{p.x}); // 10
 print("p.y: {}\n", .{p.y}); // 30
 
 // In C:
-//   1. we would have written something like: point_set(p, 10, 30);
-//   2. since all functions are in the same namespace, it would have been
+//   1. We would have written something like: point_set(p, 10, 30).
+//   2. Since all functions are in the same namespace, it would have been
 //      very cumbersome to create functions with different names for different
 //      structures. Many long names, painful to read.
 //
-// In Zig, structures provide namespaces for their own functions. Two different
-// structures can have the same names for their functions, which brings clarity.
+// In Zig, structures provide namespaces for their own functions.
+// Different structures can have the same names for their functions, which brings clarity.
 
 
 
 /// Tuples.
+// A tuple is a list of elements, possibly of different types.
 
 const foo = .{ "hello", true, 42 };
 // foo.len == 3
@@ -568,8 +557,6 @@ const foo = .{ "hello", true, 42 };
 /// Enumerations.
 
 const Type = enum { ok, not_ok };
-// Enums aren't integers, they have to be converted.
-// @enumToInt(Value.zero) == 0
 
 const CardinalDirections = enum { North, South, East, West };
 const direction: CardinalDirections = .North;
@@ -580,7 +567,7 @@ const x = switch (direction) {
 };
 
 // Switch statements need exhaustiveness.
-// WARNING: won't compile, East and West are missing.
+// WARNING: won't compile. East and West are missing.
 const x = switch (direction) {
   .North => true,
   .South => true,
@@ -610,6 +597,8 @@ const Bar = union {
 // Both syntaxes are equivalent.
 const foo = Bar{ .int = 42 };
 const foo: Bar = .{ .int = 42 };
+
+// Unions, like enumerations and structures, can have functions.
 
 
 /// Tagged unions
@@ -648,11 +637,11 @@ switch (nay) {
 // Useful for memory allocations, and resource management in general.
 
 pub fn main() void {
-    // should be executed at the end of the function
+    // Should be executed at the end of the function.
     defer print("third!\n", .{});
 
     {
-        // last element of its scope: will be executed right away
+        // Last element of its scope: will be executed right away.
         defer print("first!\n", .{});
     }
 
@@ -668,7 +657,7 @@ fn hello_world() void {
 // errdefer executes the instruction (or block of code) only on error.
 fn second_hello_world() !void {
     errdefer print("2. something went wrong!\n", .{}); // if "foo" fails.
-    defer print("1. second hello world\n", .{}); // executed after "foo"
+    defer    print("1. second hello world\n", .{});    // executed after "foo"
 
     try foo();
 }
@@ -727,16 +716,14 @@ fn foo() !void {
 /// Memory allocation combined with error management and defer.
 
 fn some_memory_allocation_example() !void {
-
     // Memory allocation may fail, so we "try" to allocate the memory and
     // in case there is an error, the current function returns it.
     var buf = try page_allocator.alloc(u8, 10);
-    // Right after a successful allocation, we indicate to free the memory
-    // BEFORE THE END OF THE FUNCTION, which may be before returning AN ERROR.
+    // Defer memory release right after the allocation. Will happen even if an error occurs.
     defer page_allocator.free(buf);
 
     // Second allocation.
-    // In case of a failure, the first allocation is correctly deallocated.
+    // In case of a failure, the first allocation is correctly released.
     var buf2 = try page_allocator.alloc(u8, 10);
     defer page_allocator.free(buf2);
 
@@ -750,29 +737,18 @@ fn some_memory_allocation_example() !void {
 
 /// Memory allocators: a taste of the standard library.
 
-/// TODO
-fn playing_with_a_slice(slice: []u8) void {
-    slice[0] = 0;
-    slice[1] = 1;
-    for (slice) |item, i| {
-        std.debug.print("val {}: {}\n", .{i, item});
-    }
-}
-
 // Allocators: 4 main functions to know
-
 //   single_value = create (type)
-//                  destroy (single_value)
-
+//   destroy (single_value)
 //   slice = alloc (type, size)
-//           free (slice)
+//   free (slice)
 
 // Page Allocator
 fn page_allocator_fn() !void {
     var slice = try std.heap.page_allocator.alloc(u8, 3);
     defer std.heap.page_allocator.free(slice);
 
-    playing_with_a_slice(slice);
+    // playing_with_a_slice(slice);
 }
 
 // GeneralPurposeAllocator
@@ -783,29 +759,27 @@ fn general_purpose_allocator_fn() !void {
     var gpa = std.heap.GeneralPurposeAllocator(config){};
     defer _ = gpa.deinit();
 
-    const allocator = &gpa.allocator;
+    const allocator = gpa.allocator();
 
     var slice = try allocator.alloc(u8, 3);
     defer allocator.free(slice);
 
-    playing_with_a_slice(slice);
+    // playing_with_a_slice(slice);
 }
 
 // FixedBufferAllocator
 fn fixed_buffer_allocator_fn() !void {
-    var buffer = [_]u8{0} ** 1000; // array of 1000 u8, each item is initialized at zero
-    var fba = std.heap.FixedBufferAllocator.init(buffer[0..]);
+    var buffer = [_]u8{0} ** 1000; // array of 1000 u8, each item is initialized at zero.
+    var allocator  = std.heap.FixedBufferAllocator.init(buffer[0..]).allocator();
     // Side note: buffer[0..] is a way to create a slice from an array.
     //            Since the function takes a slice and not an array, this makes the
     //            type system happy.
-
-    var allocator = &fba.allocator;
 
     var slice = try allocator.alloc(u8, 3);
     // No need for "free", memory cannot be freed with a fixed buffer allocator.
     // defer allocator.free(slice);
 
-    playing_with_a_slice(slice);
+    // playing_with_a_slice(slice);
 }
 
 // ArenaAllocator
@@ -815,12 +789,12 @@ fn arena_allocator_fn() !void {
     var arena = std.heap.arena_allocator.init(std.heap.page_allocator);
     defer arena.deinit(); // end of function = all allocations are freed.
 
-    var allocator = &arena.allocator;
+    var allocator = arena.allocator();
 
     const slice = try allocator.alloc(u8, 3);
     // No need for "free", memory will be freed anyway.
 
-    playing_with_a_slice(slice);
+    // playing_with_a_slice(slice);
 }
 
 
@@ -831,17 +805,17 @@ fn gpa_arena_allocator_fn() !void {
     var gpa = std.heap.GeneralPurposeAllocator(config){};
     defer _ = gpa.deinit();
 
-    const gpa_allocator = &gpa.allocator;
+    const gpa_allocator = gpa.allocator();
 
     var arena = arena_allocator.init(gpa_allocator);
     defer arena.deinit();
 
-    const allocator = &arena.allocator;
+    const allocator = arena.allocator();
 
     var slice = try allocator.alloc(u8, 3);
     defer allocator.free(slice);
 
-    playing_with_a_slice(slice);
+    // playing_with_a_slice(slice);
 }
 
 
@@ -879,13 +853,6 @@ var list = MyList{
 };
 
 list.items[0] = 10;
-
-
-// A taste of standard library.
-/// TODO
-
-
-var my_array = ArrayList(i32).init();
 
 
 /// Conditional compilation
@@ -929,41 +896,6 @@ test "returns true" {
 }
 
 
-/// TODO
-/// NOT IN THE RIGHT PLACE
-
-const std = @import("std");
-const Allocator = std.mem.Allocator;
-
-fn List(comptime T: type) type {
-    return struct {
-        const Self = @This();
-
-        items: []T,
-        nb: usize,
-        allocator: *Allocator,
-
-        pub fn initAllocated(allocator: *Allocator) !Self {
-            return Self{
-                .allocator = allocator,
-                .items = try allocator.alloc(T, 1),
-                .nb = 0,
-            };
-        }
-
-        pub fn add(self: *Self, a : T) void {
-            self.items[self.nb] = a;
-            self.nb += 1;
-            self.allocator.resize(self.items, self.nb);
-        }
-
-        pub fn deinit(self: *Self) void {
-            self.allocator.free(self.items);
-        }
-    };
-}
-
-
 /// Compiler built-ins.
 
 // The compiler has special functions called "built-ins", starting with an "@".
@@ -979,11 +911,15 @@ fn List(comptime T: type) type {
 // - frame manipulations (for async functions, for example)
 // ...
 
-/// TODO
-// An example
+// Example: enums aren't integers, they have to be converted, which is done with a built-in function.
+const Value = enum { zero, stuff, blah };
+// if (@enumToInt(Value.zero)  == 0) { ... }
+// if (@enumToInt(Value.stuff) == 1) { ... }
+// if (@enumToInt(Value.blah)  == 2) { ... }
 
 
 /// A few "not yourself in the foot" measures in the Zig language.
+
 // - Namespaces: names conflicts are easily avoided.
 //   In practice, that means an unified API between different structures (data types).
 // - Enumerations aren't integers. Comparing an enumeration to an integer requires a conversion.
@@ -994,38 +930,15 @@ fn List(comptime T: type) type {
 //     Unions cannot be reinterpreted (in an union with an integer and a
 //     float, one cannot take a value for another by accident).
 //     Etc.
-// - Removing most of the C undefined behaviors (UBs), and when the
-//   compiler encounters one, it stops.
+// - Removing most of the C undefined behaviors (UBs), and when the compiler encounters one, it stops.
 // - Slice and Array structures are prefered to pointers.
-//   Types enforced by the compiler are less prone to errors than
-//   pointer manipulations.
-// - Numerical overflows produce an error, unless explicitly accepted
-//   using wrapping operators.
+//   Types enforced by the compiler are less prone to errors than pointer manipulations.
+// - Numerical overflows produce an error, unless explicitly accepted using wrapping operators.
 // - Try and catch mechanism.
 //   It's both handy, trivially implemented (simple error enumeration),
 //   and it takes almost no space nor computation time.
 // - Unused variables are considered as errors by the compiler.
 // - Many pointer types exist in order to represent what is pointed.
 //   Example: is this a single value or an array, is the length known, etc.
-// - Simple access to SIMD.
-//     Simple data representation through vectors (which are just arrays).
-//     Intuitive operations on vectors (basic maths: + - * /).
-// - ... and basically all low-level features we missed in C and that were
-//   provided though compiler extensions, such as packed structures for instance.
-// - Soon: new syntax to represent different parts of memory: EEPROM, flash, etc.
-//   Could be an excellent idiom to have for embedded software.
 // - Structures need a value for their attributes, and it still is possible to give an undefined
 //   value (stack garbage), but at least it is explicitely undefined.
-
-
-/// Quick summary: Zig compared to C
-// - syntax is mostly the same
-// - namespaces
-// - pointers aren't nearly as used as before and
-//   * the type system allows to express way more nuances
-//     to distinguish between a pointer to a single value, or multiple values, etc.
-//   * slices are prefered, which is a structure with a pointer and a runtime known size,
-//     which characterizes most uses of pointers in the first place.
-// - most of the C undefined behaviors (UBs) are fixed
-// - some arbitrary limitations are removed
-//   For example, enumerations, structures and unions can have functions.
