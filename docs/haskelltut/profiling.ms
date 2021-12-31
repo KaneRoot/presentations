@@ -1,2 +1,1 @@
-.NH 1
-Profiling
+.SECTION Profiling

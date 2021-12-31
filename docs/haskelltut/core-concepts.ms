@@ -1,6 +1,5 @@
-.NH 1
-Core concepts
-.LP
+.SECTION Core concepts
+.PARAGRAPH_UNINDENTED
 Functional programming brings some concepts that aren't present (or widespread) in other paradigms.
 This section presents some of these concepts:
 .I currying ,
@@ -10,12 +9,11 @@ This section presents some of these concepts:
 and
 .I "laziness" .
 
-.NH 2
-Currying
-.PP
+.SUBSECTION Currying
+.PARAGRAPH_INDENTED
 Or,
 .I "why do functions take a single argument" ?
-.LP
+.PARAGRAPH_UNINDENTED
 In Haskell and other functional programming languages, functions only take a single argument.
 Let's take an example with a function
 .B add ,
@@ -67,9 +65,8 @@ In Haskell and in functional programming in general, the concept of
 functions is widespead, and brings conciseness and code reusability.
 Plenty of examples will be presented later.
 
-.NH 2
-Function composition
-.LP
+.SUBSECTION Function composition
+.PARAGRAPH_UNINDENTED
 Function composition is the act of pipelining the result of one function, to the input of another.
 This is almost like in shell but the order is reversed, and typed\*[*].
 .FS
@@ -92,9 +89,8 @@ countdown = sort_and_reverse [2,8,7,10,1,9,5,3,4,6]
 countdown = (reverse . sort) [2,8,7,10,1,9,5,3,4,6]
 .SOURCE
 
-.NH 2
-High Order Functions
-.LP
+.SUBSECTION High Order Functions
+.PARAGRAPH_UNINDENTED
 Functions in functional programming languages are simple types, they are treated as any other type.
 Functions can be given as parameters for other functions.
 .SOURCE haskell ps=8 vs=9p
@@ -108,9 +104,8 @@ map (* 2) [1,2,3,4,5]
 is a function taking another function as its first parameter, and applies it to each element of a list.
 .BELLOWEXPLANATION2
 
-.NH 2
-Referential transparency (Purity)
-.PP
+.SUBSECTION Referential transparency (Purity)
+.PARAGRAPH_INDENTED
 Referential transparency (or
 .I purity )
 is the property of an expression when it only uses its parameters to compute a value.
@@ -152,9 +147,8 @@ is factored, but it works with any pure function.
 .BELLOWEXPLANATION2
 .ENDBULLET
 
-.NH 2
-Laziness
-.PP
+.SUBSECTION Laziness
+.PARAGRAPH_INDENTED
 Laziness means to compute a value only when necessary.
 Why calculate every element of a list when you only use the first one?
 

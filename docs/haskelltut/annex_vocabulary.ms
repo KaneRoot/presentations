@@ -1,6 +1,5 @@
-.NH 1
-Annex: vocabulary
-.PP
+.SECTION Annex: vocabulary
+.PARAGRAPH_INDENTED
 Browsing through different documentations of the Haskell language (and FP in general) can be really hard.
 The technical corpus one must know prior to the reading of some of the explanations is almost preposterous\*[*].
 .FS

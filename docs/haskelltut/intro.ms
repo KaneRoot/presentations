@@ -1,6 +1,5 @@
-.NH 1
-Functional programming
-.PP
+.SECTION Functional programming
+.PARAGRAPH_INDENTED
 FP can be seen as an
 .ft I
 "everything is a function"
@@ -11,9 +10,8 @@ In that regard, each line of code represents the
 of the developer more than
 .I "how to perform stuff" .
 
-.NH 2
-Why this document?
-.LP
+.SUBSECTION Why this document?
+.PARAGRAPH_UNINDENTED
 .BULLET
 FP is great, let's talk about it.
 .BULLET
@@ -26,9 +24,8 @@ Explain Haskell, its main API and a few useful modules.
 Provide a few real-life examples.
 .ENDBULLET
 
-.NH 2
-Why FP and Haskell?
-.LP
+.SUBSECTION Why FP and Haskell?
+.PARAGRAPH_UNINDENTED
 .BULLET
 .UL Declarative :
 the language requires to write
@@ -76,9 +73,8 @@ The purpose of abstraction is not to be vague, but to create a new semantic leve
 .CITATION2
 .NAMECITATION Edsger W. Dijkstra
 
-.NH 2
-Sections
-.LP
+.SUBSECTION Sections
+.PARAGRAPH_UNINDENTED
 First, we'll talk about base concepts in FP, which will provide everything one need to start with both FP and Haskell.
 This will be quick, there is very little theory in this document.
 
@@ -136,9 +132,8 @@ section, for everything that is useful but doesn't belong anywhere else.
 
 Finally, this document provides a few pointers on useful documentations to dig more advanced concepts.
 
-.SH
-How to read this document
-.LP
+.SECTION_NO_NUMBER How to read this document
+.PARAGRAPH_UNINDENTED
 The following presents a typical function declaration.
 .SOURCE haskell ps=8 vs=9p
 multBy2 :: Int -> Int  --Function's type

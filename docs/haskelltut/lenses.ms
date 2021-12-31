@@ -1,7 +1,6 @@
-.NH 1
-Lenses: getters and setters on steroids
+.SECTION Lenses: getters and setters on steroids
 
-.PP
+.PARAGRAPH_INDENTED
 Lenses help manipulate complex, nested data structures.
 Let's consider the following types.
 
@@ -17,19 +16,17 @@ data Project = Project
   , projectRemainingTasks :: [Task] }
 .SOURCE
 
-.NH 2
-The problem
+.SUBSECTION The problem
 
-.PP
+.PARAGRAPH_INDENTED
 How to edit the content of the task (let's say, its name)?
 Pattern matching is great for simple tasks, but becomes really verbose in nested structures.
 
 .TBD
 
-.NH 2
-A first attempt to tackle the problem
+.SUBSECTION A first attempt to tackle the problem
 
-.PP
+.PARAGRAPH_INDENTED
 Let's define a modifying function.
 
 .SOURCE Haskell ps=8 vs=9p
@@ -47,10 +44,9 @@ And the code isn't even nested yet: the function becomes even harder to write wh
 instead of directly getting the
 .MODULE Task.
 
-.NH 2
-Lenses to the rescue!
+.SUBSECTION Lenses to the rescue!
 
-.PP
+.PARAGRAPH_INDENTED
 Another way to proceed is to create
 .CONSTRUCTOR lenses
 functions, helping us to easily reach inner structure values.
@@ -86,10 +82,9 @@ etc.
 
 
 
-.NH 3
-Actual lenses
+.SUBSUBSECTION Actual lenses
 
-.PP
+.PARAGRAPH_INDENTED
 Now, given the
 .MODULE lens
 package, let's rewrite our structures.
@@ -115,7 +110,7 @@ makeLenses ''Project
 As shown, Haskell can generate lenses for our records:
 it only requires each element to start with an underscore.
 This really is helpful not to have to write many mindless functions.
-.LP
+.PARAGRAPH_UNINDENTED
 Our code now has new functions, such as
 .CONSTRUCTOR taskName
 and
@@ -220,24 +215,21 @@ lenses have to be composed in reverse order from the nesting.
 Again, operations can be easily chained.
 .BELLOWEXPLANATION2
 
-.NH 3
-Prisms: lenses for sum types
+.SUBSUBSECTION Prisms: lenses for sum types
 
-.LP
+.PARAGRAPH_UNINDENTED
 
-.NH 3
-Transversals: lenses for collections
+.SUBSUBSECTION Transversals: lenses for collections
 
-.LP
+.PARAGRAPH_UNINDENTED
 Transversals help browse all elements of a collection, such as lists, arrays and maps.
 It sounds a lot like a
 .BX fmap
 function, but there are a couple of differences.
 
 
-.NH 4
-At
-.LP
+.SUBSUBSUBSECTION At
+.PARAGRAPH_UNINDENTED
 Get and set values at a given index.
 
 .SOURCE Haskell ps=8 vs=9p
@@ -260,10 +252,9 @@ Map.empty
 .\".BELLOWEXPLANATION1
 .\".BELLOWEXPLANATION2
 
-.NH 4
-Contains
+.SUBSUBSUBSECTION Contains
 
-.LP
+.PARAGRAPH_UNINDENTED
 Lens to test for an index in a container (such as a set).
 
 .SOURCE Haskell ps=8 vs=9p
@@ -281,10 +272,9 @@ IntSet.fromList [1,2,3,4] ^@. icontains 3
 .\".BELLOWEXPLANATION2
 
 
-.NH 3
-Logic behind operators
+.SUBSUBSECTION Logic behind operators
 
-.LP
+.PARAGRAPH_UNINDENTED
 This document only shown a few operators out of more than a hundred in the
 .MODULE lens
 package.

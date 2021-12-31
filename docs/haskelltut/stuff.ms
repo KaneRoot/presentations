@@ -1,6 +1,5 @@
-.NH 1
-To the point
-.PP
+.SECTION To the point
+.PARAGRAPH_INDENTED
 Pure and simple functions (such as addition) are great: they are independant from the rest of the code.
 They always have the same set of parameters, and work always as expected.
 .UL But ,
@@ -13,11 +12,9 @@ We need to communicate the
 not just say what must be done.
 
 I'll describe a few cases and a good way to handle them in Haskell.
-.NH 2
-Error cases
-.NH 3
-Pure function, single parameter and potential erroneous parameter.
-.PP
+.SUBSECTION Error cases
+.SUBSUBSECTION Pure function, single parameter and potential erroneous parameter.
+.PARAGRAPH_INDENTED
 Let's see a first example of error management with the
 .MODULE Maybe
 module.
@@ -119,9 +116,8 @@ This is a bit like Java interfaces on steroids.
 .FE
 .
 .
-.NH 1
-Notes: quick and dirty
-.PP
+.SECTION Notes: quick and dirty
+.PARAGRAPH_INDENTED
 A list of the most used operators:
 .SOURCE Haskell ps=8 vs=9p
  ($)   ::                (a -> b) ->   a ->   b
@@ -183,13 +179,11 @@ Either the language implements some sort of "try and catch" mechanism (Java, Pyt
 .
 .
 .
-.NH 1
-Pure theory
+.SECTION Pure theory
 .
 .
-.NH 2
-Covariant functor
-.PP
+.SUBSECTION Covariant functor
+.PARAGRAPH_INDENTED
 A
 .ft B
 covariant functor
@@ -250,9 +244,8 @@ etc.
 .FE
 .
 .
-.NH 2
-Contravariant functor
-.PP
+.SUBSECTION Contravariant functor
+.PARAGRAPH_INDENTED
 A contravariant functor is defined as a covariant functor, but the function it takes as a first argument is from
 .I b
 to
@@ -277,16 +270,14 @@ module includes this definition of a Contravariant functor:
 As we can see, the order of the types for the first parameter are inversed compared to a covariant functor.
 .
 .
-.NH 2
-Bifunctor
-.PP
+.SUBSECTION Bifunctor
+.PARAGRAPH_INDENTED
 A Bifunctor is a functor containing two functors.
 .TBD
 .
 .
-.NH 2
-Profunctor
-.PP
+.SUBSECTION Profunctor
+.PARAGRAPH_INDENTED
 .ft B
 Profunctor
 .ft R
@@ -302,9 +293,8 @@ as its second.
 .
 .
 .
-.NH 1
-Lenses: manipulate nested structures easily
-.PP
+.SECTION Lenses: manipulate nested structures easily
+.PARAGRAPH_INDENTED
 This section is roughly a summary of some books and web pages.
 .[
 lenses
@@ -339,16 +329,14 @@ T}
 
 .2C
 
-.NH 1
-See also
+.SECTION See also
 
-.PP
+.PARAGRAPH_INDENTED
 Here is a list of things that got my attention and may be useful to you, too.
 
-.NH 2
-A few FP languages worth mentionning
+.SUBSECTION A few FP languages worth mentionning
 
-.PP
+.PARAGRAPH_INDENTED
 .BULLET Haskell: FP without annoying parenthesis,
 a lot of modules available,
 purity,
@@ -363,9 +351,8 @@ PureScript also provides a very simple way of interacting with JavaScript.
 Great for games, video and audio applications, etc.
 .ENDBULLET
 
-.NH 2
-Modules
-.PP
+.SUBSECTION Modules
+.PARAGRAPH_INDENTED
 Here are some interesting modules, either for wide adoption in any kind of applications or in specific contexts.
 Some already are included in base Haskell distributions.
 
@@ -396,10 +383,9 @@ but this is a nice balance between functionalities, performances and simplicity.
 .BULLET PyF: a library to format strings, as the "f" operator in Python.
 .ENDBULLET
 
-.NH 2
-Books, website and tutorials
+.SUBSECTION Books, website and tutorials
 
-.LP
+.PARAGRAPH_UNINDENTED
 For absolute beginners:
 .BULLET Learn you a Haskell for Greater Good!
 .[

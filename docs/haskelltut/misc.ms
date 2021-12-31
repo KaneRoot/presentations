@@ -1,11 +1,9 @@
-.NH 1
-Misc
-.PP
+.SECTION Misc
+.PARAGRAPH_INDENTED
 This section is a way to provide some unordered informations.
 
-.NH 2
-Kinds
-.LP
+.SUBSECTION Kinds
+.PARAGRAPH_UNINDENTED
 A simple value (such as a number) and a polymorphic type without specified type parameters are not the same
 .UL kind
 of data.
@@ -43,9 +41,8 @@ Example:
 
 .TBD
 
-.SH
-A simple note...
-.LP
+.SECTION_NO_NUMBER A simple note...
+.PARAGRAPH_UNINDENTED
 
 Most of what was presented here isn't part of the language, but only the standard library.
 Function composition rests on the operator

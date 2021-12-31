@@ -1,10 +1,10 @@
 .SECTION Advanced concepts
-.PP
+.PARAGRAPH_INDENTED
 Some concepts are derived from previous properties of the language.
 The following explores a few concepts that are useful in some contexts.
 
 .SUBSECTION Continuation: a nice side-effect of composition
-.PP
+.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -23,12 +23,12 @@ safeDivide x y = Just $ divide x y
 .SOURCE
 
 .SECTION_NO_NUMBER Continuation Passing Style vs Monads
-.PP
+.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
 .METAINFO2
-.PP
+.PARAGRAPH_INDENTED
 Continuation Passing Style and Monads are actually similar.
 In both cases, the idea is to control the behavior of a function, whether it works or fails.
 
@@ -37,13 +37,13 @@ Monads are a way to ensure the same behavior for multiple function calls, that's
 .SUBSECTION Arrow operator
 
 .SUBSECTION Closure
-.PP
+.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
 .METAINFO2
 .SUBSECTION Free monads
-.PP
+.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -70,7 +70,7 @@ The second function gets the value from your functor inside the Free monad.
 
 .SUBSECTION Dependency injection (OOP) vs Continuation Passing Style
 .\" Free monads and effect handlers
-.PP
+.PARAGRAPH_INDENTED
 Dependency injection is an OOP concept.
 .UL "The general idea" :
 you have two classes, A and B, and B needs an instance of A to work.
@@ -100,7 +100,7 @@ I see a couple of differences:
 .BULLET With free monads/effect handlers, the interfaces required by the business logic are reflected in the type signature. With dependency injection, sometimes you have to stoop down to inspect a bean’s internal attributes.
 
 .SUBSECTION S-Expression (symbolic expression)
-.PP
+.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -117,7 +117,7 @@ Example:
 .SOURCE
 
 .SUBSECTION Homoiconicity
-.PP
+.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.

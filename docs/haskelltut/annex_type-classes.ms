@@ -1,8 +1,7 @@
 .1C
-.NH 1
-Annex: a bunch of type classes
+.SECTION Annex: a bunch of type classes
 
-.PP
+.PARAGRAPH_INDENTED
 Here is a list of the most used type classes.
 
 .\" TODO: find out how to reduce margin size
@@ -73,10 +72,9 @@ T}:T{
 T}
 .TE
 
-.NH 1
-TODO
+.SECTION TODO
 
-.PP
+.PARAGRAPH_INDENTED
 
 .SOURCE Haskell
 (+) <$ Just 5 <* Nothing <*> Just 4 <*> Just 3

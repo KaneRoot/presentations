@@ -1,6 +1,5 @@
-.NH 1
-Performances
-.PP
+.SECTION Performances
+.PARAGRAPH_INDENTED
 Haskell can be in the same ballpark than C regarding computational speed.
 Good performances mostly come from:
 .BULLET
@@ -32,25 +31,21 @@ Optimal code is hard to reach, but
 .I "good enough"
 is easy.
 
-.NH 2
-newtype
-.SH
-newtype, type and data
-.LP
+.SUBSECTION newtype
+.SECTION_NO_NUMBER newtype, type and data
+.PARAGRAPH_UNINDENTED
 .TBD
 
-.NH 2
-Memoization
-.LP
+.SUBSECTION Memoization
+.PARAGRAPH_UNINDENTED
 Memoization is a trade-off between memory and computation, and may transform naive implementations of some recursive algorithms into legitimate solutions.
 The idea is simple: keep the result of pure function calls, so the computation only once for a given set of parameters.
 This works with all pure functions.
 Memoization can offer recursive algorithms a massive performance boost.
 .TBD
 
-.NH 2
-Laziness
-.LP
+.SUBSECTION Laziness
+.PARAGRAPH_UNINDENTED
 Laziness
 .BULLET
 can make qualitative improvements to performance
@@ -66,9 +61,8 @@ Makes hard problems conceivable
 .BULLET
 Allows for separation of concerns with regard to generating and processing data.
 
-.NH 2
-Tail recursion elimination
-.PP
+.SUBSECTION Tail recursion elimination
+.PARAGRAPH_INDENTED
 In the general case, a function call is stacked in memory.
 The
 .I stack
@@ -105,9 +99,8 @@ Otherwise it creates
 and this also builds a stack that will end-up in overflow.
 .ENDBULLET
 
-.SH
-First step
-.PP
+.SECTION_NO_NUMBER First step
+.PARAGRAPH_INDENTED
 .I "Tail recursion elimination"
 (or
 .I "tail recursion optimization" )
@@ -125,9 +118,8 @@ This function is lazy and won't be computed right away, this isn't efficient and
 The compiler should be noticed that the accumulator is
 .I strict .
 
-.SH
-Rewrite the function with a strict accumulator
-.PP
+.SECTION_NO_NUMBER Rewrite the function with a strict accumulator
+.PARAGRAPH_INDENTED
 One way to make sure the accumulator is strict, is to use the
 .BX $!
 operator, which forces a strict evaluation to its right component.
@@ -158,9 +150,8 @@ When compiling with
 the compiler can find out some of the actual strict parameters.
 .BELLOWEXPLANATION2
 
-.SH
-A better way
-.PP
+.SECTION_NO_NUMBER A better way
+.PARAGRAPH_INDENTED
 Our
 .I len
 function follows the
@@ -178,9 +169,8 @@ len = foldl' (\acc _ -> 1 + acc) 0
 Reusing existing functions is simpler, less error-prone and actually more efficient.
 .BELLOWEXPLANATION2
 
-.SH
-Experiment
-.PP
+.SECTION_NO_NUMBER Experiment
+.PARAGRAPH_INDENTED
 Several implementations of the
 .I len
 function were described: the
@@ -231,21 +221,17 @@ option (computation can be 13 times quicker), even using optimized versions with
 standard functions are so darn fast, use them.
 .ENDBULLET
 
-.NH 2
-Inlining
-.LP
+.SUBSECTION Inlining
+.PARAGRAPH_UNINDENTED
 
 .TBD
 
-.SH
-Inlining a function
-.LP
+.SECTION_NO_NUMBER Inlining a function
+.PARAGRAPH_UNINDENTED
 .TBD
 
-.SH
-Prevent inlining
-.LP
+.SECTION_NO_NUMBER Prevent inlining
+.PARAGRAPH_UNINDENTED
 .TBD
 
-.NH 2
-Avoiding space leaks
+.SUBSECTION Avoiding space leaks

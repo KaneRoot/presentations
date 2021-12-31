@@ -1,14 +1,9 @@
-.NH 1
-Complex data structures
+.SECTION Complex data structures
 
-.NH 2
-Generalized Algebraic Data Types
+.SUBSECTION Generalized Algebraic Data Types
 
-.NH 2
-Phantom type
+.SUBSECTION Phantom type
 
-.NH 2
-Tagless final
+.SUBSECTION Tagless final
 
-.NH 2
-Free monad
+.SUBSECTION Free monad

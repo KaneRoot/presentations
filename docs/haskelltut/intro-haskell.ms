@@ -1,6 +1,5 @@
-.NH 1
-Introduction to Haskell
-.PP
+.SECTION Introduction to Haskell
+.PARAGRAPH_INDENTED
 Functional and imperative programming languages are differents on many levels.
 This section provides an overview on those differences.
 
@@ -29,9 +28,8 @@ And finally, a brief discussion on the Haskell language, functional programming 
 .\"Learn You a Haskell
 .\".]
 
-.NH 2
-A first example
-.PP
+.SUBSECTION A first example
+.PARAGRAPH_INDENTED
 Just to get started on how to write a program with a functional programming language, here is an example: the fibonacci sequence.
 .\" A space in necessary (otherwise, everything is single-lined)
 .SOURCE Haskell
@@ -77,9 +75,8 @@ This is not a set of instructions to execute, this is a single expression repres
 Consequently, the whole expression is to be executed and its single produced value is to be returned by the function.
 .ENDBULLET
 
-.NH 2
-A few Haskell basic types
-.PP
+.SUBSECTION A few Haskell basic types
+.PARAGRAPH_INDENTED
 Before introducing syntax for functions, a quick overview of very simple types in Haskell.
 .SOURCE haskell ps=8 vs=9p
 5                     :: Int
@@ -143,9 +140,8 @@ is syntactic sugar for
 .BX "['h', 'e', 'l', 'l', 'o' ]"
 .BELLOWEXPLANATION2
 
-.NH 2
-Haskell's syntax for functions
-.PP
+.SUBSECTION Haskell's syntax for functions
+.PARAGRAPH_INDENTED
 Functions in imperative and functional languages are different concepts.
 
 In an imperative language, a function is a set of instructions to execute and are gathered and named to be called later, possibly several times or just to cut the code in more readable pieces.
@@ -174,9 +170,8 @@ This will be explained in details later (with
 The syntax for functions is rather extended in Haskell compared to an imperative language.
 Following sub-sections present different ways to create functions.
 
-.NH 3
-Pattern Matching
-.LP
+.SUBSUBSECTION Pattern Matching
+.PARAGRAPH_UNINDENTED
 A function can take parameters, and the function body can change according to their value.
 The fibonacci sequence included pattern matching on a number.
 .SOURCE Haskell
@@ -268,9 +263,8 @@ g Baz {} = False
 
 Pattern matching on more complex types will be presented later.
 
-.NH 3
-Guards
-.LP
+.SUBSUBSECTION Guards
+.PARAGRAPH_UNINDENTED
 Pattern matching provides a different function body according to the value of a parameter.
 Sometimes, this is not enough, and the parameter has to be tested more thoroughly, by calling a function for example.
 Guards provide a different function body according to tests on values.
@@ -286,9 +280,8 @@ Guards elegantly replace some conditional instructions (predicates) at the start
 
 Predicates and function's body are clearly identified.
 
-.NH 3
-Case ... of
-.LP
+.SUBSUBSECTION Case ... of
+.PARAGRAPH_UNINDENTED
 A value can be tested through
 .I "case ... of"
 which is like a switch in C, for example.
@@ -299,9 +292,8 @@ not v = case v of
   _     -> True    --in case v is any other value
 .SOURCE
 
-.NH 3
-Anonymous functions: lambdas
-.LP
+.SUBSUBSECTION Anonymous functions: lambdas
+.PARAGRAPH_UNINDENTED
 An anonymous function is created with the backslash character \\ followed by the parameters, then an arrow (->) and finally the body of the function.
 This anonymous function is called a
 .I lambda \*[*].
@@ -326,9 +318,8 @@ map (\x -> x + 5) [1,2,3,4,5]
 map (+ 5) [1,2,3,4,5]
 .SOURCE
 
-.NH 3
-Where and let
-.LP
+.SUBSUBSECTION Where and let
+.PARAGRAPH_UNINDENTED
 Within the scope of a function, one can declare functions or constant values.
 .SOURCE haskell ps=8 vs=9p
 health :: Float -> Float -> String
@@ -395,9 +386,8 @@ f x =
 .BELLOWEXPLANATION1
 .BELLOWEXPLANATION2
 
-.SH
-Let or where?
-.LP
+.SECTION_NO_NUMBER Let or where?
+.PARAGRAPH_UNINDENTED
 Chosing either
 .I let
 or
@@ -437,10 +427,9 @@ f x
 Chosing the right one comes with experience, nothing to worry about.
 .BELLOWEXPLANATION2
 
-.NH 2
-Haskell's type system
+.SUBSECTION Haskell's type system
 
-.PP
+.PARAGRAPH_INDENTED
 This document already introduced primitive types (integer, float and character) and a few others: Bool, tuples and lists.
 Functions also have their own type, and can be passed as function parameter as any other type of value.
 
@@ -462,9 +451,8 @@ keyword, to make the code more understandable to other developers\*[*].
 Documentation through type names is both elegant and effective, even if this isn't sufficient by any mean.
 .FE
 
-.NH 3
-What type should I use? Holes!
-.PP
+.SUBSUBSECTION What type should I use? Holes!
+.PARAGRAPH_INDENTED
 Haskell has a great type inference.
 When writing a function, the actual type of the missing code can be asked to the compiler by writing a
 .I hole
@@ -481,17 +469,15 @@ For an unnamed hole, write an underscore.
 Holes also work in function types.
 .BELLOWEXPLANATION2
 
-.NH 3
-Data structures
-.LP
+.SUBSUBSECTION Data structures
+.PARAGRAPH_UNINDENTED
 One of the big challenges of a developer is to create data structures.
 Once this part is done, related code almost writes itself.
 Following sub-sections present different ways to create structures with the
 .MODULE data
 keyword.
-.NH 4
-Sum
-.LP
+.SUBSUBSUBSECTION Sum
+.PARAGRAPH_UNINDENTED
 A sum type is a simple enumeration.
 .SOURCE haskell ps=8 vs=9p
 data Bool = False | True
@@ -517,9 +503,8 @@ Pattern matching works on constructors.
 Check for non exhaustive patterns with
 .I "-fwarn-incomplete-patterns" .
 
-.NH 4
-Product
-.LP
+.SUBSUBSUBSECTION Product
+.PARAGRAPH_UNINDENTED
 A product type is a type containing data.
 .SOURCE haskell ps=8 vs=9p
 data Figure = Rectangle Double Double
@@ -542,9 +527,8 @@ and it contains two floating point numbers.
 Pattern matching works on constructors, and their parameters are named to be used in the function.
 .BELLOWEXPLANATION2
 
-.NH 4
-Record
-.LP
+.SUBSUBSUBSECTION Record
+.PARAGRAPH_UNINDENTED
 Record type is a product type with named parameters.
 .SOURCE haskell ps=8 vs=9p
 data Figure = Rectangle { height :: Double
@@ -605,9 +589,8 @@ The actual useful value (height) can be obtained directly.
 This way, data structure can evolve without breaking anything.
 .BELLOWEXPLANATION2
 
-.NH 4
-Algebraic
-.LP
+.SUBSUBSUBSECTION Algebraic
+.PARAGRAPH_UNINDENTED
 Algebraic type is both sum and product types.
 .SOURCE haskell ps=8 vs=9p
 data Figure
@@ -626,9 +609,8 @@ Convenient: each figure has its own statement, any error become obvious and a mi
 The equivalent in imperative programming is less readable.
 .BELLOWEXPLANATION2
 
-.NH 4
-Recursive
-.LP
+.SUBSUBSUBSECTION Recursive
+.PARAGRAPH_UNINDENTED
 An algebraic data type is recursive if its declaration involves itself.
 This is common to describe lists, trees, etc.
 .SOURCE haskell ps=8 vs=9p
@@ -668,9 +650,8 @@ The
 type class will make it trivial.
 .BELLOWEXPLANATION2
 
-.NH 4
-Polymorphic
-.LP
+.SUBSUBSUBSECTION Polymorphic
+.PARAGRAPH_UNINDENTED
 Types are
 .I polymorphic
 when they have type a parameter, meaning that the type of the values they contain isn't fixed.
@@ -704,9 +685,8 @@ with the
 constraint (inner values have to be numbers).
 .BELLOWEXPLANATION2
 
-.NH 4
-Summary on data types
-.PP
+.SUBSUBSUBSECTION Summary on data types
+.PARAGRAPH_INDENTED
 
 Let's recap the available data types in Haskell.
 .BULLET
@@ -732,9 +712,8 @@ data structure needs to store a value without imposing the type.
 
 Haskell is built on these types, they all have a purpose and help describe different data structures.
 
-.NH 3
-Type synonyms
-.LP
+.SUBSUBSECTION Type synonyms
+.PARAGRAPH_UNINDENTED
 A floating point number can be a height, a length, a random number, or the average size of guinea pigs in a pet store.
 .SOURCE haskell ps=8 vs=9p
 --What does the surface function compute?
@@ -760,9 +739,8 @@ Type synonyms provide the
 .UL semantic
 behind the types.
 
-.NH 2
-Haskell's type classes
-.PP
+.SUBSECTION Haskell's type classes
+.PARAGRAPH_INDENTED
 
 Types may be related to each other.
 An integer and a float, wheither their size, are both numbers, for example.
@@ -775,9 +753,8 @@ and so on.
 
 In Haskell, many type classes are provided by default, and some will be introduced later.
 
-.SH
-Syntax
-.LP
+.SECTION_NO_NUMBER Syntax
+.PARAGRAPH_UNINDENTED
 Let's see some parts of the Haskell standard library: the
 .MODULE Semigroup
 class.
@@ -836,9 +813,8 @@ will result in
 
 Plenty of examples are provided in the section on usual type classes.
 
-.SH
-Laws
-.PP
+.SECTION_NO_NUMBER Laws
+.PARAGRAPH_INDENTED
 Sometimes, in order to have a meaninful type class, the behavior of the structure, given a function, has to be imposed.
 For example, the
 .BX <>
@@ -870,9 +846,8 @@ Otherwise the semantic of the type class will be broken and the behavior won't m
 Furthermore, it could be completely legitimate for the compiler to implement code optimizations to cut a few function calls, or rewrite some functions, based on these laws.
 .FE
 
-.SH
-Summary
-.PP
+.SECTION_NO_NUMBER Summary
+.PARAGRAPH_INDENTED
 A type class regroups similar types, related to each other by the functions they can perform.
 Sometimes, they have to obey laws, such as
 .I associativity ,
@@ -893,17 +868,15 @@ and
 they both need to be in the type class
 .MODULE Num.
 
-.NH 2
-Modules
-.LP
+.SUBSECTION Modules
+.PARAGRAPH_UNINDENTED
 Any non trivial program needs to split its code base into managable pieces.
 Each file will represent a
 .I module
 which can be imported (even partially) in other modules.
 
-.SH
-Module import
-.LP
+.SECTION_NO_NUMBER Module import
+.PARAGRAPH_UNINDENTED
 .SOURCE Haskell ps=8 vs=9p
 --somewhere on your system there is a file named
 --data/bytestring.hs
@@ -958,9 +931,8 @@ Import all functions and types except the function
 .I head .
 .BELLOWEXPLANATION2
 
-.SH
-Module declaration
-.LP
+.SECTION_NO_NUMBER Module declaration
+.PARAGRAPH_UNINDENTED
 .SOURCE Haskell ps=8 vs=9p
 --File: some/simple/module.hs
 module Some.Simple.Module where
@@ -977,9 +949,8 @@ module Some.Simple.Module (
   ) where
 .SOURCE
 
-.NH 2
-Discussion on Haskell and common concepts
-.PP
+.SUBSECTION Discussion on Haskell and common concepts
+.PARAGRAPH_INDENTED
 This section shown most of the common ways to create functions and data structures in Haskell.
 This is a boring but non avoidable part of the journey to learn the language, and this only scratched the surface.
 

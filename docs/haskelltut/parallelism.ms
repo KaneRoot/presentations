@@ -1,2 +1,1 @@
-.NH 1
-Parallelism and Concurrency
+.SECTION Parallelism and Concurrency

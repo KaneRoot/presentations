@@ -1,12 +1,10 @@
-.NH 1
-Annex: code deduplication (OOP < type classes)
-.PP
+.SECTION Annex: code deduplication (OOP < type classes)
+.PARAGRAPH_INDENTED
 Avoiding duplication is a noble but difficult exercise.
 Let's see how this works in C, C++ and Haskell with some examples.
 
-.NH 2
-Trivial example
-.PP
+.SUBSECTION Trivial example
+.PARAGRAPH_INDENTED
 Let's say we have a function with a structure that can satisfy several types of arguments.
 Example, in pseudo code:
 .b1
@@ -94,9 +92,8 @@ is declared and is composed of a single function
 This function takes two parameters and returns a value, all of the same type (whatever the actual type is).
 And finally, the implementation is a synonym of the + function.
 
-.NH 2
-Less trivial code
-.PP
+.SUBSECTION Less trivial code
+.PARAGRAPH_INDENTED
 
 The problem: represent both a
 .CONSTRUCTOR car
@@ -215,9 +212,8 @@ T}
 Haskell : type classes                  : about none
 .TE
 
-.NH 2
-Conclusion
-.PP
+.SUBSECTION Conclusion
+.PARAGRAPH_INDENTED
 C is an abstraction over assembly, nothing more.
 This has its use: C developers can make an educated guess how the code will be compiled into assembly.
 However, code is constantly duplicated, and the tools at our disposal to make it more generic are flawed on many points (static code analysis, type verifications, etc.).

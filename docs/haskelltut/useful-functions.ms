@@ -1,11 +1,8 @@
-.NH 1
-Useful functions
+.SECTION Useful functions
 
-.NH 2
-show and read
+.SUBSECTION show and read
 
-.NH 2
-list functions
+.SUBSECTION list functions
 
 .\" 0.15  = height box when move, half boxht
 .\" 0.375 = half a horizontal move
@@ -51,36 +48,22 @@ line from LINE_INIT.end + (0,-0.1) to \
 ."line from TAIL.s + (0,-0.1) to D.ne
 .PE
 
-.NH 3
-Const and (:)
-.NH 3
-length and null
-.NH 3
-(!!)
-.NH 3
-elem
-.NH 3
-(++)
-.NH 3
-take and drop
-.NH 3
-takeWhile and dropWhile
-.NH 3
-reverse
-.NH 3
-cycle
-.NH 3
-repeat
-.NH 3
-replicate
-.NH 3
-sum product maximum minimum
+.SUBSUBSECTION Const and (:)
+.SUBSUBSECTION length and null
+.SUBSUBSECTION (!!)
+.SUBSUBSECTION elem
+.SUBSUBSECTION (++)
+.SUBSUBSECTION take and drop
+.SUBSUBSECTION takeWhile and dropWhile
+.SUBSUBSECTION reverse
+.SUBSUBSECTION cycle
+.SUBSUBSECTION repeat
+.SUBSUBSECTION replicate
+.SUBSUBSECTION sum product maximum minimum
 
-.NH 3
-map
+.SUBSUBSECTION map
 
-.NH 3
-fold
+.SUBSUBSECTION fold
 .PARAGRAPH_INDENTED
 
 .SUBSECTION_NO_NUMBER foldl
@@ -98,24 +81,19 @@ is the list catamorphism.
 .BULLET foldr is a constructor replacement
 .ENDBULLET
 
-.NH 3
-scan
+.SUBSUBSECTION scan
 
-.NH 2
-Functions on tuples
+.SUBSECTION Functions on tuples
 
-.NH 3
-zip and zipWith
+.SUBSUBSECTION zip and zipWith
 
 .SOURCE Haskell ps=8 vs=9p
 fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
 .SOURCE
 
-.NH 2
-String manipulation
+.SUBSECTION String manipulation
 
-.NH 3
-chr and ord
+.SUBSUBSECTION chr and ord
 
 .SOURCE Haskell ps=8 vs=9p
 chr :: Int  -> Char
