@@ -81,6 +81,22 @@ map
 
 .NH 3
 fold
+.PARAGRAPH_INDENTED
+
+.SUBSECTION_NO_NUMBER foldl
+.SUBSECTION_NO_NUMBER foldr
+.SOURCE Haskell ps=8 vs=9p
+--the following produces [], the list identity
+foldr (:) []
+.SOURCE
+catamorphism is when a function produces an identity given a constructor for a data type.
+.B foldr
+is the list catamorphism.
+.SUBSECTION_NO_NUMBER foldl vs foldr
+.PARAGRAPH_INDENTED
+.BULLET foldl is an imperative loop
+.BULLET foldr is a constructor replacement
+.ENDBULLET
 
 .NH 3
 scan
