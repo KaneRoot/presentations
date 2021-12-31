@@ -266,6 +266,14 @@ Compilé pour la dernière fois le
 .NH 2
 \\$*
 ..
+.de SUBSUBSECTION
+.NH 3
+\\$*
+..
+.de SUBSUBSUBSECTION
+.NH 4
+\\$*
+..
 .de SECTION_NO_NUMBER
 .SH
 \\$*
