@@ -2,49 +2,41 @@
 .PARAGRAPH_INDENTED
 Browsing through different documentations of the Haskell language (and FP in general) can be really hard.
 The technical corpus one must know prior to the reading of some of the explanations is almost preposterous\*[*].
-.FS
+.FOOTNOTE1
 And sometimes you get pure garbage descriptions.
 What's an applicative functor?
 According to the Haskell wiki: "An applicative functor has more structure than a functor but less than a monad.".
 Seriously, is this trolling at an academic level?
-.FE
+.FOOTNOTE2
 So, in order to tackle this problem, here is a list of technical terms explained in a simple way.
 
-.KS
-.BULLET
-.UL Class :
+.VOCABULARY1 Class
 category of types.
 .br
 Example: the class
 .MODULE Show
 represents all types that can be printed in the terminal.
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL Constructor :
+.VOCABULARY1 Constructor
 keyword to create a structure.
 .br
 Example:
 .CONSTRUCTOR True
 for a
 .MODULE Bool.
-.KE
+.VOCABULARY2
 
-.\".KS
-.\".BULLET
-.\".UL Method :
+.\".VOCABULARY1 Method
 .\"function in a class.
 .\".br
 .\"Example:
 .\".I fmap
 .\"in the type class
 .\".MODULE Functor.
-.\".KE
+.\".VOCABULARY2
 
-.KS
-.BULLET
-.UL Instance :
+.VOCABULARY1 Instance
 function implementation for a real type.
 .br
 Example:
@@ -53,31 +45,32 @@ instance  Functor Maybe  where
   fmap _ Nothing   = Nothing
   fmap f (Just a)  = Just (f a)
 .SOURCE
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL Prelude :
+.VOCABULARY1 Variadic
+undefined number of something (mostly used to describe undefined number of parameters for a function).
+Functions can have an undefined number of parameters in C, LISP and many other languages, not in Haskell.
+.TBD
+(TODO: maybe reword a bit)
+.VOCABULARY2
+
+.VOCABULARY1 Prelude
 standard library, available by default in every distribution of Haskell.
 Even included by default in any Haskell code without any
 .I import
 statement.
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL Recursivity :
+.VOCABULARY1 Recursivity
 the definition of something (a function or a structure) includes itself.
 .br
 Example:
 .SOURCE Haskell
 data List = Element Int List | Void
 .SOURCE
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Referential transparency and purity" :
+.VOCABULARY1 "Referential transparency and purity"
 same parameters leads to same result.
 A function will always provide the same result given a set of parameters.
 .br
@@ -90,11 +83,9 @@ These functions only work on their parameters and have
 they are called
 .I pure .
 On the contrary, when a function requires side effects (through networking, printing something in the terminal or getting an input from somewhere), the function isn't pure and its result cannot be known from a previous call.
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL Laziness :
+.VOCABULARY1 Laziness
 compute a value only when necessary.
 As a side effect, infinite lists are valid in Haskell.
 An infinite list can be declared and used, unless the code tries to get all its values, they won't be computed.
@@ -105,11 +96,9 @@ Example:
 take 5 $ [1..]
 --provides: 1, 2, 3, 4, 5
 .SOURCE
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "High order function" :
+.VOCABULARY1 "High order function"
 treat functions as values.
 .br
 Example:
@@ -117,11 +106,64 @@ Example:
 apply :: (a -> b) -> a -> b
 apply function value = function value
 .SOURCE
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Comprehension list" :
+.VOCABULARY1 Predicate
+function (or expression) whose range consists of truth values.
+See guards for example, they are used to chose the right function body.
+.VOCABULARY2
+
+.VOCABULARY1 Coroutine
+function that can be interrupted by
+.I yielding
+(providing a value or not) then resumed where it stopped.
+.VOCABULARY2
+
+.VOCABULARY1 Closure
+.TBD
+.VOCABULARY2
+
+.VOCABULARY1 "Continuation Passing Style (CPS)"
+to add to each function an extra
+.I continuation
+argument, a function to call to continue the program instead of simply returning a value.
+.TBD
+.VOCABULARY2
+
+.VOCABULARY1 Continuation
+functions take an extra parameter corresponding to the following function to execute, the rest of the application.
+Thus, functions do not really end, they jump to the next function, it is a goto.
+.TBD
+(why this can be useful)
+.VOCABULARY2
+
+.VOCABULARY1 "Applicative order"
+execute code within inner list first.
+Example:
+.SOURCE Haskell ps=7 vs=9p
+x = f (g)
+.SOURCE
+In an
+.I Applicative
+order, g is executed first.
+This is the case in most programming languages, and in LISP by default.
+.VOCABULARY2
+
+.VOCABULARY1 "Normal order"
+evaluate an expression only when needed.
+Example:
+.SOURCE Haskell ps=7 vs=9p
+x = f (g)
+.SOURCE
+In a
+.I Normal
+order, g is executed only if required by f.
+It is
+.I lazy
+and it is the way Haskell works.
+.VOCABULARY2
+
+.VOCABULARY1 "Comprehension list"
 a way to create lists.
 .br
 Example:
@@ -133,11 +175,9 @@ Example:
 --from (1,1) to (10,10)
 [(x,y) | x <- [1..10], y <- [x..10]]
 .SOURCE
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Point free" :
+.VOCABULARY1 "Point free"
 writing a function without explicit parameters.
 .br
 Example:
@@ -145,11 +185,9 @@ Example:
 add1 = + 1          --no explicit integer param
 h = reverse . sort  --no explicit list param
 .SOURCE
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Eta conversion" :
+.VOCABULARY1 "Eta conversion"
 making a function either more abstract (eta expansion) or less abstract (eta reduction).
 .br
 Example:
@@ -163,11 +201,9 @@ From the first to the second notation:
 From the second to the first notation:
 .I "eta expansion" .
 .BELLOWEXPLANATION2
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Lambda lifting" :
+.VOCABULARY1 "Lambda lifting"
 taking an inner function (in the
 .I where
 part of another function) and making it top-level.
@@ -183,11 +219,9 @@ g x y = x + y
 .SOURCE
 .BELLOWEXPLANATION1
 .BELLOWEXPLANATION2
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Free variable" :
+.VOCABULARY1 "Free variable"
 when a value doesn't come from the context of the function.
 A free variable is neither passed as parameter or computed within the function.
 .br
@@ -208,17 +242,13 @@ These values aren't parameters of the
 function, they're from the function
 .I f .
 .BELLOWEXPLANATION2
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Free expression" :
+.VOCABULARY1 "Free expression"
 an expression in which every variable is a Free variable. 
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Thunk" :
+.VOCABULARY1 Thunk
 unevaluated code in a non-strict environment.
 .SOURCE Haskell ps=8 vs=9p
 snd (undefined, 2)
@@ -233,38 +263,28 @@ is evaluated, the
 .I snd
 function takes the second element of the tuple, so the tuple itself is being evaluated, and the first element is dropped since it won't be useful later in the code.
 .BELLOWEXPLANATION2
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Normal form" :
+.VOCABULARY1 "Normal form"
 fully evaluated value.
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Weak head normal form" :
+.VOCABULARY1 "Weak head normal form"
 partially evaluated expression.
 Any intermediate evaluation between a thunk and a normal form.
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Persistence" :
+.VOCABULARY1 Persistence
 when a value is updated, older versions are still there, the update isn't
 .I "in place" .
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Amortization" :
+.VOCABULARY1 Amortization
 distribute unequal running times across a sequence of operations.
 .TBD
-.KE
+.VOCABULARY2
 
-.KS
-.BULLET
-.UL "Bottom (\[pp])" :
+.VOCABULARY1 "Bottom (\[pp])"
 a computation which never completes successfully.
 This notation isn't used in Haskell code, but rather in documentation to explain the behavior of a function.
 The code equivalent of \[pp] is
@@ -292,6 +312,7 @@ zip \m[darkgreen]\[pp]\m[] \m[darkred][]\m[] \m[darkred]=\m[] error
 .fam
 .DE
 .b2
+.VOCABULARY2
 
 
 .ENDBULLET
