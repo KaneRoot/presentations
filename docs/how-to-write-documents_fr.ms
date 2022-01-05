@@ -38,7 +38,7 @@ Salut, seconde note en pied de page.
 à moins que ce soit pour décrire explicitement ce que vous faites et
 .B seulement
 si vous en avez besoin.
-Si votre document décrit quelque-chose, parlez du sujet et pas de vous.
+Si votre document décrit quelque chose, parlez du sujet et pas de vous.
 Prenez en exemple cette liste de conseils. 
 .BULLET Attention au public : évitez d'être trop familier.
 Évitez d'employer des mots savants si ce n'est pas la manière dont votre interlocuteur s'exprime.
