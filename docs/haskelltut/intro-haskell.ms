@@ -654,7 +654,7 @@ type class will make it trivial.
 .PARAGRAPH_UNINDENTED
 Types are
 .I polymorphic
-when they have type a parameter, meaning that the type of the values they contain isn't fixed.
+when they have a type parameter, meaning that the type of the values they contain isn't fixed.
 For example, a list may contain integers, strings or anything else, and that's still a list.
 Fixing the type of the values it contains would be arbitrary and very limiting.
 .SOURCE haskell ps=8 vs=9p
@@ -780,9 +780,10 @@ in the standard library, then implements an instance for the recursive and polym
 .I a ,
 defined earlier (in the "polymorphic type" section).
 .SOURCE haskell ps=8 vs=9p
+--Type class definition: function(s) to implement
+--to be part of it.
 class Semigroup a where
-   --Function to implement to be part of
-   --this type class.
+   -- <> is a concatenation operator.
    (<>) :: a -> a -> a
 
 --instance for the "List a" type
@@ -815,13 +816,12 @@ Plenty of examples are provided in the section on usual type classes.
 
 .SECTION_NO_NUMBER Laws
 .PARAGRAPH_INDENTED
-Sometimes, in order to have a meaninful type class, the behavior of the structure, given a function, has to be imposed.
+Sometimes, in order to have a meaningful type class, the behavior of the structure, given a function, has to be imposed.
 For example, the
 .BX <>
-function, from the
+function from the
 .MODULE Semigroup
-type class,
-requires the data structure to be associative.
+type class requires the data structure to be associative.
 .SOURCE haskell ps=8 vs=9p
 --associtivity is required for the operator '<>'
 (a <> b) <> c == a <> (b <> c)
