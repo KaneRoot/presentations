@@ -487,8 +487,7 @@ And this completes the function call and the result is
 
 .QUESTION "Why is this a thing?"
 Applicative functors present a way to handle a common code structure.
-
-.TBD
+Let's see the following example:
 
 .PS
 reset
@@ -536,19 +535,62 @@ move to CTITLE + (0.8,-2.5)
 "getting \fIfunction3\f[] parameters ready, then call it"
 .PE
 .BELLOWEXPLANATION1
-Code required in C to check for errors is in red, error managment is in blue, function calls are in green.
+Error checking is in red, error managment is in blue, function calls are in green.
 .BELLOWEXPLANATION2
+
+In this example, in both C and Haskell, we try to call
+.FUNCTION function3
+with the results of
+.FUNCTION function1
+and
+.FUNCTION function2
+as parameters.
+Both handle errors: in case either the first or the second function fails, the rest isn't called and the function returns an error value.
+This error value is either a default error value, such as
+.CONSTRUCTOR null
+in C or
+.CONSTRUCTOR Nothing
+in Haskell, or the value provided by the defective function.
+
+In C, the current function can do anything at any time, even returning unrelated values for example.
+In Haskell, both three functions have the same return type (implementing operators <$> and <*>).
+Thus, errors are handled in a standardized way: error management is written in the data structure code, once.
+
+.SECTION_NO_NUMBER Implementation example: Maybe
+.PARAGRAPH_INDENTED
 
 .SECTION_NO_NUMBER Conclusion on applicative functors
 .PARAGRAPH_INDENTED
-Functors and Applicative functors encourage to create functions with a similar way of handling data or errors, by using data structures such as
+As we saw earlier, data structures implementing
+.FUNCTION fmap
+(to apply a function to the data) are called
+.CONSTRUCTOR functors.
+If the applied function requires more than one parameter, it is curried: the data structure now contains a partially applied function.
+Applicative functors are about providing a new parameter to this function.
+
+Functors and applicative functors help the developer: both were created because of recurring patterns in applications.
+Functors allow to manipulate data in data structures, no matter how complex the data structure is.
+Applicative functors gather all parameters to a function call, allowing to write code almost as simple as
+.BX "f3(f1(), f2())"
+(in imperative languages) while still handling errors\*[*].
+.FOOTNOTE1
+In Haskell, something like
+.BX "f3(f1(), f2())"
+can be written as
+.BX "f3 <$> f1 <*> f2"
+which is both safe (errors are handled) and standardized.
+.FOOTNOTE2
+
+Generic and expressive data structures such as
 .MODULE Maybe
-or
-.MODULE Either.
+and
+.MODULE Either
+implement both Functor and Applicative type classes.
+This allows developers to manipulate elements of these data structures and to chain function calls in a standardized way.
 
 .SUBSECTION Monad: binding functions
 .PARAGRAPH_INDENTED
-Functional programming, and particularly in Haskell, a function is a single expression.
+In functional programming, and particularly in Haskell, a function is a single expression.
 However, one may want to perform multiple function calls in this single expression.
 A
 .MODULE Monad
