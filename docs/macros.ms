@@ -314,3 +314,11 @@ Compilé pour la dernière fois le
 .de FOOTNOTE2
 .FE
 ..
+.de VOCABULARY1
+.KS
+.BULLET
+.UL "\\$*" :
+..
+.de VOCABULARY2
+.KE
+..
