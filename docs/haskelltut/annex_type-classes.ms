@@ -1,4 +1,4 @@
-.1C
+.SINGLE_COLUMN
 .SECTION Annex: a bunch of type classes
 
 .PARAGRAPH_INDENTED
@@ -71,13 +71,10 @@ T}:T{
 (>>)
 T}
 .TE
+.TWO_COLUMNS
 
 .SECTION TODO
-
 .PARAGRAPH_INDENTED
-
-.SOURCE Haskell
+.SOURCE Haskell ps=7 vs=9p
 (+) <$ Just 5 <* Nothing <*> Just 4 <*> Just 3
 .SOURCE
-
-.2C
