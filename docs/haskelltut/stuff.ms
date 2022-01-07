@@ -64,7 +64,7 @@ operator (which is an infix version of
 .I fmap ).
 This operator is well-known and designed for this purpose:
 .UL "apply when semantically valid" \*[*].
-.FS
+.FOOTNOTE1
 One may refer to the
 .I fmap
 function is a
@@ -74,7 +74,7 @@ It takes a pure function
 .BX "(a -> b)"
 and lift it to be valid in a functor context
 .BX "(f a -> f b)"
-.FE
+.FOOTNOTE2
 
 The semantic of the
 .BX <$>
@@ -111,9 +111,9 @@ Compare this to what you would have written in an imperative language.
 .BELLOWEXPLANATION2
 
 In this last version, our function is valid for many functors\*[*].
-.FS
+.FOOTNOTE1
 This is a bit like Java interfaces on steroids.
-.FE
+.FOOTNOTE2
 .
 .
 .SECTION Notes: quick and dirty
@@ -127,7 +127,7 @@ A list of the most used operators:
 .ps 9
 
 And how to use them\*[*]:
-.FS
+.FOOTNOTE1
 Remember:
 .I Maybe
 is a functor, and parameters
@@ -136,7 +136,7 @@ and
 .I b
 are simple types, such as
 .I Integer .
-.FE
+.FOOTNOTE2
 .ps 8
 .SOURCE Haskell
  fun :: Maybe (Int -> Int)
@@ -234,14 +234,14 @@ is transformed into a function
 .UL lifted
 into
 .I f \*[*].
-.FS
+.FOOTNOTE1
 There are a lot of functors classes:
 .MODULEX Applicative
 .MODULEX Monad
 .MODULEX Bifunctor
 etc.
 .TBD
-.FE
+.FOOTNOTE2
 .
 .
 .SUBSECTION Contravariant functor
@@ -254,11 +254,11 @@ to
 Whereas in Haskell, one can think of a
 .MODULE Functor
 as containing or producing values, a contravariant functor is a functor that can be thought of as consuming values\*[*].
-.FS
+.FOOTNOTE1
 This is a citation from the Haskell documentation on
 .MODULE Data.Functor.Contravariant
 and it deserves a read.
-.FE
+.FOOTNOTE2
 
 In Haskell, the
 .MODULE Data.Functor.Contravariant
