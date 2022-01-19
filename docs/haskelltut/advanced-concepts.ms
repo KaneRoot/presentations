@@ -129,3 +129,15 @@ Said otherwise, code is represented as a series of primitive structures of the l
 For example, in Lisp, the code is a series of nested lists.
 This allows very powerful metaprogrammation: developers can write code that modifies the code (maybe even at runtime) in a very concise way.
 All thanks to the use of primitive structures to represent the code itself.
+
+Example in LISP:
+.SOURCE Lisp ps=8 vs=9p
+(defmacro print-parameters (f)
+	`(print (cdr '(,@f))))
+(print-parameters (+ 1 2))
+; (1 2)
+.SOURCE
+
+.SUBSECTION Futures, Monads, Reactive Programming and Functors
+.PARAGRAPH_INDENTED
+

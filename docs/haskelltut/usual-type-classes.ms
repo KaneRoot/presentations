@@ -359,20 +359,17 @@ as the value.
 Functors are a way to manipulate data structures.
 
 The following figure compares a list manipulation from C and Haskell perspectives.
-
 .PS
 reset
-.defcolor lightgreen rgb 0.9 1.0 0.9
-.defcolor lightblue  rgb 0.9 0.9 1.0
-.defcolor bloatcode  rgb 1.0 0.1 0.1
-down
-boxht=0.2
+copy "macros.pic"
 boxwid=0.4
+down
 CLANG: "C"
 move; left; move; move; down
 "\fIst = ...\f[]" ljust
 move 0.2
-FORLOOP: "for (int i = 0; i<= \fIst\f[].len; i++) {" ljust outline "bloatcode"
+FORLOOP: "for (int i = 0; i<= \fIst\f[].len; i++) {" ljust \
+  outline "bloatcode"
 move 0.1; move right; down
 CBOX: box "..." shaded "lightgreen"
 move to FORLOOP + (0,-0.4)
@@ -488,14 +485,10 @@ And this completes the function call and the result is
 .QUESTION "Why is this a thing?"
 Applicative functors present a way to handle a common code structure.
 Let's see the following example:
-
 .PS
 reset
-.defcolor lightgreen rgb 0.9 1.0 0.9
-.defcolor lightblue  rgb 0.9 0.9 1.0
-.defcolor bloatcode  rgb 1.0 0.1 0.1
+copy "macros.pic"
 down
-boxht=0.2
 CTITLE: "C"
 move
 move right 0.1
@@ -535,11 +528,11 @@ move to CTITLE + (0.8,-2.5)
 "getting \fIfunction3\f[] parameters ready, then call it"
 .PE
 .BELLOWEXPLANATION1
-Error checking is in red, error managment is in blue, function calls are in green.
+Error checking is in red, error management is in blue, function calls are in green.
 .BELLOWEXPLANATION2
 
 In this example, in both C and Haskell, we try to call
-.FUNCTION function3
+.FUNCTION f
 with the results of
 .FUNCTION function1
 and
@@ -558,6 +551,81 @@ Thus, errors are handled in a standardized way: error management is written in t
 
 .SECTION_NO_NUMBER Implementation example: Maybe
 .PARAGRAPH_INDENTED
+.PS
+reset
+copy "macros.pic"
+
+.\" Boxes.
+BOX1: box "f"
+BOX2: box "function1" with .ne at BOX1.se + (0, -boxes_separation)
+BOX3: box "function2" with .ne at BOX2.se + (0, -boxes_separation)
+
+.\" End circles.
+CIRCLE1: circle with .c at BOX2.c + (1.5,0) rad 0.1 fill "End" "" ""
+CIRCLE2: circle with .c at BOX3.c + (1.5,0) rad 0.1 fill "End" "" ""
+HAPPY_END: circle rad 0.1 fill with .n at BOX3.s + (0, -boxes_separation) "End      " rjust
+
+linewidth=0.13
+.\" Simple text.
+"\f[CW]f\f[] is a function"            ljust at BOX1.e + (0.1,0)
+"requiring 2 parameters"               ljust at BOX1.e + (0.1,-linewidth)
+"function \f[CW]f\f[] is now complete" ljust at HAPPY_END.e + (0.1,0)
+"and can be called"                    ljust at HAPPY_END.e + (0.1,-linewidth)
+
+.\" Arrows.
+arrow "Nothing" above from BOX2.e to CIRCLE1.w
+arrow "Nothing" above from BOX3.e to CIRCLE2.w
+arrow "Just \fIresult\f[]  " rjust "give \fIresult\f[] to f  " rjust from BOX3.s to HAPPY_END.n
+
+.\" Arcs.
+arc -> from BOX2.sw to BOX3.nw "Just \fIresult\f[]          " rjust "give \fIresult\f[] to f          " rjust
+
+.\" Operator circles
+circle "\f[CW]<$>\f[]" rad circlerad at BOX1.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
+circle "\f[CW]<*>\f[]" rad circlerad at BOX2.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
+
+down; move to BOX3.s; move; move; move right
+"Maybe applicative: \f[CW]f <$> function1 <*> function2\f[]"
+.PE
+
+.SECTION_NO_NUMBER Implementation example: Either
+.PARAGRAPH_INDENTED
+.PS
+reset
+copy "macros.pic"
+
+.\" Boxes.
+BOX1: box "f"
+BOX2: box "function1" with .ne at BOX1.se + (0, -boxes_separation)
+BOX3: box "function2" with .ne at BOX2.se + (0, -boxes_separation)
+
+.\" End circles.
+CIRCLE1: circle with .c at BOX2.c + (1.5,0) rad 0.1 fill "End" "" ""
+CIRCLE2: circle with .c at BOX3.c + (1.5,0) rad 0.1 fill "End" "" ""
+HAPPY_END: circle rad 0.1 fill with .n at BOX3.s + (0, -boxes_separation) "End      " rjust
+
+linewidth=0.13
+.\" Simple text.
+"\f[CW]f\f[] is a function"            ljust at BOX1.e + (0.1,0)
+"requiring 2 parameters"               ljust at BOX1.e + (0.1,-linewidth)
+"function \f[CW]f\f[] is now complete" ljust at HAPPY_END.e + (0.1,0)
+"and can be called"                    ljust at HAPPY_END.e + (0.1,-linewidth)
+
+.\" Arrows.
+arrow "Left \fIerror\f[]" above from BOX2.e to CIRCLE1.w
+arrow "Left \fIerror\f[]" above from BOX3.e to CIRCLE2.w
+arrow "Right \fIresult\f[]  " rjust "give \fIresult\f[] to f  " rjust from BOX3.s to HAPPY_END.n
+
+.\" Arcs.
+arc -> from BOX2.sw to BOX3.nw "Right \fIresult\f[]          " rjust "give \fIresult\f[] to f          " rjust
+
+.\" Operator circles
+circle "\f[CW]<$>\f[]" rad circlerad at BOX1.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
+circle "\f[CW]<*>\f[]" rad circlerad at BOX2.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
+
+down; move to BOX3.s; move; move; move right
+"Either applicative: \f[CW]f <$> function1 <*> function2\f[]"
+.PE
 
 .SECTION_NO_NUMBER Conclusion on applicative functors
 .PARAGRAPH_INDENTED
@@ -616,11 +684,8 @@ mechanism.
 
 .PS
 reset
-.defcolor lightgreen rgb 0.9 1.0 0.9
-.defcolor lightblue  rgb 0.9 0.9 1.0
-.defcolor bloatcode  rgb 1.0 0.1 0.1
+copy "macros.pic"
 down
-boxht=0.2
 JAVA: "JAVA"
 move
 move left
@@ -745,7 +810,8 @@ The following figure represents the
 function.
 .PS
 reset
-boxht=0.3
+copy "macros.pic"
+
 define function { [
 	right
 	X: box $1
@@ -839,10 +905,9 @@ However, the Maybe structure is fairly limited: functions cannot indicate an err
 
 .SECTION_NO_NUMBER The Either Monad
 .PARAGRAPH_INDENTED
-
 .PS
 reset
-boxht=0.3
+copy "macros.pic"
 define function { [
 	right
 	X: box $1

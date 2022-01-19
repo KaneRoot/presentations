@@ -47,6 +47,72 @@ instance  Functor Maybe  where
 .SOURCE
 .VOCABULARY2
 
+.VOCABULARY1 Functor
+structure implementing the
+.FUNCTION fmap
+function, to change its inner value(s).
+.br
+Example:
+.SOURCE Haskell ps=7 vs=9p
+--fmap :: Functor f => (a -> b) -> f a -> f b
+
+--Previous code snippet shows an instance of fmap.
+--Usage example (Maybe functor):
+fmap (+2) Just 2
+--> Just 4
+
+--Usage example (Either functor):
+fmap (+2) Right 2
+--> Right 4
+.SOURCE
+.VOCABULARY2
+
+.VOCABULARY1 Applicative Functor
+structure implementing the
+.OPERATOR <*>
+operator, allowing to pass arguments to a function in a functor.
+.br
+Example:
+.SOURCE Haskell ps=7 vs=9p
+--<*> :: Applicative f => f (a -> b) -> f a -> f b
+
+--Usage example (Maybe applicative functor):
+Just (+2) <*> Just 2
+--> Just 4
+
+--Usage example (Either applicative functor):
+Right (+2) <*> Right 2
+--> Right 4
+.SOURCE
+.VOCABULARY2
+
+.VOCABULARY1 Monad
+structure implementing the
+.OPERATOR >>=
+operator, allowing to bind function calls together.
+Said otherwise: the infix operator
+.OPERATOR >>=
+takes a monad (containing a value of type
+.TYPE a )
+and a function taking a value of type
+.TYPE a
+and returning another monad (containing a value of type
+.TYPE b ).
+.br
+Example:
+.SOURCE Haskell ps=7 vs=9p
+-->>= :: Monad m => m a -> (a -> m b) -> m b
+
+--Usage example (Maybe monad):
+Just 2 >>= \x -> Just (2+x)
+--> Just 4
+
+--Usage example (Either monad):
+Right 2 >>= \x -> Right (2+x)
+--> Right 4
+.SOURCE
+.VOCABULARY2
+
 .VOCABULARY1 Variadic
 undefined number of something (mostly used to describe undefined number of parameters for a function).
 Functions can have an undefined number of parameters in C, LISP and many other languages, not in Haskell.

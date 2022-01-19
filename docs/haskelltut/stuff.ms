@@ -22,12 +22,12 @@ We create a function
 .I foo
 which takes a parameter.
 The parameter is a
-.MODULE "Maybe Int,"
+.MODULE "Maybe Int" ,
 it can be either a
 .CONSTRUCTOR Nothing
 (there is no value) or a
 .CONSTRUCTOR Just
-.TYPE Int.
+.TYPE Int .
 We want to perform a computation our single parameter only in case it is valid.
 Otherwise, we should return
 .CONSTRUCTOR Nothing.
