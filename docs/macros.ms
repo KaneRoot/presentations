@@ -30,6 +30,7 @@ accumulate
 .defcolor specialcolor_module      rgb 0.1 0.5 0.2
 .defcolor specialcolor_function    rgb 0.4 0.4 0.7
 .defcolor specialcolor_question    rgb 0.0 0.0 0.7
+.defcolor specialcolor_operator    rgb 0.3 0.8 0.3
 .defcolor specialcolor_shine       rgb 0.3 0.3 0.7
 .
 . \" SIZES
@@ -37,6 +38,7 @@ accumulate
 .nr specialsize_constructor 8
 .nr specialsize_module      8
 .nr specialsize_function    8
+.nr specialsize_operator    9
 .nr specialsize_question    10   \" Current point size, no change.
 .nr specialsize_shine       11
 .
@@ -44,7 +46,8 @@ accumulate
 .ds specialfont_type        CW
 .ds specialfont_constructor CW
 .ds specialfont_module      CW
-.ds specialfont_function    I
+.ds specialfont_function    CW
+.ds specialfont_operator    CW
 .ds specialfont_question    I
 .ds specialfont_shine       B
 .
@@ -220,10 +223,8 @@ accumulate
 .I "\\$1" "\\$2"
 ..
 .de FUNCTION
-.gcolor color_function
-\f[CW]\\$1\f[]\c
-.gcolor
-\\$2
+.ds semantictoken function
+.SPECIAL_WORDS "\\$1" "\\$2"
 ..
 .de TYPE
 .ds semantictoken type
@@ -233,7 +234,8 @@ accumulate
 .I "\\$1" "\\$2"
 ..
 .de OPERATOR
-\f[CW]\\$1\f[]\\$2
+.ds semantictoken operator
+.SPECIAL_WORDS "\\$1" "\\$2"
 ..
 .de QUESTION
 .ds semantictoken question
