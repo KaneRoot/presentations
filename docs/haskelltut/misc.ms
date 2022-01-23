@@ -1,5 +1,4 @@
 .SECTION Misc
-.PARAGRAPH_INDENTED
 This section is a way to provide some unordered informations.
 
 .SUBSECTION Kinds

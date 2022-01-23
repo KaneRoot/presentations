@@ -1,5 +1,4 @@
 .SECTION Functional programming
-.PARAGRAPH_INDENTED
 FP can be seen as an
 .ft I
 "everything is a function"

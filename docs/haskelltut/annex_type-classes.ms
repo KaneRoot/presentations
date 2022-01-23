@@ -74,7 +74,6 @@ T}
 .TWO_COLUMNS
 
 .SECTION TODO
-.PARAGRAPH_INDENTED
 .SOURCE Haskell ps=7 vs=9p
 (+) <$ Just 5 <* Nothing <*> Just 4 <*> Just 3
 .SOURCE

@@ -1,5 +1,4 @@
 .SECTION To the point
-.PARAGRAPH_INDENTED
 Pure and simple functions (such as addition) are great: they are independant from the rest of the code.
 They always have the same set of parameters, and work always as expected.
 .UL But ,
@@ -14,7 +13,6 @@ not just say what must be done.
 I'll describe a few cases and a good way to handle them in Haskell.
 .SUBSECTION Error cases
 .SUBSUBSECTION Pure function, single parameter and potential erroneous parameter.
-.PARAGRAPH_INDENTED
 Let's see a first example of error management with the
 .MODULE Maybe
 module.
@@ -117,7 +115,6 @@ This is a bit like Java interfaces on steroids.
 .
 .
 .SECTION Notes: quick and dirty
-.PARAGRAPH_INDENTED
 A list of the most used operators:
 .SOURCE Haskell ps=8 vs=9p
  ($)   ::                (a -> b) ->   a ->   b
@@ -183,7 +180,6 @@ Either the language implements some sort of "try and catch" mechanism (Java, Pyt
 .
 .
 .SUBSECTION Covariant functor
-.PARAGRAPH_INDENTED
 A
 .ft B
 covariant functor
@@ -245,7 +241,6 @@ etc.
 .
 .
 .SUBSECTION Contravariant functor
-.PARAGRAPH_INDENTED
 A contravariant functor is defined as a covariant functor, but the function it takes as a first argument is from
 .I b
 to
@@ -271,13 +266,11 @@ As we can see, the order of the types for the first parameter are inversed compa
 .
 .
 .SUBSECTION Bifunctor
-.PARAGRAPH_INDENTED
 A Bifunctor is a functor containing two functors.
 .TBD
 .
 .
 .SUBSECTION Profunctor
-.PARAGRAPH_INDENTED
 .ft B
 Profunctor
 .ft R
@@ -294,7 +287,6 @@ as its second.
 .
 .
 .SECTION Lenses: manipulate nested structures easily
-.PARAGRAPH_INDENTED
 This section is roughly a summary of some books and web pages.
 .[
 lenses
@@ -352,7 +344,6 @@ Great for games, video and audio applications, etc.
 .ENDBULLET
 
 .SUBSECTION Modules
-.PARAGRAPH_INDENTED
 Here are some interesting modules, either for wide adoption in any kind of applications or in specific contexts.
 Some already are included in base Haskell distributions.
 

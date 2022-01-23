@@ -1,10 +1,8 @@
 .SECTION Usual data structures
-.PARAGRAPH_INDENTED
 Haskell provides some very simple and ubiquitous data structures.
 This very brief section covers some of them.
 
 .SUBSECTION Bool
-.PARAGRAPH_INDENTED
 A boolean value is either true or false.
 Haskell has probably one of the simplest way to express this.
 .SOURCE Haskell ps=8 vs=9p
@@ -15,7 +13,6 @@ This is a sum data type.
 .BELLOWEXPLANATION2
 
 .SUBSECTION List
-.PARAGRAPH_INDENTED
 A list in Haskell is as simple as one can expect.
 .SOURCE Haskell ps=8 vs=9p
 data List a = Nil | Cons a (List a)
@@ -39,7 +36,6 @@ is found as an infix operator
 about everywhere in Haskell code.
 
 .SUBSECTION String
-.PARAGRAPH_INDENTED
 A
 .MODULE String
 is a list of characters.
@@ -52,7 +48,6 @@ Still, it made sense to show this here.
 .BELLOWEXPLANATION2
 
 .SUBSECTION Maybe
-.PARAGRAPH_INDENTED
 The
 .MODULE Maybe
 data structure is simple: either there is a value (stored with the
@@ -68,7 +63,6 @@ Those words aren't so scary now, heh?
 .BELLOWEXPLANATION2
 
 .SUBSECTION Either
-.PARAGRAPH_INDENTED
 A computation can work or fail, which already can be represented by a
 .MODULE Maybe
 value.

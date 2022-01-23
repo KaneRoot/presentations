@@ -1,5 +1,4 @@
 .SECTION Usual Haskell type classes
-.PARAGRAPH_INDENTED
 A type class represents a property of a data type.
 For example, a type that isn't empty (NonEmpty), or that can be serialized in a printable string format on the terminal (Show).
 Type classes allow developers to focus on an abstraction of the types they work with;
@@ -50,7 +49,6 @@ Some widespread monads will be introduced, such as the IO monad, allowing us to 
 Finally, a brief conclusion on type classes and their usefulness.
 
 .SUBSECTION Eq: types that can be tested for equality
-.PARAGRAPH_INDENTED
 The
 .TYPECLASS Eq
 type class represents all types that can be tested for equality.
@@ -117,7 +115,6 @@ See later sections.
 .BELLOWEXPLANATION2
 
 .SUBSECTION Ord: types that can be sorted
-.PARAGRAPH_INDENTED
 The
 .TYPECLASS Ord
 type class represents all types that can be sorted (is a value smaller or equal than another).
@@ -214,7 +211,6 @@ And we just touched something really interesting with Haskell.
 Despite its simplity, code is generic and reusability is great!
 
 .SUBSECTION Functor: applying a function in a structure
-.PARAGRAPH_INDENTED
 A functor is a type allowing to apply a function to its inner value(s), through a
 .FUNCTION fmap
 function.
@@ -355,7 +351,6 @@ as the value.
 .BELLOWEXPLANATION2
 
 .SECTION_NO_NUMBER Imperative vs functional structure manipulation
-.PARAGRAPH_INDENTED
 Functors are a way to manipulate data structures.
 
 The following figure compares a list manipulation from C and Haskell perspectives.
@@ -404,7 +399,6 @@ What if the structure wasn't a simple list anymore?
 The C code should be rewritten completely.
 
 .SECTION_NO_NUMBER Synonym: infix <$> operator
-.PARAGRAPH_INDENTED
 Finally, the
 .FUNCTION fmap
 function has a synonym: the infix operator
@@ -424,7 +418,6 @@ actually is relevant for the next sections and to write idiomatic Haskell code.
 .BELLOWEXPLANATION2
 
 .SECTION_NO_NUMBER Conclusion on functors
-.PARAGRAPH_INDENTED
 The functor type class allows a great code abstraction.
 First, it applies a function to a whole data structure with a single and simple function call.
 There is no need for loops, and it is generic (works the same way for many types).
@@ -438,7 +431,6 @@ value in an Either data type).
 And keep in mind the <$> operator!
 
 .SUBSECTION Applicative: applying parameters to a functor
-.PARAGRAPH_INDENTED
 A functor is a type containing data that can be changed through the
 .FUNCTION fmap
 function.
@@ -550,7 +542,6 @@ In Haskell, both three functions have the same return type (implementing operato
 Thus, errors are handled in a standardized way: error management is written in the data structure code, once.
 
 .SECTION_NO_NUMBER Implementation example: Maybe
-.PARAGRAPH_INDENTED
 .PS
 reset
 copy "macros.pic"
@@ -589,7 +580,6 @@ down; move to BOX3.s; move; move; move right
 .PE
 
 .SECTION_NO_NUMBER Implementation example: Either
-.PARAGRAPH_INDENTED
 .PS
 reset
 copy "macros.pic"
@@ -628,7 +618,6 @@ down; move to BOX3.s; move; move; move right
 .PE
 
 .SECTION_NO_NUMBER Conclusion on applicative functors
-.PARAGRAPH_INDENTED
 As we saw earlier, data structures implementing
 .FUNCTION fmap
 (to apply a function to the data) are called
@@ -657,7 +646,6 @@ implement both Functor and Applicative type classes.
 This allows developers to manipulate elements of these data structures and to chain function calls in a standardized way.
 
 .SUBSECTION Monad: binding functions
-.PARAGRAPH_INDENTED
 In functional programming, and particularly in Haskell, a function is a single expression.
 However, one may want to perform multiple function calls in this single expression.
 A
@@ -785,7 +773,6 @@ and
 monads, provide the general idea behind monads.
 
 .SECTION_NO_NUMBER The Maybe Monad
-.PARAGRAPH_INDENTED
 A monad was created from the Maybe data structure.
 And this can be summarized this way: either there is a value and the next function is called, or the computation stops and returns Nothing.
 
@@ -904,7 +891,6 @@ cat file | grep value | grep othervalue > result.
 However, the Maybe structure is fairly limited: functions cannot indicate an error, which will be fixed with the next monad.
 
 .SECTION_NO_NUMBER The Either Monad
-.PARAGRAPH_INDENTED
 .PS
 reset
 copy "macros.pic"
@@ -938,10 +924,8 @@ move right
 .SECTION_NO_NUMBER Conclusion on monads
 
 .SUBSECTION The IO monad
-.PARAGRAPH_INDENTED
 
 .SUBSUBSECTION To sort
-.PARAGRAPH_INDENTED
 
 .BULLET
 .UL Num :
@@ -986,7 +970,6 @@ Show
 .\".SOURCE
 
 .SUBSECTION Alternative
-.PARAGRAPH_INDENTED
 The
 .MODULE Alternative
 class helps chaining function calls and takes the first valid value returned by these functions.
@@ -1074,5 +1057,4 @@ Both examples are valid in Python.
 .KE
 
 .SUBSECTION Arrows
-.PARAGRAPH_INDENTED
 Arrows are another way than monads to express a logical implication between function calls.

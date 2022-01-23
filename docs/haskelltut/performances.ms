@@ -1,5 +1,4 @@
 .SECTION Performances
-.PARAGRAPH_INDENTED
 Haskell can be in the same ballpark than C regarding computational speed.
 Good performances mostly come from:
 .BULLET
@@ -62,7 +61,6 @@ Makes hard problems conceivable
 Allows for separation of concerns with regard to generating and processing data.
 
 .SUBSECTION Tail recursion elimination
-.PARAGRAPH_INDENTED
 In the general case, a function call is stacked in memory.
 The
 .I stack
@@ -100,7 +98,6 @@ and this also builds a stack that will end-up in overflow.
 .ENDBULLET
 
 .SECTION_NO_NUMBER First step
-.PARAGRAPH_INDENTED
 .I "Tail recursion elimination"
 (or
 .I "tail recursion optimization" )
@@ -119,7 +116,6 @@ The compiler should be noticed that the accumulator is
 .I strict .
 
 .SECTION_NO_NUMBER Rewrite the function with a strict accumulator
-.PARAGRAPH_INDENTED
 One way to make sure the accumulator is strict, is to use the
 .BX $!
 operator, which forces a strict evaluation to its right component.
@@ -151,7 +147,6 @@ the compiler can find out some of the actual strict parameters.
 .BELLOWEXPLANATION2
 
 .SECTION_NO_NUMBER A better way
-.PARAGRAPH_INDENTED
 Our
 .I len
 function follows the
@@ -170,7 +165,6 @@ Reusing existing functions is simpler, less error-prone and actually more effici
 .BELLOWEXPLANATION2
 
 .SECTION_NO_NUMBER Experiment
-.PARAGRAPH_INDENTED
 Several implementations of the
 .I len
 function were described: the

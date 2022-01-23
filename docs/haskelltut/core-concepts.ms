@@ -10,7 +10,6 @@ and
 .I "laziness" .
 
 .SUBSECTION Currying
-.PARAGRAPH_INDENTED
 Or,
 .I "why do functions take a single argument" ?
 .PARAGRAPH_UNINDENTED
@@ -105,7 +104,6 @@ is a function taking another function as its first parameter, and applies it to 
 .BELLOWEXPLANATION2
 
 .SUBSECTION Referential transparency (Purity)
-.PARAGRAPH_INDENTED
 Referential transparency (or
 .I purity )
 is the property of an expression when it only uses its parameters to compute a value.
@@ -148,7 +146,6 @@ is factored, but it works with any pure function.
 .ENDBULLET
 
 .SUBSECTION Laziness
-.PARAGRAPH_INDENTED
 Laziness means to compute a value only when necessary.
 Why calculate every element of a list when you only use the first one?
 

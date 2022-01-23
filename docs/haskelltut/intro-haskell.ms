@@ -1,5 +1,4 @@
 .SECTION Introduction to Haskell
-.PARAGRAPH_INDENTED
 Functional and imperative programming languages are differents on many levels.
 This section provides an overview on those differences.
 
@@ -29,7 +28,6 @@ And finally, a brief discussion on the Haskell language, functional programming 
 .\".]
 
 .SUBSECTION A first example
-.PARAGRAPH_INDENTED
 Just to get started on how to write a program with a functional programming language, here is an example: the fibonacci sequence.
 .\" A space in necessary (otherwise, everything is single-lined)
 .SOURCE Haskell
@@ -76,7 +74,6 @@ Consequently, the whole expression is to be executed and its single produced val
 .ENDBULLET
 
 .SUBSECTION A few Haskell basic types
-.PARAGRAPH_INDENTED
 Before introducing syntax for functions, a quick overview of very simple types in Haskell.
 .SOURCE haskell ps=8 vs=9p
 5                     :: Int
@@ -141,7 +138,6 @@ is syntactic sugar for
 .BELLOWEXPLANATION2
 
 .SUBSECTION Haskell's syntax for functions
-.PARAGRAPH_INDENTED
 Functions in imperative and functional languages are different concepts.
 
 In an imperative language, a function is a set of instructions to execute and are gathered and named to be called later, possibly several times or just to cut the code in more readable pieces.
@@ -428,8 +424,6 @@ Chosing the right one comes with experience, nothing to worry about.
 .BELLOWEXPLANATION2
 
 .SUBSECTION Haskell's type system
-
-.PARAGRAPH_INDENTED
 This document already introduced primitive types (integer, float and character) and a few others: Bool, tuples and lists.
 Functions also have their own type, and can be passed as function parameter as any other type of value.
 
@@ -452,7 +446,6 @@ Documentation through type names is both elegant and effective, even if this isn
 .FE
 
 .SUBSUBSECTION What type should I use? Holes!
-.PARAGRAPH_INDENTED
 Haskell has a great type inference.
 When writing a function, the actual type of the missing code can be asked to the compiler by writing a
 .I hole
@@ -686,7 +679,6 @@ constraint (inner values have to be numbers).
 .BELLOWEXPLANATION2
 
 .SUBSUBSUBSECTION Summary on data types
-.PARAGRAPH_INDENTED
 
 Let's recap the available data types in Haskell.
 .BULLET
@@ -740,7 +732,6 @@ Type synonyms provide the
 behind the types.
 
 .SUBSECTION Haskell's type classes
-.PARAGRAPH_INDENTED
 
 Types may be related to each other.
 An integer and a float, wheither their size, are both numbers, for example.
@@ -815,7 +806,6 @@ will result in
 Plenty of examples are provided in the section on usual type classes.
 
 .SECTION_NO_NUMBER Laws
-.PARAGRAPH_INDENTED
 Sometimes, in order to have a meaningful type class, the behavior of the structure, given a function, has to be imposed.
 For example, the
 .BX <>
@@ -847,7 +837,6 @@ Furthermore, it could be completely legitimate for the compiler to implement cod
 .FE
 
 .SECTION_NO_NUMBER Summary
-.PARAGRAPH_INDENTED
 A type class regroups similar types, related to each other by the functions they can perform.
 Sometimes, they have to obey laws, such as
 .I associativity ,
@@ -950,7 +939,6 @@ module Some.Simple.Module (
 .SOURCE
 
 .SUBSECTION Discussion on Haskell and common concepts
-.PARAGRAPH_INDENTED
 This section shown most of the common ways to create functions and data structures in Haskell.
 This is a boring but non avoidable part of the journey to learn the language, and this only scratched the surface.
 

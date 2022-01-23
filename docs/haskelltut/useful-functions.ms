@@ -64,7 +64,6 @@ line from LINE_INIT.end + (0,-0.1) to \
 .SUBSUBSECTION map
 
 .SUBSUBSECTION fold
-.PARAGRAPH_INDENTED
 
 .SUBSECTION_NO_NUMBER foldl
 .SUBSECTION_NO_NUMBER foldr
@@ -76,7 +75,6 @@ catamorphism is when a function produces an identity given a constructor for a d
 .B foldr
 is the list catamorphism.
 .SUBSECTION_NO_NUMBER foldl vs foldr
-.PARAGRAPH_INDENTED
 .BULLET foldl is an imperative loop
 .BULLET foldr is a constructor replacement
 .ENDBULLET

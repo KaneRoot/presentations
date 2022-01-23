@@ -1,10 +1,8 @@
 .SECTION Advanced concepts
-.PARAGRAPH_INDENTED
 Some concepts are derived from previous properties of the language.
 The following explores a few concepts that are useful in some contexts.
 
 .SUBSECTION Continuation: a nice side-effect of composition
-.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -23,7 +21,6 @@ safeDivide x y = Just $ divide x y
 .SOURCE
 
 .SECTION_NO_NUMBER Continuation Passing Style vs Monads
-.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -37,13 +34,11 @@ Monads are a way to ensure the same behavior for multiple function calls, that's
 .SUBSECTION Arrow operator
 
 .SUBSECTION Closure
-.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
 .METAINFO2
 .SUBSECTION Free monads
-.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -100,7 +95,6 @@ I see a couple of differences:
 .BULLET With free monads/effect handlers, the interfaces required by the business logic are reflected in the type signature. With dependency injection, sometimes you have to stoop down to inspect a bean’s internal attributes.
 
 .SUBSECTION S-Expression (symbolic expression)
-.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -117,7 +111,6 @@ Example:
 .SOURCE
 
 .SUBSECTION Homoiconicity
-.PARAGRAPH_INDENTED
 .METAINFO1
 WARNING: the following is a draft.
 NOTHING IS FINISHED HERE.
@@ -139,5 +132,4 @@ Example in LISP:
 .SOURCE
 
 .SUBSECTION Futures, Monads, Reactive Programming and Functors
-.PARAGRAPH_INDENTED
 
