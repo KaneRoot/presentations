@@ -5,3 +5,4 @@
 .so notes-on-languages/zig.ms
 .so notes-on-languages/lisp.ms
 .so notes-on-languages/haskell.ms
+.so notes-on-languages/dedicated.ms
