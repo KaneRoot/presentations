@@ -1,0 +1,25 @@
+reset
+copy "macros.pic"
+boxwid=0.4
+down
+CTITLE: "C"
+
+"\fIst = ...\f[]"                                     ljust at CTITLE + (-1.1,-(hdrsep*2/3))
+FORLOOP: "for (int i = 0; i<= \fIst\f[].len; i++) {"  ljust outline "bloatcode" at Here + (0,-linesep)
+CBOX: box "..." shaded "lightgreen" at Here + (0.3,-boxht)
+"}" outline "bloatcode" at FORLOOP + (0,-0.4)
+
+
+Haskell: "Haskell" at CTITLE + (1.6,0)
+
+FMAP: "fmap" rjust at Haskell + (-0.3, -hdrsep)
+FMAPBOX: box "..." shaded "lightgreen" at FMAP.c + (0.3,0)
+"\fIstructure\f[]" at FMAPBOX.e + (0.3,0)
+
+line from CTITLE + (0.8,0) to CTITLE + (0.8,-1.1)
+
+.\" Title
+.ps 14
+"Functor" at last line .s + (0,-0.3)
+.ps
+"manual structure manipulation vs fmap" at Here + (0,-linesep)

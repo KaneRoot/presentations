@@ -1,0 +1,45 @@
+reset
+copy "macros.pic"
+down
+CTITLE: "C"
+
+.\" Functions.
+CF1: box "function1 ()" shaded "lightgreen" at CTITLE + (0.1,-hdrsep)
+CF2: box "function2 ()" shaded "lightgreen" with .ne at last box .se + (0,-boxes_separation)
+CF3: box "function3 (ret1, ret2)" wid 1.3 shaded "lightgreen" with .ne at last box .se + (0,-boxes_separation)
+
+.\" Error management boxes.
+box "..." shaded "lightblue" at 1st box .s + (0,-(3/2)*boxht)
+box "..." shaded "lightblue" at 2nd box .s + (0,-(3/2)*boxht)
+
+.gcolor red
+"ret1 = "          ljust at CF1  + (-0.8,0)
+"if (ret1 == ...)" ljust at Here + (0,-linesep)
+"ret2 = "          ljust at CF2  + (-0.8,0)
+"if (ret2 == ...)" ljust at Here + (0,-linesep)
+.gcolor
+
+line from CTITLE + (0.8,0) to CTITLE + (0.8,-2.3)
+
+HASKELL: "Haskell" at CTITLE + (1.6,0)
+
+HF3: box "function3" shaded "lightgreen" at HASKELL + (0, -hdrsep)
+HF1: box "function1" shaded "lightgreen" at Here + (0, -boxes_separation)
+HF2: box "function2" shaded "lightgreen" at Here + (0, -boxes_separation)
+
+.\" Let's cheat a bit: creating invisible lines between boxes
+.\" to put circles between them.
+L1: line from HF3.s to HF1.n invis
+L2: line from HF1.s to HF2.n invis
+
+.\" Operators.
+.ft CW
+circle "<$>" at L1.c
+circle "<*>" at L2.c
+.ft
+
+.\" Title
+.ps 14
+"Applicative functor:" at CTITLE + (0.8,-2.5)
+.ps
+"getting \fIfunction3\f[] parameters ready, then call it" at Here + (0,-linesep)

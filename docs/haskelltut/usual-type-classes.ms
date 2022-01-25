@@ -355,32 +355,7 @@ Functors are a way to manipulate data structures.
 
 The following figure compares a list manipulation from C and Haskell perspectives.
 .PS
-reset
-copy "macros.pic"
-boxwid=0.4
-down
-CLANG: "C"
-move; left; move; move; down
-"\fIst = ...\f[]" ljust
-move 0.2
-FORLOOP: "for (int i = 0; i<= \fIst\f[].len; i++) {" ljust \
-  outline "bloatcode"
-move 0.1; move right; down
-CBOX: box "..." shaded "lightgreen"
-move to FORLOOP + (0,-0.4)
-"}" outline "bloatcode"
-move to CLANG + (1.4,0)
-Haskell: "Haskell"
-move; move left 0.2; down
-FMAP: "fmap" rjust
-move to FMAP.c + (0.3,boxht/2)
-FMAPBOX: box "..." shaded "lightgreen"
-move to FMAPBOX.e + (0.3,0)
-"\fIstructure\f[]"
-line from CLANG + (0.8,0) to CLANG + (0.8,-1)
-.\" Title
-move to CLANG + (0.8,-1.3)
-"manual structure manipulation vs fmap"
+copy "haskelltut/schemes/type-class_functor_c-vs-haskell.pic"
 .PE
 .BELLOWEXPLANATION1
 (Bloat) code required in C to loop over the data in red.
@@ -428,7 +403,9 @@ The function isn't propagated when the data type conveys an error (such as a
 .CONSTRUCTOR Left
 value in an Either data type).
 
-And keep in mind the <$> operator!
+And keep in mind the
+.OPERATOR <$>
+operator!
 
 .SUBSECTION Applicative: applying parameters to a functor
 A functor is a type containing data that can be changed through the
@@ -439,7 +416,7 @@ Example:
 .SOURCE Haskell ps=8 vs=9p
 --remember, <$> is an infix `fmap`
 (+) <$> Just 3
---> Just (+3)
+--> Just (3+)
 .SOURCE
 .BELLOWEXPLANATION1
 Unfortunatelly, GHCi cannot print functions this way, but this is the right result.
@@ -460,16 +437,19 @@ a new parameter to a functor.
 .BELLOWEXPLANATION1
 The (+) function gains a first argument with
 .FUNCTION fmap
-(<$>). and creates the
+.OPERATOR <$> ) (
+and creates the
 .BX "Just (+3)"
-value (which is (+3) in the
+value (which is (3+) in the
 .MODULE Maybe
 functor).
 Then, the function
-.I "(+3)"
+.I "(3+)"
 is passed to the
 .BX "Just 2"
-value via the <*> operator.
+value via the
+.OPERATOR <*>
+operator.
 And this completes the function call and the result is
 .BX "Just 5"
 .BELLOWEXPLANATION2
@@ -478,46 +458,7 @@ And this completes the function call and the result is
 Applicative functors present a way to handle a common code structure.
 Let's see the following example:
 .PS
-reset
-copy "macros.pic"
-down
-CTITLE: "C"
-move
-move right 0.1
-down
-linesep=0.20
-define cfun { [
-	R: $1 ljust outline "bloatcode"
-	right
-	move to R.e + (0.4,0)
-	box $2 shaded "lightgreen"
-	move to R
-	down
-	move linesep
-	$3 ljust outline "bloatcode"
-	move linesep
-	move right 0.3
-	box "..." shaded "lightblue"
-	down
-	move linesep
-] }
-cfun("ret1 = ", "function1()", "if (ret1 == ...)")
-cfun("ret2 = ", "function2()", "if (ret2 == ...)")
-move down 0.05
-box "function3 (ret1, ret2)" wid 1.3 shaded "lightgreen"
-move to CTITLE + (1.6,0)
-HASKELL: "Haskell"
-move
-moveht=0.1
-box "function3" shaded "lightgreen"
-move; circle "<$>" rad 0.13; move
-box "function1" shaded "lightgreen"
-move; circle "<*>" rad 0.13; move
-box "function2" shaded "lightgreen"
-line from CTITLE + (0.8,0) to CTITLE + (0.8,-2.3)
-.\" Title
-move to CTITLE + (0.8,-2.5)
-"getting \fIfunction3\f[] parameters ready, then call it"
+copy "haskelltut/schemes/type-class_applicative-functor_c-vs-haskell.pic"
 .PE
 .BELLOWEXPLANATION1
 Error checking is in red, error management is in blue, function calls are in green.
@@ -538,83 +479,20 @@ in C or
 in Haskell, or the value provided by the defective function.
 
 In C, the current function can do anything at any time, even returning unrelated values for example.
-In Haskell, both three functions have the same return type (implementing operators <$> and <*>).
+In Haskell, both three functions have the same return type (implementing operators
+.OPERATOR <$>
+and
+.OPERATOR <*> ).
 Thus, errors are handled in a standardized way: error management is written in the data structure code, once.
 
 .SECTION_NO_NUMBER Implementation example: Maybe
 .PS
-reset
-copy "macros.pic"
-
-.\" Boxes.
-BOX1: box "f"
-BOX2: box "function1" with .ne at BOX1.se + (0, -boxes_separation)
-BOX3: box "function2" with .ne at BOX2.se + (0, -boxes_separation)
-
-.\" End circles.
-CIRCLE1: circle with .c at BOX2.c + (1.5,0) rad 0.1 fill "End" "" ""
-CIRCLE2: circle with .c at BOX3.c + (1.5,0) rad 0.1 fill "End" "" ""
-HAPPY_END: circle rad 0.1 fill with .n at BOX3.s + (0, -boxes_separation) "End      " rjust
-
-linewidth=0.13
-.\" Simple text.
-"\f[CW]f\f[] is a function"            ljust at BOX1.e + (0.1,0)
-"requiring 2 parameters"               ljust at BOX1.e + (0.1,-linewidth)
-"function \f[CW]f\f[] is now complete" ljust at HAPPY_END.e + (0.1,0)
-"and can be called"                    ljust at HAPPY_END.e + (0.1,-linewidth)
-
-.\" Arrows.
-arrow "Nothing" above from BOX2.e to CIRCLE1.w
-arrow "Nothing" above from BOX3.e to CIRCLE2.w
-arrow "Just \fIresult\f[]  " rjust "give \fIresult\f[] to f  " rjust from BOX3.s to HAPPY_END.n
-
-.\" Arcs.
-arc -> from BOX2.sw to BOX3.nw "Just \fIresult\f[]          " rjust "give \fIresult\f[] to f          " rjust
-
-.\" Operator circles
-circle "\f[CW]<$>\f[]" rad circlerad at BOX1.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
-circle "\f[CW]<*>\f[]" rad circlerad at BOX2.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
-
-down; move to BOX3.s; move; move; move right
-"Maybe applicative: \f[CW]f <$> function1 <*> function2\f[]"
+copy "haskelltut/schemes/type-class_applicative-functor_maybe.pic"
 .PE
 
 .SECTION_NO_NUMBER Implementation example: Either
 .PS
-reset
-copy "macros.pic"
-
-.\" Boxes.
-BOX1: box "f"
-BOX2: box "function1" with .ne at BOX1.se + (0, -boxes_separation)
-BOX3: box "function2" with .ne at BOX2.se + (0, -boxes_separation)
-
-.\" End circles.
-CIRCLE1: circle with .c at BOX2.c + (1.5,0) rad 0.1 fill "End" "" ""
-CIRCLE2: circle with .c at BOX3.c + (1.5,0) rad 0.1 fill "End" "" ""
-HAPPY_END: circle rad 0.1 fill with .n at BOX3.s + (0, -boxes_separation) "End      " rjust
-
-linewidth=0.13
-.\" Simple text.
-"\f[CW]f\f[] is a function"            ljust at BOX1.e + (0.1,0)
-"requiring 2 parameters"               ljust at BOX1.e + (0.1,-linewidth)
-"function \f[CW]f\f[] is now complete" ljust at HAPPY_END.e + (0.1,0)
-"and can be called"                    ljust at HAPPY_END.e + (0.1,-linewidth)
-
-.\" Arrows.
-arrow "Left \fIerror\f[]" above from BOX2.e to CIRCLE1.w
-arrow "Left \fIerror\f[]" above from BOX3.e to CIRCLE2.w
-arrow "Right \fIresult\f[]  " rjust "give \fIresult\f[] to f  " rjust from BOX3.s to HAPPY_END.n
-
-.\" Arcs.
-arc -> from BOX2.sw to BOX3.nw "Right \fIresult\f[]          " rjust "give \fIresult\f[] to f          " rjust
-
-.\" Operator circles
-circle "\f[CW]<$>\f[]" rad circlerad at BOX1.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
-circle "\f[CW]<*>\f[]" rad circlerad at BOX2.sw + (circle_box_dist_x,-(circlerad+circle_box_dist_y))
-
-down; move to BOX3.s; move; move; move right
-"Either applicative: \f[CW]f <$> function1 <*> function2\f[]"
+copy "haskelltut/schemes/type-class_applicative-functor_either.pic"
 .PE
 
 .SECTION_NO_NUMBER Conclusion on applicative functors
@@ -669,64 +547,8 @@ there is no need to test if they failed and error management is separated from r
 The following figure shows the difference between C error management and the Java's
 .I "try and catch"
 mechanism.
-
 .PS
-reset
-copy "macros.pic"
-down
-JAVA: "JAVA"
-move
-move left
-"try"
-move right
-down
-move 0.1
-box "function1()" shaded "lightgreen"
-box "function2()" shaded "lightgreen"
-box "function3()" shaded "lightgreen"
-box "function4()" shaded "lightgreen"
-move left
-down
-move 0.1
-"catch ..."
-move right
-down
-move 0.1
-box "..." shaded "lightblue"
-move to JAVA + (1.4,0)
-C: "C"
-move
-move right 0.1
-down
-linesep=0.20
-define cfun { [
-	R: $1 ljust outline "bloatcode"
-	right
-	move to R.e + (0.4,0)
-	box $2 shaded "lightgreen"
-	move to R
-	down
-	move linesep
-	$3 ljust outline "bloatcode"
-	move linesep
-	move right 0.3
-	box "..." shaded "lightblue"
-	down
-	move linesep
-] }
-cfun("ret1 = ", "function1()", "if (ret1 == ...)")
-cfun("ret2 = ", "function2()", "if (ret2 == ...)")
-move left 0.4
-right
-circle fill rad 0.03
-move 0.1
-circle fill rad 0.03
-move 0.1
-circle fill rad 0.03
-line from JAVA + (0.8,0) to JAVA + (0.8,-2)
-.\" Title
-move to JAVA + (0.8,-2.3)
-"Try & Catch vs fully imperative error management" shaded "green"
+copy "haskelltut/schemes/type-class_monad_java-vs-c.pic"
 .PE
 .BELLOWEXPLANATION1
 Function calls are green boxes, error management are blue boxes.
@@ -796,34 +618,7 @@ The following figure represents the
 .FUNCTION expression
 function.
 .PS
-reset
-copy "macros.pic"
-
-define function { [
-	right
-	X: box $1
-	arrow "\fINothing\f[]" above to last box + (1.5,0)
-	circle rad 0.1 fill "End" "" ""
-] }
-down
-FUN1: function("function1");
-move
-FUN2: function("function2");
-move
-FUN3: function("function3");
-.\" Circles
-move to FUN1.sw + (0.375,-0.10)
-circle ">>" rad 0.15
-move to FUN2.sw + (0.375,-0.10)
-circle ">>=" rad 0.15
-arc -> from FUN1.sw to FUN2.nw "Just \fIresult\f[]         " rjust "ignore \fIresult\f[]         " rjust
-arc -> from FUN2.sw to FUN3.nw "Just \fIresult\f[]         " rjust "give \fIresult\f[] to         " rjust "function3         " rjust
-move to FUN3.sw + (0.375,0)
-arrow "  Just \fIresult\f[]" ljust
-circle rad 0.1 fill "End      " rjust
-move
-move right
-"Maybe monad: function1 >> function2 >>= function3"
+copy "haskelltut/schemes/type-class_monad_maybe.pic"
 .PE
 .BELLOWEXPLANATION1
 First,
@@ -892,33 +687,7 @@ However, the Maybe structure is fairly limited: functions cannot indicate an err
 
 .SECTION_NO_NUMBER The Either Monad
 .PS
-reset
-copy "macros.pic"
-define function { [
-	right
-	X: box $1
-	arrow "Left \fIerror\f[]" above to last box + (1.5,0)
-	circle rad 0.1 fill "End" "" ""
-] }
-down
-FUN1: function("function1");
-move
-FUN2: function("function2");
-move
-FUN3: function("function3");
-.\" Circles
-move to FUN1.sw + (0.375,-0.10)
-circle ">>" rad 0.15
-move to FUN2.sw + (0.375,-0.10)
-circle ">>=" rad 0.15
-arc -> from FUN1.sw to FUN2.nw "Right \fIresult\f[]         " rjust "ignore \fIresult\f[]         " rjust
-arc -> from FUN2.sw to FUN3.nw "Right \fIresult\f[]         " rjust "give \fIresult\f[] to         " rjust "function3         " rjust
-move to FUN3.sw + (0.375,0)
-arrow "  Right \fIresult\f[]" ljust
-circle rad 0.1 fill "End      " rjust
-move
-move right
-"Either monad: function1 >> function2 >>= function3"
+copy "haskelltut/schemes/type-class_monad_either.pic"
 .PE
 
 .SECTION_NO_NUMBER Conclusion on monads

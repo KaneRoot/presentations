@@ -1,0 +1,42 @@
+reset
+copy "macros.pic"
+
+.\" Boxes.
+BOX1: box "f"
+BOX2: box "function1" with .ne at BOX1.se + (0, -boxes_separation)
+BOX3: box "function2" with .ne at BOX2.se + (0, -boxes_separation)
+
+.\" End circles.
+CIRCLE1: circle with .c at BOX2.c + (1.5,0) rad 0.1 fill "End" "" ""
+CIRCLE2: circle with .c at BOX3.c + (1.5,0) rad 0.1 fill "End" "" ""
+HAPPY_END: circle rad 0.1 fill with .n at BOX3.s + (0, -boxes_separation) "End      " rjust
+
+.\" Simple text.
+"\f[CW]f\f[] is a function"            ljust at BOX1.e + (0.1,0)
+"requiring 2 parameters"               ljust at BOX1.e + (0.1,-linewidth)
+"function \f[CW]f\f[] is now complete" ljust at HAPPY_END.e + (0.1,0)
+"and can be called"                    ljust at HAPPY_END.e + (0.1,-linewidth)
+
+.\" Arrows.
+arrow "Nothing" above from BOX2.e to CIRCLE1.w
+arrow "Nothing" above from BOX3.e to CIRCLE2.w
+arrow "Just \fIresult\f[]  " rjust "give \fIresult\f[] to f  " rjust from BOX3.s to HAPPY_END.n
+
+.\" Arcs.
+arc -> from BOX2.sw to BOX3.nw "Just \fIresult\f[]          " rjust "give \fIresult\f[] to f          " rjust
+
+.\" Let's cheat a bit: creating invisible lines between boxes
+.\" to put circles between them.
+L1: line from BOX1.s to BOX2.n invis
+L2: line from BOX2.s to BOX3.n invis
+
+.\" Operator circles
+.ft CW
+circle "<$>" at L1.c
+circle "<*>" at L2.c
+.ft
+
+.ps 14
+"Maybe Applicative functor" at HAPPY_END.s + (0,-0.2)
+.ps
+"f \f[CW]<$>\f[] function1 \f[CW]<*>\f[] function2" at Here + (0, -linesep)

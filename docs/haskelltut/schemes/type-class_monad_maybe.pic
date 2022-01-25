@@ -1,0 +1,35 @@
+reset
+copy "macros.pic"
+down
+
+FUN1: box "function1"
+FUN2: box "function2" at Here + (0, -boxes_separation)
+FUN3: box "function3" at Here + (0, -boxes_separation)
+
+ENDF1: circle rad 0.1 fill "End" "" "" at FUN1 + (1.5,0)
+ENDF2: circle rad 0.1 fill "End" "" "" at FUN2 + (1.5,0)
+ENDF3: circle rad 0.1 fill "End" "" "" at FUN3 + (1.5,0)
+
+arrow from FUN1.e to ENDF1.w "Nothing" above
+arrow from FUN2.e to ENDF2.w "Nothing" above
+arrow from FUN3.e to ENDF3.w "Nothing" above
+
+
+.\" Let's cheat a bit: creating invisible lines between boxes
+.\" to put circles between them.
+L1: line from FUN1.s to FUN2.n invis
+L2: line from FUN2.s to FUN3.n invis
+
+.\" Circles
+.ft CW
+circle ">>"  at L1.c
+circle ">>=" at L2.c
+.ft
+
+arc -> from FUN1.sw to FUN2.nw "Just \fIresult\f[]         " rjust "ignore \fIresult\f[]         " rjust
+arc -> from FUN2.sw to FUN3.nw "Just \fIresult\f[]         " rjust "give \fIresult\f[] to         " rjust "function3         " rjust
+
+arrow "  Just \fIresult\f[]" ljust at FUN3.sw + (0.375,0)
+circle rad 0.1 fill "End      " rjust
+
+"Maybe monad: function1 \f[CW]>>\f[] function2 \f[CW]>>=\f[] function3" at Here + (0.3,-0.35)

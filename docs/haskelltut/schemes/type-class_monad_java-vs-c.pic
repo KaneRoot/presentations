@@ -1,0 +1,43 @@
+reset
+copy "macros.pic"
+down
+JAVA: "JAVA"
+
+box "function1()" shaded "lightgreen" at JAVA + (0, -hdrsep)
+box "function2()" shaded "lightgreen"
+box "function3()" shaded "lightgreen"
+box "function4()" shaded "lightgreen"
+box "..." shaded "lightblue" at Here + (0, -linesep*(3/2))
+
+"try"       rjust at 1st  box .nw + (-0.1,0.5*linesep)
+"catch ..." rjust at last box .nw + (-0.1,0.5*linesep)
+
+
+line from JAVA + (0.8,0) to JAVA + (0.8,-2)
+
+
+CTITLE: "C" at JAVA + (1.6, 0)
+
+.\" Fonctions.
+CF1: box "function1 ()" shaded "lightgreen" at CTITLE + (0.1,-hdrsep)
+CF2: box "function2 ()" shaded "lightgreen" with .ne at last box .se + (0,-boxes_separation)
+
+.\" Error management boxes.
+box "..." shaded "lightblue" at CF1 .s + (0,-(3/2)*boxht)
+box "..." shaded "lightblue" at CF2 .s + (0,-(3/2)*boxht)
+
+.gcolor red
+"ret1 = "          ljust at CF1  + (-0.8,0)
+"if (ret1 == ...)" ljust at Here + (0,-linesep)
+"ret2 = "          ljust at CF2  + (-0.8,0)
+"if (ret2 == ...)" ljust at Here + (0,-linesep)
+.gcolor
+
+
+circle fill rad 0.03 at last box .s + (-0.3,-0.2)
+circle fill rad 0.03 at last circle + (0.1,0)
+circle fill rad 0.03 at last circle + (0.1,0)
+
+.\" Title
+move to JAVA + (0.8,-2.3)
+"Try & Catch vs fully imperative error management" shaded "green"
