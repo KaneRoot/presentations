@@ -19,7 +19,8 @@ EQN = eqn $(EQN_OPTS)
 # GH_OUTRO: ------------ after  ---- ------ ---- -------- -- ----------------
 # GH_INTRO/GH_OUTRO: values are separated by ';'
 #
-GH_INTRO := .b1;.nr DI 0;.DS I;.fam C
+CODE_FONT_FAMILY ?= C
+GH_INTRO := .b1;.nr DI 0;.DS I;.fam $(CODE_FONT_FAMILY)
 GH_OUTRO := .fam;.DE;.b2
 #
 export GH_INTRO
