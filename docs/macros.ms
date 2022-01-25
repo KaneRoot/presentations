@@ -25,6 +25,7 @@ accumulate
 .defcolor explanation    rgb 0.7 0.4 0.4
 .defcolor explanationbar rgb 0.8 0.3 0.3
 .
+.defcolor specialcolor_command     rgb 0.7 0.3 0.3
 .defcolor specialcolor_type        rgb 0.6 0.3 0.5
 .defcolor specialcolor_constructor rgb 0.1 0.5 0.2
 .defcolor specialcolor_module      rgb 0.1 0.5 0.2
@@ -34,6 +35,7 @@ accumulate
 .defcolor specialcolor_shine       rgb 0.3 0.3 0.7
 .
 . \" SIZES
+.nr specialsize_command     10
 .nr specialsize_type        8
 .nr specialsize_constructor 8
 .nr specialsize_module      8
@@ -43,6 +45,7 @@ accumulate
 .nr specialsize_shine       11
 .
 . \" FONTS
+.ds specialfont_command     CW
 .ds specialfont_type        CW
 .ds specialfont_constructor CW
 .ds specialfont_module      CW
@@ -187,6 +190,7 @@ accumulate
 . \" Fonts and colors.
 .
 .de SPECIAL_WORDS
+.ie !'\\$3'' \\$3\c
 .nr current_size \\n[.s]  \" Current point size.
 .gcolor specialcolor_\\*[semantictoken]
 .
@@ -220,39 +224,40 @@ accumulate
 .b2
 ..
 .de COMMANDNAME
-.I "\\$1" "\\$2"
+.ds semantictoken command
+.SPECIAL_WORDS \\$@
 ..
 .de FUNCTION
 .ds semantictoken function
-.SPECIAL_WORDS "\\$1" "\\$2"
+.SPECIAL_WORDS \\$@
 ..
 .de TYPE
 .ds semantictoken type
-.SPECIAL_WORDS "\\$1" "\\$2"
+.SPECIAL_WORDS \\$@
 ..
 .de TYPECLASS
 .I "\\$1" "\\$2"
 ..
 .de OPERATOR
 .ds semantictoken operator
-.SPECIAL_WORDS "\\$1" "\\$2"
+.SPECIAL_WORDS \\$@
 ..
 .de QUESTION
 .ds semantictoken question
-.SPECIAL_WORDS "\\$1" "\\$2"
+.SPECIAL_WORDS \\$@
 \h'5p'
 ..
 .de CONSTRUCTOR
 .ds semantictoken constructor
-.SPECIAL_WORDS "\\$1" "\\$2"
+.SPECIAL_WORDS \\$@
 ..
 .de MODULE
 .ds semantictoken module
-.SPECIAL_WORDS "\\$1" "\\$2"
+.SPECIAL_WORDS \\$@
 ..
 .de SHINE
 .ds semantictoken shine
-.SPECIAL_WORDS "\\$1" "\\$2"
+.SPECIAL_WORDS \\$@
 ..
 .de MODULEX
 .MODULE \\$1 ,
