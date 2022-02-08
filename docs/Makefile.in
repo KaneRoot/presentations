@@ -1,18 +1,29 @@
 SRC ?= haskelltut
 
+# Let's allow different implementations to be tested.
+BINPIC        ?= pic
+BINREFER      ?= refer
+BINSOELIM     ?= soelim
+BINPRECONV    ?= preconv
+BINEQN        ?= eqn
+BINGHIGHLIGHT ?= ./bin/ghighlight
+BINGRAP       ?= grap
+BINROFF       ?= groff
+export BINPIC BINREFER BINSOELIM BINPRECONV BINEQN BINGHIGHLIGHT BINGRAP BINROFF
+
 ODIR ?= .
 
 BIBLIOGRAPHY ?= bibliography
 ALLSRC = $(shell find . -name "*.ms")
 
 SOELIM_OPTS ?=
-SOELIM = soelim $(SOELIM_OPTS)
+SOELIM = $(BINSOELIM) $(SOELIM_OPTS)
 
 PRECONV_OPTS ?= -e utf-8
-PRECONV = preconv $(PRECONV_OPTS)
+PRECONV = $(BINPRECONV) $(PRECONV_OPTS)
 
 EQN_OPTS ?= -Tpdf
-EQN = eqn $(EQN_OPTS)
+EQN = $(BINEQN) $(EQN_OPTS)
 
 # source-highlight stuff
 # GH_INTRO: instructions before each source code provided by source-highlight
@@ -32,20 +43,20 @@ export SHOPTS
 
 # ghighlight brings `source-highlight` to troff
 GHIGHLIGHT_OPTS ?=
-GHIGHLIGHT = ./bin/ghighlight $(GHIGHLIGHT_OPTS)
+GHIGHLIGHT = $(BINGHIGHLIGHT) $(GHIGHLIGHT_OPTS)
 
 GRAP_OPTS ?=
-GRAP = grap $(GRAP_OPTS)
+GRAP = $(BINGRAP) $(GRAP_OPTS)
 
 PIC_OPTS ?= -Tpdf
-PIC = pic $(PIC_OPTS)
+PIC = $(BINPIC) $(PIC_OPTS)
 
 # -P      => move ponctuation after reference
 # -S      => label and bracket-label options
 # -e      => accumulate (use a reference section)
 # -p bib  => bibliography file
 REFER_OPTS ?= -PS -e -p $(BIBLIOGRAPHY)
-REFER = refer $(REFER_OPTS)
+REFER = $(BINREFER) $(REFER_OPTS)
 
 # -k     => iconv conversion (did it ever worked?)
 # -ms    => ms macro
@@ -59,8 +70,8 @@ REFER = refer $(REFER_OPTS)
 # TODO: no change with or without the following options -P -e
 #       This has to be inverstigated: how to make PDFs look nice in browsers?
 # -P -e  => provide "-e" to gropdf to embed fonts
-GROFF_OPTS ?= -ms -t -Tpdf -U -mspdf -mpdfmark -M ./bin -P -e
-GROFF = groff $(GROFF_OPTS)
+ROFF_OPTS ?= -ms -t -Tpdf -U -mspdf -mpdfmark -M ./bin -P -e
+ROFF = $(BINROFF) $(ROFF_OPTS)
 
 $(SRC).pdf:
 	$(SOELIM) < $(SRC).ms |\
@@ -70,7 +81,7 @@ $(SRC).pdf:
 		$(GRAP) |\
 		$(PIC) |\
 		$(REFER) |\
-		$(GROFF) > $(ODIR)/$@
+		$(ROFF) > $(ODIR)/$@
 
 # Keep options in memory for the recursive 'make' call
 export SOELIM_OPTS PRECONV_OPTS EQN_OPTS GHIGHLIGHT_OPTS GRAP_OPTS PIC_OPTS REFER_OPTS
