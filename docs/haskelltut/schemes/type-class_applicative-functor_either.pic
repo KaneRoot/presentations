@@ -1,42 +1,141 @@
 reset
 copy "macros.pic"
+down
 
-.\" Boxes.
-BOX1: box "f"
-BOX2: box "function1" with .ne at BOX1.se + (0, -boxes_separation)
-BOX3: box "function2" with .ne at BOX2.se + (0, -boxes_separation)
+circlesep = 0.6
+boxsep = boxwid*5/4
 
-.\" End circles.
-CIRCLE1: circle with .c at BOX2.c + (1.5,0) rad 0.1 fill "End" "" ""
-CIRCLE2: circle with .c at BOX3.c + (1.5,0) rad 0.1 fill "End" "" ""
-HAPPY_END: circle rad 0.1 fill with .n at BOX3.s + (0, -boxes_separation) "End      " rjust
+boxwid = 0.3
 
-.\" Simple text.
-"\f[CW]f\f[] is a function"            ljust at BOX1.e + (0.1,0)
-"requiring 2 parameters"               ljust at BOX1.e + (0.1,-linewidth)
-"function \f[CW]f\f[] is now complete" ljust at HAPPY_END.e + (0.1,0)
-"and can be called"                    ljust at HAPPY_END.e + (0.1,-linewidth)
+.defcolor xcolor rgb 1 0 0
+.defcolor ycolor rgb 0 0 1
 
-.\" Arrows.
-arrow "Left \fIerror\f[]" above from BOX2.e to CIRCLE1.w
-arrow "Left \fIerror\f[]" above from BOX3.e to CIRCLE2.w
-arrow "Right \fIresult\f[]  " rjust "give \fIresult\f[] to f  " rjust from BOX3.s to HAPPY_END.n
+.defcolor xvalcolor rgb 1 .4 .4
+.defcolor yvalcolor rgb .4 .4 1
 
-.\" Arcs.
-arc -> from BOX2.sw to BOX3.nw "Right \fIresult\f[]          " rjust "give \fIresult\f[] to f          " rjust
+FUN1: box "f"
+FUN2: box "\m[xcolor]\f[B]x\f[]\m[]" at FUN1.e + (boxsep, 0)
+FUN3: box "\m[ycolor]\f[B]y\f[]\m[]" at FUN2.e + (boxsep, 0)
 
+# Box around first expression.
+inner_margin_ht = 0.2
+inner_margin_wid = 0.1
+define loc_box_first_expr { \
+  with .w at FUN1.w + (-inner_margin_wid,0) \
+  wid (FUN2.e.x - FUN1.w.x + inner_margin_wid * 2) \
+  ht (boxht+inner_margin_ht) \
+  thick 0.1 \
+}
+BOX_FIRST_EXPR: box loc_box_first_expr
+
+define error_return { "\f[CW]Left\f[] \f[CI]\m[$2]$1\m[]\f[]" }
+
+.ps +1
+.gcolor grey
+FIRST_STEP_TXT: "First step of the" ljust \
+"evaluation is: \f[CI]f\f[] \f[CW]<$>\f[] \f[B]\m[xcolor]x\m[]\f[]" ljust \
+"So \f[B]\m[xcolor]x\m[]\f[] is tested" ljust at BOX_FIRST_EXPR.nw + (-0.5,0.4)
+
+INTERMEDIATE_STEP_TXT: "Intermediate state of the" ljust \
+"evaluation is:" ljust \
+"\f[CW]Right\f[] \f[CI](f \m[xvalcolor]value1\m[])\f[] \f[CW]<*>\f[] \m[ycolor]\f[CI]\f[B]y\f[]\f[]\m[]" \
+ljust at FIRST_STEP_TXT.sw + (0.0,-1.3)
+.ps
+.gcolor black
+
+.ps -2
 .\" Let's cheat a bit: creating invisible lines between boxes
 .\" to put circles between them.
-L1: line from BOX1.s to BOX2.n invis
-L2: line from BOX2.s to BOX3.n invis
+L1: line from FUN1.e to FUN2.w invis
+L2: line from FUN2.e to FUN3.w invis
 
-.\" Operator circles
+.\" Circles
 .ft CW
-circle "<$>" at L1.c
-circle "<*>" at L2.c
+FUNCTOR: circle "<$>"  at L1.c
+APPLICA: circle "<*>"  at L2.c
+END1:      circle at FUN2.n + (0,circlesep)  rad 0.1 fill
+END2:      circle at FUN3.n + (0,circlesep)  rad 0.1 fill
+HAPPY_END: circle at FUN3.s + (0,-circlesep) rad 0.1 fill
 .ft
 
-.ps 14
-"Either Applicative functor" at HAPPY_END.s + (0,-0.2)
+.\" End text.
+.vs 9p
+"1st possible return" at END1.n + (0,linesep)
+error_return(error1,xvalcolor) at Here + (0,-linesep*2/3)
+"2nd possible return" at END2.n + (0,linesep)
+error_return(error2,yvalcolor) at Here + (0,-linesep*2/3)
+"Last possible return" "\f[CW]Right\f[] \f[CI](f \m[xvalcolor]value1\m[] \m[yvalcolor]value2\m[])\f[]" at HAPPY_END.s + (0,-linesep)
+.vs
+
+AEND1:     arrow from FUN2.n to END1.s dashed 0.05
+AEND2:     arrow from FUN3.n to END2.s dashed 0.05
+AHAPPYEND: arrow from FUN3.s to HAPPY_END.n dashed 0.05
+
+.\" Arc.
+arcrad = 0.5
+ARC: arc -> from FUN2.se to FUN3.sw dashed 0.05
+
+"\m[xcolor]\f[B]x\f[]\m[] is" ljust at AEND1.c + (0.1,linesep*1/4)
+error_return(error1,xvalcolor) ljust at Here + (0,-linesep/2)
+
+"\m[xcolor]\f[B]x\f[]\m[] is"              ljust at APPLICA .s + (-0.5,-0.2)
+T: "\f[CW]Right\f[] \f[CI]\m[xvalcolor]value1\m[]\f[]" ljust at Here + (0,-linesep/2)
+
+line from T.s + (0,-linesep/2) to T.s + (0.8,-linesep/2)
+arrow -> from last line .c to last line .c + (0,-linesep/2) to last line .c + (-0.6,-linesep/2)
+
+"\m[ycolor]\f[B]y\f[]\m[] is" ljust at AEND2.c + (0.1,linesep*1/4)
+error_return(error2,yvalcolor) ljust at Here + (0,-linesep/2)
+
+"\m[ycolor]\f[B]y\f[]\m[] is" ljust at AHAPPYEND.c + (0.1,linesep*1/4)
+"\f[CW]Right\f[] \f[CI]\m[yvalcolor]value2\m[]\f[]" ljust at Here + (0,-linesep/2)
 .ps
-"f \f[CW]<$>\f[] function1 \f[CW]<*>\f[] function2" at Here + (0, -linesep)
+
+
+.ps 14
+"Either Applicative Functor" at HAPPY_END + (-0.7,-0.65)
+"f \f[CW]<$>\f[] \m[xcolor]\f[B]x\f[]\m[] \f[CW]<*>\f[] \m[ycolor]\f[B]y\f[]\m[]" at Here + (0, -linesep)
+.ps
+
+# reset
+# copy "macros.pic"
+#
+# .\" Boxes.
+# BOX1: box "f"
+# BOX2: box "function1" with .ne at BOX1.se + (0, -boxes_separation)
+# BOX3: box "function2" with .ne at BOX2.se + (0, -boxes_separation)
+#
+# .\" End circles.
+# CIRCLE1: circle with .c at BOX2.c + (1.5,0) rad 0.1 fill "End" "" ""
+# CIRCLE2: circle with .c at BOX3.c + (1.5,0) rad 0.1 fill "End" "" ""
+# HAPPY_END: circle rad 0.1 fill with .n at BOX3.s + (0, -boxes_separation) "End      " rjust
+#
+# .\" Simple text.
+# "\f[CW]f\f[] is a function"            ljust at BOX1.e + (0.1,0)
+# "requiring 2 parameters"               ljust at BOX1.e + (0.1,-linewidth)
+# "function \f[CW]f\f[] is now complete" ljust at HAPPY_END.e + (0.1,0)
+# "and can be called"                    ljust at HAPPY_END.e + (0.1,-linewidth)
+#
+# .\" Arrows.
+# arrow "Left \fIerror\f[]" above from BOX2.e to CIRCLE1.w
+# arrow "Left \fIerror\f[]" above from BOX3.e to CIRCLE2.w
+# arrow "Right \fIresult\f[]  " rjust "give \fIresult\f[] to f  " rjust from BOX3.s to HAPPY_END.n
+#
+# .\" Arcs.
+# arc -> from BOX2.sw to BOX3.nw "Right \fIresult\f[]          " rjust "give \fIresult\f[] to f          " rjust
+#
+# .\" Let's cheat a bit: creating invisible lines between boxes
+# .\" to put circles between them.
+# L1: line from BOX1.s to BOX2.n invis
+# L2: line from BOX2.s to BOX3.n invis
+#
+# .\" Operator circles
+# .ft CW
+# circle "<$>" at L1.c
+# circle "<*>" at L2.c
+# .ft
+#
+# .ps 14
+# "Either Applicative functor" at HAPPY_END.s + (0,-0.2)
+# .ps
+# "f \f[CW]<$>\f[] function1 \f[CW]<*>\f[] function2" at Here + (0, -linesep)

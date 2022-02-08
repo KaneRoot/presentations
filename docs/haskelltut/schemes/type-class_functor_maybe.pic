@@ -1,0 +1,27 @@
+reset
+copy "macros.pic"
+down
+
+FUN1: box "f"
+FUN2: box "value" at Here + (0, -boxes_separation)
+
+ENDF2: circle rad 0.1 fill "End" "" "" at FUN2 + (1.5,0)
+
+.\" Let's cheat a bit: creating invisible lines between boxes
+.\" to put circles between them.
+L1: line from FUN1.s to FUN2.n invis
+
+.\" Circles
+.ft CW
+circle "<$>"  at L1.c
+.ft
+
+arrow from FUN2.e to ENDF2.w "Nothing" above
+arrow "  Just \fIresult\f[]" ljust at FUN2.sw + (0.375,0)
+
+circle rad 0.1 fill "End      " rjust
+
+.ps 14
+"Maybe functor" at Here + (0.3,-0.35)
+.ps
+"f \f[CW]<$>\f[] value" at Here + (0,-linesep)

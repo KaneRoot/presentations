@@ -307,8 +307,8 @@ either the value is valid and the function is applied to it, otherwise the error
 This isn't exactly the same as the list functor, where the data type doesn't represent any possible "error".
 The implementation of the
 .TYPECLASS Functor
-type class actually is dependent of the
-.UL semantic
+type class actually depends on the
+.HIGHLIGHT semantic
 of the data type.
 .\"A type
 .\".I f
@@ -391,6 +391,11 @@ This operator
 .ft
 actually is relevant for the next sections and to write idiomatic Haskell code.
 .BELLOWEXPLANATION2
+
+The following figure shows a diagram of the Maybe functor.
+.PS
+copy "haskelltut/schemes/type-class_functor_maybe.pic"
+.PE
 
 .SECTION_NO_NUMBER Conclusion on functors
 The functor type class allows a great code abstraction.
