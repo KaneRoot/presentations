@@ -18,6 +18,7 @@ accumulate
 .defcolor darkblue  rgb 0.3 0.3 0.7
 .defcolor darkred   rgb 0.7 0.3 0.3
 .defcolor black     rgb 0 0 0
+.defcolor color_box rgb 1 1 .6
 .
 . \" with semantic
 .defcolor citation       rgb 0.4 0.4 0.4
@@ -401,4 +402,27 @@ Compilé pour la dernière fois le
 ..
 .de VOCABULARY2
 .KE
+..
+.
+.
+.de HIGHLIGHT
+.
+.  nr @wd \w'\\$1'
+.  nr x1 0
+.  nr y1 (\\n[rst]u - \\n[rsb]u + .4m)
+.  nr x2 (\\n[@wd]u + .4m)
+.  nr y2 0
+.  nr x3 0
+.  nr y3 (\\n[rst]u - \\n[rsb]u + .4m)
+.  nr x4 (\\n[@wd]u + .4m)
+.  nr y4 0
+.
+\h'.2m'\
+\h'-.2m'\v'(.2m - \\n[rsb]u)'\
+\M[color_box]\
+\D'P \\n[x1] -\\n[y1]u \\n[x2]u \\n[y2]u \\n[x3]u \\n[y3]u -\\n[x4]u \\n[y4]u '\
+\h'.2m'\v'-(.2m - \\n[rsb]u)'\
+\M[]\
+\\$1\
+\h'.2m'
 ..
