@@ -1,9 +1,5 @@
-.NH 1
-Graphviz: drawing graphs
-
-.NH 2
-Tools
-.PP
+.SECTION Graphviz: drawing graphs
+.SUBSECTION Tools
 .BULLET
 .UL dot :
 a command-line tool to produce layered drawings of directed graphs.
@@ -54,7 +50,4 @@ file converters.
 .\"convert to/from GXL, another graph file format.
 .ENDBULLET
 
-.NH 2
-Basic usage
-.PP
-
+.SUBSECTION Basic usage

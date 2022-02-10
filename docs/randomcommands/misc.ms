@@ -1,9 +1,6 @@
-.NH 1
-Misc
-.NH 2
-Vym: Mind Mapping
-.NH 2
-entr: run command on file change
+.SECTION Misc
+.SUBSECTION Vym: Mind Mapping
+.SUBSECTION entr: run command on file change
 .SH
 Basic usage
 .LP
@@ -11,11 +8,9 @@ Basic usage
 find . -name "*.ms" | entr gmake build
 .COMMAND2
 
-.NH 2
-Retroarch: retro gaming
+.SUBSECTION Retroarch: retro gaming
 
-.NH 2
-nl: add line numbers
+.SUBSECTION nl: add line numbers
 .SH
 Usage
 .LP
@@ -23,13 +18,10 @@ Usage
 nl file
 .COMMAND2
 
-.NH 2
-prename: renaming files with regex
-.PP
+.SUBSECTION prename: renaming files with regex
 Simple Perl script.
 
-.NH 2
-paste: concat files line-by-line
+.SUBSECTION paste: concat files line-by-line
 .SH
 Usage
 .LP
@@ -40,22 +32,16 @@ Usage
  > a b
 .COMMAND2
 
-.NH 2
-Faster key inputs
-.PP
+.SUBSECTION Faster key inputs
 xset r rate 200 50
 
-.NH 2
-sxiv: image viewer
+.SUBSECTION sxiv: image viewer
 
-.NH 2
-zathura: pdfviewer
+.SUBSECTION zathura: pdfviewer
 
-.NH 2
-mocp: music player
+.SUBSECTION mocp: music player
 
-.NH 2
-scrot: taking screenshots
+.SUBSECTION scrot: taking screenshots
 .SH
 With selection
 .COMMAND1
@@ -64,29 +50,21 @@ scrot -s my-image.png
 .LP
 Possible alternative: shutter
 
-.NH 2
-gs: compress a PDF
+.SUBSECTION gs: compress a PDF
 .COMMAND1
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=output.pdf input.pdf
 .COMMAND2
 
-.NH 2
-Kdenlive: (Non Linear) Video Editing
-.NH 2
-Audacity: Audio Editing
-.NH 2
-Krita: Image Editing
-.NH 2
-pointtools: create presentations
+.SUBSECTION Kdenlive: (Non Linear) Video Editing
+.SUBSECTION Audacity: Audio Editing
+.SUBSECTION Krita: Image Editing
+.SUBSECTION pointtools: create presentations
 
-.NH 2
-rtorrent
+.SUBSECTION rtorrent
 
-.NH 2
-powertop: change power settings on Linux
+.SUBSECTION powertop: change power settings on Linux
 
-.NH 2
-Tools I used to use, still fine
+.SUBSECTION Tools I used to use, still fine
 .LP
 .BULLET
 .UL "deluge and transmission" :
@@ -97,9 +75,12 @@ torrent.
 .UL ""
 .ENDBULLET
 
-.NH 2
-Tools I never (or not often) used but seem fine
+.SUBSECTION Tools I never (or not often) used but seem fine
 .LP
+.BULLET
+.UL "jot"
+to replace
+.B seq
 .BULLET
 .UL inkscape
 .BULLET
@@ -129,8 +110,7 @@ rythmbox.
 .UL gdb
 .ENDBULLET
 
-.NH 2
-Games
+.SUBSECTION Games
 .LP
 .BULLET
 .UL "Caph and Numpty Physics" ,
@@ -143,9 +123,7 @@ games with a good physic engine.
 .UL "0AD"
 .ENDBULLET
 
-.NH 1
-Websites
-.PP
+.SECTION Websites
 .BULLET
 .UL "explainshell.com"
 .BULLET
