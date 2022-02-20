@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# From a single byte in hexadecimal per line to lines ending with 0a
+# (hex for '\n'). Ex: 61 62 63 0a
+# Required to easily match (and remove) multi-byte characters.
+regroup_lines() awk '
+	BEGIN {
+		line_start=1
+	}
+
+	{
+		if (line_start == 1)
+			line = $1;
+		else
+			line = line " " $1;
+
+		line_start = 0;
+		if ($1 == "0a") {
+			print line;
+			line_start = 1
+		}
+	}
+
+	END {
+		if (line_start == 0)
+			print line
+	}
+	'
+
+uppercase()                   tr "[a-z]" "[A-Z]"
+
+# One column decimal to plain text.
+from_dec()                    awk '{ printf ("%c", $1 + 0) }'
+
+# Replace spaces by line returns, outputs a single column.
+spaces_to_line_returns()      tr " " "\n"
+
+# Convert input into hexadecimal and a single byte per line.
+to_hex_one_column() { od -An -tx1 | awk '{for(i=1;i<=NF;i++){ print $i }}'; }
+
+# One column hexa to one column decimal.
+hex_to_dec() { { echo "obase=10;ibase=16;" ; cat ; } | bc ; }
+
+# Reverse hexadecimal (with space separators) to original value.
+from_hex() { spaces_to_line_returns | uppercase | hex_to_dec | from_dec; }
+
+# Replace unbreakable spaces by '\ '.
+replace_unbreakable_spaces()    sed "s/c2 a0/5c 20/g"
+
+custom_mods(){
+	to_hex_one_column | # Input to hexadecimal, 1-byte representation per line.
+		regroup_lines | # From 1-byte to x-byte lines with space separators.
+		replace_unbreakable_spaces | # Replace unbreakable spaces by '\ '.
+		from_hex # Convert back from hex (x-byte per line, space separator).
+}
+
+custom_mods
