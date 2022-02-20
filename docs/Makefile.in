@@ -19,6 +19,10 @@ ALLSRC = $(shell find . -name "*.ms")
 SOELIM_OPTS ?=
 SOELIM = $(BINSOELIM) $(SOELIM_OPTS)
 
+# Custom script, currently to replace unbreakable spaces by \SP.
+CUSTOM_OPTS ?=
+CUSTOM ?= ./bin/custom $(CUSTOM_OPTS)
+
 PRECONV_OPTS ?= -e utf-8
 PRECONV = $(BINPRECONV) $(PRECONV_OPTS)
 
@@ -75,6 +79,7 @@ ROFF = $(BINROFF) $(ROFF_OPTS)
 
 $(SRC).pdf:
 	$(SOELIM) < $(SRC).ms |\
+		$(CUSTOM) |\
 		$(PRECONV) |\
 		$(EQN) |\
 		$(GHIGHLIGHT) |\
