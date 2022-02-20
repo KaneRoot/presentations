@@ -9,6 +9,7 @@ my @list_multiline_cmd = (
 	, qr/^\.SUBSUBSUBSECTION$/
 	, qr/^\.SECTION$/
 	, qr/^\.BULLET$/
+	, qr/^\.ENUM$/
 	);
 
 my $STACK = "";
