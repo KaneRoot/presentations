@@ -4,7 +4,7 @@
 .ABSTRACT1
 Ce document présente succintement la science : son objectif, la méthode scientifique, le déroulement de la recherche ainsi que la création de papiers.
 Une introduction sur les biais cognitifs est également donnée, avec des conseils pour repérer des erreurs de raisonnement.
-Enfin, suite à la lecture de ce document, il est attendu que les discussions de la vie quotidienne soient plus fertiles et les prises de décision plus pertinentes.
+Suite à la lecture de ce document, il est attendu que les discussions de la vie quotidienne soient plus fertiles et les prises de décision plus pertinentes.
 
 .INFORMATIONS_FR \\*[WEBSITE]/research_fr.pdf \\*[EMAIL]
 .br
@@ -36,6 +36,11 @@ Nous aborderons également la rigueur nécessaire pour toute contribution série
 Il n'est pas question, en seulement quelques pages, de faire du lecteur un chercheur aguerri (loin de là).
 En revanche, la compréhension de ce document permet de prendre du recul sur les informations obtenues dans les médias ainsi que d'aborder n'importe quel sujet de manière plus rationnelle.
 
+Ce document est écrit dans un style proche d'un papier scientifique, mais sans prétendre en avoir la rigueur.
+L'objectif est de fournir des informations utiles au plus grand nombre pour découvrir ce qu'est la recherche, pas de s'adresser aux experts d'un domaine.
+La concision est recherchée ainsi que la compréhension intuitive des informations fournies, le détail de certains concepts présentés sort du cadre de ce document.
+En cas d'imprécision néfaste à la compréhension, n'hésitez pas à contacter l'auteur.
+
 La section 2 présente le principe de biais (cognitif, méthodologique, statistique...), c'est-à-dire d'erreur de raisonnement ou de perception par exemple.
 La section 3 présente la méthode scientifique, qui permet de prévenir au mieux les erreurs de raisonnement et ainsi d'être plus confiant quant aux connaissances acquises.
 La section 4 présente l'art de l'écriture de papiers scientifiques ainsi que la rigueur nécessaire dans la formulation d'un problème.
@@ -51,7 +56,7 @@ Si l'erreur est honnête, c'est-à-dire involontaire, elle est nommée paralogis
 À l'inverse, une erreur consciente, dans le but de tromper, est nommée sophisme.
 D'autres types de biais existent également (méthodologie, statistique, etc.), et sont synonymes d'erreur dans la suite du document ; leur distinction sortant du cadre de ce papier.
 Un biais ne mène pas nécessairement à une conclusion erronée, mais le processus logique y menant n'étant pas fiable, aucune confiance ne peut être accordée au résultat.
-Dans cette section, différents biais seront présentés en les mettant en rapport avec des contextes où ils sont régulièrement présents.
+Dans cette section, différents biais sont présentés en les mettant en rapport avec des contextes où ils sont régulièrement présents.
 
 .QUESTION "Dieu, où es-tu ?"
 La notion de « Dieu » a fait couler beaucoup d'encre au fil des siècles et fait figure de cas d'école concernant les biais de raisonnement.
@@ -60,22 +65,34 @@ L'argumentation en faveur d'une divinité est, encore de nos jours, sujette à d
 .\".[
 .\"sophismes
 .\".]
-Quelques exemples proposés par les croyants pour justifier l'existence ou des propriétés d'un dieu :
+Quelques exemples proposés pour justifier l'existence ou des propriétés d'un dieu :
 .BULLET
-.B "special pleading" " :"
+.B "plaidoirie spéciale" " :"
 « tout à une cause, sauf Dieu » ;
 .BULLET
 .B "tautologie" " :"
+définir X comme étant Y, puis Y comme étant X.
+Le résultat est donc que
+.I "X = X"
+et
+.I "Y = Y" ,
+ce qui ne dit rien.
 « Dieu est la première de toutes les causes », en qualifiant par suite la première de toutes les causes de Dieu ;
 .BULLET
 .B "argumentation circulaire" " :"
 « la bible est la voix de Dieu, on le sait car la bible le dit, et la bible est infaillible car c'est la voix de Dieu » ;
 .BULLET
 .B "appel à l'ignorance" " :"
+partir du principe qu'une position est vraie par défaut.
 « Dieu existe car on ne peut pas prouver qu'il n'existe pas » ou encore « la science n'a jamais créé la vie, donc une intervention divine est nécessaire » ;
 .BULLET
+.B "appel à l'incrédulité personnelle" " :"
+supposer une position vraie car on n'arrive pas à imaginer une autre solution.
+Autrement dit, « je ne sais pas, donc dieu ».
+« Je vois pas comment un poisson peut devenir un homme, donc Dieu nous a créé puis c'est tout. » ;
+.BULLET
 .B "appel à la popularité" " :"
-« Des milliards de personnes y croient » ;
+« Des milliards de personnes y croient, c'est bien que ça doit être vrai » ;
 .BULLET
 .B "argument d'autorité" " :"
 « X est docteur et il y croit ».
@@ -84,11 +101,22 @@ Quelques exemples proposés par les croyants pour justifier l'existence ou des p
 .QUESTION "Ma petite entreprise ne connaît pas la crise."
 Le monde des affaires et de l'entreprise en général sont sujets à certains biais.
 Par exemple, le biais du survivant se retrouve dans les start-up où les différents associés se disent « si X a réussi, nous pouvons le faire aussi ».
+De plus, cela peut être combiné à un biais de confirmation si ces mêmes personnes ne s'informent que sur des entreprises ayant du succès.
+
+.QUESTION "Les statistiques, cruelles statistiques."
+Les statistiques forment un outil très important en science, mais également dans des prises de décisions de la vie quotidienne.
+Par exemple, un marchand peut décider de mettre en avant un produit (disons une poussette) plutôt qu'un autre (un sac de randonnée) suite à une étude de marché portant sur sa clientelle.
+Si cette étude de marché se déroule (uniquement) via un formulaire à remplir à la sortie d'une crèche, elle conduira à la conclusion que 100 % des clients ont un enfant en bas âge, privilégiant le premier produit.
+Bien entendu, cela est lié à un biais de sélection, les personnes sondées n'étant pas représentatives des clients du marchand.
 
 .QUESTION "Détecter les biais."
-Un même biais cognitif peut être formulé de nombreuses manières, rendant sa détection parfois complexe.
-Il n'existe malheureusement aucune manière automatique de détecter les biais cognitifs.
+Un même biais peut être formulé de nombreuses manières, rendant sa détection parfois complexe.
+Un biais peut également être présent dans de nombreux contextes, comme le biais de confirmation.
+Il n'existe malheureusement aucune manière automatique de les détecter.
 Par conséquent, la vigilance face à ces erreurs de raisonnement reste nécessaire.
+
+Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants.
+La suite du document présente une manière, imparfaite mais suffisante, utilisée en science pour limiter ces erreurs dans le cadre de la recherche.
 .SECTION Méthode scientifique
 La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vérifications différentes pour comprendre le monde qui nous entoure.
 
@@ -96,23 +124,46 @@ La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vér
 Suivant le problème étudié, le chercheur utilise une méthode plutôt qu'une autre pour le résoudre.
 Prenons deux exemples : la méthode hypothético-déductive et le double-aveugle.
 
-.CITATION1
-La méthode hypothético-déductive est une méthode scientifique qui consiste à formuler une hypothèse afin d'en déduire des conséquences observables futures (prédiction), mais également passées (rétroduction), permettant d'en déterminer la validité. 
-.CITATION2
-.NAMECITATION Extrait de la page « Méthode hypothético-déductive », Wikipédia
-.br
+.QUESTION "La méthode hypothético-déductive."
+Cette méthode pourrait se résumer brièvement par la formulation d'une hypothèse et la déduction de ses conséquences observables.
+Cette méthode tend à faire des prédictions et à expliquer des événements qui se sont déroulés, ce qui permet de juger de sa validité.
 Cette méthode a un vaste champ d'application et est très utilisée en science.
 
+Par exemple, un chercheur en informatique s'intéresse à des algorithmes de tri de listes de nombres entiers (passer d'une liste
+.I "3, 1, 2"
+à
+.I "1, 2, 3" ).
+Il émet une ou plusieurs hypothèses qu'il suppose lui permettent de créer un algorithme plus rapide.
+Ensuite, il explique son nouvel algorithme puis démontre sa complexité (pour faire simple : son nombre d'opérations nécessaires pour trier une liste de N éléments), en comparant cela aux meilleurs algorithmes actuels.
+Enfin, comme cela est possible en informatique, le chercheur vérifie par la pratique sa solution en la comparant aux autres algorithmes, ce qui s'appelle une expérimentation\*[*].
+.FOOTNOTE1
+Certains travaux de recherche peuvent être résumés aussi simplement.
+La difficulté du métier de chercheur n'est pas uniquement liée à la complexité des documents produits.
+Voir section 6.
+.FOOTNOTE2
+
+.QUESTION "La méthode du double-aveugle."
 Certaines méthodes sont plus spécifiques, et ont un champ d'application plus restreint.
 Par exemple, la méthode du double-aveugle est utile dans un contexte médical.
 Dans cette méthode (et dans un contexte médical), pour étudier l'efficacité d'un nouveau traitement, on prend deux groupes de patients : l'un qui reçoit le traitement, l'autre non (ils prennent un autre traitement ou un placébo).
 Ni les patients ni le docteur ne savent qui prend le nouveau traitement.
-De ce fait, les biais liés à la connaissance du traitement sont limités, que ce soit pour le patient (qui pourrait subir un effet psychosomatique) ou pour le médecin (qui pourrait avoir une interprétation biaisée des résultats).
+De ce fait, les biais liés à la connaissance du traitement sont limités, que ce soit pour le patient (qui pourrait subir un effet psychosomatique) ou pour le médecin (qui pourrait avoir une interprétation biaisée des résultats, par exemple).
 
 .QUESTION "La multiplicité des méthodes."
 Les différentes méthodes sont complémentaires et dépendent de la problématique à résoudre.
-Par exemple, le double-aveugle n'a pas de sens en informatique; cette méthode s'attaque à des biais qui ne sont pas présent dans ce contexte.
-De même, la méthode hypothético-déductive n'est pas adaptée à toutes les domaines, et certaines branches des mathématiques s'en passent.
+Par exemple, le double-aveugle n'a pas de sens en informatique ; cette méthode s'attaque à des biais qui ne sont pas présent dans ce contexte.
+De même, la méthode hypothético-déductive n'est pas adaptée à tous les domaines, et certaines branches des mathématiques s'en passent.
+
+.QUESTION "La relecture par les pairs."
+Peu importe la méthode utilisée, la relecture par les pairs est nécessaire.
+Le principe est le suivant : d'autres chercheurs relisent les travaux avant la publication officielle dans un journal scientifique.
+La science est la recherche systématique d'erreurs : failles de raisonnement, de mesure, de méthode, etc.
+.TBD
+
+.QUESTION "L'art du doute raisonnable."
+La science doute de toute affirmation péremptoire, ainsi le doute est un outil utile pour poser de meilleures questions.
+En revanche, lorsque plusieurs études avec des méthodes indépendantes sont concordantes, c'est-à-dire qui partagent la même conclusion, le doute peut cesser d'être raisonnable.
+.TBD
 
 Quelques éléments à retenir\*[*] :
 .FOOTNOTE1
@@ -120,8 +171,13 @@ Quelques éléments à retenir\*[*] :
 .FOOTNOTE2
 .BULLET La science peut jauger la véracité de certaines affirmations, même en se basant sur des métriques imparfaites.
 .BULLET La science tente de rejeter un maximum d'affirmations fausses ou qui n'ont pas de sens.
-.BULLET La science est la recherche systématique d'erreurs : failles de raisonnement, de mesure, de méthode, etc.
 .ENDBULLET
+
+.TBD
+
+.EXPLANATION1
+La science est le raffinement de méthodes pour éviter les biais pour s'approcher de la vérité au mieux de nos capacités.
+.EXPLANATION2
 .
 .\" TODO
 .\" science = raffinement de méthodes pour éviter les biais, obtenir le fin mot de l'histoire
@@ -152,7 +208,7 @@ Le présent document se réserve le droit à un style légèrement plus libre, p
 Ainsi, le document comporte de la couleur dans le texte et un style différent pour les extraits (texte coloré, barre verticale).
 .FOOTNOTE2
 Le papier est constitué de phrases simples et qui se suivent pour former une idée par paragraphe.
-Peu d'éléments de style sont utilisés (italique et graisse) et avec parcimonie.
+Peu d'éléments de style sont utilisés (italique, graisse, surlignement) et avec parcimonie.
 Les listes à puces sont, dans la mesure du raisonnable, évitées; lister des éléments se fait dans le texte autant que possible.
 
 Un papier de recherche n'est pas un roman.
@@ -185,6 +241,20 @@ Une section pour présenter les résultats ainsi que leur interprétation.
 Enfin le papier se termine par une conclusion sur l'étude menée.
 Un papier peut également posséder une ou plusieurs annexes, pour alléger le cœur du papier et se concentrer sur l'essentiel.
 Par exemple, les données brutes d'une expérimentation peuvent faire l'objet d'une annexe, de même qu'une démonstration mathématique.
+
+.QUESTIONS "Les auteurs et leur implication."
+Un papier doit mentionner les auteurs, dans l'ordre d'implication dans le travail.
+Le premier auteur est la personne la plus importante, celle ayant travaillée le plus sur le contenu (sur le fond et la forme).
+Les autres auteurs peuvent avoir une implication soit identique, soit moindre.
+Certains des auteurs peuvent avoir contribué via des conseils, ou avoir donné une direction au projet, voire même avoir sorti l'auteur principal d'une impasse dans ses travaux.
+Bien souvent, les
+.I seconds
+auteurs ont relu le document et donné des correctifs voire des pistes d'améliorations, parfois à de multiples et longues reprises\*[*].
+.FOOTNOTE1
+Pardon, Pierre. Et merci.
+.FOOTNOTE2
+Enfin, le dernier auteur passe généralement moins de temps sur le travail, il ne s'occupe pas des détails.
+.TBD
 
 Chaque schéma, tableau ou équation doit être introduit et expliqué.
 Chaque résultat doit être introduit, interprété, expliqué.
