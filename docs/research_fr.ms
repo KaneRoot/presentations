@@ -94,8 +94,14 @@ Autrement dit, « je ne sais pas, donc dieu ».
 .B "appel à la popularité" " :"
 « Des milliards de personnes y croient, c'est bien que ça doit être vrai » ;
 .BULLET
+.B "argument « Galilée »" " (inverse du sophisme précédent) :"
+penser qu'une personne dans l'erreur est un lanceur d'alerte visionnaire, envers et contre tous, car ses conclusions confortent notre vision du monde quand bien même ses arguments sont faibles et légitimement rejetés par ses pairs ;
+.BULLET
 .B "argument d'autorité" " :"
-« X est docteur et il y croit ».
+« X est docteur et il y croit » ;
+.BULLET
+.B "appel à la purité" " :"
+« Aucun chrétien ne renie sa foi, s'il a changé de religion, c'est qu'il n'a jamais été chrétien ».
 .ENDBULLET
 
 .QUESTION "Ma petite entreprise ne connaît pas la crise."
@@ -112,8 +118,9 @@ Bien entendu, cela est lié à un biais de sélection, les personnes sondées n'
 .QUESTION "Détecter les biais."
 Un même biais peut être formulé de nombreuses manières, rendant sa détection parfois complexe.
 Un biais peut également être présent dans de nombreux contextes, comme le biais de confirmation.
-Il n'existe malheureusement aucune manière automatique de les détecter.
-Par conséquent, la vigilance face à ces erreurs de raisonnement reste nécessaire.
+De plus, des erreurs peuvent se glisser dans l'acquisition d'une donnée ou son interprétation, biaisant, là encore, le résultat.
+Il n'existe malheureusement aucune manière automatique de détecter toutes ces erreurs.
+Par conséquent, la vigilance reste nécessaire.
 
 Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants.
 La suite du document présente une manière, imparfaite mais suffisante, utilisée en science pour limiter ces erreurs dans le cadre de la recherche.
@@ -197,34 +204,58 @@ La science est la recherche systématique d'erreurs : failles de raisonnement, d
 .TBD
 
 .QUESTION "Déroulement de la recherche."
-Un chercheur se documente sur un problème, il lit les papiers en rapport avec ce problème non résolu.
-Lorsqu'il a une intuition sur la manière de le résoudre, il essait de résoudre ce problème (par exemple via des hypothèses) et immédiatement après il tente de réfuter sa propre proposition (par des calculs ou expérimentations).
-Même au début de ses travaux, le chercheur n'est pas nécessairement seul.
-Il peut discuter de sa démarche avec des collègues, de manière semi-formelle (réunions, présentations) ou non, pour tenter de réfuter ses hypothèses ou enrichir sa réflexion.
+En premier lieu, un chercheur se documente sur un problème non résolu en lisant tous les papiers disponibles sur le sujet.
+Cette première phase prend des mois de travail, le corpus dédié à un sujet (aussi précis soit-il) pouvant être immense.
+Tous les papiers ne sont pas évidents à comprendre, surtout pour un nouveau chercheur, même brillant.
 
-Maintenant que le travail a été fait, le papier est rédigé\*[*].
+Lorsque le chercheur a une intuition sur une résolution possible du problème, il tente sa chance, par exemple en formulant des hypothèses.
+Immédiatement après, il tente de réfuter sa propre proposition, par des calculs ou expérimentations.
+
+.EXPLANATION1
+Un chercheur doit essayer de
+.UL réfuter
+son analyse.
+C'est l'effort de réfutation qui donne de la crédibilité à une étude.
+Plus une analyse résiste, plus elle apparaît comme valide.
+.EXPLANATION2
+
+Les chercheurs travaillent parfois à plusieurs sur un même sujet, parfois seuls.
+Dans tous les cas, même au début de ses travaux, un chercheur peut discuter de sa démarche avec des collègues pour tenter de réfuter ses hypothèses ou enrichir sa réflexion.
+Ces discussions peuvent, par exemple, prendre une forme semi-formelle via des réunions ou des présentations internes à l'équipe.
+
+Une fois le travail accompli, un papier est rédigé\*[*].
 .FOOTNOTE1
 Certains réussissent à écrire le papier avant de faire le travail.
-Cela demande une grande confiance en soi : l'étude peut échouer (pour diverses raisons) et rendre le papier inutile, par exemple.
+Cela demande une grande confiance en soi : l'étude peut échouer (pour diverses raisons) ou être devancée par un autre laboratoire, rendant le papier inutile.
 .FOOTNOTE2
 Ce document sera éventuellement relu par un collègue (qui pourra être second auteur) afin d'avoir un second point de vue et de corriger les fautes les plus évidentes.
 Une fois tout ce travail effectué, le papier est envoyé à un journal.
 
-Le journal va ensuite demander à d'autres chercheurs (d'autres laboratoires) de relire le papier.
-Chaque relecteur va émettre une appréciation sur le papier : acceptation forte, acceptation, rejet, rejet fort.
-Les relecteurs doivent également fournir un retour détaillé sur le document, donner des pistes d'amélioration ou au moins indiquer ce qui ne va pas\*[*].
+Le journal va ensuite demander à des chercheurs d'autres laboratoires de relire le papier.
+Chaque relecteur va émettre une appréciation : acceptation forte, acceptation, rejet, rejet fort.
+Les relecteurs doivent également fournir un retour (bref) au journal et un retour détaillé aux auteurs.
+Ils donnent ainsi des pistes d'amélioration, ou indiquent au moins ce qui les a dérangé lors de la lecture\*[*].
 .FOOTNOTE1
-Tous les relecteurs ne sont pas consciencieux, malheureusement.
+Tous les relecteurs ne sont pas conscencieux, malheureusement.
 Un papier peut être rejeté avec une réponse très pauvre, ne permettant pas d'améliorer significativement le travail.
 .FOOTNOTE2
 Si le papier n'est pas directement rejeté, s'en suivent des allers-retours entre les auteurs et les relecteurs.
+Si le papier est rejeté, les auteurs tentent de le publier dans un autre journal.
+
+Une fois le papier accepté, son contenu a déjà passé plusieurs filtres, mais il n'est pas pour autant accepté comme vrai.
 
 .QUESTION "La science n'est pas une démocratie."
 Si une hypothèse n'est pas réfutable (pas testable, ou qui ne peut pas s'invalider), elle est rejetée, il n'y a pas de vote nécessaire.
+
+.QUESTION "Un chercheur n'est pas la science."
+Aucun chercheur ne fait autorité dans tout un domaine de recherche.
+Un chercheur a une spécialité dont il connaît le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
+Dans sa spécialité, a priori, le chercheur a un avis pertinent ; sa voix est légitime.
+En revanche, même dans sa spécialité, la parole d'un chercheur n'est pas au-dessus de toute critique et il peut lui-même avoir un avis qui ne fait pas concensus.
+
 .\ TODO
-.\" C'est quoi un chercheur qui fait autorité ? Quelqu'un qui avance des arguments solides sur un sujet dont il a connaissance de la littérature autour. Sa voix, dans ce contexte et en particulier s'il avance des arguments, est légitime.
-.\" Point galilée => confondre un type dans l'erreur et le lanceur qu'il clame être
-.\" Toute hypothèse n'est pas raisonnable => on ne remet pas en cause tout ce qu'on sait à chaque fois qu'on émet une hypothèse. Si l'hypothèse implique un coût épistémique trop important sans une très solide justification, elle n'est pas jugée sérieuse.
+.\" Toute hypothèse n'est pas raisonnable => on ne remet pas en cause tout ce qu'on sait à chaque fois qu'on émet une hypothèse.
+.\" Si l'hypothèse implique un coût épistémique trop important sans une très solide justification, elle n'est pas jugée sérieuse.
 
 .QUESTION "L'art du doute raisonnable."
 La science doute de toute affirmation péremptoire, ainsi le doute est un outil utile pour poser de meilleures questions.
@@ -310,7 +341,9 @@ Une ou plusieurs sections pour l'état de l'art, qui décrit les solutions actue
 Une ou plusieurs sections pour introduire la solution envisagée.
 Une section pour décrire l'expérimentation, c'est-à-dire toute information nécessaire pour sa potentielle reproduction (paramètres initiaux, déroulement, outils utilisés, etc.).
 Une section pour présenter les résultats ainsi que leur interprétation.
-Enfin le papier se termine par une conclusion sur l'étude menée.
+Le papier peut également inclure une section pour les travaux futurs en rapport avec ce qui a été publié, des pistes à creuser.
+Ensuite, une section pour conclure l'étude menée, rappelant le sujet et mettant en avant les résultats.
+Et enfin, les références utilisées pour l'étude, c'est-à-dire les papiers, livres et autres documents qui ont été mentionnés.
 Un papier peut également posséder une ou plusieurs annexes, pour alléger le cœur du papier et se concentrer sur l'essentiel.
 Par exemple, les données brutes d'une expérimentation peuvent faire l'objet d'une annexe, de même qu'une démonstration mathématique.
 
@@ -326,6 +359,8 @@ auteurs ont relu le document et donné des correctifs voire des pistes d'amélio
 Pardon, Pierre. Et merci.
 .FOOTNOTE2
 Enfin, le dernier auteur passe généralement moins de temps sur le travail, il ne s'occupe pas des détails.
+Le dernier auteur est souvent bien plus expérimenté, est habilité à diriger des recherches et a proposé cette étude.
+Il fournit des pistes de réflexion, vérifie le bon déroulement, prend éventuellement contact avec d'autres chercheurs pour des collaborations ou des relectures du travail en interne au sein de l'équipe, etc.
 .TBD
 
 Chaque schéma, tableau ou équation doit être introduit et expliqué.
@@ -389,18 +424,25 @@ Les scientifiques sérieux publient exclusivement dans des revues à comité de 
 .SUBSECTION Travail d'un chercheur
 .QUESTION "En pratique, que fait un chercheur ?"
 .SUBSECTION Difficultés
+.QUESTION "Le temps."
 Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps.
 Le chercheur doit se maintenir à jour, il fait de la veille pour s'assurer toujours être au courant des avancées dans son domaine.
-.
-.\" TODO
-.\" en france on est souvent enseignant-chercheur
-.
+De plus, en France, un chercheur est souvent enseignant-chercheur, et consacre principalement son temps à l'enseignement à l'université.
 .SUBSECTION Limites de la recherche
 .SUBSECTION Un chercheur, un domaine
 .SECTION Science au-delà de la recherche
+Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 .\" Zététique
 .SUBSECTION Pseudo-sciences
 .SUBSECTION Politique
+La politique est un sujet à la fois vaste et complexe.
+Des mesures simples peuvent impliquer de nombreuses ramifications inattendues.
+
+.CITATION1
+Des automobilistes se moquent de personnes construisant un bâteau car leur véhicule n'a pas de roues.
+.CITATION2
+.NAMECITATION "Discussions politiques entre personnes de paradigmes différents"
+
 .SECTION Conclusion
 Ce document a présenté des biais présents dans la vie de tous les jours et dans de nombreux domaines.
 
