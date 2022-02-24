@@ -54,7 +54,7 @@ Enfin, une conclusion sera tirée en section 8.
 Un biais cognitif est une erreur de raisonnement ou de perception.
 Si l'erreur est honnête, c'est-à-dire involontaire, elle est nommée paralogisme.
 À l'inverse, une erreur consciente, dans le but de tromper, est nommée sophisme.
-D'autres types de biais existent également (méthodologie, statistique, etc.), et sont synonymes d'erreur dans la suite du document ; leur distinction sortant du cadre de ce papier.
+D'autres types de biais existent également (méthodologique, statistique, etc.), et sont synonymes d'erreur dans la suite du document ; leur distinction sortant du cadre de ce papier.
 Un biais ne mène pas nécessairement à une conclusion erronée, mais le processus logique y menant n'étant pas fiable, aucune confiance ne peut être accordée au résultat.
 Dans cette section, différents biais sont présentés en les mettant en rapport avec des contextes où ils sont régulièrement présents.
 
@@ -68,7 +68,7 @@ L'argumentation en faveur d'une divinité est, encore de nos jours, sujette à d
 Quelques exemples proposés pour justifier l'existence ou des propriétés d'un dieu :
 .BULLET
 .B "plaidoirie spéciale" " :"
-« tout à une cause, sauf Dieu » ;
+une règle spéciale qui s'appliquerait mais sans justification « tout a une cause, sauf Dieu » ;
 .BULLET
 .B "tautologie" " :"
 définir X comme étant Y, puis Y comme étant X.
@@ -77,7 +77,7 @@ Le résultat est donc que
 et
 .I "Y = Y" ,
 ce qui ne dit rien.
-« Dieu est la première de toutes les causes », en qualifiant par suite la première de toutes les causes de Dieu ;
+« Dieu est la première de toutes les causes », en définissant « la première de toutes les causes » de Dieu (ce sont donc de simples synonymes, ce qui ne forme pas une définition acceptable) ;
 .BULLET
 .B "argumentation circulaire" " :"
 « la bible est la voix de Dieu, on le sait car la bible le dit, et la bible est infaillible car c'est la voix de Dieu » ;
@@ -151,8 +151,44 @@ De ce fait, les biais liés à la connaissance du traitement sont limités, que 
 
 .QUESTION "La multiplicité des méthodes."
 Les différentes méthodes sont complémentaires et dépendent de la problématique à résoudre.
-Par exemple, le double-aveugle n'a pas de sens en informatique ; cette méthode s'attaque à des biais qui ne sont pas présent dans ce contexte.
+Par exemple, le double-aveugle n'a pas de sens en informatique ; cette méthode s'attaque à des biais qui ne sont pas présents dans ce contexte.
 De même, la méthode hypothético-déductive n'est pas adaptée à tous les domaines, et certaines branches des mathématiques s'en passent.
+
+.QUESTION "La science a son propre vocabulaire."
+Bien des mots se retrouvent à la fois au quotidien et dans le monde universitaire, pourtant leur signification y est différente.
+La suite présente quelques cas évidents.
+
+En logique propositionnelle, dire qu'une proposition est
+.I valide
+ne veut pas dire qu'elle est vraie ou acceptable, mais que la manière dont elle est formulée (sa forme) est correcte.
+La proposition suivante est valide, bien qu'absurde et sans intérêt : « si je mange un pruneau ma voiture change de couleur, si ma voiture change de couleur mon chat explose, donc si je mange un pruneau mon chat explose ».
+Mathématiquement, cette proposition ressemble à :
+
+.KS
+.EQ
+A -> B
+.EN
+.sp -1
+.EQ
+B -> C
+.EN
+.sp -1
+.EQ
+A -> C
+.EN
+.KE
+
+Une théorie dans le monde académique n'est pas synonyme d'hypothèse.
+Une théorie est un ensemble d'hypothèses
+.TBD
+.\" théorie
+
+.\" TODO: parler de ça ou pas ?
+.\" Toute hypothèse n'est pas valide dans le monde académique.
+.\" Si l'hypothèse est trop coûteuse d'un point de vue épistémique, elle sera rejetée.
+.\" hypothèse
+.\" théorie
+.TBD
 
 .QUESTION "La relecture par les pairs."
 Peu importe la méthode utilisée, la relecture par les pairs est nécessaire.
@@ -160,10 +196,46 @@ Le principe est le suivant : d'autres chercheurs relisent les travaux avant la 
 La science est la recherche systématique d'erreurs : failles de raisonnement, de mesure, de méthode, etc.
 .TBD
 
+.QUESTION "Déroulement de la recherche."
+Un chercheur se documente sur un problème, il lit les papiers en rapport avec ce problème non résolu.
+Lorsqu'il a une intuition sur la manière de le résoudre, il essait de résoudre ce problème (par exemple via des hypothèses) et immédiatement après il tente de réfuter sa propre proposition (par des calculs ou expérimentations).
+Même au début de ses travaux, le chercheur n'est pas nécessairement seul.
+Il peut discuter de sa démarche avec des collègues, de manière semi-formelle (réunions, présentations) ou non, pour tenter de réfuter ses hypothèses ou enrichir sa réflexion.
+
+Maintenant que le travail a été fait, le papier est rédigé\*[*].
+.FOOTNOTE1
+Certains réussissent à écrire le papier avant de faire le travail.
+Cela demande une grande confiance en soi : l'étude peut échouer (pour diverses raisons) et rendre le papier inutile, par exemple.
+.FOOTNOTE2
+Ce document sera éventuellement relu par un collègue (qui pourra être second auteur) afin d'avoir un second point de vue et de corriger les fautes les plus évidentes.
+Une fois tout ce travail effectué, le papier est envoyé à un journal.
+
+Le journal va ensuite demander à d'autres chercheurs (d'autres laboratoires) de relire le papier.
+Chaque relecteur va émettre une appréciation sur le papier : acceptation forte, acceptation, rejet, rejet fort.
+Les relecteurs doivent également fournir un retour détaillé sur le document, donner des pistes d'amélioration ou au moins indiquer ce qui ne va pas\*[*].
+.FOOTNOTE1
+Tous les relecteurs ne sont pas consciencieux, malheureusement.
+Un papier peut être rejeté avec une réponse très pauvre, ne permettant pas d'améliorer significativement le travail.
+.FOOTNOTE2
+Si le papier n'est pas directement rejeté, s'en suivent des allers-retours entre les auteurs et les relecteurs.
+
+.QUESTION "La science n'est pas une démocratie."
+Si une hypothèse n'est pas réfutable (pas testable, ou qui ne peut pas s'invalider), elle est rejetée, il n'y a pas de vote nécessaire.
+.\ TODO
+.\" C'est quoi un chercheur qui fait autorité ? Quelqu'un qui avance des arguments solides sur un sujet dont il a connaissance de la littérature autour. Sa voix, dans ce contexte et en particulier s'il avance des arguments, est légitime.
+.\" Point galilée => confondre un type dans l'erreur et le lanceur qu'il clame être
+.\" Toute hypothèse n'est pas raisonnable => on ne remet pas en cause tout ce qu'on sait à chaque fois qu'on émet une hypothèse. Si l'hypothèse implique un coût épistémique trop important sans une très solide justification, elle n'est pas jugée sérieuse.
+
 .QUESTION "L'art du doute raisonnable."
 La science doute de toute affirmation péremptoire, ainsi le doute est un outil utile pour poser de meilleures questions.
 En revanche, lorsque plusieurs études avec des méthodes indépendantes sont concordantes, c'est-à-dire qui partagent la même conclusion, le doute peut cesser d'être raisonnable.
-.TBD
+Un exemple de doute ayant cessé d'être raisonnable concerne la théorie de l'évolution,
+.[
+origin of species
+.]
+qui regroupe l'évolution des espèces (fait observable) et les mécanismes de sélection naturelle.
+Cette théorie, au départ très imparfaite mais ayant comme fondation des concepts solides, a été raffinée au fil du temps.
+De nos jours, de très nombreuses méthodes indépendantes ont convergé vers les mêmes résultats (via la datation des fossiles, l'anatomie comparée des espèces, la biogéographie, l'épigénétique, etc.), rendant cette théorie la plus solidement vérifiée de toute l'histoire de la science.
 
 Quelques éléments à retenir\*[*] :
 .FOOTNOTE1
@@ -176,7 +248,7 @@ Quelques éléments à retenir\*[*] :
 .TBD
 
 .EXPLANATION1
-La science est le raffinement de méthodes pour éviter les biais pour s'approcher de la vérité au mieux de nos capacités.
+La science est le raffinement de méthodes pour éviter les biais et ainsi s'approcher de la vérité au mieux de nos capacités.
 .EXPLANATION2
 .
 .\" TODO
@@ -330,3 +402,19 @@ Le chercheur doit se maintenir à jour, il fait de la veille pour s'assurer touj
 .SUBSECTION Pseudo-sciences
 .SUBSECTION Politique
 .SECTION Conclusion
+Ce document a présenté des biais présents dans la vie de tous les jours et dans de nombreux domaines.
+
+La science s'est adaptée à ces erreurs de raisonnement.
+Les multiples méthodes sont adaptées aux différentes problématiques ; elles prennent en compte les biais spécifiques à chaque domaine.
+Le format utilisé pour matérialiser la réflexion des chercheurs est également d'une grande aide.
+Par exemple, la justification systématique des affirmations enlève des ambiguités, ce qui est utile comme outil de raisonnement pour les auteurs eux-mêmes.
+La relecture par les pairs (experts du domaine), antérieure à la publication, permet d'ajouter des vérifications supplémentaires.
+Une faute d'inattention est vite arrivée, mais trois ou quatre chercheurs qui passent à côté d'une erreur est plus rare.
+La publication est parfois suivie d'autres analyses, des réplications par d'autres laboratoires de la même étude.
+Répliquer une analyse contribue à la crédibilité des résultats obtenus (ou y apporte du discrédit si la réplication échoue).
+La synthèse des différentes études (sur le même sujet) est produite dans des meta-analyses, qui offrent un recul sur les résultats individuels de chaque laboratoire.
+Après toutes ces étapes, chacune permettant de rejeter la validité des hypothèses (même bien au-delà de la publication du papier originel), le résultat devient un concensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
+.
+.\" Tout cela forme la manière utilisée en science pour acquérir des connaissances.
+.\" Toute connaissance n'a pas à passer par ces étapes, si vous perdez vos clés il n'y a pas besoin de publier un article pour les retrouver.
+.\" Pas nécessaire, mais plus sûr, on prend en compte les erreurs humaines.
