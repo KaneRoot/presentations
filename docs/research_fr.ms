@@ -77,7 +77,8 @@ Le résultat est donc que
 et
 .I "Y = Y" ,
 ce qui ne dit rien.
-« Dieu est la première de toutes les causes », en définissant « la première de toutes les causes » de Dieu (ce sont donc de simples synonymes, ce qui ne forme pas une définition acceptable) ;
+« Dieu est la première de toutes les causes », en définissant « la première de toutes les causes » de Dieu.
+Ce sont donc de simples synonymes, ce qui ne forme pas une définition acceptable ;
 .BULLET
 .B "argumentation circulaire" " :"
 « la bible est la voix de Dieu, on le sait car la bible le dit, et la bible est infaillible car c'est la voix de Dieu » ;
@@ -94,7 +95,7 @@ Autrement dit, « je ne sais pas, donc dieu ».
 .B "appel à la popularité" " :"
 « Des milliards de personnes y croient, c'est bien que ça doit être vrai » ;
 .BULLET
-.B "argument « Galilée »" " (inverse du sophisme précédent) :"
+.B "argument « Galilée »" " (± l'inverse du précédent) :"
 penser qu'une personne dans l'erreur est un lanceur d'alerte visionnaire, envers et contre tous, car ses conclusions confortent notre vision du monde quand bien même ses arguments sont faibles et légitimement rejetés par ses pairs ;
 .BULLET
 .B "argument d'autorité" " :"
@@ -115,6 +116,19 @@ Par exemple, un marchand peut décider de mettre en avant un produit (disons une
 Si cette étude de marché se déroule (uniquement) via un formulaire à remplir à la sortie d'une crèche, elle conduira à la conclusion que 100 % des clients ont un enfant en bas âge, privilégiant le premier produit.
 Bien entendu, cela est lié à un biais de sélection, les personnes sondées n'étant pas représentatives des clients du marchand.
 
+Toute statistique doit être accompagnée d'un ou plusieurs paramètres pour comprendre les données (p-valeur, intervalle de confiance, écart à la moyenne…).
+Pour illustrer cela, un exemple : un enseignant a deux classes et leur donne un devoir.
+La première classe obtient une moyenne de
+.FRAC 10 20
+et l'autre
+.FRAC 12 20 .
+Quelle classe est la plus en difficulté ?
+Avec seulement deux moyennes brutes, impossible de savoir.
+Quelques étudiants, très bons ou en grande difficulté, peuvent fausser une moyenne.
+De plus, émettre un jugement sur un seul devoir est peut-être hâtif.
+Le nombre d'étudiants par classe n'est pas non plus mentionné.
+Une valeur seule (comme une moyenne) est insuffisante.
+
 .QUESTION "Détecter les biais."
 Un même biais peut être formulé de nombreuses manières, rendant sa détection parfois complexe.
 Un biais peut également être présent dans de nombreux contextes, comme le biais de confirmation.
@@ -124,12 +138,13 @@ Par conséquent, la vigilance reste nécessaire.
 
 Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants.
 La suite du document présente une manière, imparfaite mais suffisante, utilisée en science pour limiter ces erreurs dans le cadre de la recherche.
-.SECTION Méthode scientifique
+.SECTION Science et méthode scientifique
 La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vérifications différentes pour comprendre le monde qui nous entoure.
-
-.QUESTION "Un contexte, une méthode."
 Suivant le problème étudié, le chercheur utilise une méthode plutôt qu'une autre pour le résoudre.
-Prenons deux exemples : la méthode hypothético-déductive et le double-aveugle.
+Dans cette section, deux méthodes sont introduites (hypothético-déductive et double-aveugle) pour montrer la diversité du travail de recherche.
+De même, la chronologie de la recherche est présentée, de l'intuition permettant de résoudre un problème au concensus scientifique.
+Par la suite, plusieurs discussions sont amorcées : le vocabulaire scientifique (différent du langage courant)
+.TBD
 
 .QUESTION "La méthode hypothético-déductive."
 Cette méthode pourrait se résumer brièvement par la formulation d'une hypothèse et la déduction de ses conséquences observables.
@@ -161,49 +176,7 @@ Les différentes méthodes sont complémentaires et dépendent de la problémati
 Par exemple, le double-aveugle n'a pas de sens en informatique ; cette méthode s'attaque à des biais qui ne sont pas présents dans ce contexte.
 De même, la méthode hypothético-déductive n'est pas adaptée à tous les domaines, et certaines branches des mathématiques s'en passent.
 
-.QUESTION "La science a son propre vocabulaire."
-Bien des mots se retrouvent à la fois au quotidien et dans le monde universitaire, pourtant leur signification y est différente.
-La suite présente quelques cas évidents.
-
-En logique propositionnelle, dire qu'une proposition est
-.I valide
-ne veut pas dire qu'elle est vraie ou acceptable, mais que la manière dont elle est formulée (sa forme) est correcte.
-La proposition suivante est valide, bien qu'absurde et sans intérêt : « si je mange un pruneau ma voiture change de couleur, si ma voiture change de couleur mon chat explose, donc si je mange un pruneau mon chat explose ».
-Mathématiquement, cette proposition ressemble à :
-
-.KS
-.EQ
-A -> B
-.EN
-.sp -1
-.EQ
-B -> C
-.EN
-.sp -1
-.EQ
-A -> C
-.EN
-.KE
-
-Une théorie dans le monde académique n'est pas synonyme d'hypothèse.
-Une théorie est un ensemble d'hypothèses
-.TBD
-.\" théorie
-
-.\" TODO: parler de ça ou pas ?
-.\" Toute hypothèse n'est pas valide dans le monde académique.
-.\" Si l'hypothèse est trop coûteuse d'un point de vue épistémique, elle sera rejetée.
-.\" hypothèse
-.\" théorie
-.TBD
-
-.QUESTION "La relecture par les pairs."
-Peu importe la méthode utilisée, la relecture par les pairs est nécessaire.
-Le principe est le suivant : d'autres chercheurs relisent les travaux avant la publication officielle dans un journal scientifique.
-La science est la recherche systématique d'erreurs : failles de raisonnement, de mesure, de méthode, etc.
-.TBD
-
-.QUESTION "Déroulement de la recherche."
+.QUESTION "Chronologie de la recherche."
 En premier lieu, un chercheur se documente sur un problème non résolu en lisant tous les papiers disponibles sur le sujet.
 Cette première phase prend des mois de travail, le corpus dédié à un sujet (aussi précis soit-il) pouvant être immense.
 Tous les papiers ne sont pas évidents à comprendre, surtout pour un nouveau chercheur, même brillant.
@@ -223,7 +196,7 @@ Les chercheurs travaillent parfois à plusieurs sur un même sujet, parfois seul
 Dans tous les cas, même au début de ses travaux, un chercheur peut discuter de sa démarche avec des collègues pour tenter de réfuter ses hypothèses ou enrichir sa réflexion.
 Ces discussions peuvent, par exemple, prendre une forme semi-formelle via des réunions ou des présentations internes à l'équipe.
 
-Une fois le travail accompli, un papier est rédigé\*[*].
+Une fois le travail accompli, un papier de recherche est rédigé\*[*] (détail en section suivante).
 .FOOTNOTE1
 Certains réussissent à écrire le papier avant de faire le travail.
 Cela demande une grande confiance en soi : l'étude peut échouer (pour diverses raisons) ou être devancée par un autre laboratoire, rendant le papier inutile.
@@ -243,6 +216,59 @@ Si le papier n'est pas directement rejeté, s'en suivent des allers-retours entr
 Si le papier est rejeté, les auteurs tentent de le publier dans un autre journal.
 
 Une fois le papier accepté, son contenu a déjà passé plusieurs filtres, mais il n'est pas pour autant accepté comme vrai.
+En lisant un papier, le chercheur se doit d'être toujours critique.
+De plus, même une fois publié, l'auteur peut s'apercevoir d'une faille dans son étude et décider de contacter le journal pour rétracter sa publication.
+Le journal peut rétracter lui-même le papier, sans l'aval de l'auteur, si des chercheurs lui font remarquer des erreurs trop importantes.
+
+La même étude peut être répliquée par d'autres laboratoires, menant à d'autres publications pouvant ainsi confirmer ou infirmer les conclusions de la première étude.
+Une étude gagne en crédibilité si elle est répliquée avec succès.
+
+Lorsqu'une étude est suffisamment importante, elle fait l'objet de multiples réplications.
+Par la suite, à la lueur de ces résultats, une meta-analyse (c'est-à-dire une
+.I "étude des études" )
+vient résumer l'état de nos connaissances, sur ce sujet précis et à un instant donné.
+
+Enfin, le concensus scientifique.
+.TBD
+
+.QUESTION "La science a son propre vocabulaire."
+Bien des mots se retrouvent à la fois au quotidien et dans le monde universitaire, pourtant leur signification y est différente.
+La suite présente quelques cas évidents.
+
+En statistiques, le terme
+.I significatif
+n'est pas synonyme d'une grande valeur.
+Lors d'une comparaison de deux nombres, disons le taux de rétablissement de patients ayant pris soit un placébo soit un médicament, l'écart est dit
+.I significatif
+si la différence entre ces deux valeurs n'est pas due au hasard.
+Dans ce cas, si le médicament a eu un effet observable, même totalement mineur (disons un taux de rétablissement amélioré de 0.5 %), l'écart sera dit significatif.
+
+Une théorie dans le monde académique n'est pas synonyme d'hypothèse (une simple supposition), c'est le plus haut niveau de connaissance.
+Une théorie en science correspond à un ensemble d'explications, de lois et d'hypothèses permettant de comprendre un phénomène.
+Les principes théoriques doivent correspondre aux observations et aux expérimentations (passées, présentes, futures).
+.\" TODO: parler de ça ou pas ?
+.\" Toute hypothèse n'est pas valide dans le monde académique.
+.\" Si l'hypothèse est trop coûteuse d'un point de vue épistémique, elle sera rejetée.
+
+En logique propositionnelle (un formalisme mathématique), dire qu'une proposition est
+.I valide
+ne veut pas dire qu'elle est vraie ou acceptable, mais que la manière dont elle est formulée (sa forme) est correcte.
+La proposition suivante est valide, bien qu'absurde et sans intérêt : « si je mange un pruneau ma voiture change de couleur, si ma voiture change de couleur mon chat explose, donc si je mange un pruneau mon chat explose ».
+Formalisé mathématiquement, cette proposition ressemble à :
+
+.KS
+.EQ
+A -> B
+.EN
+.sp -1
+.EQ
+B -> C
+.EN
+.sp -1
+.EQ
+A -> C
+.EN
+.KE
 
 .QUESTION "La science n'est pas une démocratie."
 Si une hypothèse n'est pas réfutable (pas testable, ou qui ne peut pas s'invalider), elle est rejetée, il n'y a pas de vote nécessaire.
@@ -252,6 +278,7 @@ Aucun chercheur ne fait autorité dans tout un domaine de recherche.
 Un chercheur a une spécialité dont il connaît le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
 Dans sa spécialité, a priori, le chercheur a un avis pertinent ; sa voix est légitime.
 En revanche, même dans sa spécialité, la parole d'un chercheur n'est pas au-dessus de toute critique et il peut lui-même avoir un avis qui ne fait pas concensus.
+Les arguments priment sur le status.
 
 .\ TODO
 .\" Toute hypothèse n'est pas raisonnable => on ne remet pas en cause tout ce qu'on sait à chaque fois qu'on émet une hypothèse.
@@ -268,30 +295,21 @@ qui regroupe l'évolution des espèces (fait observable) et les mécanismes de s
 Cette théorie, au départ très imparfaite mais ayant comme fondation des concepts solides, a été raffinée au fil du temps.
 De nos jours, de très nombreuses méthodes indépendantes ont convergé vers les mêmes résultats (via la datation des fossiles, l'anatomie comparée des espèces, la biogéographie, l'épigénétique, etc.), rendant cette théorie la plus solidement vérifiée de toute l'histoire de la science.
 
-Quelques éléments à retenir\*[*] :
-.FOOTNOTE1
-À retravailler dans une prochaine ébauche pour mieux intégrer chaque notion.
-.FOOTNOTE2
-.BULLET La science peut jauger la véracité de certaines affirmations, même en se basant sur des métriques imparfaites.
-.BULLET La science tente de rejeter un maximum d'affirmations fausses ou qui n'ont pas de sens.
-.ENDBULLET
-
+.QUESTION "Un raisonnement toujours nuancé."
+La science rejete un maximum d'affirmations fausses, sans justification ou qui n'ont pas de sens.
+La science peut jauger la véracité de certaines affirmations, même en se basant sur des métriques imparfaites.
 .TBD
 
-.EXPLANATION1
-La science est le raffinement de méthodes pour éviter les biais et ainsi s'approcher de la vérité au mieux de nos capacités.
-.EXPLANATION2
-.
 .\" TODO
-.\" science = raffinement de méthodes pour éviter les biais, obtenir le fin mot de l'histoire
-
 .\" pas besoin d'un résultat définitif et sans appel
 .\" 	=> on peut très bien avoir un résultat mitigé
 .\" 	=> reste utile même en étant plus nuancé
 .
 .\" isoler un paramètre
-.\" chercher à prouver qu'une hypothèse est fausse
 .
+.EXPLANATION1
+La science est le raffinement de méthodes et la recherche systématique d'erreurs pour éviter les biais et ainsi s'approcher de la vérité au mieux de nos capacités.
+.EXPLANATION2
 .SECTION Écriture de papiers
 En pratique, la science se matérialise par l'écriture de papiers de recherche, qui représente la transmission du savoir.
 Un papier établit un contexte dans lequel la recherche se fait (introduction au sujet de l'étude), décrit la problématique, dresse un état de l'art (en mentionnant les travaux annexes qui répondent à la même problématique), explique la solution étudiée ainsi que l'expérimentation, interprête les résultats et en tire des conclusions, et enfin, présente de futurs travaux possibles sur le sujet.
@@ -433,6 +451,28 @@ De plus, en France, un chercheur est souvent enseignant-chercheur, et consacre p
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 .\" Zététique
+.SUBSECTION Repérer des manipulations
+.QUESTION "L'arnaque de Dieu."
+La section 2 présente un petit florilège d'arguments fallacieux brandits par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
+Des
+.UL dizaines
+d'autres arguments sans valeur sont avancés.
+Ils se retrouvent encore et toujours dans les conversations, débats et même livres
+.[
+TODO
+.]
+.TBD
+.UL "malgré leurs réfutations" .
+La validité des arguments n'a donc aucune valeur aux yeux des apologistes.
+Ce document n'a pas pour objectif de tous les répertorier, 
+De même, le manque d'honnêteté des apologistes à ce sujet est flagrant : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
+Les mots sont changés pour paraître plus savant mais pas pour apporter un sens plus intéressant.
+Ainsi, les apologistes continuent de parler de l'argument de l'improbabilité, en changeant quelques mots (en plus abstraits) pour les récalcitrants.
+C'est ainsi que l'argument de l'improbabilité devient l'argument de la
+.I contingence ,
+alors que l'argument est strictement identique.
+Cette tentative de manipulation grossière est évidente.
+
 .SUBSECTION Pseudo-sciences
 .SUBSECTION Politique
 La politique est un sujet à la fois vaste et complexe.
