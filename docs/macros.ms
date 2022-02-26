@@ -169,8 +169,14 @@ accumulate
 .
 .
 .de FRAC
+.ie '\\$3'' \{\
 \v'-.7m\s[\\n(.s*6u/10u]+.7m'\\$1\v'-.7m\s0+.7m'\
 \(f/\s[\\n(.s*6u/10u]\\$2\s0
+\}
+.el \{\
+\v'-.7m\s[\\n(.s*6u/10u]+.7m'\\$1\v'-.7m\s0+.7m'\
+\(f/\s[\\n(.s*6u/10u]\\$2\s0\\$3
+\}
 ..
 .de FOOTNOTE_TO_COLUMN_WIDTH
 .nr pg@fn-colw \\n[pg@colw]   \" footnotes' column width
