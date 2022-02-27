@@ -86,6 +86,7 @@ $(SRC).pdf:
 		$(GRAP) |\
 		$(PIC) |\
 		$(REFER) |\
+		$(PRECONV) |\
 		$(ROFF) > $(ODIR)/$@
 
 # Keep options in memory for the recursive 'make' call

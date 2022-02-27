@@ -3,12 +3,12 @@
 .AUTHOR Philippe Pittoli
 .ABSTRACT1
 Ce document présente succintement la science : son objectif, la méthode scientifique, le déroulement de la recherche ainsi que la création de papiers.
-Une introduction sur les biais cognitifs est également donnée, avec des conseils pour repérer des erreurs de raisonnement.
-Suite à la lecture de ce document, il est attendu que les discussions de la vie quotidienne soient plus fertiles et les prises de décision plus pertinentes.
+Le travail des chercheurs montre un raisonnement et des réflexions qui peuvent être utiles pour repérer des biais cognitifs présents dans la vie quotidienne, voire même des manipulations.
+Suite à la lecture de ce document, il est attendu que les discussions (autour de l'actualité par exemple) soient plus fertiles et les prises de décision plus pertinentes.
 
 .INFORMATIONS_FR \\*[WEBSITE]/research_fr.pdf \\*[EMAIL]
 .br
-Statut : abstract et introduction corrects. Le reste = WIP.
+Statut : les 4 premières sections sont correctes. Le reste = WIP.
 .ABSTRACT2
 .TWO_COLUMNS
 .SECTION Introduction
@@ -61,10 +61,9 @@ Dans cette section, différents biais sont présentés en les mettant en rapport
 .QUESTION "Dieu, où es-tu ?"
 La notion de « Dieu » a fait couler beaucoup d'encre au fil des siècles et fait figure de cas d'école concernant les biais de raisonnement.
 L'argumentation en faveur d'une divinité est, encore de nos jours, sujette à des dizaines de paralogismes plus ou moins évidents à identifier.
-.\" TODO: référencer un site ou un bouquin autour de ce sujet
-.\".[
-.\"sophismes
-.\".]
+.[
+sophismes
+.]
 Quelques exemples proposés pour justifier l'existence ou des propriétés d'un dieu :
 .BULLET
 .B "plaidoirie spéciale" " :"
@@ -124,9 +123,9 @@ et l'autre
 .FRAC 12 20 .
 Quelle classe est la plus en difficulté ?
 Avec seulement deux moyennes brutes, impossible de savoir.
-Quelques étudiants, très bons ou en grande difficulté, peuvent fausser une moyenne.
-De plus, émettre un jugement sur un seul devoir est peut-être hâtif.
+Quelques étudiants, très bons ou en grande difficulté, peuvent avoir une grande influence sur une moyenne.
 Le nombre d'étudiants par classe n'est pas non plus mentionné.
+De plus, émettre un jugement sur un seul devoir est peut-être hâtif.
 Une valeur seule (comme une moyenne) est insuffisante pour émettre un jugement.
 
 .QUESTION "Détecter les biais."
@@ -169,7 +168,7 @@ Certaines méthodes sont plus spécifiques, et ont un champ d'application plus r
 Par exemple, la méthode du double-aveugle est utile dans un contexte médical.
 Dans cette méthode (et dans un contexte médical), pour étudier l'efficacité d'un nouveau traitement, on prend deux groupes de patients : l'un qui reçoit le traitement, l'autre non (ils prennent un autre traitement ou un placébo).
 Ni les patients ni le docteur ne savent qui prend le nouveau traitement.
-De ce fait, les biais liés à la connaissance du traitement sont limités, que ce soit pour le patient (qui pourrait subir un effet psychosomatique) ou pour le médecin (qui pourrait avoir une interprétation biaisée des résultats, par exemple).
+De ce fait, les biais liés à la connaissance du traitement sont limités, que ce soit pour le patient (qui pourrait subir un effet psychosomatique) ou pour le médecin (qui pourrait avoir une interprétation biaisée des résultats ou traiter les patients différemment, par exemple).
 
 .QUESTION "La multiplicité des méthodes."
 Les différentes méthodes sont complémentaires et dépendent de la problématique à résoudre.
@@ -189,8 +188,11 @@ Un chercheur doit essayer de
 .UL réfuter
 son analyse.
 C'est l'effort de réfutation qui donne de la crédibilité à une étude.
-Plus une analyse résiste, plus elle apparaît comme valide.
+Plus une analyse résiste, plus elle apparaît comme valide\*[*].
 .EXPLANATION2
+.FOOTNOTE1
+Ceci est bien sûr discutable dans le cadre spécifique d'une preuve mathématique.
+.FOOTNOTE2
 
 Les chercheurs travaillent parfois à plusieurs sur un même sujet, parfois seuls.
 Dans tous les cas, même au début de ses travaux, un chercheur peut discuter de sa démarche avec des collègues pour tenter de réfuter ses hypothèses ou enrichir sa réflexion.
@@ -207,7 +209,7 @@ Le papier est ensuite envoyé à un journal.
 Le journal demande à des chercheurs d'autres laboratoires de relire le papier.
 Chaque relecteur émet une appréciation : acceptation forte, acceptation, rejet, rejet fort.
 Les relecteurs fournissent un retour (bref) au journal et un retour détaillé aux auteurs.
-Ils donnent ainsi des pistes d'amélioration, ou indiquent au moins ce qui les a dérangé lors de la lecture\*[*].
+Ils donnent ainsi des pistes d'amélioration, ou indiquent au moins ce qui les a dérangé lors de la lecture\*[*] (erreurs, imprécisions…).
 .FOOTNOTE1
 Tous les relecteurs ne sont pas conscencieux, malheureusement.
 Un papier peut être rejeté avec une réponse très pauvre, ne permettant pas d'améliorer significativement le travail.
@@ -342,8 +344,7 @@ L'écriture est la plus rigoureuse possible, autant sur le fond que sur la forme
 .QUESTION "Sur la forme."
 Un papier doit suivre autant que possible les quelques consignes suivantes\*[*].
 .FOOTNOTE1
-Ces consignes forment un guide qui tend à uniformiser les papiers.
-Cette uniformisation rend la lecture plus facile (toujours les mêmes constructions), mais également l'écriture (le chercheur s'habitude à l'écriture).
+Ces consignes forment un guide qui tend à uniformiser les papiers, rendant la lecture et l'écriture plus faciles.
 Par conséquent, l'analyse elle-même est simplifiée.
 .FOOTNOTE2
 
@@ -357,7 +358,8 @@ Peu d'éléments de style sont utilisés (italique, graisse, soulignement) et av
 Les listes à puces sont, dans la mesure du raisonnable, évitées ; lister des éléments se fait dans le texte autant que possible.
 
 Un papier de recherche n'est pas un roman.
-Le langage utilisé est simple et concis : un chercheur lit des dizaines de papiers par an, il faut lui faciliter la lecture.
+Un chercheur lit des dizaines de papiers par an, il faut lui faciliter la lecture.
+Un papier est écrit au présent, sans formulation alambiquée et le langage utilisé est simple et concis.
 De même, l'usage de vocabulaire complexe doit être évité.
 La répétition de certains termes (en lieu et place d'adjectifs ou d'acronymes) peut être envisagée pour aider à la compréhension.
 
@@ -367,8 +369,7 @@ De même, l'utilisation du « je » doit, dans la mesure du possible, se limit
 Dans un papier, l'expression doit être
 .B neutre .
 
-Un papier doit être conservateur.
-Toute affirmation doit être justifiée.
+Un papier doit être prudent, toute affirmation doit être justifiée.
 Le sensationnalisme en science est très mal perçu, aucune affirmation excessive n'est tolérée.
 
 Un papier comporte généralement les sections suivantes\*[*].
@@ -403,7 +404,6 @@ Pardon, Pierre. Et merci.
 Enfin, le dernier auteur passe généralement moins de temps sur le travail, il ne s'occupe pas des détails.
 Le dernier auteur est souvent bien plus expérimenté, est habilité à diriger des recherches et a proposé cette étude.
 Il fournit des pistes de réflexion, vérifie le bon déroulement, prend éventuellement contact avec d'autres chercheurs pour des collaborations ou des relectures du travail en interne au sein de l'équipe, etc.
-.TBD
 
 Chaque schéma, tableau ou équation doit être introduit et expliqué.
 Chaque résultat doit être introduit, interprété, expliqué.
@@ -413,33 +413,36 @@ Par exemple, d'une manière générale, une moyenne sur des mesures avec très p
 
 Un papier est aussi concis que possible pour transmettre l'information.
 Seules les informations nécessaires, en rapport avec le sujet et pertinentes, doivent se retrouver dans le document final.
+Le nombre de pages d'une publication varie selon le domaine voire la spécialité, l'objectif de la publication (journal ou conférence) et le journal voire la publication elle-même.
+Pour une publication nationale, dont l'objectif serait de faire rencontrer des doctorants entre eux (conférences ou présentation de posters), une publication très courte peut être acceptée (2 à 4 pages) et n'aurait même pas besoin d'être écrite en anglais.
+Pour une publication internationale, avec comme objectif une réelle contribution scientifique (publication dans un journal ou une conférence), les publications vont de quelques pages jusqu'à plusieurs dizaines (ce qui est rare).
+En informatique par exemple, le nombre de pages est généralement autour de 6 à 15, double colonne (comme dans ce document).
 
 .QUESTION "Tous les papiers ne sont pas égaux."
 Certains papiers sont de bonne qualité, d'autres de moins bonne qualité, d'autres ne valent rien.
 Cela dépend de nombreux paramètres.
-Le respect de ce dont il est question dans cette section est un des critères, par exemple.
-De plus, un papier peut traiter son sujet sur un angle intéressant ou non. 
-Il peut représenter une vraie avancée dans le domaine ou n'apporter qu'une contribution modeste.
-De plus, le taux d'acceptation du journal est important pour la visibilité du papier (voir section « journaux scientifiques »).
+Le respect de ce dont il est question dans cette section est l'un des critères.
+De plus, un papier peut représenter une avancée considérable dans le domaine ou n'apporter qu'une contribution modeste.
+Au-delà de la qualité intrinsèque du papier, le taux d'acceptation du journal dans lequel il est publié est important pour sa visibilité (voir section « journaux scientifiques »).
 
 .QUESTION "Tous les papiers n'ont pas le même objectif."
 La plupart des papiers apportent une contribution dans un domaine, une nouvelle connaissance.
 D'autres papiers
 .I survey ) (
-font l'inventaire des différentes contributions d'un domaine, et les catégorise afin de les rendre plus accessibles.
+font l'inventaire des différentes contributions d'un domaine, et les catégorisent pour les rendre plus accessibles (leur donner de la visibilité).
 Le survey est important comme entrée en matière pour de jeunes chercheurs puisqu'il référence les papiers les plus importants du domaine.
-D'autres apportent une méta-analyse, c'est-à-dire une
+Un autre type de papiers est la méta-analyse, c'est-à-dire une
 .I "étude des études"
 sur un sujet précis.
 La méta-analyse apporte une position sur un sujet suivant
 .I "état actuel" "" l'
 du corpus scientifique sur le sujet traité.
-Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'ingénieurie derrière une infrastructure ou des outils, par exemple.
-Ces derniers n'apportent pas nécessairement une contribution très intéressante d'un point de vue scientifique, mais peuvent être utiles en pratique pour les chercheurs et ingénieurs de recherche.
+Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'ingénieurie derrière une infrastructure ou des outils.
+Ces derniers n'apportent pas une contribution très intéressante d'un point de vue scientifique, mais peuvent être utiles en pratique pour les chercheurs et ingénieurs de recherche.
 
 Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
 La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et donner confiance au fond.
-Le papier n'est pas la fin de l'étude, celui-ci doit ensuite être accepté dans un journal scientifique, ce qui est détaillé dans la section suivante.
+Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
 .SECTION Journaux scientifiques
 Chaque papier de recherche est publié dans un journal à comité de lecture
 .I "peer review" ). (
@@ -447,16 +450,6 @@ Chaque papier de recherche est publié dans un journal à comité de lecture
 .QUESTION "Le taux d'acceptation des journaux."
 Un journal à fort taux d'acceptation est peu intéressant, car le journal accepte des papiers de faible qualité, des contributions peut-être (très) modestes.
 Un journal à faible taux d'acceptation privilégie la qualité à la quantité, il est donc plus prestigieux et apporte une meilleure visibilité aux papiers publiés.
-
-.\" TODO
-.\" publication des papiers
-.\"   - dans des journaux à comité de lecture
-.\"     => autres chercheurs cherchent des biais de raisonnement, erreurs, imprécisions
-.\"     => autres chercheurs donnent leur avis sur la qualité, donnent des pistes pour enrichir le document
-.\"   - meta analyses
-.\"   - un papier != vérité absolue
-.\"     => on peut remettre en question le papier (hypothèses, mesures, interprétation des résultats, conclusion...)
-.\"   - un papier a une qualité => jugement par les pairs (fortement accepté, accepté, rejeté, fortement rejeté)
 
 .QUESTION "Attention aux arnaques."
 Certains journaux sont qualifiés de
@@ -486,7 +479,7 @@ Des
 d'autres arguments sans valeur sont avancés.
 Ils se retrouvent encore et toujours dans les conversations, débats et même livres
 .[
-TODO
+sophismes
 .]
 .TBD
 .UL "malgré leurs réfutations" .
