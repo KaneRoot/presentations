@@ -127,7 +127,7 @@ Avec seulement deux moyennes brutes, impossible de savoir.
 Quelques étudiants, très bons ou en grande difficulté, peuvent fausser une moyenne.
 De plus, émettre un jugement sur un seul devoir est peut-être hâtif.
 Le nombre d'étudiants par classe n'est pas non plus mentionné.
-Une valeur seule (comme une moyenne) est insuffisante.
+Une valeur seule (comme une moyenne) est insuffisante pour émettre un jugement.
 
 .QUESTION "Détecter les biais."
 Un même biais peut être formulé de nombreuses manières, rendant sa détection parfois complexe.
@@ -143,8 +143,8 @@ La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vér
 Suivant le problème étudié, le chercheur utilise une méthode plutôt qu'une autre pour le résoudre.
 Dans cette section, deux méthodes sont introduites (hypothético-déductive et double-aveugle) pour montrer la diversité du travail de recherche.
 De même, la chronologie de la recherche est présentée, de l'intuition permettant de résoudre un problème au concensus scientifique.
-Par la suite, plusieurs discussions sont amorcées : le vocabulaire scientifique (différent du langage courant)
-.TBD
+Par la suite, plusieurs discussions sont amorcées, comme le vocabulaire scientifique (différent du langage courant), le caractère non démocratique, matérialiste et descriptif de la science ou encore la légitimité de la parole d'un scientifique.
+Enfin, la section se termine par deux qualités importantes en science : le doute et la nuance.
 
 .QUESTION "La méthode hypothético-déductive."
 Cette méthode pourrait se résumer brièvement par la formulation d'une hypothèse et la déduction de ses conséquences observables.
@@ -199,14 +199,14 @@ Ces discussions peuvent, par exemple, prendre une forme semi-formelle via des r�
 Une fois le travail accompli, un papier de recherche est rédigé\*[*] (détail en section suivante).
 .FOOTNOTE1
 Certains réussissent à écrire le papier avant de faire le travail.
-Cela demande une grande confiance en soi : l'étude peut échouer (pour diverses raisons) ou être devancée par un autre laboratoire, rendant le papier inutile.
+Cela demande une grande confiance en soi : l'étude peut échouer (pour diverses raisons) ou être devancée par un autre laboratoire, rendant le papier inutile et faisant perdre des mois de travail.
 .FOOTNOTE2
-Ce document sera éventuellement relu par un collègue (qui pourra être second auteur) afin d'avoir un second point de vue et de corriger les fautes les plus évidentes.
-Une fois tout ce travail effectué, le papier est envoyé à un journal.
+Ce document sera éventuellement relu par un collègue (qui pourra être second auteur) afin d'avoir un autre point de vue et de corriger les fautes les plus évidentes.
+Le papier est ensuite envoyé à un journal.
 
-Le journal va ensuite demander à des chercheurs d'autres laboratoires de relire le papier.
-Chaque relecteur va émettre une appréciation : acceptation forte, acceptation, rejet, rejet fort.
-Les relecteurs doivent également fournir un retour (bref) au journal et un retour détaillé aux auteurs.
+Le journal demande à des chercheurs d'autres laboratoires de relire le papier.
+Chaque relecteur émet une appréciation : acceptation forte, acceptation, rejet, rejet fort.
+Les relecteurs fournissent un retour (bref) au journal et un retour détaillé aux auteurs.
 Ils donnent ainsi des pistes d'amélioration, ou indiquent au moins ce qui les a dérangé lors de la lecture\*[*].
 .FOOTNOTE1
 Tous les relecteurs ne sont pas conscencieux, malheureusement.
@@ -215,40 +215,39 @@ Un papier peut être rejeté avec une réponse très pauvre, ne permettant pas d
 Si le papier n'est pas directement rejeté, s'en suivent des allers-retours entre les auteurs et les relecteurs.
 Si le papier est rejeté, les auteurs tentent de le publier dans un autre journal.
 
-Une fois le papier accepté, son contenu a déjà passé plusieurs filtres, mais il n'est pas pour autant accepté comme vrai.
-En lisant un papier, le chercheur se doit d'être toujours critique.
+Une fois le papier accepté, son contenu a déjà passé plusieurs filtres : des experts de la spécialité concernée l'ont jugé acceptable et apportant une contribution suffisante au domaine pour être publié.
+Le papier n'est pas pour autant accepté comme vrai, et le chercheur se doit d'adopter une lecture critique de tout papier.
 De plus, même une fois publié, l'auteur peut s'apercevoir d'une faille dans son étude et décider de contacter le journal pour rétracter sa publication.
 Le journal peut rétracter lui-même le papier, sans l'aval de l'auteur, si des chercheurs lui font remarquer des erreurs trop importantes.
 
-La même étude peut être répliquée par d'autres laboratoires, menant à d'autres publications pouvant ainsi confirmer ou infirmer les conclusions de la première étude.
+La même étude peut être répliquée par d'autres laboratoires, menant à d'autres publications.
+Ainsi, ces nouvelles expérimentations confirment ou infirment les conclusions de la première étude.
 Une étude gagne en crédibilité si elle est répliquée avec succès.
 
 Lorsqu'une étude est suffisamment importante, elle fait l'objet de multiples réplications.
-Par la suite, à la lueur de ces résultats, une meta-analyse (c'est-à-dire une
-.I "étude des études" )
-vient résumer l'état de nos connaissances, sur ce sujet précis et à un instant donné.
+Une meta-analyse, c'est-à-dire une
+.I "étude des études" ,
+vient alors résumer l'état de nos connaissances, sur ce sujet précis et à un instant donné.
 
-Enfin, le concensus scientifique.
-.TBD
+Enfin, le résultat de l'étude originelle devient un concensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
+Cette expression est rarement employée en dehors des positions faisant l'objet de fausses controverses par idéologie ou pour le profit.
+C'est pourquoi il est fait mention de concensus scientifique dans les médias pour le changement climatique (récent et d'origine humaine) ou la théorie de l'évolution par exemple : des lobbies travaillent encore aujourd'hui à nier les faits.
 
 .QUESTION "La science a son propre vocabulaire."
 Bien des mots se retrouvent à la fois au quotidien et dans le monde universitaire, pourtant leur signification y est différente.
-La suite présente quelques cas évidents.
+La suite présente quelques cas évidents, montrant qu'une certaine culture scientifique est nécessaire pour comprendre les papiers, même dans les rares cas où aucun jargon n'est employé.
 
 En statistiques, le terme
 .I significatif
 n'est pas synonyme d'une grande valeur.
-Lors d'une comparaison de deux nombres, disons le taux de rétablissement de patients ayant pris soit un placébo soit un médicament, l'écart est dit
+Lors d'une comparaison de deux nombres, comme le taux de rétablissement de patients ayant pris soit un placébo soit un médicament, l'écart est dit
 .I significatif
 si la différence entre ces deux valeurs n'est pas due au hasard.
-Dans ce cas, si le médicament a eu un effet observable, même totalement mineur (disons un taux de rétablissement amélioré de 0.5 %), l'écart sera dit significatif.
+Dans ce cas, si le médicament a eu un effet observable, même totalement mineur (comme un taux de rétablissement amélioré de 0.5 %), l'écart sera dit significatif.
 
-Une théorie dans le monde académique n'est pas synonyme d'hypothèse (une simple supposition), c'est le plus haut niveau de connaissance.
-Une théorie en science correspond à un ensemble d'explications, de lois et d'hypothèses permettant de comprendre un phénomène.
-Les principes théoriques doivent correspondre aux observations et aux expérimentations (passées, présentes, futures).
-.\" TODO: parler de ça ou pas ?
-.\" Toute hypothèse n'est pas valide dans le monde académique.
-.\" Si l'hypothèse est trop coûteuse d'un point de vue épistémique, elle sera rejetée.
+Une théorie dans le monde académique n'est pas synonyme d'hypothèse (une simple supposition), c'est un ensemble d'explications, de lois et d'hypothèses permettant de comprendre un phénomène.
+Les principes d'une théorie scientifique doivent correspondre aux observations et aux expérimentations (passées, présentes, futures).
+Une théorie scientifique est le plus haut niveau de connaissance.
 
 En logique propositionnelle (un formalisme mathématique), dire qu'une proposition est
 .I valide
@@ -271,18 +270,32 @@ A -> C
 .KE
 
 .QUESTION "La science n'est pas une démocratie."
-Si une hypothèse n'est pas réfutable (pas testable, ou qui ne peut pas s'invalider), elle est rejetée, il n'y a pas de vote nécessaire.
+Si une hypothèse n'est pas réfutable (c'est-à-dire qui ne peut pas être vérifiée, pas testable, qui ne peut pas s'invalider), elle est rejetée.
+Aucun vote n'est nécessaire.
+De même, aucun vote ou cérémonie officielle ne sont nécessaires pour créer un concensus scientifique : les chercheurs doivent suivre les faits, où qu'ils mènent.
+C'est ainsi que la communauté scientifique pensait que l'univers était éternel et statique, même après la publication en 1916 de la théorie de la relativité générale d'Albert Einstein, car ses travaux ne correspondaient pas aux observations.
+En 1929, les observations évoluent grâce à Edwin Hubble et au téléscope Hooker, montrant que l'univers est en expansion, changeant pratiquement du jour au lendemain le concensus scientifique sur le sujet.
+
+.QUESTION "La science est matérialiste."
+Certaines questions, ou sujets d'étude, ne relèvent pas du domaine scientifique.
+La science se limite à l'étude de ce qui est observable (directement ou non), quantifiable, ainsi qu'aux mathématiques.
+Par exemple, prouver l'existence (ou non) du
+.I surnaturel ,
+qui par définition ne peut s'expliquer rationnellement, ne rentre pas dans le cadre de la science.
+
+.QUESTION "La science est descriptive."
+La recherche scientifique est dédiée à mieux comprendre le monde qui nous entoure.
+Elle ne dicte pas la conduite des individus, entreprises, médias, organisations ou gouvernements.
+La distinction entre la recherche et ce qui en est fait est importante : la science est
+.UL seulement
+l'acquisition de la connaissance.
 
 .QUESTION "Un chercheur n'est pas la science."
 Aucun chercheur ne fait autorité dans tout un domaine de recherche.
-Un chercheur a une spécialité dont il connaît le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
+Un chercheur a une spécialité dont il connait le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
 Dans sa spécialité, a priori, le chercheur a un avis pertinent ; sa voix est légitime.
 En revanche, même dans sa spécialité, la parole d'un chercheur n'est pas au-dessus de toute critique et il peut lui-même avoir un avis qui ne fait pas concensus.
-Les arguments priment sur le status.
-
-.\ TODO
-.\" Toute hypothèse n'est pas raisonnable => on ne remet pas en cause tout ce qu'on sait à chaque fois qu'on émet une hypothèse.
-.\" Si l'hypothèse implique un coût épistémique trop important sans une très solide justification, elle n'est pas jugée sérieuse.
+Les arguments priment sur le statut, même pour un directeur de recherche dans un laboratoire prestigieux.
 
 .QUESTION "L'art du doute raisonnable."
 La science doute de toute affirmation péremptoire, ainsi le doute est un outil utile pour poser de meilleures questions.
@@ -295,23 +308,34 @@ qui regroupe l'évolution des espèces (fait observable) et les mécanismes de s
 Cette théorie, au départ très imparfaite mais ayant comme fondation des concepts solides, a été raffinée au fil du temps.
 De nos jours, de très nombreuses méthodes indépendantes ont convergé vers les mêmes résultats (via la datation des fossiles, l'anatomie comparée des espèces, la biogéographie, l'épigénétique, etc.), rendant cette théorie la plus solidement vérifiée de toute l'histoire de la science.
 
-.QUESTION "Un raisonnement toujours nuancé."
-La science rejete un maximum d'affirmations fausses, sans justification ou qui n'ont pas de sens.
-La science peut jauger la véracité de certaines affirmations, même en se basant sur des métriques imparfaites.
-.TBD
+Être raisonnable, c'est également ne pas accepter n'importe quelle hypothèse remettant en question tout ce que la science a acquis comme connaissance.
+Une hypothèse rejetant tous les résultats d'un domaine d'étude necessite de très solides arguments et une explication pour les résultats obtenus précédemment.
+De plus, une hypothèse doit être une explication, non un appel à un plus grand mystère.
+Ainsi, justifier la création des pyramides d'Égypte par la venue d'extra-terrestres n'est pas une proposition sérieuse (et par ailleurs non réfutable).
 
-.\" TODO
-.\" pas besoin d'un résultat définitif et sans appel
-.\" 	=> on peut très bien avoir un résultat mitigé
-.\" 	=> reste utile même en étant plus nuancé
-.
-.\" isoler un paramètre
-.
+.QUESTION "La science s'accomode de résultats imparfaits."
+La science rejete les affirmations sans justification ou qui n'ont pas de sens, et tente au mieux de rejeter toute affirmation fausse.
+Mais toute proposition ne peut pas être jugée aussi facilement, parfois un raisonnement plus nuancé est nécessaire.
+La véracité d'une affirmation peut être jaugée, via des métriques, parfois imparfaites ou peu précises, mais objectives.
+De même, une théorie incomplète, menant à des calculs approximatifs et ayant des défauts, peut être acceptée.
+Un exemple de cela est le modèle héliocentrique de Copernic, suivi de la théorie de la gravitation universelle de Newton, suivi de la théorie de la relativité générale d'Einstein.
+Bien qu'imparfaites, ces théories apportent chacune une meilleure explication (ou des calculs plus précis) au mouvement des planètes dans le système solaire que leurs prédécesseurs.
+Cet exemple montre également que la science se corrige elle-même.
+
 .EXPLANATION1
-La science est le raffinement de méthodes et la recherche systématique d'erreurs pour éviter les biais et ainsi s'approcher de la vérité au mieux de nos capacités.
+La science est le raffinement de méthodes et la recherche systématique d'erreurs pour s'approcher de la vérité au mieux de nos capacités.
 .EXPLANATION2
+
+Cette section a présenté des méthodes scientifiques et diverses informations pour caractériser la science (sa chronologie, le vocabulaire académique, la nécessité du doute et de la nuance, etc.).
+Rien de ce qui a été dit n'est une vérité absolue et intemporelle.
+Par exemple, le principe de réfutabilité, bien que déjà plus ou moins appliqué depuis longtemps, n'a été théorisé qu'au 20 ème siècle et ne fait pas l'unanimité.
+Malgré cela, les informations données forment une explication intuitive et suffisante pour l'objectif initial du document.
+La section suivante présente la matérialisation de toute étude, à savoir le papier scientifique.
 .SECTION Écriture de papiers
-En pratique, la science se matérialise par l'écriture de papiers de recherche, qui représente la transmission du savoir.
+En pratique, la science se matérialise par l'écriture de papiers de recherche, représentant la transmission du savoir.
+Cette section introduit l'art de l'écriture de papiers, ainsi que des critères pour juger de leur qualité.
+De même, différents types de papiers sont présentés, chacun ayant un objectif, une utilité particulière dans le corpus scientifique.
+
 Un papier établit un contexte dans lequel la recherche se fait (introduction au sujet de l'étude), décrit la problématique, dresse un état de l'art (en mentionnant les travaux annexes qui répondent à la même problématique), explique la solution étudiée ainsi que l'expérimentation, interprête les résultats et en tire des conclusions, et enfin, présente de futurs travaux possibles sur le sujet.
 L'écriture est la plus rigoureuse possible, autant sur le fond que sur la forme.
 
@@ -329,8 +353,8 @@ Le présent document se réserve le droit à un style légèrement plus libre, p
 Ainsi, le document comporte de la couleur dans le texte et un style différent pour les extraits (texte coloré, barre verticale).
 .FOOTNOTE2
 Le papier est constitué de phrases simples et qui se suivent pour former une idée par paragraphe.
-Peu d'éléments de style sont utilisés (italique, graisse, surlignement) et avec parcimonie.
-Les listes à puces sont, dans la mesure du raisonnable, évitées; lister des éléments se fait dans le texte autant que possible.
+Peu d'éléments de style sont utilisés (italique, graisse, soulignement) et avec parcimonie.
+Les listes à puces sont, dans la mesure du raisonnable, évitées ; lister des éléments se fait dans le texte autant que possible.
 
 Un papier de recherche n'est pas un roman.
 Le langage utilisé est simple et concis : un chercheur lit des dizaines de papiers par an, il faut lui faciliter la lecture.
@@ -413,6 +437,9 @@ du corpus scientifique sur le sujet traité.
 Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'ingénieurie derrière une infrastructure ou des outils, par exemple.
 Ces derniers n'apportent pas nécessairement une contribution très intéressante d'un point de vue scientifique, mais peuvent être utiles en pratique pour les chercheurs et ingénieurs de recherche.
 
+Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
+La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et donner confiance au fond.
+Le papier n'est pas la fin de l'étude, celui-ci doit ensuite être accepté dans un journal scientifique, ce qui est détaillé dans la section suivante.
 .SECTION Journaux scientifiques
 Chaque papier de recherche est publié dans un journal à comité de lecture
 .I "peer review" ). (
@@ -496,7 +523,8 @@ La publication est parfois suivie d'autres analyses, des réplications par d'aut
 Répliquer une analyse contribue à la crédibilité des résultats obtenus (ou y apporte du discrédit si la réplication échoue).
 La synthèse des différentes études (sur le même sujet) est produite dans des meta-analyses, qui offrent un recul sur les résultats individuels de chaque laboratoire.
 Après toutes ces étapes, chacune permettant de rejeter la validité des hypothèses (même bien au-delà de la publication du papier originel), le résultat devient un concensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
-.
+
+Le document a présenté également le cadre de travail des chercheurs, partageant par moments des informations triviales pour restituer la dimension humaine de la recherche.
 .\" Tout cela forme la manière utilisée en science pour acquérir des connaissances.
 .\" Toute connaissance n'a pas à passer par ces étapes, si vous perdez vos clés il n'y a pas besoin de publier un article pour les retrouver.
 .\" Pas nécessaire, mais plus sûr, on prend en compte les erreurs humaines.
