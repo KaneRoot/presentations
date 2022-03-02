@@ -418,6 +418,159 @@ Pour une publication nationale, dont l'objectif serait de faire rencontrer des d
 Pour une publication internationale, avec comme objectif une réelle contribution scientifique (publication dans un journal ou une conférence), les publications vont de quelques pages jusqu'à plusieurs dizaines (ce qui est rare).
 En informatique par exemple, le nombre de pages est généralement autour de 6 à 15, double colonne (comme dans ce document).
 
+.QUESTION "Sur le fond."
+Une introduction doit présenter le contexte et la problématique.
+L'état de l'art doit présenter les méthodes actuelles pour résoudre le problème (si cela s'applique au sujet).
+La solution doit ensuite être présentée, ainsi qu'une méthode pour l'évaluer et son évaluation et l'interprétation des résultats (méthode hypothético-déductive).
+Enfin, une conclusion doit être apportée.
+
+La suite présente quelques exemples pour comprendre la logique et le type d'informations nécessaires dans papier.
+Ces exemples (volontairement très concis pour ne pas alourdir la présentation) sont des tentatives très imparfaites d'écriture d'un papier.
+Chaque exemple est accompagné des erreurs commises ainsi qu'une meilleure version (bien que toujours incomplète).
+
+En premier, une introduction.
+.de GIVEEXAMPLE1
+.in +1
+.ll -1
+.KS          \" start a keep
+.\" .ft I        \" citation in italics
+.mk C        \" set a marker for line drawing
+.in +1       \" indent a bit
+.gcolor citation
+..
+.de GIVEEXAMPLE2
+.mk D        \" set second marker to come back here
+.\" .ft          \" back to previous font
+.in -1       \" remove indent
+.gcolor      \" remove previous color
+.gcolor citationbar
+.\" r     = move upward
+.\" Z D t = drawing thickness
+.\" L     = draw the line
+\r\
+\Z'\D't 1p''\
+\L'|\\nCu'     \" draw line
+.gcolor black  \" remove previous color
+.sp -2         \" get two lines back
+\Z'\D't 1''    \" get the previous drawing thickness back
+.KE            \" end of the keep
+.ll +1
+.in -1
+..
+
+.GIVEEXAMPLE1
+Il y a des aboiements dehors.
+Je veux que ces aboiements s'arrêtent.
+.GIVEEXAMPLE2
+
+Problème : source des aboiements ?
+Où et quand est-ce qu'ils se produisent ?
+Problème de style d'écriture également.
+
+.GIVEEXAMPLE1
+Dans les maisons à la campagne, des chiens sont dehors et aboient à midi et le soir lors des repas.
+Ces aboiements constituent une nuisance sonore pour leurs propriétaires.
+La suite du document présente une manière pour arrêter ces aboiements.
+.GIVEEXAMPLE2
+
+Mieux : contexte bien mieux établi, problème plus évident.
+
+.HORIZONTALLINE
+
+Pour l'état de l'art, les solutions alternatives à la nôtre doivent être présentées.
+L'exemple suivant, composant l'état de l'art de notre papier fictif, décrit une de ces alternatives.
+
+.GIVEEXAMPLE1
+Une méthode pour résoudre ce problème est de s'enfermer chez soi, portes et fenêtres fermées.
+.GIVEEXAMPLE2
+
+Problème : la solution est présentée sans indiquer les limites.
+Si le papier présente une autre solution, c'est bien que cette méthode n'est pas suffisante, il faut dire pourquoi.
+
+.GIVEEXAMPLE1
+Une méthode pour résoudre ce problème est de s'enfermer chez soi, portes et fenêtres fermées.
+Cette solution n'est pas entièrement satisfaisante car la nuisance sonore reste présente, elle est seulement diminuée.
+De plus, cela est contraignant pour les propriétaires qui pourraient vouloir profiter d'une météo ensoleillée.
+.GIVEEXAMPLE2
+
+Mieux : quelques limites sont présentées, qui semblent justifier d'imaginer une meilleure solution.
+En pratique, chaque solution est liée à un article qui doit être référencé.
+
+.HORIZONTALLINE
+
+Expliquer son hypothèse, sa solution.
+
+.GIVEEXAMPLE1
+Notre hypothèse est qu'il faut jeter un steak par terre.
+.GIVEEXAMPLE2
+
+Problème : imprécis et confus.
+Comment cela fonctionne ?
+Quel est le résultat attendu ?
+Si je jette le steak dans ma salle de bain (où les chiens ne vont pas) est-ce que cela fonctionne ?
+Cela fonctionne pour combien de chiens ?
+Quelle taille de steak ?
+Etc.
+
+.GIVEEXAMPLE1
+Notre hypothèse est que donner de la nourriture aux chiens, à leur faim, juste avant de passer à table permettrait de résoudre le problème.
+Les chiens mangeraient silentieusement, sans aboyer.
+.GIVEEXAMPLE2
+
+Mieux : le concept et l'objectif sont plus clairs, tout en laissant le détail pour la partie expérimentation.
+
+.HORIZONTALLINE
+
+Ensuite il faut expliquer son expérimentation.
+
+.GIVEEXAMPLE1
+Je jette deux steaks dehors, et ça a marché.
+.GIVEEXAMPLE2
+
+Problème : très imprécis, aucun paramètre n'a été donné.
+Décrire une expérimentation implique de fournir suffisamment d'informations (pertinentes) pour
+.UL reproduire
+l'expérience.
+De plus, le résultat et l'interprétation du résultat doivent se faire à part.
+
+.GIVEEXAMPLE1
+L'expérience se passe dans une villa avec deux chiens de petite taille.
+Les deux chiens sont habituellement nourris avec un steak haché de 150 grammes chacun, suffisant pour les satisfaire plusieurs heures.
+À l'heure du repas, vers 12h et 19h, nous leur donnons chacun un steak de 150 grammes.
+.GIVEEXAMPLE2
+
+Mieux : les paramètres importants pour reproduire l'expérimentation ont été donnés.
+
+.HORIZONTALLINE
+
+Ensuite on donne les résultats et leur interprétation.
+
+.GIVEEXAMPLE1
+Les chiens sont silencieux, l'objectif est atteint.
+.GIVEEXAMPLE2
+
+Problème : cela manque d'informations.
+Les chiens sont silencieux combien de temps, 5 minutes ?
+Fonctionne à midi et le soir ?
+Quelles sont les limites entrevues par cette méthode ?
+Etc.
+
+.GIVEEXAMPLE1
+Les chiens n'aboient plus, ils sont silencieux durant toute la durée des repas.
+Le résultat est concluant, l'objectif est atteint.
+
+Cette méthode a des limites, tout d'abord le prix de la viande utilisée et la santé des chiens sur le long terme (la nourriture utilisée n'est pas assez diversifiée).
+.GIVEEXAMPLE2
+
+Mieux : l'explication montre que la solution fonctionne et répond réellement à la problématique initiale.
+Ceci dit, deux métriques sont introduites, à savoir le prix de la nourriture et la santé des chiens.
+L'étude devrait prendre en compte ces paramètres depuis le début, et donc y faire mention dans l'introduction, puis dans l'état de l'art (pour situer les autres solutions sur ces points), etc.
+
+.HORIZONTALLINE
+
+Enfin, on donne une conclusion à l'étude.
+.TBD
+
 .QUESTION "Tous les papiers ne sont pas égaux."
 Certains papiers sont de bonne qualité, d'autres de moins bonne qualité, d'autres ne valent rien.
 Cela dépend de nombreux paramètres.
@@ -458,6 +611,9 @@ car ils n'ont pas de comité de lecture.
 Leurs publications ne valent rien, l'intérêt de la publication scientifique résidant en grande partie dans la relecture par les pairs.
 Sans cette relecture, le papier peut comporter de nombreux biais évidents, la confiance du lecteur en est sérieusement entâchée.
 Les scientifiques sérieux publient exclusivement dans des revues à comité de lecture, de préférence avec un taux de sélection (très) faible.
+
+Toujours dans le domaine de l'arnaque, un papier en "preprint" n'a pas encore été accepté.
+Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fait l'object d'aucune relecture par du personnel compétent.
 .SECTION Informations générales
 .SUBSECTION Travail d'un chercheur
 .QUESTION "En pratique, que fait un chercheur ?"
@@ -484,7 +640,7 @@ sophismes
 .TBD
 .UL "malgré leurs réfutations" .
 La validité des arguments n'a donc aucune valeur aux yeux des apologistes.
-Ce document n'a pas pour objectif de tous les répertorier, 
+Ce document n'a pas pour objectif de tous les répertorier,
 De même, le manque d'honnêteté des apologistes à ce sujet est flagrant : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
 Les mots sont changés pour paraître plus savant mais pas pour apporter un sens plus intéressant.
 Ainsi, les apologistes continuent de parler de l'argument de l'improbabilité, en changeant quelques mots (en plus abstraits) pour les récalcitrants.
@@ -521,3 +677,92 @@ Le document a présenté également le cadre de travail des chercheurs, partagea
 .\" Tout cela forme la manière utilisée en science pour acquérir des connaissances.
 .\" Toute connaissance n'a pas à passer par ces étapes, si vous perdez vos clés il n'y a pas besoin de publier un article pour les retrouver.
 .\" Pas nécessaire, mais plus sûr, on prend en compte les erreurs humaines.
+
+.[
+$LIST$
+.]
+
+.SECTION_NO_NUMBER Annexe 1 : quelques biais de plus
+.
+.de INNERBULLET
+.in +1
+.br
+\(bu
+.in +1
+.sp -1
+\\$*
+.in -2
+..
+.de EENUM           \" Numbered list
+.nr LIST_NUMBER +1
+.br
+\\n[LIST_NUMBER]
+.in +1
+.sp -1
+\\$*
+.in -1
+..
+.de EENDENUM
+.nr LIST_NUMBER 0
+..
+De nombreux biais ont été présentés en section 2, il n'était pas nécessaire d'en présenter davantage pour saisir l'idée générale.
+Voici quelques biais possibles de plus, en prenant le thème de la justification de dieu(x).
+.SUBSECTION_NO_NUMBER 1.1 Ergotage linguistique
+Voici l'argument
+.I ontologique ,
+tel que donné par les apologistes (sous une forme ou une autre).
+
+.gcolor citation
+.EENUM Dieu est un être parfait.
+.EENUM Une perfection qui ne comprendrait pas l'existence ne serait évidemment pas complète.
+.EENUM Donc, Dieu est aussi doté de l'existence.
+.EENDENUM
+.gcolor
+
+Avec cet argument, peu importe la signification du mot « Dieu », il existe forcément puisque le concept est défini comme ayant la propriété d'exister.
+Pour montrer l'escroquerie complète que représente cet argument, les phrases précédentes pourraient être retranscrites de cette manière :
+
+.gcolor citation
+.EENUM Dieu est un être parfait (je le dis donc c'est vrai).
+.EENUM « Parfait » ça veut aussi dire « qui existe » (là encore, je le dis donc c'est vrai).
+.EENUM Donc, Dieu existe (= ce qui était dit en prémice 1).
+.EENDENUM
+.gcolor
+
+Fait intéressant : cet argument est donné y compris par les personnes
+.UL "les plus éduquées"
+sur le sujet.
+Si un argument solide en faveur d'une divinité existait, est-ce que l'argument ontologique, qui est digne d'une cours d'école, serait encore d'actualité ?
+Il est raisonnable d'en douter.
+
+.HORIZONTALLINE
+
+Autre pirouette linguistique, traiter des adjectifs comme des noms.
+.I arbre "" L'
+le plus grand,
+la première
+.I cause .
+
+.HORIZONTALLINE
+
+Dernier sophisme linguistique : redéfinir des mots.
+Les mots ont le sens que nous leur prêtons, nous nous accordons sur leur définition, ils ont un sens
+.UL conventionnel .
+Un mot n'a pas fondamentalement un sens, invariable et intemporel.
+
+Donc, si une personne s'annonce comme athée, et qu'elle définit l'athéisme comme le fait de
+.I "ne pas être convaincu qu'un dieu existe" ,
+il est malhonnête de lui refuser cette définition.
+Dire après cela que l'athéisme est lié à la croyance qu'un dieu n'existe pas, peu importe comment l'interlocuteur se définit lui-même, c'est vouloir déformer ses propos pour s'attaquer à un homme de paille.
+Refuser une définition, ce n'est pas faire disparaître le concept auquel il était associé.
+La personne disant ne pas être convaincue qu'un dieu existe, peu importe le mot associé, n'a pas changé son point de vue car on lui a refusé sa définition du mot
+.I athéisme .
+
+.SUBSECTION_NO_NUMBER 1.2 Autre biais en vrac
+
+.BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
+.BULLET généralisation abusive
+.BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
+.BULLET inversion de la charge de la preuve : c'est à celui qui affirme quelque chose de prouver que ce qu'il dit est vrai, pas l'inverse.
+Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que dieu n'existe pas ».
+.ENDBULLET
