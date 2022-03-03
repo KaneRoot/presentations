@@ -427,6 +427,13 @@ Ensuite, les résultats et leur interprétation doivent être présentés.
 Enfin, une conclusion doit être apportée, en rappelant la problématique, la solution envisagée et le résultat, et en tentant de prendre un peu de hauteur sur le sujet, un papier n'est pas un simple rapport technique.
 L'annexe 2 présente des exemples (fortement abbrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
 
+.QUESTION "Un papier, une idée."
+Chaque papier doit présenter une seule idée\*[*].
+.FOOTNOTE1
+Ou au moins un ensemble cohérent d'idées qui ne peuvent être présentées séparément, si cela est correctement justifié.
+.FOOTNOTE2
+Si l'auteur souhaite présenter plusieurs solutions à un même problème, alors il serait préférable (voire nécessaire) de publier plusieurs papiers.
+
 .QUESTION "Tous les papiers ne sont pas égaux."
 Certains papiers sont de bonne qualité, d'autres de moins bonne qualité, d'autres ne valent rien.
 Cela dépend de nombreux paramètres.
@@ -453,10 +460,28 @@ Cette section a présenté la forme et le contenu attendu d'un papier scientifiq
 La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et donner confiance au fond.
 L'annexe 2 est un complément à cette section, pour voir un papier en cours d'écriture mettant en œuvre la plupart des règles dictées dans cette section.
 Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
-.SECTION Journaux scientifiques
+.SECTION Publications scientifiques
 .TBD
 Chaque papier de recherche est publié dans un journal à comité de lecture
 .I "peer review" ). (
+Cette section regroupe quelques informations sur ces journaux pour mieux situer leur rôle dans la science.
+.TBD
+Leurs objectifs et fonctionnement, la confiance qui peut leur être accordée, etc.
+
+.QUESTION "Qu'est-ce qu'un journal scientifique ?"
+Un journal scientifique est un journal qui publie des papiers scientifiques.
+Ces papiers sont envoyés au journal, et s'en suit une revue par des pairs tel que décrit au chapitre précédent, puis le papier est (éventuellement) publié dans le journal.
+Chaque journal a un domaine, voire une spécialité de prédilection, par exemple
+.I "Ad Hoc Networks"
+est un journal spécialisé dans les réseaux de capteurs (de petits ordinateurs qui vérifient des métriques comme la température ambiante, le taux de luminosité, etc.).
+Un journal peut publier des papiers de conférences, c'est-à-dire qu'une série de conférences est organisée pour présenter ces travaux.
+Un journal a également un
+.I "Impact Factor" ,
+c'est-à-dire un taux de visibilité pour les papiers publiés, qui se mesure par le taux de citations.
+
+.QUESTION "Où trouver ces journaux ?"
+Énormément de journaux sont publiés par de grands groupes éditoriaux comme Elsevier ou Springer.
+Leurs sites web respectifs recensent leurs journaux, et affichent certaines de leurs caractéristiques (objectifs, visibilité, taux d'acceptation, prochaine date de publication, etc.).
 
 .QUESTION "Le taux d'acceptation des journaux."
 Un journal à fort taux d'acceptation est peu intéressant, car le journal accepte des papiers de faible qualité, des contributions peut-être (très) modestes.
@@ -472,8 +497,15 @@ Les scientifiques sérieux publient exclusivement dans des revues à comité de 
 
 Toujours dans le domaine de l'arnaque, un papier en "preprint" n'a pas encore été accepté.
 Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fait l'object d'aucune relecture par du personnel compétent.
+
+.QUESTION "Conférences."
+Un journal peut accepter des papiers de conférences, c'est-à-dire que la publication du journal est suivie par une série de conférences.
+Chaque auteur vient présenter ses travaux aux autres auteurs, avec une courte conférence, habituellement de 20 minutes environ, suivie de quelques minutes de questions.
+Ces conférences sont fréquentes dans le milieu de la recherche, et permettent (en théorie) de rencontrer d'autres chercheurs travaillant sur des sujets connexes.
 .SECTION Informations générales
 .TBD
+
+.QUESTION "Qui paie quoi dans la recherche"
 .SUBSECTION Travail d'un chercheur
 .QUESTION "En pratique, que fait un chercheur ?"
 .SUBSECTION Difficultés
@@ -481,6 +513,9 @@ Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fa
 Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps.
 Le chercheur doit se maintenir à jour, il fait de la veille pour s'assurer toujours être au courant des avancées dans son domaine.
 De plus, en France, un chercheur est souvent enseignant-chercheur, et consacre principalement son temps à l'enseignement à l'université.
+
+.QUESTION "Trouver la bonne représentation d'une donnée."
+Présenter correctement une donnée, rendre une information évidente, est une tâche parfois complexe.
 .SUBSECTION Limites de la recherche
 .SUBSECTION Un chercheur, un domaine
 .SECTION Science au-delà de la recherche
