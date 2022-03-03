@@ -141,7 +141,7 @@ La suite du document présente une manière, imparfaite mais suffisante, utilis�
 La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vérifications différentes pour comprendre le monde qui nous entoure.
 Suivant le problème étudié, le chercheur utilise une méthode plutôt qu'une autre pour le résoudre.
 Dans cette section, deux méthodes sont introduites (hypothético-déductive et double-aveugle) pour montrer la diversité du travail de recherche.
-De même, la chronologie de la recherche est présentée, de l'intuition permettant de résoudre un problème au concensus scientifique.
+De même, la chronologie de la recherche est présentée, de l'intuition permettant de résoudre un problème au consensus scientifique.
 Par la suite, plusieurs discussions sont amorcées, comme le vocabulaire scientifique (différent du langage courant), le caractère non démocratique, matérialiste et descriptif de la science ou encore la légitimité de la parole d'un scientifique.
 Enfin, la section se termine par deux qualités importantes en science : le doute et la nuance.
 
@@ -231,9 +231,9 @@ Une meta-analyse, c'est-à-dire une
 .I "étude des études" ,
 vient alors résumer l'état de nos connaissances, sur ce sujet précis et à un instant donné.
 
-Enfin, le résultat de l'étude originelle devient un concensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
+Enfin, le résultat de l'étude originelle devient un consensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
 Cette expression est rarement employée en dehors des positions faisant l'objet de fausses controverses par idéologie ou pour le profit.
-C'est pourquoi il est fait mention de concensus scientifique dans les médias pour le changement climatique (récent et d'origine humaine) ou la théorie de l'évolution par exemple : des lobbies travaillent encore aujourd'hui à nier les faits.
+C'est pourquoi il est fait mention de consensus scientifique dans les médias pour le changement climatique (récent et d'origine humaine) ou la théorie de l'évolution par exemple : des lobbies travaillent encore aujourd'hui à nier les faits.
 
 .QUESTION "La science a son propre vocabulaire."
 Bien des mots se retrouvent à la fois au quotidien et dans le monde universitaire, pourtant leur signification y est différente.
@@ -274,9 +274,9 @@ A -> C
 .QUESTION "La science n'est pas une démocratie."
 Si une hypothèse n'est pas réfutable (c'est-à-dire qui ne peut pas être vérifiée, pas testable, qui ne peut pas s'invalider), elle est rejetée.
 Aucun vote n'est nécessaire.
-De même, aucun vote ou cérémonie officielle ne sont nécessaires pour créer un concensus scientifique : les chercheurs doivent suivre les faits, où qu'ils mènent.
+De même, aucun vote ou cérémonie officielle ne sont nécessaires pour créer un consensus scientifique : les chercheurs doivent suivre les faits, où qu'ils mènent.
 C'est ainsi que la communauté scientifique pensait que l'univers était éternel et statique, même après la publication en 1916 de la théorie de la relativité générale d'Albert Einstein, car ses travaux ne correspondaient pas aux observations.
-En 1929, les observations évoluent grâce à Edwin Hubble et au téléscope Hooker, montrant que l'univers est en expansion, changeant pratiquement du jour au lendemain le concensus scientifique sur le sujet.
+En 1929, les observations évoluent grâce à Edwin Hubble et au téléscope Hooker, montrant que l'univers est en expansion, changeant pratiquement du jour au lendemain le consensus scientifique sur le sujet.
 
 .QUESTION "La science est matérialiste."
 Certaines questions, ou sujets d'étude, ne relèvent pas du domaine scientifique.
@@ -296,7 +296,7 @@ l'acquisition de la connaissance.
 Aucun chercheur ne fait autorité dans tout un domaine de recherche.
 Un chercheur a une spécialité dont il connait le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
 Dans sa spécialité, a priori, le chercheur a un avis pertinent ; sa voix est légitime.
-En revanche, même dans sa spécialité, la parole d'un chercheur n'est pas au-dessus de toute critique et il peut lui-même avoir un avis qui ne fait pas concensus.
+En revanche, même dans sa spécialité, la parole d'un chercheur n'est pas au-dessus de toute critique et il peut lui-même avoir un avis qui ne fait pas consensus.
 Les arguments priment sur le statut, même pour un directeur de recherche dans un laboratoire prestigieux.
 
 .QUESTION "L'art du doute raisonnable."
@@ -421,11 +421,259 @@ En informatique par exemple, le nombre de pages est généralement autour de 6 �
 .QUESTION "Sur le fond."
 Une introduction doit présenter le contexte et la problématique.
 L'état de l'art doit présenter les méthodes actuelles pour résoudre le problème (si cela s'applique au sujet).
-La solution doit ensuite être présentée, ainsi qu'une méthode pour l'évaluer et son évaluation et l'interprétation des résultats (méthode hypothético-déductive).
-Enfin, une conclusion doit être apportée.
+La solution doit ensuite être présentée, en indiquant le résultat attendu.
+Ensuite, une expérimentation doit être conduite, en décrivant dans le détail ce qui est fait.
+Ensuite, les résultats et leur interprétation doivent être présentés.
+Enfin, une conclusion doit être apportée, en rappelant la problématique, la solution envisagée et le résultat, et en tentant de prendre un peu de hauteur sur le sujet, un papier n'est pas un simple rapport technique.
+L'annexe 2 présente des exemples (fortement abbrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
 
-La suite présente quelques exemples pour comprendre la logique et le type d'informations nécessaires dans papier.
-Ces exemples (volontairement très concis pour ne pas alourdir la présentation) sont des tentatives très imparfaites d'écriture d'un papier.
+.QUESTION "Tous les papiers ne sont pas égaux."
+Certains papiers sont de bonne qualité, d'autres de moins bonne qualité, d'autres ne valent rien.
+Cela dépend de nombreux paramètres.
+Le respect de ce dont il est question dans cette section est l'un des critères.
+De plus, un papier peut représenter une avancée considérable dans le domaine ou n'apporter qu'une contribution modeste.
+Au-delà de la qualité intrinsèque du papier, le taux d'acceptation du journal dans lequel il est publié est important pour sa visibilité (voir section « journaux scientifiques »).
+
+.QUESTION "Tous les papiers n'ont pas le même objectif."
+La plupart des papiers apportent une contribution dans un domaine, une nouvelle connaissance.
+D'autres papiers
+.I survey ) (
+font l'inventaire des différentes contributions d'un domaine, et les catégorisent pour les rendre plus accessibles (leur donner de la visibilité).
+Le survey est important comme entrée en matière pour de jeunes chercheurs puisqu'il référence les papiers les plus importants du domaine.
+Un autre type de papiers est la méta-analyse, c'est-à-dire une
+.I "étude des études"
+sur un sujet précis.
+La méta-analyse apporte une position sur un sujet suivant
+.I "état actuel" "" l'
+du corpus scientifique sur le sujet traité.
+Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'ingénieurie derrière une infrastructure ou des outils.
+Ces derniers n'apportent pas une contribution très intéressante d'un point de vue scientifique, mais peuvent être utiles en pratique pour les chercheurs et ingénieurs de recherche.
+
+Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
+La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et donner confiance au fond.
+L'annexe 2 est un complément à cette section, pour voir un papier en cours d'écriture mettant en œuvre la plupart des règles dictées dans cette section.
+Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
+.SECTION Journaux scientifiques
+.TBD
+Chaque papier de recherche est publié dans un journal à comité de lecture
+.I "peer review" ). (
+
+.QUESTION "Le taux d'acceptation des journaux."
+Un journal à fort taux d'acceptation est peu intéressant, car le journal accepte des papiers de faible qualité, des contributions peut-être (très) modestes.
+Un journal à faible taux d'acceptation privilégie la qualité à la quantité, il est donc plus prestigieux et apporte une meilleure visibilité aux papiers publiés.
+
+.QUESTION "Attention aux arnaques."
+Certains journaux sont qualifiés de
+.I "revues prédatrices"
+car ils n'ont pas de comité de lecture.
+Leurs publications ne valent rien, l'intérêt de la publication scientifique résidant en grande partie dans la relecture par les pairs.
+Sans cette relecture, le papier peut comporter de nombreux biais évidents, la confiance du lecteur en est sérieusement entâchée.
+Les scientifiques sérieux publient exclusivement dans des revues à comité de lecture, de préférence avec un taux de sélection (très) faible.
+
+Toujours dans le domaine de l'arnaque, un papier en "preprint" n'a pas encore été accepté.
+Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fait l'object d'aucune relecture par du personnel compétent.
+.SECTION Informations générales
+.TBD
+.SUBSECTION Travail d'un chercheur
+.QUESTION "En pratique, que fait un chercheur ?"
+.SUBSECTION Difficultés
+.QUESTION "Le temps."
+Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps.
+Le chercheur doit se maintenir à jour, il fait de la veille pour s'assurer toujours être au courant des avancées dans son domaine.
+De plus, en France, un chercheur est souvent enseignant-chercheur, et consacre principalement son temps à l'enseignement à l'université.
+.SUBSECTION Limites de la recherche
+.SUBSECTION Un chercheur, un domaine
+.SECTION Science au-delà de la recherche
+Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
+.\" Zététique
+.SUBSECTION Repérer des manipulations
+.QUESTION "L'arnaque de Dieu."
+La section 2 présente un petit florilège d'arguments fallacieux brandits par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
+Des
+.UL dizaines
+d'autres arguments sans valeur sont avancés.
+Ils se retrouvent encore et toujours dans les conversations, débats et même livres
+.[
+sophismes
+.]
+.TBD
+.UL "malgré leurs réfutations" .
+La validité des arguments n'a donc aucune valeur aux yeux des apologistes.
+Ce document n'a pas pour objectif de tous les répertorier,
+De même, le manque d'honnêteté des apologistes à ce sujet est flagrant : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
+Les mots sont changés pour paraître plus savant mais pas pour apporter un sens plus intéressant.
+Ainsi, les apologistes continuent de parler de l'argument de l'improbabilité, en changeant quelques mots (en plus abstraits) pour les récalcitrants.
+C'est ainsi que l'argument de l'improbabilité devient l'argument de la
+.I contingence ,
+alors que l'argument est strictement identique.
+Cette tentative de manipulation grossière est évidente.
+
+.SUBSECTION Pseudo-sciences
+.TBD
+.SUBSECTION Politique
+.TBD
+La politique est un sujet à la fois vaste et complexe.
+Des mesures simples peuvent impliquer de nombreuses ramifications inattendues.
+
+.CITATION1
+Des automobilistes se moquent de personnes construisant un bâteau car leur véhicule n'a pas de roues.
+.CITATION2
+.NAMECITATION "Discussions politiques entre personnes de paradigmes différents"
+
+.SECTION Conclusion
+Ce document a présenté des biais présents dans la vie de tous les jours et dans de nombreux domaines.
+
+La science s'est adaptée à ces erreurs de raisonnement.
+Les multiples méthodes sont adaptées aux différentes problématiques ; elles prennent en compte les biais spécifiques à chaque domaine.
+Le format utilisé pour matérialiser la réflexion des chercheurs est également d'une grande aide.
+Par exemple, la justification systématique des affirmations enlève des ambiguités, ce qui est utile comme outil de raisonnement pour les auteurs eux-mêmes.
+La relecture par les pairs (experts du domaine), antérieure à la publication, permet d'ajouter des vérifications supplémentaires.
+Une faute d'inattention est vite arrivée, mais trois ou quatre chercheurs qui passent à côté d'une erreur est plus rare.
+La publication est parfois suivie d'autres analyses, des réplications par d'autres laboratoires de la même étude.
+Répliquer une analyse contribue à la crédibilité des résultats obtenus (ou y apporte du discrédit si la réplication échoue).
+La synthèse des différentes études (sur le même sujet) est produite dans des meta-analyses, qui offrent un recul sur les résultats individuels de chaque laboratoire.
+Après toutes ces étapes, chacune permettant de rejeter la validité des hypothèses (même bien au-delà de la publication du papier originel), le résultat devient un consensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
+
+Le document a présenté également le cadre de travail des chercheurs, partageant par moments des informations triviales pour restituer la dimension humaine de la recherche.
+.\" Tout cela forme la manière utilisée en science pour acquérir des connaissances.
+.\" Toute connaissance n'a pas à passer par ces étapes, si vous perdez vos clés il n'y a pas besoin de publier un article pour les retrouver.
+.\" Pas nécessaire, mais plus sûr, on prend en compte les erreurs humaines.
+
+.[
+$LIST$
+.]
+
+.SECTION_NO_NUMBER Annexe 1 : quelques biais et manipulations de plus
+.
+.de INNERBULLET
+.in +1
+.br
+\(bu
+.in +1
+.sp -1
+\\$*
+.in -2
+..
+.de EENUM           \" Numbered list
+.nr LIST_NUMBER +1
+.br
+\\n[LIST_NUMBER]
+.in +1
+.sp -1
+\\$*
+.in -1
+..
+.de EENDENUM
+.nr LIST_NUMBER 0
+..
+De nombreux biais ont été présentés en section 2, il n'était pas nécessaire d'en présenter davantage pour saisir l'idée générale.
+Voici quelques biais possibles de plus, en prenant le thème de la justification de dieu(x).
+.SUBSECTION_NO_NUMBER 1.1 Ergotage linguistique
+Voici l'argument
+.I ontologique ,
+tel que donné par les apologistes (sous une forme ou une autre).
+
+.gcolor citation
+.EENUM Dieu est un être parfait.
+.EENUM Une perfection qui ne comprendrait pas l'existence ne serait évidemment pas complète.
+.EENUM Donc, Dieu est aussi doté de l'existence.
+.EENDENUM
+.gcolor black
+
+Avec cet argument, peu importe la signification du mot « Dieu », il existe forcément puisque le concept est défini comme ayant la propriété d'exister.
+Pour montrer l'escroquerie complète que représente cet argument, les phrases précédentes pourraient être retranscrites de cette manière :
+
+.gcolor citation
+.EENUM Dieu est un être parfait (je le dis donc c'est vrai).
+.EENUM « Parfait » ça veut aussi dire « qui existe » (là encore, je le dis donc c'est vrai).
+.EENUM Donc, Dieu existe (= ce qui était dit en prémice 1).
+.EENDENUM
+.gcolor black
+
+Fait intéressant : cet argument est donné y compris par les personnes
+.UL "les plus éduquées"
+sur le sujet.
+Si un argument solide en faveur d'une divinité existait, est-ce que l'argument ontologique, qui est digne d'une cours d'école, serait encore d'actualité ?
+Il est raisonnable d'en douter.
+
+.HORIZONTALLINE
+
+Autre pirouette linguistique, traiter des adjectifs comme des noms.
+.I arbre "" L'
+le plus grand,
+la première
+.I cause .
+.TBD
+
+.HORIZONTALLINE
+
+Autre sophisme linguistique : redéfinir des mots.
+Les mots ont le sens que nous leur prêtons, nous nous accordons sur leur définition, ils ont un sens
+.UL conventionnel .
+Un mot n'a pas fondamentalement un sens, invariable et intemporel.
+
+Donc, si une personne s'annonce comme athée, et qu'elle définit l'athéisme comme le fait de
+.I "ne pas être convaincu qu'un dieu existe" ,
+il est malhonnête de lui refuser cette définition.
+Dire que l'athéisme est lié à la croyance qu'un dieu n'existe pas, sans se soucier de comment l'interlocuteur se définit lui-même, c'est vouloir déformer ses propos pour s'attaquer à un homme de paille.
+Refuser une définition, ce n'est pas faire disparaître le concept auquel il était associé.
+La personne disant ne pas être convaincue qu'un dieu existe, peu importe le mot associé, n'a pas changé son point de vue car on lui a refusé sa définition du mot
+.I athéisme .
+
+.HORIZONTALLINE
+
+Dieu est absolu : sa réfutation doit l'être également.
+
+À part dans certains formalismes mathématiques (comme en logique propositionnelle, où il est possible de dire qu'une proposition est vraie ou fausse), sinon rien en science n'est absolu.
+Même les découvertes scientifiques faisant actuellement consensus ne sont pas considérées comme des vérités absolues (y compris la théorie de l'évolution).
+Toute hypothèse est considérée comme raisonnable si elle explique un phénomène (sans faire appel elle-même à un plus grand mystère) et s'il est possible, au moins en théorie, de l'expérimenter.
+.TBD
+Si l'hypothèse ne répond pas à ces critères elle est rejetée, car elle ne permet pas de créer de la connaissance, elle est vide de sens.
+
+Pourtant, quand bien même
+.B "strictement toutes"
+les tentatives de prouver l'existence d'un dieu ont échoué, les croyants ne veulent pas admettre que cette hypothèse n'est pas valide, et vont même jusqu'à demander de prouver l'inexistance de dieu de manière absolue.
+
+.SUBSECTION_NO_NUMBER 1.2 N'importe namaths
+.TBD
+Les mathématiques et la science en général ont été utilisés à de nombreuses reprises dans des arguments douteux.
+
+.BULLET argument d'improbabilité
+.BULLET argument de contingence
+.ENDBULLET
+
+.SUBSECTION_NO_NUMBER 1.3 Les erreurs d'attribution
+.TBD
+
+.SUBSECTION_NO_NUMBER 1.4 Concordisme
+Le concordisme est le fait de réinterpréter les textes religieux à la lumière de nos connaissances actuelles.
+Prétendre que ce qui est découvert par la science était déjà présent dans des textes bibliques est un jeu auquel de nombreux croyants s'adonnent.
+La suite donne quelques exemples.
+
+.CITATION1
+Si une mouche tombe dans votre boisson, plongez-le dedans, puis retirez-la car l’une de ses ailes contient une maladie et l’autre un remède.
+.CITATION2
+.NAMECITATION "Boukhari dans son Sahih n°3320"
+
+Cette citation est utilisée comme « miracle » dans l'islam.
+Comme nous savons de nos jours que certaines mouches peuvent propager des maladies (ou que nous pouvons les utiliser pour fabriquer des médicaments), alors cela validerait cette citation.
+Quand bien même la citation dit bien que la maladie et son remède sont dans les ailes de la mouche (ce qui n'a aucun sens), quand bien même cela a mené à des
+.I savants " »" "« "
+de l'islam de se poser la question de quelle aile contenait la maladie et quelle aile contenait le remède (prouvant à quel point la citation n'a pas aidé du tout à comprendre quoi que ce soit au fonctionnement des maladies), le texte est considéré comme un miracle.
+
+.SUBSECTION_NO_NUMBER 1.5 Autre biais en vrac
+.TBD
+
+.BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
+.BULLET généralisation abusive
+.BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
+.BULLET inversion de la charge de la preuve : c'est à celui qui affirme quelque chose de prouver que ce qu'il dit est vrai, pas l'inverse.
+Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que dieu n'existe pas ».
+.ENDBULLET
+
+.SECTION_NO_NUMBER Annexe 2 : écriture d'un papier
+Cette annexe présente quelques exemples pour comprendre la logique et le type d'informations nécessaires dans un papier.
+Ces exemples (volontairement très concis pour rester digeste) sont des tentatives, très imparfaites, d'écriture d'un papier.
 Chaque exemple est accompagné des erreurs commises ainsi qu'une meilleure version (bien que toujours incomplète).
 
 En premier, une introduction.
@@ -442,7 +690,7 @@ En premier, une introduction.
 .mk D        \" set second marker to come back here
 .\" .ft          \" back to previous font
 .in -1       \" remove indent
-.gcolor      \" remove previous color
+.gcolor black\" remove previous color
 .gcolor citationbar
 .\" r     = move upward
 .\" Z D t = drawing thickness
@@ -452,7 +700,7 @@ En premier, une introduction.
 \L'|\\nCu'     \" draw line
 .gcolor black  \" remove previous color
 .sp -2         \" get two lines back
-\Z'\D't 1''    \" get the previous drawing thickness back
+\Z'\D't 0.5p''    \" get the previous drawing thickness back
 .KE            \" end of the keep
 .ll +1
 .in -1
@@ -515,9 +763,12 @@ Etc.
 .GIVEEXAMPLE1
 Notre hypothèse est que donner de la nourriture aux chiens, à leur faim, juste avant de passer à table permettrait de résoudre le problème.
 Les chiens mangeraient silentieusement, sans aboyer.
+Une fois rassasiés, ils resteraient calmes.
 .GIVEEXAMPLE2
 
-Mieux : le concept et l'objectif sont plus clairs, tout en laissant le détail pour la partie expérimentation.
+Mieux : le concept et l'objectif sont plus clairs.
+La présentation de l'hypothèse inclut également le résultat attendu, avec un niveau de détail satisfaisant.
+Le détail est laissé à la partie expérimentation.
 
 .HORIZONTALLINE
 
@@ -569,200 +820,26 @@ L'étude devrait prendre en compte ces paramètres depuis le début, et donc y f
 .HORIZONTALLINE
 
 Enfin, on donne une conclusion à l'étude.
-.TBD
 
-.QUESTION "Tous les papiers ne sont pas égaux."
-Certains papiers sont de bonne qualité, d'autres de moins bonne qualité, d'autres ne valent rien.
-Cela dépend de nombreux paramètres.
-Le respect de ce dont il est question dans cette section est l'un des critères.
-De plus, un papier peut représenter une avancée considérable dans le domaine ou n'apporter qu'une contribution modeste.
-Au-delà de la qualité intrinsèque du papier, le taux d'acceptation du journal dans lequel il est publié est important pour sa visibilité (voir section « journaux scientifiques »).
+.GIVEEXAMPLE1
+Il faut donner un steak aux chiens pour avoir la paix.
+.GIVEEXAMPLE2
 
-.QUESTION "Tous les papiers n'ont pas le même objectif."
-La plupart des papiers apportent une contribution dans un domaine, une nouvelle connaissance.
-D'autres papiers
-.I survey ) (
-font l'inventaire des différentes contributions d'un domaine, et les catégorisent pour les rendre plus accessibles (leur donner de la visibilité).
-Le survey est important comme entrée en matière pour de jeunes chercheurs puisqu'il référence les papiers les plus importants du domaine.
-Un autre type de papiers est la méta-analyse, c'est-à-dire une
-.I "étude des études"
-sur un sujet précis.
-La méta-analyse apporte une position sur un sujet suivant
-.I "état actuel" "" l'
-du corpus scientifique sur le sujet traité.
-Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'ingénieurie derrière une infrastructure ou des outils.
-Ces derniers n'apportent pas une contribution très intéressante d'un point de vue scientifique, mais peuvent être utiles en pratique pour les chercheurs et ingénieurs de recherche.
+Problème : cette conclusion ne rappelle pas le contexte de l'étude, ni sa problématique, ni ne met en perspective notre solution par rapport aux autres.
+De plus, la solution fournie est incorrecte, il n'est pas nécessaire de donner un steak mais plutôt de la nourriture, rien ne dit que d'autres aliments ne fonctionneraient pas aussi bien.
 
-Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
-La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et donner confiance au fond.
-Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
-.SECTION Journaux scientifiques
-Chaque papier de recherche est publié dans un journal à comité de lecture
-.I "peer review" ). (
+Évidemment, si on souhaite respecter toutes ces consignes, le texte est bien plus verbeux.
 
-.QUESTION "Le taux d'acceptation des journaux."
-Un journal à fort taux d'acceptation est peu intéressant, car le journal accepte des papiers de faible qualité, des contributions peut-être (très) modestes.
-Un journal à faible taux d'acceptation privilégie la qualité à la quantité, il est donc plus prestigieux et apporte une meilleure visibilité aux papiers publiés.
+.GIVEEXAMPLE1
+Cette étude porte sur la tranquilité des propriétaires de chiens lors des repas (à 12h et 19h).
+À ces périodes, les chiens sont agités et aboient, ce qui est désagréable.
 
-.QUESTION "Attention aux arnaques."
-Certains journaux sont qualifiés de
-.I "revues prédatrices"
-car ils n'ont pas de comité de lecture.
-Leurs publications ne valent rien, l'intérêt de la publication scientifique résidant en grande partie dans la relecture par les pairs.
-Sans cette relecture, le papier peut comporter de nombreux biais évidents, la confiance du lecteur en est sérieusement entâchée.
-Les scientifiques sérieux publient exclusivement dans des revues à comité de lecture, de préférence avec un taux de sélection (très) faible.
+Notre solution a consisté à nourrir les chiens peu avant les heures de repas, avec leur nourriture habituelle (1 steak de 150 grammes par chien, mais peut varier selon le chien).
+L'expérimentation a montré que les chiens restaient calmes durant toute la durée du repas (2h).
+Contrairement aux solutions précédentes, les propriétaires ont eu la paix sans désagrément (ils peuvent ainsi profiter de la météo).
+Notre solution coûte un peu d'argent, la nourriture n'est pas gratuite, mais malgré cela nous pensons que cette technique peut être satisfaisante pour la majorité des propriétaires de chiens.
+.GIVEEXAMPLE2
 
-Toujours dans le domaine de l'arnaque, un papier en "preprint" n'a pas encore été accepté.
-Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fait l'object d'aucune relecture par du personnel compétent.
-.SECTION Informations générales
-.SUBSECTION Travail d'un chercheur
-.QUESTION "En pratique, que fait un chercheur ?"
-.SUBSECTION Difficultés
-.QUESTION "Le temps."
-Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps.
-Le chercheur doit se maintenir à jour, il fait de la veille pour s'assurer toujours être au courant des avancées dans son domaine.
-De plus, en France, un chercheur est souvent enseignant-chercheur, et consacre principalement son temps à l'enseignement à l'université.
-.SUBSECTION Limites de la recherche
-.SUBSECTION Un chercheur, un domaine
-.SECTION Science au-delà de la recherche
-Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
-.\" Zététique
-.SUBSECTION Repérer des manipulations
-.QUESTION "L'arnaque de Dieu."
-La section 2 présente un petit florilège d'arguments fallacieux brandits par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
-Des
-.UL dizaines
-d'autres arguments sans valeur sont avancés.
-Ils se retrouvent encore et toujours dans les conversations, débats et même livres
-.[
-sophismes
-.]
-.TBD
-.UL "malgré leurs réfutations" .
-La validité des arguments n'a donc aucune valeur aux yeux des apologistes.
-Ce document n'a pas pour objectif de tous les répertorier,
-De même, le manque d'honnêteté des apologistes à ce sujet est flagrant : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
-Les mots sont changés pour paraître plus savant mais pas pour apporter un sens plus intéressant.
-Ainsi, les apologistes continuent de parler de l'argument de l'improbabilité, en changeant quelques mots (en plus abstraits) pour les récalcitrants.
-C'est ainsi que l'argument de l'improbabilité devient l'argument de la
-.I contingence ,
-alors que l'argument est strictement identique.
-Cette tentative de manipulation grossière est évidente.
-
-.SUBSECTION Pseudo-sciences
-.SUBSECTION Politique
-La politique est un sujet à la fois vaste et complexe.
-Des mesures simples peuvent impliquer de nombreuses ramifications inattendues.
-
-.CITATION1
-Des automobilistes se moquent de personnes construisant un bâteau car leur véhicule n'a pas de roues.
-.CITATION2
-.NAMECITATION "Discussions politiques entre personnes de paradigmes différents"
-
-.SECTION Conclusion
-Ce document a présenté des biais présents dans la vie de tous les jours et dans de nombreux domaines.
-
-La science s'est adaptée à ces erreurs de raisonnement.
-Les multiples méthodes sont adaptées aux différentes problématiques ; elles prennent en compte les biais spécifiques à chaque domaine.
-Le format utilisé pour matérialiser la réflexion des chercheurs est également d'une grande aide.
-Par exemple, la justification systématique des affirmations enlève des ambiguités, ce qui est utile comme outil de raisonnement pour les auteurs eux-mêmes.
-La relecture par les pairs (experts du domaine), antérieure à la publication, permet d'ajouter des vérifications supplémentaires.
-Une faute d'inattention est vite arrivée, mais trois ou quatre chercheurs qui passent à côté d'une erreur est plus rare.
-La publication est parfois suivie d'autres analyses, des réplications par d'autres laboratoires de la même étude.
-Répliquer une analyse contribue à la crédibilité des résultats obtenus (ou y apporte du discrédit si la réplication échoue).
-La synthèse des différentes études (sur le même sujet) est produite dans des meta-analyses, qui offrent un recul sur les résultats individuels de chaque laboratoire.
-Après toutes ces étapes, chacune permettant de rejeter la validité des hypothèses (même bien au-delà de la publication du papier originel), le résultat devient un concensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
-
-Le document a présenté également le cadre de travail des chercheurs, partageant par moments des informations triviales pour restituer la dimension humaine de la recherche.
-.\" Tout cela forme la manière utilisée en science pour acquérir des connaissances.
-.\" Toute connaissance n'a pas à passer par ces étapes, si vous perdez vos clés il n'y a pas besoin de publier un article pour les retrouver.
-.\" Pas nécessaire, mais plus sûr, on prend en compte les erreurs humaines.
-
-.[
-$LIST$
-.]
-
-.SECTION_NO_NUMBER Annexe 1 : quelques biais de plus
-.
-.de INNERBULLET
-.in +1
-.br
-\(bu
-.in +1
-.sp -1
-\\$*
-.in -2
-..
-.de EENUM           \" Numbered list
-.nr LIST_NUMBER +1
-.br
-\\n[LIST_NUMBER]
-.in +1
-.sp -1
-\\$*
-.in -1
-..
-.de EENDENUM
-.nr LIST_NUMBER 0
-..
-De nombreux biais ont été présentés en section 2, il n'était pas nécessaire d'en présenter davantage pour saisir l'idée générale.
-Voici quelques biais possibles de plus, en prenant le thème de la justification de dieu(x).
-.SUBSECTION_NO_NUMBER 1.1 Ergotage linguistique
-Voici l'argument
-.I ontologique ,
-tel que donné par les apologistes (sous une forme ou une autre).
-
-.gcolor citation
-.EENUM Dieu est un être parfait.
-.EENUM Une perfection qui ne comprendrait pas l'existence ne serait évidemment pas complète.
-.EENUM Donc, Dieu est aussi doté de l'existence.
-.EENDENUM
-.gcolor
-
-Avec cet argument, peu importe la signification du mot « Dieu », il existe forcément puisque le concept est défini comme ayant la propriété d'exister.
-Pour montrer l'escroquerie complète que représente cet argument, les phrases précédentes pourraient être retranscrites de cette manière :
-
-.gcolor citation
-.EENUM Dieu est un être parfait (je le dis donc c'est vrai).
-.EENUM « Parfait » ça veut aussi dire « qui existe » (là encore, je le dis donc c'est vrai).
-.EENUM Donc, Dieu existe (= ce qui était dit en prémice 1).
-.EENDENUM
-.gcolor
-
-Fait intéressant : cet argument est donné y compris par les personnes
-.UL "les plus éduquées"
-sur le sujet.
-Si un argument solide en faveur d'une divinité existait, est-ce que l'argument ontologique, qui est digne d'une cours d'école, serait encore d'actualité ?
-Il est raisonnable d'en douter.
-
-.HORIZONTALLINE
-
-Autre pirouette linguistique, traiter des adjectifs comme des noms.
-.I arbre "" L'
-le plus grand,
-la première
-.I cause .
-
-.HORIZONTALLINE
-
-Dernier sophisme linguistique : redéfinir des mots.
-Les mots ont le sens que nous leur prêtons, nous nous accordons sur leur définition, ils ont un sens
-.UL conventionnel .
-Un mot n'a pas fondamentalement un sens, invariable et intemporel.
-
-Donc, si une personne s'annonce comme athée, et qu'elle définit l'athéisme comme le fait de
-.I "ne pas être convaincu qu'un dieu existe" ,
-il est malhonnête de lui refuser cette définition.
-Dire après cela que l'athéisme est lié à la croyance qu'un dieu n'existe pas, peu importe comment l'interlocuteur se définit lui-même, c'est vouloir déformer ses propos pour s'attaquer à un homme de paille.
-Refuser une définition, ce n'est pas faire disparaître le concept auquel il était associé.
-La personne disant ne pas être convaincue qu'un dieu existe, peu importe le mot associé, n'a pas changé son point de vue car on lui a refusé sa définition du mot
-.I athéisme .
-
-.SUBSECTION_NO_NUMBER 1.2 Autre biais en vrac
-
-.BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
-.BULLET généralisation abusive
-.BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
-.BULLET inversion de la charge de la preuve : c'est à celui qui affirme quelque chose de prouver que ce qu'il dit est vrai, pas l'inverse.
-Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que dieu n'existe pas ».
-.ENDBULLET
+Mieux : les problèmes adressés précédemment ont été répondu.
+Il est fait mention de la portée de l'étude (valable pour la majorité des propriétaires de chiens), de même que l'apport à la science que cela représente (les propriétaires peuvent désormais manger tranquillement, contrairement aux autres solutions).
+Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contexte plus général, mieux comprendre son utilité réelle.
