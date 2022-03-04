@@ -1,4 +1,5 @@
 .so macros.ms   \" First, let's import some macros.
+.mso fr.tmac
 .TITLE La science et la méthode scientifique
 .AUTHOR Philippe Pittoli
 .ABSTRACT1
@@ -479,9 +480,27 @@ Un journal a également un
 .I "Impact Factor" ,
 c'est-à-dire un taux de visibilité pour les papiers publiés, qui se mesure par le taux de citations.
 
+.EQ
+delim $$
+.EN
+
+.QUESTION "La visibilité d'un journal."
+La visibilité d'un journal se calcule simplement de la manière suivante : ${nb citations} over {nb publications}$
+
+.sp -1
+.EQ
+{nb citations} over {nb publications}
+.EN
+.sp -1
+
+.TBD
+
+Scopus
+
 .QUESTION "Où trouver ces journaux ?"
 Énormément de journaux sont publiés par de grands groupes éditoriaux comme Elsevier ou Springer.
 Leurs sites web respectifs recensent leurs journaux, et affichent certaines de leurs caractéristiques (objectifs, visibilité, taux d'acceptation, prochaine date de publication, etc.).
+Des dizaines de milliers de journaux existent.
 
 .QUESTION "Le taux d'acceptation des journaux."
 Un journal à fort taux d'acceptation est peu intéressant, car le journal accepte des papiers de faible qualité, des contributions peut-être (très) modestes.
@@ -502,6 +521,15 @@ Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fa
 Un journal peut accepter des papiers de conférences, c'est-à-dire que la publication du journal est suivie par une série de conférences.
 Chaque auteur vient présenter ses travaux aux autres auteurs, avec une courte conférence, habituellement de 20 minutes environ, suivie de quelques minutes de questions.
 Ces conférences sont fréquentes dans le milieu de la recherche, et permettent (en théorie) de rencontrer d'autres chercheurs travaillant sur des sujets connexes.
+
+.QUESTION "Qu'apporte un journal aux auteurs ?"
+En théorie, une aide à la mise en page des papiers, mais cela semble plutôt faux de nos jours : les éditeurs ont des modèles LaTeX (un outil pour créer les fichiers numériques des papiers).
+De fait, toute personne souhaitant publier un article n'a besoin que d'appliquer le modèle de l'éditeur, et le document est plus ou moins de facto
+.I "camera ready" ,
+c'est-à-dire bon pour impression.
+
+Un journal peut apporter une aide pour la visualisation des données.
+.TBD
 .SECTION Informations générales
 .TBD
 
