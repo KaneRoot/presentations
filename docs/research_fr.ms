@@ -9,7 +9,7 @@ Suite à la lecture de ce document, il est attendu que les discussions (autour d
 
 .INFORMATIONS_FR \\*[WEBSITE]/research_fr.pdf \\*[EMAIL]
 .br
-Statut : les 4 premières sections sont correctes. Le reste = WIP.
+Statut : les 5 premières sections sont correctes. Le reste est en travaux.
 .ABSTRACT2
 .TWO_COLUMNS
 .SECTION Introduction
@@ -462,12 +462,10 @@ La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; l
 L'annexe 2 est un complément à cette section, pour voir un papier en cours d'écriture mettant en œuvre la plupart des règles dictées dans cette section.
 Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
 .SECTION Publications scientifiques
-.TBD
-Chaque papier de recherche est publié dans un journal à comité de lecture
+Chaque papier est publié dans un journal à comité de lecture
 .I "peer review" ). (
-Cette section regroupe quelques informations sur ces journaux pour mieux situer leur rôle dans la science.
-.TBD
-Leurs objectifs et fonctionnement, la confiance qui peut leur être accordée, etc.
+Cette section regroupe quelques informations sur ces journaux pour mieux situer leur rôle dans la science (objectifs, fonctionnement).
+De même, des moyens de rechercher et d'accéder à des articles sont présentés.
 
 .QUESTION "Qu'est-ce qu'un journal scientifique ?"
 Un journal scientifique est un journal qui publie des papiers scientifiques.
@@ -483,24 +481,17 @@ c'est-à-dire un taux de visibilité pour les papiers publiés, qui se mesure pa
 .EQ
 delim $$
 .EN
-
 .QUESTION "La visibilité d'un journal."
-La visibilité d'un journal se calcule simplement de la manière suivante : ${nb citations} over {nb publications}$
-
-.sp -1
+La visibilité d'un journal se calcule simplement de la manière suivante :
 .EQ
-{nb citations} over {nb publications}
+roman {nb " " citations} over roman {nb " " publications}
 .EN
-.sp -1
-
-.TBD
-
-Scopus
+Scopus est une base de données qui référence les documents (livres, articles scientifiques, etc.) permettant de faire ce calcul.
 
 .QUESTION "Où trouver ces journaux ?"
 Énormément de journaux sont publiés par de grands groupes éditoriaux comme Elsevier ou Springer.
 Leurs sites web respectifs recensent leurs journaux, et affichent certaines de leurs caractéristiques (objectifs, visibilité, taux d'acceptation, prochaine date de publication, etc.).
-Des dizaines de milliers de journaux existent.
+Des dizaines de milliers de journaux existent ; un moteur de recherche peut aider à trouver des journaux au-delà des plus gros éditeurs.
 
 .QUESTION "Le taux d'acceptation des journaux."
 Un journal à fort taux d'acceptation est peu intéressant, car le journal accepte des papiers de faible qualité, des contributions peut-être (très) modestes.
@@ -512,10 +503,12 @@ Certains journaux sont qualifiés de
 car ils n'ont pas de comité de lecture.
 Leurs publications ne valent rien, l'intérêt de la publication scientifique résidant en grande partie dans la relecture par les pairs.
 Sans cette relecture, le papier peut comporter de nombreux biais évidents, la confiance du lecteur en est sérieusement entâchée.
-Les scientifiques sérieux publient exclusivement dans des revues à comité de lecture, de préférence avec un taux de sélection (très) faible.
+Les scientifiques sérieux publient
+.UL exclusivement
+dans des revues à comité de lecture, de préférence avec un taux de sélection (très) faible.
 
-Toujours dans le domaine de l'arnaque, un papier en "preprint" n'a pas encore été accepté.
-Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fait l'object d'aucune relecture par du personnel compétent.
+Toujours dans le domaine de l'arnaque, un papier en « preprint » n'a pas encore été accepté.
+Aucune confiance ne peut lui être accordée à ce stade, le document n'ayant fait l'objet d'aucune relecture par du personnel compétent.
 
 .QUESTION "Conférences."
 Un journal peut accepter des papiers de conférences, c'est-à-dire que la publication du journal est suivie par une série de conférences.
@@ -528,8 +521,38 @@ De fait, toute personne souhaitant publier un article n'a besoin que d'appliquer
 .I "camera ready" ,
 c'est-à-dire bon pour impression.
 
-Un journal peut apporter une aide pour la visualisation des données.
-.TBD
+Un journal peut apporter une aide pour la visualisation des données ou l'illustration du document (créer de plus beaux schémas).
+De même, d'après le site d'Elsevier, la faible qualité de la langue est la principale source de rejet des documents (erreurs grammaticales, syntaxiques, orthographiques, etc.).
+Pour éviter cela, l'éditeur propose une relecture pour corriger les fautes d'anglais.
+
+.QUESTION "Où trouver des papiers ?"
+Les journaux, voire les articles individuels, peuvent s'acheter sur les sites des éditeurs.
+Certaines publications sont en accès libre
+.I "Open Access" ) (
+et sont disponibles gratuitement (parfois après une inscription) sur le site de l'éditeur.
+Sci-hub est une excellente base de données gratuite d'articles\*[*].
+.FOOTNOTE1
+Bien qu'illégale, sci-hub est une base de données parfaitement légitime.
+L'accès au savoir ne devrait pas être entravé par l'avarice des éditeurs.
+Pour rappel, les chercheurs sont payés avec nos impôts, leur travail a déjà été rémunéré, et l'éditeur ne fournit quasi aucun travail.
+.FOOTNOTE2
+HAL \f[CW](\s-2hal.archives-ouvertes.fr\s+2)\f[] est un site pour accéder gratuitement à des articles scientifiques (publiés ou non) et des thèses.
+Les thèses françaises sont publiées et accessibles gratuitement sur le site \f[CW]\s-2theses.fr\s+2\f[].
+Enfin, Google Scholar est d'une grande aide pour rechercher des articles en rapport avec un sujet, des mots clés ou par auteur.
+
+À noter que l'auteur conserve le droit de fournir ses documents, donc lui demander son œuvre (avec un simple mail) est tout à fait possible.
+
+.QUESTION "Le juteux marché de l'édition scientifique."
+Comme dit précédemment, un journal ne fournit pas un immense travail, son rôle est très limité.
+La publication et l'accès aux documents sont payants.
+Les universités payent également des sommes conséquentes pour un accès illimité au contenu… produit par leurs propres chercheurs.
+La relecture scientifique est gratuite et est faite par des chercheurs, payés par leur université ou laboratoire (via un financement public ou privé) et non par le journal.
+De même, ce sont les chercheurs qui organisent les conférences, mais c'est le journal qui en retire des bénéfices.
+Ceci représente une spoliation du travail des chercheurs par les journaux, en toute légalité.
+
+Cette section a présenté les journaux scientifiques (objectifs, fonctionnement, qualité), les éditeurs de ces journaux, les conférences organisées entre chercheurs et comment trouver des articles (gratuitement ou non).
+Certaines fraudes ont été présentées, comme les revues prédactrices, les documents en « preprint » ou encore l'abus (légal) des journaux envers le travail des chercheurs.
+La section suivante présente des informations générales autour de la recherche, qui étaient superflues dans les sections précédentes mais qui apportent une meilleure compréhension du métier de chercheur.
 .SECTION Informations générales
 .TBD
 
