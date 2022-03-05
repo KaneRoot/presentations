@@ -423,9 +423,10 @@ En informatique par exemple, le nombre de pages est généralement autour de 6 �
 Une introduction doit présenter le contexte et la problématique.
 L'état de l'art doit présenter les méthodes actuelles pour résoudre le problème (si cela s'applique au sujet).
 La solution doit ensuite être présentée, en indiquant le résultat attendu.
-Ensuite, une expérimentation doit être conduite, en décrivant dans le détail ce qui est fait.
+Puis, une expérimentation doit être conduite, en décrivant dans le détail ce qui est fait.
 Ensuite, les résultats et leur interprétation doivent être présentés.
-Enfin, une conclusion doit être apportée, en rappelant la problématique, la solution envisagée et le résultat, et en tentant de prendre un peu de hauteur sur le sujet, un papier n'est pas un simple rapport technique.
+Enfin, une conclusion doit être apportée, en rappelant la problématique, la solution envisagée et le résultat.
+La conclusion doit prendre un peu de hauteur sur le sujet, un papier n'est pas un simple rapport technique.
 L'annexe 2 présente des exemples (fortement abbrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
 
 .QUESTION "Un papier, une idée."
@@ -458,8 +459,8 @@ Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'i
 Ces derniers n'apportent pas une contribution très intéressante d'un point de vue scientifique, mais peuvent être utiles en pratique pour les chercheurs et ingénieurs de recherche.
 
 Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
-La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et donner confiance au fond.
-L'annexe 2 est un complément à cette section, pour voir un papier en cours d'écriture mettant en œuvre la plupart des règles dictées dans cette section.
+La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et à donner confiance au fond.
+L'annexe 2 est un complément à cette section, montrant un papier en cours d'écriture mettant en œuvre la plupart des règles dictées précédemment.
 Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
 .SECTION Publications scientifiques
 Chaque papier est publié dans un journal à comité de lecture
@@ -477,16 +478,36 @@ Un journal peut publier des papiers de conférences, c'est-à-dire qu'une série
 Un journal a également un
 .I "Impact Factor" ,
 c'est-à-dire un taux de visibilité pour les papiers publiés, qui se mesure par le taux de citations.
+.
+.de WRITE_URL_PAREN
+\f[CW](\s-2\\$*\s+2)\f[]
+..
+.de WRITE_URL
+\f[CW]\s-2\\$*\s+2\f[]
+..
 
-.EQ
-delim $$
-.EN
 .QUESTION "La visibilité d'un journal."
 La visibilité d'un journal se calcule simplement de la manière suivante :
 .EQ
-roman {nb " " citations} over roman {nb " " publications}
+size 8 { roman "Visibilité d'un journal" = roman "nb citations" over roman "nb publications" }
 .EN
-Scopus est une base de données qui référence les documents (livres, articles scientifiques, etc.) permettant de faire ce calcul.
+Scopus\*[*]
+.FOOTNOTE1
+Scopus \h'1'\(em\h'1'
+.WRITE_URL www.scopus.com
+.FOOTNOTE2
+est une base de données qui référence les documents (livres, articles scientifiques, etc.) permettant de faire ce calcul.
+Google Scholar\*[*]
+.FOOTNOTE1
+Google Scholar \h'1'\(em\h'1'
+.WRITE_URL scholar.google.com
+.FOOTNOTE2
+et Citeseer\ux\d\*[*]
+.FOOTNOTE1
+Citeseer\ux\d \h'1'\(em\h'1'
+.WRITE_URL citeseerx.ist.psu.edu
+.FOOTNOTE2
+sont d'autres bases de données bibliographiques, accessibles gratuitement, permettant de faire des recherches.
 
 .QUESTION "Où trouver ces journaux ?"
 Énormément de journaux sont publiés par de grands groupes éditoriaux comme Elsevier ou Springer.
@@ -530,15 +551,25 @@ Les journaux, voire les articles individuels, peuvent s'acheter sur les sites de
 Certaines publications sont en accès libre
 .I "Open Access" ) (
 et sont disponibles gratuitement (parfois après une inscription) sur le site de l'éditeur.
-Sci-hub est une excellente base de données gratuite d'articles\*[*].
+Sci-hub est une excellente base de données gratuite d'articles\*[*] (l'URL change régulièrement).
 .FOOTNOTE1
 Bien qu'illégale, sci-hub est une base de données parfaitement légitime.
 L'accès au savoir ne devrait pas être entravé par l'avarice des éditeurs.
 Pour rappel, les chercheurs sont payés avec nos impôts, leur travail a déjà été rémunéré, et l'éditeur ne fournit quasi aucun travail.
 .FOOTNOTE2
-HAL \f[CW](\s-2hal.archives-ouvertes.fr\s+2)\f[] est un site pour accéder gratuitement à des articles scientifiques (publiés ou non) et des thèses.
-Les thèses françaises sont publiées et accessibles gratuitement sur le site \f[CW]\s-2theses.fr\s+2\f[].
-Enfin, Google Scholar est d'une grande aide pour rechercher des articles en rapport avec un sujet, des mots clés ou par auteur.
+HAL\*[*]
+.FOOTNOTE1
+HAL \h'1'\(em\h'1'
+.WRITE_URL hal.archives-ouvertes.fr
+.FOOTNOTE2
+est un site pour accéder gratuitement à des articles scientifiques (publiés ou non) et des thèses.
+Les thèses françaises\*[*]
+.FOOTNOTE1
+Thèses françaises \h'1'\(em\h'1'
+.WRITE_URL theses.fr
+.FOOTNOTE2
+sont également publiées et accessibles gratuitement.
+Enfin, les bases de données bibliographiques présentées précédemment (Scopus, Google Scholar et Citeseer\ux\d) sont d'une grande aide pour rechercher des articles en rapport avec un sujet, des mots clés ou par auteur.
 
 À noter que l'auteur conserve le droit de fournir ses documents, donc lui demander son œuvre (avec un simple mail) est tout à fait possible.
 
@@ -554,16 +585,22 @@ Cette section a présenté les journaux scientifiques (objectifs, fonctionnement
 Certaines fraudes ont été présentées, comme les revues prédactrices, les documents en « preprint » ou encore l'abus (légal) des journaux envers le travail des chercheurs.
 La section suivante présente des informations générales autour de la recherche, qui étaient superflues dans les sections précédentes mais qui apportent une meilleure compréhension du métier de chercheur.
 .SECTION Informations générales
-.TBD
+Cette section regroupe toutes les informations autour du métier de chercheur qui ne rentrent pas dans les autres sections.
 
-.QUESTION "Qui paie quoi dans la recherche"
-.SUBSECTION Travail d'un chercheur
+.QUESTION "Au-delà des journaux, qui paie quoi dans la recherche ?"
+Les chercheurs sont payés soit par des universités (public), soit par des laboratoires (ou entreprises) privés.
+Les entreprises peuvent avoir des subventions pour embaucher des chercheurs ou mener des études.
+Dans le public, les universités sont attachées à des laboratoires.
+
 .QUESTION "En pratique, que fait un chercheur ?"
-.SUBSECTION Difficultés
-.QUESTION "Le temps."
+Une grande partie du temps consacré à la recherche se passe à lire des papiers de sa spécialité ; le chercheur fait de la veille sur son domaine.
+De plus, en France, le contrat universitaire classique
+.I "maître de conférences"
+inclut de l'enseignement, et les université étant en sous-effectif, le personnel fait énormément d'heures.
+La veille et l'enseignement représentent ainsi la plus grande partie du temps de travail du chercheur.
+
+.QUESTION "Difficultés du métier de chercheur."
 Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps.
-Le chercheur doit se maintenir à jour, il fait de la veille pour s'assurer toujours être au courant des avancées dans son domaine.
-De plus, en France, un chercheur est souvent enseignant-chercheur, et consacre principalement son temps à l'enseignement à l'université.
 
 .QUESTION "Trouver la bonne représentation d'une donnée."
 Présenter correctement une donnée, rendre une information évidente, est une tâche parfois complexe.
@@ -929,3 +966,21 @@ Notre solution coûte un peu d'argent, la nourriture n'est pas gratuite, mais ma
 Mieux : les problèmes adressés précédemment ont été répondu.
 Il est fait mention de la portée de l'étude (valable pour la majorité des propriétaires de chiens), de même que l'apport à la science que cela représente (les propriétaires peuvent désormais manger tranquillement, contrairement aux autres solutions).
 Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contexte plus général, mieux comprendre son utilité réelle.
+.
+.ig
+_En quoi les différents biais sont des biais ?
+_Comment réfuter une affirmation ? Un contre-exemple suffit ?
+_D'autres méthodes de démonstration (quand j'étais en fac de math, on nous enseignait plein de trucs cools, démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
+
+monsieur anarcap :
+- ma démarche n'avait rien de scientifique
+- une observation des différents avis politiques, de leur justification, de leurs implémentations, et de la confusion possibles entre des différents camps qui peuvent paraître amis alors qu'ils sont ennemis.
+
+- légitimité de la science (recherche de réalité objective) à contester les positions des individus qui relèvent purement du subjectif
+- considères tu que la science à son mot à dire dans les choix personnels des individus ? La politique ? La morale ? Mais pour le coup, je pense qu'on pourrait en écrire un livre.
+
+- Ça serait cool aussi développer l'idée de la fiabilité des sources, où piocher de l'information et des papiers scientifiques ?
+- Qui croire dans la mesure où nous ne pouvons pas mener des expériences pertinentes nous-même ?
+- Dans quelles mesures pouvons-nous nous fier à nos propres expériences sensorielles ?
+(On ne va pas envoyer notre propre appareil photo dans l'espace pour confirmer que la terre est ronde, on est obligé de passer par un pair).
+..
