@@ -600,12 +600,87 @@ inclut de l'enseignement, et les université étant en sous-effectif, le personn
 La veille et l'enseignement représentent ainsi la plus grande partie du temps de travail du chercheur.
 
 .QUESTION "Difficultés du métier de chercheur."
-Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps.
+Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps (veille et enseignement).
+Une étude peut également prendre du temps, parfois des dizaines d'années.
+Il n'est pas rare par exemple dans le domaine de la physique d'avoir des publications à titre posthume pour une partie des auteurs.
 
-.QUESTION "Trouver la bonne représentation d'une donnée."
+Autre difficulté, trouver la bonne représentation d'une donnée.
 Présenter correctement une donnée, rendre une information évidente, est une tâche parfois complexe.
-.SUBSECTION Limites de la recherche
-.SUBSECTION Un chercheur, un domaine
+
+.QUESTION "Limites de la recherche"
+
+Des anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
+De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
+
+.QUESTION "Le h-index, mesure de la productivité d'un chercheur."
+Au même titre que les journaux sont jugés sur leur visibilité, la portée des travaux d'un chercheur se mesure via son « h-index ».
+
+.G1
+coord x 0,20 y 0,20
+grid bot  dotted from 0 to 20 by 5
+grid left dotted from 0 to 20 by 5
+frame ht 2.0 wid 2.2
+draw LINEAR dashed
+for i from 0 to 20 by 1 do {
+  next LINEAR at i, i
+}
+
+v=5
+line from 0,v to v,v
+line from v,0 to v,v
+#"    linear curve" ljust at 1,650
+
+label top "Calcul du h-index : représentation graphique"
+label left "Nombre de citations"
+label bot "Papiers \s-2(classés par ordre décroissant de citations)\s+2"
+
+# values
+times at 1,18
+times at 2,10
+times at 3,8
+times at 4,7
+times at 5,7
+times at 6,3
+times at 7,2
+for i from 8 to 14 by 1 do {
+  times at i,1
+}
+times at 15,0
+.G2
+
+Le graphique précédent montre le calcul du
+.I h-index
+d'un chercheur.
+Dans cet exemple, le chercheur a publié 15 papiers, allant de 0 à 18 citations, présentés par ordre décroissant sur le graphique.
+Le premier papier a reçu 18 citations, le second 10, le troisième 8, et caetera.
+Le
+.I h-index
+est égal au nombre de papiers dont le nombre de citations est au-dessus de la courbe linéaire (x = y, soit \s-2n\u\s-3o\s+3\d papier = nb citations\s+2).
+Autrement dit, le
+.I h-index
+équivaut au nombre de papiers ayant un nombre de citations supérieur ou égal à leur numéro dans la liste des papiers (par exemple, le 4\u\s-4ème\s+4\d papier doit avoir au moins 4 citations).
+
+Cette métrique n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
+
+.ig
+frame ht 2.5 wid 2.8
+define expo { $1+$1*GROWTHFACTOR }
+value = 1
+draw LINEAR solid
+for i from 1 to 100 by 1 do {
+  next LINEAR at i, i
+  times at i, value
+  value = expo(value)
+}
+line from 0,650 to 3,650
+"    linear curve" ljust at 1,650
+"    exponential curve" ljust at 1,600
+times at 1,600
+label top "Exponential curves: growth over time (7%)" up -.2
+..
+
+.QUESTION "Un chercheur, un domaine"
+
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 .\" Zététique
