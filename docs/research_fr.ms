@@ -33,7 +33,7 @@ Par conséquent, les prises de décisions sont plus rationnelles et éclairées.
 Mieux comprendre la science mène également à des discussions plus fructueuses au quotidien.
 
 Ce document présente la science ainsi que le travail de recherche dans les grandes lignes.
-Nous aborderons également la rigueur nécessaire pour toute contribution sérieuse à la science.
+La rigueur nécessaire pour toute contribution sérieuse à la science sera abordée.
 Il n'est pas question, en seulement quelques pages, de faire du lecteur un chercheur aguerri (loin de là).
 En revanche, la compréhension de ce document permet de prendre du recul sur les informations obtenues dans les médias ainsi que d'aborder n'importe quel sujet de manière plus rationnelle.
 
@@ -129,6 +129,12 @@ Le nombre d'étudiants par classe n'est pas non plus mentionné.
 De plus, émettre un jugement sur un seul devoir est peut-être hâtif.
 Une valeur seule (comme une moyenne) est insuffisante pour émettre un jugement.
 
+.QUESTION "Une question peut être biaisée."
+Un biais ne vient pas uniquement d'une réponse à une question ou d'une étude, la question peut être
+.I chargée ,
+c'est-à-dire qui contient une présupposition qui n'est pas remise en question.
+Exemple : « depuis combien de temps avez-vous arrêté de battre votre femme ? ».
+
 .QUESTION "Détecter les biais."
 Un même biais peut être formulé de nombreuses manières, rendant sa détection parfois complexe.
 Un biais peut également être présent dans de nombreux contextes, comme le biais de confirmation.
@@ -136,7 +142,7 @@ De plus, des erreurs peuvent se glisser dans l'acquisition d'une donnée ou son 
 Il n'existe malheureusement aucune manière automatique de détecter toutes ces erreurs.
 Par conséquent, la vigilance reste nécessaire.
 
-Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants.
+Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants (complétés par de nombreux autres exemples dans l'annexe 1).
 La suite du document présente une manière, imparfaite mais suffisante, utilisée en science pour limiter ces erreurs dans le cadre de la recherche.
 .SECTION Science et méthode scientifique
 La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vérifications différentes pour comprendre le monde qui nous entoure.
@@ -486,6 +492,8 @@ c'est-à-dire un taux de visibilité pour les papiers publiés, qui se mesure pa
 \f[CW]\s-2\\$*\s+2\f[]
 ..
 
+.ds CITESEERX Citeseer\u\s-3x\s+3\d
+
 .QUESTION "La visibilité d'un journal."
 La visibilité d'un journal se calcule simplement de la manière suivante :
 .EQ
@@ -502,9 +510,9 @@ Google Scholar\*[*]
 Google Scholar \h'1'\(em\h'1'
 .WRITE_URL scholar.google.com
 .FOOTNOTE2
-et Citeseer\ux\d\*[*]
+et \*[CITESEERX]\*[*]
 .FOOTNOTE1
-Citeseer\ux\d \h'1'\(em\h'1'
+\*[CITESEERX] \h'1'\(em\h'1'
 .WRITE_URL citeseerx.ist.psu.edu
 .FOOTNOTE2
 sont d'autres bases de données bibliographiques, accessibles gratuitement, permettant de faire des recherches.
@@ -569,7 +577,7 @@ Thèses françaises \h'1'\(em\h'1'
 .WRITE_URL theses.fr
 .FOOTNOTE2
 sont également publiées et accessibles gratuitement.
-Enfin, les bases de données bibliographiques présentées précédemment (Scopus, Google Scholar et Citeseer\ux\d) sont d'une grande aide pour rechercher des articles en rapport avec un sujet, des mots clés ou par auteur.
+Enfin, les bases de données bibliographiques présentées précédemment (Scopus, Google Scholar et \*[CITESEERX]) sont d'une grande aide pour rechercher des articles en rapport avec un sujet, des mots clés ou par auteur.
 
 À noter que l'auteur conserve le droit de fournir ses documents, donc lui demander son œuvre (avec un simple mail) est tout à fait possible.
 
@@ -608,12 +616,22 @@ Autre difficulté, trouver la bonne représentation d'une donnée.
 Présenter correctement une donnée, rendre une information évidente, est une tâche parfois complexe.
 
 .QUESTION "Limites de la recherche"
+Les limites théoriques à la science forment un domaine de recherche en soi, nommé
+.I épistémologie .
+Bien que ce domaine ait son intérêt, il n'offre pas une représentation correcte de ce qu'est la science en pratique pour la quasi totalité des domaines de recherche et des chercheurs.
+Pour faire simple, une règle générale : la science se positionne sur ce qui peut être testé.
+Cette affirmation est simpliste mais valide dans la plupart des cas et donne un bon point de départ.
 
-Des anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
-De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
+En pratique, un chercheur est lié à un domaine scientifique, et se focalise sur une spécialité.
+Comme montré en section 3, un domaine de travail a déjà des méthodologies de recherche en place et utilisées par tout le monde (double-aveugle, hypothético-déductive, etc.), voire un mélange de plusieurs méthodes.
+Tout chercheur ne va pas défier les limites méthodologiques à chaque papier, c'est même extrêmement rare.
+
+Les ressources matérielles (argent, matériaux, outils…), les ressources humaines et le temps sont de vraies limites à la recherche.
+Même en ayant de solides connaissances théoriques, une équipe de recherche de 4 personnes sans financement ne peut imaginer coloniser Mars en un mois.
 
 .QUESTION "Le h-index, mesure de la productivité d'un chercheur."
-Au même titre que les journaux sont jugés sur leur visibilité, la portée des travaux d'un chercheur se mesure via son « h-index ».
+Au même titre que les journaux sont jugés sur leur visibilité, la portée des travaux d'un chercheur se mesure via une métrique nommée
+.I h-index " »." "« "
 
 .G1
 coord x 0,20 y 0,20
@@ -647,7 +665,27 @@ for i from 8 to 14 by 1 do {
 }
 times at 15,0
 .G2
+.nr legendps 2
+.de LEGEND1
+.QP
+.vs -\\n[legendps]p
+.ps -\\n[legendps]
+.br
+\\$*
+..
+.de LEGEND2
+.br
+.vs
+.ps +\\n[legendps]
+..
+.LEGEND1
+Schéma représentant le classement des papiers d'un chercheur, par ordre décroissant du nombre de citations.
+Son
+.I h-index
+est de 5, car c'est le nombre de papiers ayant un nombre de citations au-delà de la courbe linéaire (y = x).
+.LEGEND2
 
+.LP
 Le graphique précédent montre le calcul du
 .I h-index
 d'un chercheur.
@@ -661,25 +699,11 @@ Autrement dit, le
 équivaut au nombre de papiers ayant un nombre de citations supérieur ou égal à leur numéro dans la liste des papiers (par exemple, le 4\u\s-4ème\s+4\d papier doit avoir au moins 4 citations).
 
 Cette métrique n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
-
-.ig
-frame ht 2.5 wid 2.8
-define expo { $1+$1*GROWTHFACTOR }
-value = 1
-draw LINEAR solid
-for i from 1 to 100 by 1 do {
-  next LINEAR at i, i
-  times at i, value
-  value = expo(value)
-}
-line from 0,650 to 3,650
-"    linear curve" ljust at 1,650
-"    exponential curve" ljust at 1,600
-times at 1,600
-label top "Exponential curves: growth over time (7%)" up -.2
-..
+Le chercheur doit produire de bons papiers dans la durée.
+Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais les plus évidents.
 
 .QUESTION "Un chercheur, un domaine"
+Paradoxe de simpson.
 
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
@@ -819,13 +843,13 @@ La personne disant ne pas être convaincue qu'un dieu existe, peu importe le mot
 .I athéisme .
 
 .HORIZONTALLINE
+.TBD
 
 Dieu est absolu : sa réfutation doit l'être également.
 
 À part dans certains formalismes mathématiques (comme en logique propositionnelle, où il est possible de dire qu'une proposition est vraie ou fausse), sinon rien en science n'est absolu.
 Même les découvertes scientifiques faisant actuellement consensus ne sont pas considérées comme des vérités absolues (y compris la théorie de l'évolution).
 Toute hypothèse est considérée comme raisonnable si elle explique un phénomène (sans faire appel elle-même à un plus grand mystère) et s'il est possible, au moins en théorie, de l'expérimenter.
-.TBD
 Si l'hypothèse ne répond pas à ces critères elle est rejetée, car elle ne permet pas de créer de la connaissance, elle est vide de sens.
 
 Pourtant, quand bien même
@@ -864,6 +888,7 @@ de l'islam de se poser la question de quelle aile contenait la maladie et quelle
 
 .BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
 .BULLET généralisation abusive
+.BULLET double standard : juger deux situations identiques avec des critères différents.
 .BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
 .BULLET inversion de la charge de la preuve : c'est à celui qui affirme quelque chose de prouver que ce qu'il dit est vrai, pas l'inverse.
 Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que dieu n'existe pas ».
@@ -1045,7 +1070,7 @@ Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contex
 .ig
 _En quoi les différents biais sont des biais ?
 _Comment réfuter une affirmation ? Un contre-exemple suffit ?
-_D'autres méthodes de démonstration (quand j'étais en fac de math, on nous enseignait plein de trucs cools, démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
+_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
 
 monsieur anarcap :
 - ma démarche n'avait rien de scientifique
@@ -1058,4 +1083,8 @@ monsieur anarcap :
 - Qui croire dans la mesure où nous ne pouvons pas mener des expériences pertinentes nous-même ?
 - Dans quelles mesures pouvons-nous nous fier à nos propres expériences sensorielles ?
 (On ne va pas envoyer notre propre appareil photo dans l'espace pour confirmer que la terre est ronde, on est obligé de passer par un pair).
+
+À caser quelque-part :
+Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
+De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
 ..
