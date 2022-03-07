@@ -1,5 +1,6 @@
 .so macros.ms   \" First, let's import some macros.
 .mso fr.tmac
+.mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
 .AUTHOR Philippe Pittoli
 .ABSTRACT1
@@ -707,8 +708,58 @@ Paradoxe de simpson.
 
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
+
 .\" Zététique
 .SUBSECTION Repérer des manipulations
+
+L'apathie, le refus de se positionner sur le moindre sujet, ou encore la paralysie d'analyse ne sont pas les buts recherchés par ce document.
+
+.nr legendps 2
+.vs -\n[legendps]
+.ps -\n[legendps]
+.br
+.TS
+allbox tab(:);
+c | c
+lw(0.5i) | lew(2.8i).
+Propriété : Raison de se méfier
+T{
+confiance excessive
+T}:T{
+Toute personne sérieuse connait les limites de ses travaux.
+T}
+T{
+propos flous
+T}:T{
+Toute démonstration doit s'accompagner d'une présentation claire, expliquant le contexte, le cadre voire les limites du raisonnement.
+T}
+T{
+citation hors contexte
+T}:T{
+Ne pas indiquer de contexte à une citation peut être un signe de malhonnêteté.
+T}
+T{
+propos choquants, injurieux, moqueurs
+T}:T{
+Attention aux appels à l'émotion (tristesse, colère, sentiment de supériorité intellectuelle ou morale, etc.).
+Les émotions obscurcissent le jugement.
+T}
+T{
+débit
+T}:T{
+La pédagogie nécessite de s'assurer de la bonne compréhension du propos.
+Un débit de parole ou un montage (audio ou vidéo) trop rapides sont nuisibles à la compréhension.
+T}
+T{
+vantardise, orgueil
+T}:T{
+Au-delà d'une blague, les deux sont mauvais signes pour le sérieux d'une personne.
+T}
+.TE
+.br
+.vs +\n[legendps]
+.ps +\n[legendps]
+
 .QUESTION "L'arnaque de Dieu."
 La section 2 présente un petit florilège d'arguments fallacieux brandits par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
 Des
