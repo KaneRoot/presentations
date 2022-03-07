@@ -672,12 +672,13 @@ times at 15,0
 .vs -\\n[legendps]p
 .ps -\\n[legendps]
 .br
-\\$*
 ..
 .de LEGEND2
 .br
-.vs
+.vs +\\n[legendps]p
 .ps +\\n[legendps]
+.br
+.LP
 ..
 .LEGEND1
 Schéma représentant le classement des papiers d'un chercheur, par ordre décroissant du nombre de citations.
@@ -686,7 +687,6 @@ Son
 est de 5, car c'est le nombre de papiers ayant un nombre de citations au-delà de la courbe linéaire (y = x).
 .LEGEND2
 
-.LP
 Le graphique précédent montre le calcul du
 .I h-index
 d'un chercheur.
@@ -721,7 +721,7 @@ L'apathie, le refus de se positionner sur le moindre sujet, ou encore la paralys
 .TS
 allbox tab(:);
 c | c
-lw(0.5i) | lew(2.8i).
+lw(0.5i) | lew(2.7i).
 Propriété : Raison de se méfier
 T{
 confiance excessive
@@ -731,7 +731,7 @@ T}
 T{
 propos flous
 T}:T{
-Toute démonstration doit s'accompagner d'une présentation claire, expliquant le contexte, le cadre voire les limites du raisonnement.
+Tout propos doit s'accompagner d'un contexte, d'affirmations expliquées clairement point par point, du cadre voire des limites de ce qui est proposé.
 T}
 T{
 citation hors contexte
@@ -743,6 +743,17 @@ propos choquants, injurieux, moqueurs
 T}:T{
 Attention aux appels à l'émotion (tristesse, colère, sentiment de supériorité intellectuelle ou morale, etc.).
 Les émotions obscurcissent le jugement.
+T}
+T{
+charabiat, baratin
+T}:T{
+Attention à la rationalisation.
+L'être humain est faillible et trouve du sens même lorsque le propos en est dépourvu.
+T}
+T{
+diversion
+T}:T{
+Au-delà d'une mise en contexte d'un propos, éviter le sujet principal est un signe de malhonnêteté.
 T}
 T{
 débit
@@ -868,6 +879,43 @@ Fait intéressant : cet argument est donné y compris par les personnes
 sur le sujet.
 Si un argument solide en faveur d'une divinité existait, est-ce que l'argument ontologique, qui est digne d'une cours d'école, serait encore d'actualité ?
 Il est raisonnable d'en douter.
+
+.HORIZONTALLINE
+
+L'argument suivant est nommé
+.I "argument cosmologique"
+ou
+.I "Kalam cosmological argument" ) (
+tel que donné par les apologistes (sous une forme ou une autre).
+
+.gcolor citation
+.EENUM Tout ce qui commence à exister à une cause.
+.EENUM L'univers a commencé à exister.
+.EENUM Donc l'univers a une cause.
+.EENDENUM
+.gcolor black
+
+Cet argument a plusieurs problèmes.
+En premier, le plus évident,
+.I "commencer à exister" " »" "« "
+n'a aucun fondement scientifique ; personne n'a jamais observé de la matière qui
+.I "commence à exister" .
+De plus, nous ne savons pas si l'univers a réellement un début, il pourrait être éternel, cette hypothèse n'a jamais été écartée.
+Notre représentation du temps étant elle-même un effet de bord de certaines forces apparues lors du big bang, il n'est pas sûr que le temps, tel que nous le concevons, existait au-delà du mur de Planck.
+
+Les deux prémices sont donc contestées ; elles affirment des choses qui ne sont pas démontrées.
+Pire, même en admettant ces deux prémices, c'est-à-dire en supposant que l'apparition de matière soit possible et que l'univers aurait un commencement, l'affirmation que l'univers a une cause resterait hasardeuse.
+Une propriété physique inconnue (car hors de notre portée d'étude) pourrait toujours être à l'origine de notre univers.
+
+Enfin, en ignorant
+.B "tous"
+les problèmes de cet argument, il ne démontrerait même pas l'existence d'un dieu mais l'existence d'une
+.I cause ,
+c'est-à-dire un terme vague qui n'indique rien sur la nature de cette cause.
+C'est pour cela que cet argument est complété par d'autres affirmations (cette cause serait un dieu personnel, etc.) qui ne sont qu'un appel à l'igorance
+.I "je ne sais pas, donc dieu" ). (
+
+En clair : cet argument est un charabiat teinté d'appel à l'ignorance.
 
 .HORIZONTALLINE
 
