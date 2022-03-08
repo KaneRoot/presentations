@@ -703,73 +703,29 @@ Cette métrique n'encense pas les chercheurs ayant énormément de publications 
 Le chercheur doit produire de bons papiers dans la durée.
 Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais les plus évidents.
 
-.QUESTION "Un chercheur, un domaine"
-Paradoxe de simpson.
+.QUESTION "Un chercheur, un domaine."
+Comme dit en section 3, un chercheur a un domaine, par exemple l'informatique, et une spécialité, comme les protocoles de communication sécurisés sur des réseaux contraints (oui, une spécialité est souvent
+.UL très
+spécifique).
+Chaque domaine a un jargon bien distinct des autres, et c'est d'autant plus vrai au sein d'une spécialité.
+De plus, chaque spécialité a un corpus scientifique bien précis, très différent des autres : les chercheurs ne sont pas interchangeables.
+C'est d'autant plus vrai quand les domaines sont différents : un physicien n'est pas
+.UL "du tout"
+en mesure de se prononcer sur un problème de médecine.
+
+Bien entendu, les chercheurs peuvent partager certains outils.
+Ainsi, une bonne partie des chercheurs sait manipuler des statistiques\*[*], faire des graphes, faire preuve de pédagogie (pour décrire un contexte, un problème et sa solution, une expérimentation), la gestion d'une bibliographie, avoir un certain esprit de synthèse, etc.
+.FOOTNOTE1
+Les chercheurs savent manipuler des statistiques
+.UL "dans leur spécialité" ,
+voir le paradoxe de Simpson.
+.FOOTNOTE2
 
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 
 .\" Zététique
 .SUBSECTION Repérer des manipulations
-
-L'apathie, le refus de se positionner sur le moindre sujet, ou encore la paralysie d'analyse ne sont pas les buts recherchés par ce document.
-
-.nr legendps 2
-.vs -\n[legendps]
-.ps -\n[legendps]
-.br
-.TS
-allbox tab(:);
-c | c
-lw(0.5i) | lew(2.7i).
-Propriété : Raison de se méfier
-T{
-confiance excessive
-T}:T{
-Toute personne sérieuse connait les limites de ses travaux.
-T}
-T{
-propos flous
-T}:T{
-Tout propos doit s'accompagner d'un contexte, d'affirmations expliquées clairement point par point, du cadre voire des limites de ce qui est proposé.
-T}
-T{
-citation hors contexte
-T}:T{
-Ne pas indiquer de contexte à une citation peut être un signe de malhonnêteté.
-T}
-T{
-propos choquants, injurieux, moqueurs
-T}:T{
-Attention aux appels à l'émotion (tristesse, colère, sentiment de supériorité intellectuelle ou morale, etc.).
-Les émotions obscurcissent le jugement.
-T}
-T{
-charabiat, baratin
-T}:T{
-Attention à la rationalisation.
-L'être humain est faillible et trouve du sens même lorsque le propos en est dépourvu.
-T}
-T{
-diversion
-T}:T{
-Au-delà d'une mise en contexte d'un propos, éviter le sujet principal est un signe de malhonnêteté.
-T}
-T{
-débit
-T}:T{
-La pédagogie nécessite de s'assurer de la bonne compréhension du propos.
-Un débit de parole ou un montage (audio ou vidéo) trop rapides sont nuisibles à la compréhension.
-T}
-T{
-vantardise, orgueil
-T}:T{
-Au-delà d'une blague, les deux sont mauvais signes pour le sérieux d'une personne.
-T}
-.TE
-.br
-.vs +\n[legendps]
-.ps +\n[legendps]
 
 .QUESTION "L'arnaque de Dieu."
 La section 2 présente un petit florilège d'arguments fallacieux brandits par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
@@ -807,16 +763,18 @@ Des automobilistes se moquent de personnes construisant un bâteau car leur véh
 .SECTION Conclusion
 Ce document a présenté des biais présents dans la vie de tous les jours et dans de nombreux domaines.
 
-La science s'est adaptée à ces erreurs de raisonnement.
-Les multiples méthodes sont adaptées aux différentes problématiques ; elles prennent en compte les biais spécifiques à chaque domaine.
-Le format utilisé pour matérialiser la réflexion des chercheurs est également d'une grande aide.
-Par exemple, la justification systématique des affirmations enlève des ambiguités, ce qui est utile comme outil de raisonnement pour les auteurs eux-mêmes.
+La science s'est adaptée à ces erreurs de raisonnement, et les multiples méthodes prennent en compte les biais spécifiques à chaque domaine.
+Les articles scientifiques matérialisent la réflexion des chercheurs en forçant la justification systématique des affirmations.
+Ceci lève ainsi les ambiguités et formant un outil de raisonnement pour les auteurs eux-mêmes.
 La relecture par les pairs (experts du domaine), antérieure à la publication, permet d'ajouter des vérifications supplémentaires.
 Une faute d'inattention est vite arrivée, mais trois ou quatre chercheurs qui passent à côté d'une erreur est plus rare.
 La publication est parfois suivie d'autres analyses, des réplications par d'autres laboratoires de la même étude.
 Répliquer une analyse contribue à la crédibilité des résultats obtenus (ou y apporte du discrédit si la réplication échoue).
 La synthèse des différentes études (sur le même sujet) est produite dans des meta-analyses, qui offrent un recul sur les résultats individuels de chaque laboratoire.
 Après toutes ces étapes, chacune permettant de rejeter la validité des hypothèses (même bien au-delà de la publication du papier originel), le résultat devient un consensus scientifique, c'est-à-dire la position partagée par les chercheurs du domaine.
+
+Bien entendu, l'apathie, le refus de se positionner sur le moindre sujet, ou encore la paralysie d'analyse ne sont pas les buts recherchés par ce document.
+Dépassionner les discussions est nécessaire pour en avoir de meilleures.
 
 Le document a présenté également le cadre de travail des chercheurs, partageant par moments des informations triviales pour restituer la dimension humaine de la recherche.
 .\" Tout cela forme la manière utilisée en science pour acquérir des connaissances.
@@ -827,6 +785,7 @@ Le document a présenté également le cadre de travail des chercheurs, partagea
 $LIST$
 .]
 
+.bp
 .SECTION_NO_NUMBER Annexe 1 : quelques biais et manipulations de plus
 .
 .de INNERBULLET
@@ -915,7 +874,7 @@ c'est-à-dire un terme vague qui n'indique rien sur la nature de cette cause.
 C'est pour cela que cet argument est complété par d'autres affirmations (cette cause serait un dieu personnel, etc.) qui ne sont qu'un appel à l'igorance
 .I "je ne sais pas, donc dieu" ). (
 
-En clair : cet argument est un charabiat teinté d'appel à l'ignorance.
+En clair : cet argument est un charabia teinté d'appel à l'ignorance.
 
 .HORIZONTALLINE
 
@@ -987,12 +946,14 @@ de l'islam de se poser la question de quelle aile contenait la maladie et quelle
 
 .BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
 .BULLET généralisation abusive
-.BULLET double standard : juger deux situations identiques avec des critères différents.
+.BULLET double standard : juger deux situations identiques avec des critères différents ;
 .BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
 .BULLET inversion de la charge de la preuve : c'est à celui qui affirme quelque chose de prouver que ce qu'il dit est vrai, pas l'inverse.
-Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que dieu n'existe pas ».
+Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que dieu n'existe pas » ;
+.BULLET mille-feuille argumentatif : méthode consistant à donner de multiples arguments sans se soucier de leur qualité ni des réponses, dans l'objectif de saturer la conversation.
 .ENDBULLET
 
+.bp
 .SECTION_NO_NUMBER Annexe 2 : écriture d'un papier
 Cette annexe présente quelques exemples pour comprendre la logique et le type d'informations nécessaires dans un papier.
 Ces exemples (volontairement très concis pour rester digeste) sont des tentatives, très imparfaites, d'écriture d'un papier.
@@ -1187,3 +1148,68 @@ monsieur anarcap :
 Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
 De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
 ..
+
+.bp
+.SECTION_NO_NUMBER Annexe 3 : résumé des manipulations
+.TBD
+Cette annexe liste des techniques de manipulation qui peuvent être employées.
+De même, des propriétés d'un discours (ou d'une personnalité) qui peuvent être suspicieuses.
+
+.nr legendps 2
+.vs -\n[legendps]
+.ps -\n[legendps]
+.br
+.TS
+allbox tab(:);
+c | c
+lw(0.5i) | lew(2.7i).
+Propriété : Raison de se méfier
+T{
+confiance excessive
+T}:T{
+Toute personne sérieuse connait les limites de ses travaux.
+T}
+T{
+propos flous
+T}:T{
+Tout propos doit s'accompagner d'un contexte, d'affirmations expliquées clairement point par point, du cadre voire des limites de ce qui est proposé.
+T}
+T{
+citation hors contexte
+T}:T{
+Ne pas indiquer de contexte à une citation peut être un signe de malhonnêteté.
+T}
+T{
+propos choquants, injurieux, moqueurs
+T}:T{
+Attention aux appels à l'émotion (tristesse, colère, sentiment de supériorité intellectuelle ou morale, etc.).
+Les émotions obscurcissent le jugement.
+T}
+T{
+charabia, baratin
+T}:T{
+Attention à la rationalisation.
+L'être humain est faillible et trouve du sens même lorsque le propos en est dépourvu.
+Résumez le propos pour voir ce qui en ressort
+.UL vraiment .
+T}
+T{
+diversion
+T}:T{
+Au-delà d'une mise en contexte d'un propos, éviter le sujet principal est un signe de malhonnêteté.
+T}
+T{
+débit
+T}:T{
+La pédagogie nécessite de s'assurer de la bonne compréhension du propos.
+Un débit de parole ou un montage (audio ou vidéo) trop rapides sont nuisibles à la compréhension.
+T}
+T{
+vantardise, orgueil
+T}:T{
+Au-delà d'une blague, les deux sont mauvais signes pour le sérieux d'une personne.
+T}
+.TE
+.br
+.vs +\n[legendps]
+.ps +\n[legendps]
