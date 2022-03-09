@@ -665,8 +665,30 @@ voir le paradoxe de Simpson.
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 
+.QUESTION "Quelques règles de base."
+Avant de se poser la question de comment utiliser au mieux la science au quotidien, voici quelques points de départ importants qu'il faut bien comprendre.
+
+.ENUM La vérité compte plus que les sentiments.
+.ENUM La vérité est souvent grise.
+.ENUM Personne n'est infaillible.
+.ENDENUM
+
+
 .QUESTION "Se renseigner sur un sujet."
-L'annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] donne des conseils pour se renseigner sur un sujet.
+La manière de s'informer dépend de l'objectif recherché.
+Se poser une question ponctuelle sur un sujet n'implique pas le même investissement que vouloir devenir un expert dans un domaine.
+L'annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] émet quelques suggestions (sans prétention aucune) sur comment se renseigner.
+Quelques cas particuliers sont adressés, par exemple l'apprentissage de modèles politiques, ou en cas de forte contrainte de temps.
+
+D'une manière générale, comprendre un sujet demande du temps et un investissement personnel.
+Penser répondre à n'importe quelle question en quelques minutes est une
+.B "illusion" ,
+et peut même s'avérer dangereux si des décisions importantes s'en suivent.
+
+.EXPLANATION1
+La connaissance n'a pas de raccourcis, mais des pièges.
+.EXPLANATION2
+
 .ig
 _Comment réfuter une affirmation ? Un contre-exemple suffit ?
 _D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
@@ -674,8 +696,32 @@ _D'autres méthodes de démonstration (démonstration par l'absurde, transposer 
 
 .\" Zététique
 .SUBSECTION Repérer des manipulations
-Une manipulation 
+Cette sous-section a pour objectif de lister des éléments qui peuvent mettre en doute la véracité ou le bien-fondé d'un propos.
+Cela peut se retrouver dans des discours ou des traits de personnalité.
+
+Il faut se méfier de soi-même.
+
 Diverses manipulations peuvent être 
+
+.QUESTION "Effet gourou."
+Une personne ayant confiance en elle, parlant avec aplomb, nous est agréable.
+De même, si cette personne raconte quelques anecdotes intéressantes pour accompagner un discours, cela peut nous paraître sympathique.
+Et c'est parce que c'est appréciable qu'il faut se méfier.
+Un personnage qui apparaît sympathique peut raconter du baratin, son public baisse sa garde.
+Un gourou et pas nécessairement de
+.I tout
+le public, peut déjà être très lucratif\*[*].
+.FOOTNOTE1
+Les jeux
+.I freemium
+par exemple attirent qu'une petite fraction des joueurs à payer, mais cette fraction dépense beaucoup.
+Parfois plus d'une dizaine de milliers d'euros... pour un jeu gratuit.
+.FOOTNOTE2
+
+.CITATION1
+Qui aime bien châtie bien.
+.CITATION2
+
 
 .BULLET effet gourou (forte confiance en soi, aplomb pour parler de tout un tas de sujets différents, raconter sa vie pour faire diversion et s'attirer la sympathie, etc.)
 .BULLET déformations des propos
