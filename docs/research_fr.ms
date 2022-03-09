@@ -1,4 +1,9 @@
 .so macros.ms   \" First, let's import some macros.
+.nr N_ANNEXE_BIAIS 1
+.nr N_ANNEXE_ECRITURE_PAPIER 2
+.nr N_ANNEXE_MANIPULATIONS 3
+.nr N_ANNEXE_HINDEX 4
+.nr N_ANNEXE_CONSEILS_APPRENTISSAGE 5
 .mso fr.tmac
 .mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
@@ -143,7 +148,7 @@ De plus, des erreurs peuvent se glisser dans l'acquisition d'une donnée ou son 
 Il n'existe malheureusement aucune manière automatique de détecter toutes ces erreurs.
 Par conséquent, la vigilance reste nécessaire.
 
-Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants (complétés par de nombreux autres exemples dans l'annexe 1).
+Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants (complétés par de nombreux autres exemples dans l'annexe \n[N_ANNEXE_BIAIS]).
 La suite du document présente une manière, imparfaite mais suffisante, utilisée en science pour limiter ces erreurs dans le cadre de la recherche.
 .SECTION Science et méthode scientifique
 La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vérifications différentes pour comprendre le monde qui nous entoure.
@@ -434,7 +439,7 @@ Puis, une expérimentation doit être conduite, en décrivant dans le détail ce
 Ensuite, les résultats et leur interprétation doivent être présentés.
 Enfin, une conclusion doit être apportée, en rappelant la problématique, la solution envisagée et le résultat.
 La conclusion doit prendre un peu de hauteur sur le sujet, un papier n'est pas un simple rapport technique.
-L'annexe 2 présente des exemples (fortement abbrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
+L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] présente des exemples (fortement abbrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
 
 .QUESTION "Un papier, une idée."
 Chaque papier doit présenter une seule idée\*[*].
@@ -467,7 +472,7 @@ Ces derniers n'apportent pas une contribution très intéressante d'un point de 
 
 Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
 La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et à donner confiance au fond.
-L'annexe 2 est un complément à cette section, montrant un papier en cours d'écriture mettant en œuvre la plupart des règles dictées précédemment.
+L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] un complément à cette section, montrant un papier en cours d'écriture mettant en œuvre la plupart des règles dictées précédemment.
 Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
 .SECTION Publications scientifiques
 Chaque papier est publié dans un journal à comité de lecture
@@ -633,73 +638,11 @@ Même en ayant de solides connaissances théoriques, une équipe de recherche de
 .QUESTION "Le h-index, mesure de la productivité d'un chercheur."
 Au même titre que les journaux sont jugés sur leur visibilité, la portée des travaux d'un chercheur se mesure via une métrique nommée
 .I h-index " »." "« "
+Cette métrique est expliquée graphiquement avec un exemple en annexe \n[N_ANNEXE_HINDEX].
 
-.G1
-coord x 0,20 y 0,20
-grid bot  dotted from 0 to 20 by 5
-grid left dotted from 0 to 20 by 5
-frame ht 2.0 wid 2.2
-draw LINEAR dashed
-for i from 0 to 20 by 1 do {
-  next LINEAR at i, i
-}
-
-v=5
-line from 0,v to v,v
-line from v,0 to v,v
-#"    linear curve" ljust at 1,650
-
-label top "Calcul du h-index : représentation graphique"
-label left "Nombre de citations"
-label bot "Papiers \s-2(classés par ordre décroissant de citations)\s+2"
-
-# values
-times at 1,18
-times at 2,10
-times at 3,8
-times at 4,7
-times at 5,7
-times at 6,3
-times at 7,2
-for i from 8 to 14 by 1 do {
-  times at i,1
-}
-times at 15,0
-.G2
-.nr legendps 2
-.de LEGEND1
-.QP
-.vs -\\n[legendps]p
-.ps -\\n[legendps]
-.br
-..
-.de LEGEND2
-.br
-.vs +\\n[legendps]p
-.ps +\\n[legendps]
-.br
-.LP
-..
-.LEGEND1
-Schéma représentant le classement des papiers d'un chercheur, par ordre décroissant du nombre de citations.
-Son
-.I h-index
-est de 5, car c'est le nombre de papiers ayant un nombre de citations au-delà de la courbe linéaire (y = x).
-.LEGEND2
-
-Le graphique précédent montre le calcul du
-.I h-index
-d'un chercheur.
-Dans cet exemple, le chercheur a publié 15 papiers, allant de 0 à 18 citations, présentés par ordre décroissant sur le graphique.
-Le premier papier a reçu 18 citations, le second 10, le troisième 8, et caetera.
 Le
 .I h-index
-est égal au nombre de papiers dont le nombre de citations est au-dessus de la courbe linéaire (x = y, soit \s-2n\u\s-3o\s+3\d papier = nb citations\s+2).
-Autrement dit, le
-.I h-index
-équivaut au nombre de papiers ayant un nombre de citations supérieur ou égal à leur numéro dans la liste des papiers (par exemple, le 4\u\s-4ème\s+4\d papier doit avoir au moins 4 citations).
-
-Cette métrique n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
+n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
 Le chercheur doit produire de bons papiers dans la durée.
 Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais les plus évidents.
 
@@ -707,25 +650,40 @@ Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais 
 Comme dit en section 3, un chercheur a un domaine, par exemple l'informatique, et une spécialité, comme les protocoles de communication sécurisés sur des réseaux contraints (oui, une spécialité est souvent
 .UL très
 spécifique).
-Chaque domaine a un jargon bien distinct des autres, et c'est d'autant plus vrai au sein d'une spécialité.
-De plus, chaque spécialité a un corpus scientifique bien précis, très différent des autres : les chercheurs ne sont pas interchangeables.
-C'est d'autant plus vrai quand les domaines sont différents : un physicien n'est pas
+Chaque domaine a son jargon mais surtout des compétences bien distinctes des autres, un physicien n'est pas
 .UL "du tout"
 en mesure de se prononcer sur un problème de médecine.
+C'est également le cas au sein des spécialités, chacune a un corpus scientifique bien précis, très différent des autres : les chercheurs ne sont pas interchangeables.
 
 Bien entendu, les chercheurs peuvent partager certains outils.
-Ainsi, une bonne partie des chercheurs sait manipuler des statistiques\*[*], faire des graphes, faire preuve de pédagogie (pour décrire un contexte, un problème et sa solution, une expérimentation), la gestion d'une bibliographie, avoir un certain esprit de synthèse, etc.
+Ainsi, une bonne partie des chercheurs sait manipuler des statistiques\*[*], faire des graphes, faire preuve de pédagogie (pour décrire un contexte, un problème et sa solution, une expérimentation), gérer une bibliographie, avoir un certain esprit de synthèse, etc.
 .FOOTNOTE1
 Les chercheurs savent manipuler des statistiques
 .UL "dans leur spécialité" ,
 voir le paradoxe de Simpson.
 .FOOTNOTE2
-
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 
+.QUESTION "Se renseigner sur un sujet."
+L'annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] donne des conseils pour se renseigner sur un sujet.
+.ig
+_Comment réfuter une affirmation ? Un contre-exemple suffit ?
+_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
+..
+
 .\" Zététique
 .SUBSECTION Repérer des manipulations
+Une manipulation 
+Diverses manipulations peuvent être 
+
+.BULLET effet gourou (forte confiance en soi, aplomb pour parler de tout un tas de sujets différents, raconter sa vie pour faire diversion et s'attirer la sympathie, etc.)
+.BULLET déformations des propos
+.BULLET diversion (éviter le sujet via de longs discours hors sujet par exemple, débit de parole ou montage rapide)
+.BULLET informations ou citations hors contexte
+.BULLET tromperies
+.ENDBULLET
+
 
 .QUESTION "L'arnaque de Dieu."
 La section 2 présente un petit florilège d'arguments fallacieux brandits par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
@@ -786,7 +744,8 @@ $LIST$
 .]
 
 .bp
-.SECTION_NO_NUMBER Annexe 1 : quelques biais et manipulations de plus
+.SECTION_NO_NUMBER Annexe 1 : quelques biais de plus
+.nr CURRENT_SUBSECTION 0 +1
 .
 .de INNERBULLET
 .in +1
@@ -809,9 +768,9 @@ $LIST$
 .de EENDENUM
 .nr LIST_NUMBER 0
 ..
-De nombreux biais ont été présentés en section 2, il n'était pas nécessaire d'en présenter davantage pour saisir l'idée générale.
-Voici quelques biais possibles de plus, en prenant le thème de la justification de dieu(x).
-.SUBSECTION_NO_NUMBER 1.1 Ergotage linguistique
+De nombreux biais ont été présentés en section 2 permettant de saisir l'idée générale, il n'était pas nécessaire d'en présenter davantage.
+Cette annexe présente quelques biais de plus, dont certains qui sont répandus dans divers débats.
+.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] Ergotage linguistique
 Voici l'argument
 .I ontologique ,
 tel que donné par les apologistes (sous une forme ou une autre).
@@ -824,7 +783,7 @@ tel que donné par les apologistes (sous une forme ou une autre).
 .gcolor black
 
 Avec cet argument, peu importe la signification du mot « Dieu », il existe forcément puisque le concept est défini comme ayant la propriété d'exister.
-Pour montrer l'escroquerie complète que représente cet argument, les phrases précédentes pourraient être retranscrites de cette manière :
+Pour montrer la pauvreté de cet argument, les phrases précédentes pourraient être retranscrites de cette manière :
 
 .gcolor citation
 .EENUM Dieu est un être parfait (je le dis donc c'est vrai).
@@ -836,16 +795,17 @@ Pour montrer l'escroquerie complète que représente cet argument, les phrases p
 Fait intéressant : cet argument est donné y compris par les personnes
 .UL "les plus éduquées"
 sur le sujet.
-Si un argument solide en faveur d'une divinité existait, est-ce que l'argument ontologique, qui est digne d'une cours d'école, serait encore d'actualité ?
+Si un argument solide en faveur d'une divinité existait, est-ce que l'argument ontologique, qui est
+.UL "digne d'une cours d'école" ,
+serait encore d'actualité ?
 Il est raisonnable d'en douter.
 
 .HORIZONTALLINE
 
 L'argument suivant est nommé
 .I "argument cosmologique"
-ou
 .I "Kalam cosmological argument" ) (
-tel que donné par les apologistes (sous une forme ou une autre).
+et se présente comme suit, tel que donné par les apologistes (sous une forme ou une autre).
 
 .gcolor citation
 .EENUM Tout ce qui commence à exister à une cause.
@@ -914,7 +874,7 @@ Pourtant, quand bien même
 .B "strictement toutes"
 les tentatives de prouver l'existence d'un dieu ont échoué, les croyants ne veulent pas admettre que cette hypothèse n'est pas valide, et vont même jusqu'à demander de prouver l'inexistance de dieu de manière absolue.
 
-.SUBSECTION_NO_NUMBER 1.2 N'importe namaths
+.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] N'importe namaths
 .TBD
 Les mathématiques et la science en général ont été utilisés à de nombreuses reprises dans des arguments douteux.
 
@@ -922,10 +882,10 @@ Les mathématiques et la science en général ont été utilisés à de nombreus
 .BULLET argument de contingence
 .ENDBULLET
 
-.SUBSECTION_NO_NUMBER 1.3 Les erreurs d'attribution
+.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] Les erreurs d'attribution
 .TBD
 
-.SUBSECTION_NO_NUMBER 1.4 Concordisme
+.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] Concordisme
 Le concordisme est le fait de réinterpréter les textes religieux à la lumière de nos connaissances actuelles.
 Prétendre que ce qui est découvert par la science était déjà présent dans des textes bibliques est un jeu auquel de nombreux croyants s'adonnent.
 La suite donne quelques exemples.
@@ -941,7 +901,7 @@ Quand bien même la citation dit bien que la maladie et son remède sont dans le
 .I savants " »" "« "
 de l'islam de se poser la question de quelle aile contenait la maladie et quelle aile contenait le remède (prouvant à quel point la citation n'a pas aidé du tout à comprendre quoi que ce soit au fonctionnement des maladies), le texte est considéré comme un miracle.
 
-.SUBSECTION_NO_NUMBER 1.5 Autre biais en vrac
+.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] biais en vrac
 .TBD
 
 .BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
@@ -1127,27 +1087,6 @@ Mieux : les problèmes adressés précédemment ont été répondu.
 Il est fait mention de la portée de l'étude (valable pour la majorité des propriétaires de chiens), de même que l'apport à la science que cela représente (les propriétaires peuvent désormais manger tranquillement, contrairement aux autres solutions).
 Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contexte plus général, mieux comprendre son utilité réelle.
 .
-.ig
-_En quoi les différents biais sont des biais ?
-_Comment réfuter une affirmation ? Un contre-exemple suffit ?
-_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
-
-monsieur anarcap :
-- ma démarche n'avait rien de scientifique
-- une observation des différents avis politiques, de leur justification, de leurs implémentations, et de la confusion possibles entre des différents camps qui peuvent paraître amis alors qu'ils sont ennemis.
-
-- légitimité de la science (recherche de réalité objective) à contester les positions des individus qui relèvent purement du subjectif
-- considères tu que la science à son mot à dire dans les choix personnels des individus ? La politique ? La morale ? Mais pour le coup, je pense qu'on pourrait en écrire un livre.
-
-- Ça serait cool aussi développer l'idée de la fiabilité des sources, où piocher de l'information et des papiers scientifiques ?
-- Qui croire dans la mesure où nous ne pouvons pas mener des expériences pertinentes nous-même ?
-- Dans quelles mesures pouvons-nous nous fier à nos propres expériences sensorielles ?
-(On ne va pas envoyer notre propre appareil photo dans l'espace pour confirmer que la terre est ronde, on est obligé de passer par un pair).
-
-À caser quelque-part :
-Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
-De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
-..
 
 .bp
 .SECTION_NO_NUMBER Annexe 3 : résumé des manipulations
@@ -1200,6 +1139,8 @@ Au-delà d'une mise en contexte d'un propos, éviter le sujet principal est un s
 T}
 T{
 débit
+.br
+important
 T}:T{
 La pédagogie nécessite de s'assurer de la bonne compréhension du propos.
 Un débit de parole ou un montage (audio ou vidéo) trop rapides sont nuisibles à la compréhension.
@@ -1213,3 +1154,168 @@ T}
 .br
 .vs +\n[legendps]
 .ps +\n[legendps]
+
+.bp
+.SECTION_NO_NUMBER Annexe 4 : calcul du h-index
+Cette annexe montre comment calculer graphiquement le
+.I h-index
+d'un chercheur.
+
+.de IEME
+\\$1\u\s-4\\$2\s+4\d
+..
+Pour voir le
+.I h-index
+d'un chercheur graphiquement, ses papiers sont listés par ordre décroissant de leur nombre de citations.
+Le
+.I h-index
+est égal au nombre de papiers dont le nombre de citations est au-dessus de la courbe linéaire (x = y, soit \s-2n\u\s-3o\s+3\d papier = nb citations\s+2).
+Autrement dit, le
+.I h-index
+équivaut au nombre de papiers ayant un nombre de citations supérieur ou égal à leur numéro dans la liste des papiers.
+La visualisation est rapide : le
+.IEME 1 er
+papier doit avoir au moins une citation, ce qui vaut un
+.I h-index
+de 1.
+Si c'est le cas on regarde le
+.IEME 2 ème
+papier, s'il a au moins 2 citations, alors le
+.I h-index
+est de deux, etc.
+
+.G1
+coord x 0,20 y 0,20
+grid bot  dotted from 0 to 20 by 5
+grid left dotted from 0 to 20 by 5
+frame ht 2.0 wid 2.2
+draw LINEAR dashed
+for i from 0 to 20 by 1 do {
+  next LINEAR at i, i
+}
+
+"n\u\s-4o\s+4\dpapier = nb citations" rjust size -2 at 17,18
+
+v=5
+line from 0,v to v,v
+line from v,0 to v,v
+#"    linear curve" ljust at 1,650
+
+label top "Calcul du h-index : représentation graphique"
+label left "Nombre de citations"
+label bot "Papiers \s-2(classés par ordre décroissant de citations)\s+2"
+
+# values
+times at 1,18
+times at 2,10
+times at 3,8
+times at 4,7
+times at 5,7
+times at 6,3
+times at 7,2
+for i from 8 to 14 by 1 do {
+  times at i,1
+}
+times at 15,0
+.G2
+.nr legendps 2
+.de LEGEND1
+.QP
+.vs -\\n[legendps]p
+.ps -\\n[legendps]
+.br
+..
+.de LEGEND2
+.br
+.vs +\\n[legendps]p
+.ps +\\n[legendps]
+.br
+.LP
+..
+.LEGEND1
+Schéma représentant le classement des papiers d'un chercheur, par ordre décroissant du nombre de citations.
+.LEGEND2
+
+Le graphique précédent montre un calcul de
+.I h-index .
+Dans cet exemple, le chercheur a publié 15 papiers, allant de 0 à 18 citations, présentés par ordre décroissant sur le graphique.
+Le premier papier a reçu 18 citations, le second 10, le troisième 8, et caetera.
+Les 5 premiers papiers ont un nombre de citations supérieur ou égal à leur position dans la liste, mais le
+.IEME 6 ème
+papier n'a été cité que 3 fois.
+Le
+.I h-index
+du chercheur est donc de 5, car c'est le nombre de papiers ayant un nombre de citations sur ou au-delà de la courbe linéaire (y = x).
+
+L'avantage de cette métrique est de mesurer la productivité d'un chercheur : il doit produire du contenu de bonne qualité dans la durée.
+Écrire des dizaines d'articles inutiles ou se reposer sur un seul bon article ne mène pas à une bonne note.
+
+.ig
+_Comment réfuter une affirmation ? Un contre-exemple suffit ?
+_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
+
+monsieur anarcap :
+- ma démarche n'avait rien de scientifique
+- une observation des différents avis politiques, de leur justification, de leurs implémentations, et de la confusion possibles entre des différents camps qui peuvent paraître amis alors qu'ils sont ennemis.
+
+- légitimité de la science (recherche de réalité objective) à contester les positions des individus qui relèvent purement du subjectif
+- considères tu que la science à son mot à dire dans les choix personnels des individus ? La politique ? La morale ? Mais pour le coup, je pense qu'on pourrait en écrire un livre.
+
+- Ça serait cool aussi développer l'idée de la fiabilité des sources, où piocher de l'information et des papiers scientifiques ?
+- Qui croire dans la mesure où nous ne pouvons pas mener des expériences pertinentes nous-même ?
+- Dans quelles mesures pouvons-nous nous fier à nos propres expériences sensorielles ?
+(On ne va pas envoyer notre propre appareil photo dans l'espace pour confirmer que la terre est ronde, on est obligé de passer par un pair).
+
+À caser quelque-part :
+Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
+De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
+..
+
+.bp
+.SUBSECTION_NO_NUMBER Annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] : se renseigner sur un sujet
+.nr CURRENT_SUBSECTION 0
+.TBD
+Se renseigner sur un sujet est une tâche parfois complexe, parfois impossible à cause de contraintes de temps.
+
+.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Pourquoi apprendre ?
+Quelle est la raison qui pousse à se renseigner sur un sujet ?
+Apprendre une compétence car le sujet nous intéresse ?
+Trier le vrai du faux dans les médias ?
+Se renseigner sur un potentiel complot ?
+Essayons de répondre rapidement à tout ça.
+
+Tout d'abord, si l'idée est de se renseigner sur un sujet de recherche très précis car des personnes accusent tous les chercheurs de faire partie d'un complot mondial, peu importe l'objectif annoncé, inutile d'aller plus loin.
+Les théories du complot impliquant autant de monde démontrent surtout la mécompréhension du fonctionnement de la recherche par les personnes qui les répandent.
+
+.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet « scientifique »
+Si c'est un sujet scientifique, c'est-à-dire sur l'explication d'un phénomène naturel par exemple, le plus simple est de lire des livres sur le sujet.
+La démarche la plus simple à suivre pour apprendre sereinement un sujet :
+.ENUM trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
+.br
+Généralement, trouver des livres en rapport avec un sujet est une tâche aisée.
+Parfois des livres font office de référence, mais en étant réellement débutant le mieux est d'en consulter plusieurs.
+Peu importe les faiblesses des approches, la multiplicité des sources permet de se faire une idée raisonnable du sujet.
+
+Ne pas hésiter à démarrer avec des livres grand public, fournissant peu d'explications mais faciles à lire.
+
+Wikipédia est une piste intéressante pour un débutant.
+Lire les quelques premiers paragraphes d'une page donne une idée superficielle du sujet, ce n'est jamais suffisant pour comprendre réellement de quoi il est question.
+En revanche, souvent une bibliographie accompagne la page.
+.ENUM faire des fiches pour retenir le plus importants ;
+.br
+Cela peut paraître comme une perte de temps, mais en réalité cela en fait gagner énormément.
+Les fiches sont d'autant plus utiles qu'elles permettent de ne pas avoir à revenir sur un livre déjà lu.
+Elles permettent également de structurer la pensée, elles sont encore plus utiles sur des sujets non technique.
+.ENUM lire des livres plus avancés.
+.br
+Une fois que la base est acquise et
+.B "seulement à ce moment là"
+il est pertinent de lire des livres de plus haut niveau.
+Même au niveau intermédiaire ou avancé, revenir sur des sources plus accessibles peut être pertinent pour se remémorer la base.
+La pédagogie passe par la répétition.
+.ENDENUM
+
+.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet politique
+.TBD
+La politique implique des points de vue, donc il faut a minima avoir une base de compréhension des différentes approches politiques.
+
