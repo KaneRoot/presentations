@@ -1303,11 +1303,12 @@ L'avantage de cette métrique est de mesurer la productivité d'un chercheur : 
 Se renseigner sur un sujet est une tâche parfois complexe, parfois même impossible à cause de contraintes de temps.
 Cette annexe présente quelques pistes pour s'informer au mieux.
 
-.QUESTION "Quel objectif ?"
+.QUESTION "Quel objectif, quel investissement ?"
 Quelle est la raison qui pousse à se renseigner sur un sujet ?
 Apprendre une compétence car le sujet nous intéresse ?
 Trier le vrai du faux dans les médias ?
 Se renseigner sur un potentiel complot ?
+Combien de temps pouvez-vous investir ?
 Essayons de répondre rapidement à tout ça.
 
 Tout d'abord, si l'idée est de se renseigner sur un sujet de recherche très précis car des personnes accusent tous les chercheurs de faire partie d'un complot mondial, inutile d'aller plus loin.
@@ -1315,32 +1316,33 @@ Peu importe l'objectif qui est prêté aux chercheurs.
 Déjà, vous ne
 .UL "pouvez pas"
 apprendre rapidement des notions complexes et avoir un recul suffisant pour vous faire un avis.
-Devenir chercheur demande des années d'études (3 ans)
-.B après
-avoir déjà passé des années pour maîtriser un sujet (5 ans).
+Devenir chercheur demande des années d'études (3 ans) après avoir déjà passé des années pour maîtriser un sujet (5 ans).
 Condenser autant de savoir en quelques heures de vidéo ou quelques pages web est impossible.
 Prétendre lire des papiers de recherche pour vous faire votre propre avis sans un bon bagage scientifique est
 .B "tout aussi illusoire" .
 De plus, les théories du complot impliquant autant de monde démontrent surtout la mécompréhension du fonctionnement de la recherche par les personnes qui les répandent, voire leur malhonnêteté.
 
-Si l'objectif est de trier le vrai du faux dans les médias, là encore, mauvaise nouvelle, c'est quasi impossible.
-Certains principes permettent de relever de gros problèmes, mais en définitive chaque affirmation dans un média doit être vérifiée, quand bien même le média en question est généralement de confiance.
+Si l'objectif est de trier le vrai du faux dans les médias, là encore, mauvaise nouvelle.
+Si vous ne disposez pas d'énormément de temps (et parfois de moyens) c'est quasi impossible.
+Certains principes permettent de relever de gros problèmes, et le présent document doit déjà vous aider à y voir plus clair.
+Mais en définitive chaque affirmation dans un média doit être vérifiée, quand bien même le média en question est généralement de confiance.
 Le journalisme est normalement là pour présenter un point de vue, et la multiplicité des points de vue permettraient de jauger (de manière très imparfaite) l'actualité.
-Le fait est que de nos jours, en France, la quasi totalité des médias d'information sont détenus par quelques personnes seulement.
-L'information tend à être proche d'un média à l'autre, les querelles entre médias sont bien souvent superficielles et les points de vue sont caricaturés.
-.TBD
+Le fait est que de nos jours, en France, la quasi totalité des médias sont détenus par seulement quelques personnes ; l'information tend à être proche d'un média à l'autre.
+Les querelles entre médias sont bien souvent superficielles et les points de vue sont caricaturés voire non représentés\*[*].
+L'étude des médias est un long sujet en soi.
+Donc pour faire court : ne pas hésiter à regarder des médias en dehors des plus connus, mais en gardant en tête les principes pour éviter certains biais, et garder l'esprit ouvert à de nouveaux arguments ou points de vue.
 
-Ensuite, si l'objectif est d'apprendre un sujet scientifique d'une manière générale, c'est-à-dire un sujet technique ou lié à la compréhension de la nature par exemple, il est important de partir du début avec des livres accessibles au grand public.
+Ensuite, si l'objectif est d'étudier un sujet scientifique d'une manière générale, c'est-à-dire un sujet technique ou lié à la compréhension de la nature par exemple, il est important de partir du début avec des livres accessibles au grand public.
 La sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].1 est une discussion sur ce sujet.
 
-Enfin, si l'objectif est d'apprendre un sujet politique, la méthode va différer légèrement.
-En politique, il moins question de savoir qui a raison ou tort mais plutôt de comprendre des points de vue.
+Enfin, si l'objectif est d'étudier un sujet politique ou littéraire, la méthode va différer légèrement.
+En politique, il moins question de savoir qui a raison ou tort mais plutôt de comprendre des points de vue, qui peuvent être complexes et nécessiter plus d'un livre pour être mis au clair (cela dépend aussi de votre niveau d'investissement).
 Quelques conseils sont donnés en sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].2.
 
 .SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet « scientifique » (ou technique)
-Si c'est un sujet lié à l'explication d'un phénomène naturel ou de la techique d'une manière générale, le plus simple est de lire des livres sur le sujet.
-La démarche la plus simple à suivre pour apprendre sereinement un sujet :
-.ENUM trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
+Si c'est un sujet lié à l'explication d'un phénomène naturel ou de la technique d'une manière générale, le plus simple est de lire des livres sur le sujet.
+La démarche à suivre pour apprendre sereinement un sujet :
+.ENUM Trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
 .br
 Généralement, trouver des livres en rapport avec un sujet est une tâche aisée.
 Parfois des livres font office de référence, mais en étant réellement débutant le mieux est d'en consulter plusieurs.
@@ -1348,25 +1350,58 @@ Peu importe les faiblesses des approches, la multiplicité des sources permet de
 
 Ne pas hésiter à démarrer avec des livres (très) grand public, fournissant peu d'explications mais faciles à lire.
 
-Wikipédia peut être une piste intéressante pour un débutant, malgré le manque de pédagogie évident associé au style encyclopédique.
+Wikipédia peut être une piste intéressante pour un débutant, malgré le manque de pédagogie associé au style encyclopédique.
 Lire les quelques premiers paragraphes d'une page ne donne qu'une idée superficielle du sujet, mais la bibliographie associée à la page permet d'aller plus loin.
-.ENUM faire des fiches pour retenir le plus importants ;
+.ENUM Faire des fiches pour retenir le plus importants ;
 .br
-Cela peut paraître comme une perte de temps, mais en réalité cela en fait gagner énormément.
+Cela peut paraître comme une perte de temps, en réalité c'est un gain de temps considérable.
 Les fiches sont d'autant plus utiles qu'elles permettent de ne pas avoir à revenir sur un livre déjà lu.
-Elles permettent également de structurer la pensée, elles sont encore plus utiles sur des sujets non technique.
-.ENUM lire des livres plus avancés.
+Elles permettent également de structurer la pensée, et elles sont encore plus utiles sur des sujets non technique.
+.ENUM Lire des livres plus avancés.
 .br
-Une fois que la base est acquise et
-.B "seulement à ce moment là"
+Une fois que la base est acquise, et
+.B "seulement à ce moment là" ,
 il est pertinent de lire des livres de plus haut niveau.
 Même au niveau intermédiaire ou avancé, revenir sur des sources plus accessibles peut être pertinent pour se remémorer la base.
-La pédagogie passe par la répétition.
 .ENDENUM
+
+.EXPLANATION1
+La pédagogie passe par la répétition.
+.EXPLANATION2
 
 .SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet politique (ou littéraire)
 .TBD
 La politique (tout comme la littérature) implique des points de vue, donc il faut a minima avoir une base de compréhension des différentes approches.
+
+.B Attention ,
+que ce soit bien clair : il n'est pas question de partir dans un relativisme absolu où toutes les idées se valent.
+Cette vision du monde est démontrablement fausse.
+Comprendre les courants politiques permet à terme d'avoir un résultat sur le réel, en prenant de meilleures décisions par exemple, ou ne serait-ce que pour mieux saisir le sens des discours de chaque partie.
+
+.ig
+Plan:
+* Pourquoi, temps ?
+* complot mondial = oubliez, impossible, trop de temps à investir
+* trier vrai du faux médias, quasi impossible
+  * quelques gros problèmes peuvent être vus
+  * toutes les affirmations doivent être vérifiées, même si média de confiance
+  * TEMPS NORMAL : journal = point de vue
+     * fiabilité = plein de sources
+     * de nos jours = pas fiable car tout détenu par les mêmes personnes
+- SUJET TECHNIQUE
+  * scientifique = phénomène naturel ou technique, faut lire des livres
+  *
+    1. trouver des livres débutants
+    2. faire des fiches
+    3. lire des livres plus avancés
+
+  * pédagogie = répétition
+- SUJET POLITIQUE
+  * politique = pdv => comprendre les approches
+  * attention : pas relativisme, les idées ne se valent pas
+    * comprendre = effet sur le réel => décisions + comprendre chaque partie
+  * 
+..
 
 .ig
 _Comment réfuter une affirmation ? Un contre-exemple suffit ?
@@ -1388,3 +1423,19 @@ monsieur anarcap :
 Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
 De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
 ..
+
+
+Il faut savoir quel est le sujet précis sur lequel tu veux t'informer, et le niveau de connaissances que tu cherches à atteindre.
+Ça permettra de mieux cibler les documents à lire, leur donner une priorité.
+
+.BULLET Ne pas sous-estimer les documents grand publics.
+Pour une première approche d'un sujet ou pour comprendre le principe général, des documents comme une page wikipédia voire des articles de blog peuvent être utiles.
+Même après avoir lu une documentation plus sérieuse, relire un document plus léger peut être utile juste pour être sûr de tout comprendre.
+.BULLET Les publications scientifiques sont sous copyright et derrière des paywall bien souvent.
+En revanche, un papier peut être obtenu en tapant son nom dans scihub.
+Pour les livres, je ne sais pas s'il y a une solution satisfaisante pour les trouver.
+.BULLET Aucun document ne va aussi loin qu'un papier scientifique.
+Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est quasi toujours plus adapté.
+Aussi, un papier nécessite généralement un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre.
+Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
+.I survey .
