@@ -1296,6 +1296,78 @@ du chercheur est donc de 5, car c'est le nombre de papiers ayant un nombre de ci
 L'avantage de cette métrique est de mesurer la productivité d'un chercheur : il doit produire du contenu de bonne qualité dans la durée.
 Écrire des dizaines d'articles inutiles ou se reposer sur un seul bon article ne mène pas à une bonne note.
 
+.bp
+.SECTION_NO_NUMBER Annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] : se renseigner sur un sujet
+.nr CURRENT_SUBSECTION 0
+.TBD
+Se renseigner sur un sujet est une tâche parfois complexe, parfois même impossible à cause de contraintes de temps.
+Cette annexe présente quelques pistes pour s'informer au mieux.
+
+.QUESTION "Quel objectif ?"
+Quelle est la raison qui pousse à se renseigner sur un sujet ?
+Apprendre une compétence car le sujet nous intéresse ?
+Trier le vrai du faux dans les médias ?
+Se renseigner sur un potentiel complot ?
+Essayons de répondre rapidement à tout ça.
+
+Tout d'abord, si l'idée est de se renseigner sur un sujet de recherche très précis car des personnes accusent tous les chercheurs de faire partie d'un complot mondial, inutile d'aller plus loin.
+Peu importe l'objectif qui est prêté aux chercheurs.
+Déjà, vous ne
+.UL "pouvez pas"
+apprendre rapidement des notions complexes et avoir un recul suffisant pour vous faire un avis.
+Devenir chercheur demande des années d'études (3 ans)
+.B après
+avoir déjà passé des années pour maîtriser un sujet (5 ans).
+Condenser autant de savoir en quelques heures de vidéo ou quelques pages web est impossible.
+Prétendre lire des papiers de recherche pour vous faire votre propre avis sans un bon bagage scientifique est
+.B "tout aussi illusoire" .
+De plus, les théories du complot impliquant autant de monde démontrent surtout la mécompréhension du fonctionnement de la recherche par les personnes qui les répandent, voire leur malhonnêteté.
+
+Si l'objectif est de trier le vrai du faux dans les médias, là encore, mauvaise nouvelle, c'est quasi impossible.
+Certains principes permettent de relever de gros problèmes, mais en définitive chaque affirmation dans un média doit être vérifiée, quand bien même le média en question est généralement de confiance.
+Le journalisme est normalement là pour présenter un point de vue, et la multiplicité des points de vue permettraient de jauger (de manière très imparfaite) l'actualité.
+Le fait est que de nos jours, en France, la quasi totalité des médias d'information sont détenus par quelques personnes seulement.
+L'information tend à être proche d'un média à l'autre, les querelles entre médias sont bien souvent superficielles et les points de vue sont caricaturés.
+.TBD
+
+Ensuite, si l'objectif est d'apprendre un sujet scientifique d'une manière générale, c'est-à-dire un sujet technique ou lié à la compréhension de la nature par exemple, il est important de partir du début avec des livres accessibles au grand public.
+La sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].1 est une discussion sur ce sujet.
+
+Enfin, si l'objectif est d'apprendre un sujet politique, la méthode va différer légèrement.
+En politique, il moins question de savoir qui a raison ou tort mais plutôt de comprendre des points de vue.
+Quelques conseils sont donnés en sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].2.
+
+.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet « scientifique » (ou technique)
+Si c'est un sujet lié à l'explication d'un phénomène naturel ou de la techique d'une manière générale, le plus simple est de lire des livres sur le sujet.
+La démarche la plus simple à suivre pour apprendre sereinement un sujet :
+.ENUM trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
+.br
+Généralement, trouver des livres en rapport avec un sujet est une tâche aisée.
+Parfois des livres font office de référence, mais en étant réellement débutant le mieux est d'en consulter plusieurs.
+Peu importe les faiblesses des approches, la multiplicité des sources permet de se faire une idée raisonnable du sujet.
+
+Ne pas hésiter à démarrer avec des livres (très) grand public, fournissant peu d'explications mais faciles à lire.
+
+Wikipédia peut être une piste intéressante pour un débutant, malgré le manque de pédagogie évident associé au style encyclopédique.
+Lire les quelques premiers paragraphes d'une page ne donne qu'une idée superficielle du sujet, mais la bibliographie associée à la page permet d'aller plus loin.
+.ENUM faire des fiches pour retenir le plus importants ;
+.br
+Cela peut paraître comme une perte de temps, mais en réalité cela en fait gagner énormément.
+Les fiches sont d'autant plus utiles qu'elles permettent de ne pas avoir à revenir sur un livre déjà lu.
+Elles permettent également de structurer la pensée, elles sont encore plus utiles sur des sujets non technique.
+.ENUM lire des livres plus avancés.
+.br
+Une fois que la base est acquise et
+.B "seulement à ce moment là"
+il est pertinent de lire des livres de plus haut niveau.
+Même au niveau intermédiaire ou avancé, revenir sur des sources plus accessibles peut être pertinent pour se remémorer la base.
+La pédagogie passe par la répétition.
+.ENDENUM
+
+.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet politique (ou littéraire)
+.TBD
+La politique (tout comme la littérature) implique des points de vue, donc il faut a minima avoir une base de compréhension des différentes approches.
+
 .ig
 _Comment réfuter une affirmation ? Un contre-exemple suffit ?
 _D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
@@ -1316,52 +1388,3 @@ monsieur anarcap :
 Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
 De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
 ..
-
-.bp
-.SUBSECTION_NO_NUMBER Annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] : se renseigner sur un sujet
-.nr CURRENT_SUBSECTION 0
-.TBD
-Se renseigner sur un sujet est une tâche parfois complexe, parfois impossible à cause de contraintes de temps.
-
-.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Pourquoi apprendre ?
-Quelle est la raison qui pousse à se renseigner sur un sujet ?
-Apprendre une compétence car le sujet nous intéresse ?
-Trier le vrai du faux dans les médias ?
-Se renseigner sur un potentiel complot ?
-Essayons de répondre rapidement à tout ça.
-
-Tout d'abord, si l'idée est de se renseigner sur un sujet de recherche très précis car des personnes accusent tous les chercheurs de faire partie d'un complot mondial, peu importe l'objectif annoncé, inutile d'aller plus loin.
-Les théories du complot impliquant autant de monde démontrent surtout la mécompréhension du fonctionnement de la recherche par les personnes qui les répandent.
-
-.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet « scientifique »
-Si c'est un sujet scientifique, c'est-à-dire sur l'explication d'un phénomène naturel par exemple, le plus simple est de lire des livres sur le sujet.
-La démarche la plus simple à suivre pour apprendre sereinement un sujet :
-.ENUM trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
-.br
-Généralement, trouver des livres en rapport avec un sujet est une tâche aisée.
-Parfois des livres font office de référence, mais en étant réellement débutant le mieux est d'en consulter plusieurs.
-Peu importe les faiblesses des approches, la multiplicité des sources permet de se faire une idée raisonnable du sujet.
-
-Ne pas hésiter à démarrer avec des livres grand public, fournissant peu d'explications mais faciles à lire.
-
-Wikipédia est une piste intéressante pour un débutant.
-Lire les quelques premiers paragraphes d'une page donne une idée superficielle du sujet, ce n'est jamais suffisant pour comprendre réellement de quoi il est question.
-En revanche, souvent une bibliographie accompagne la page.
-.ENUM faire des fiches pour retenir le plus importants ;
-.br
-Cela peut paraître comme une perte de temps, mais en réalité cela en fait gagner énormément.
-Les fiches sont d'autant plus utiles qu'elles permettent de ne pas avoir à revenir sur un livre déjà lu.
-Elles permettent également de structurer la pensée, elles sont encore plus utiles sur des sujets non technique.
-.ENUM lire des livres plus avancés.
-.br
-Une fois que la base est acquise et
-.B "seulement à ce moment là"
-il est pertinent de lire des livres de plus haut niveau.
-Même au niveau intermédiaire ou avancé, revenir sur des sources plus accessibles peut être pertinent pour se remémorer la base.
-La pédagogie passe par la répétition.
-.ENDENUM
-
-.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet politique
-.TBD
-La politique implique des points de vue, donc il faut a minima avoir une base de compréhension des différentes approches politiques.
-
