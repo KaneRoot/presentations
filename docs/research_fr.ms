@@ -4,6 +4,7 @@
 .nr N_ANNEXE_MANIPULATIONS 3
 .nr N_ANNEXE_HINDEX 4
 .nr N_ANNEXE_CONSEILS_APPRENTISSAGE 5
+.nr N_ANNEXE_MEDIAS 6
 .mso fr.tmac
 .mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
@@ -472,7 +473,7 @@ Ces derniers n'apportent pas une contribution très intéressante d'un point de 
 
 Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
 La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et à donner confiance au fond.
-L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] un complément à cette section, montrant un papier en cours d'écriture mettant en œuvre la plupart des règles dictées précédemment.
+L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] apporte un complément à cette section, montrant un papier en cours d'écriture mettant en œuvre la plupart des règles dictées précédemment.
 Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
 .SECTION Publications scientifiques
 Chaque papier est publié dans un journal à comité de lecture
@@ -673,7 +674,6 @@ Avant de se poser la question de comment utiliser au mieux la science au quotidi
 .ENUM Personne n'est infaillible.
 .ENDENUM
 
-
 .QUESTION "Se renseigner sur un sujet."
 La manière de s'informer dépend de l'objectif recherché.
 Se poser une question ponctuelle sur un sujet n'implique pas le même investissement que vouloir devenir un expert dans un domaine.
@@ -689,12 +689,6 @@ et peut même s'avérer dangereux si des décisions importantes s'en suivent.
 La connaissance n'a pas de raccourcis, mais des pièges.
 .EXPLANATION2
 
-.ig
-_Comment réfuter une affirmation ? Un contre-exemple suffit ?
-_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
-..
-
-.\" Zététique
 .SUBSECTION Repérer des manipulations
 Cette sous-section a pour objectif de lister des éléments qui peuvent mettre en doute la véracité ou le bien-fondé d'un propos.
 Cela peut se retrouver dans des discours ou des traits de personnalité.
@@ -729,6 +723,21 @@ Qui aime bien châtie bien.
 .BULLET informations ou citations hors contexte
 .BULLET tromperies
 .ENDBULLET
+
+Quel est le sujet, quel est le niveau de connaissances à atteindre ?
+Ça permettra de mieux cibler les documents à lire, leur donner une priorité.
+
+.BULLET Ne pas sous-estimer les documents grand publics.
+Pour une première approche d'un sujet ou pour comprendre le principe général, des documents comme une page wikipédia voire des articles de blog peuvent être utiles.
+Même après avoir lu une documentation plus sérieuse, relire un document plus léger peut être utile juste pour être sûr de tout comprendre.
+.BULLET Les publications scientifiques sont sous copyright et derrière des paywall bien souvent.
+En revanche, un papier peut être obtenu en tapant son nom dans scihub.
+Pour les livres, je ne sais pas s'il y a une solution satisfaisante pour les trouver.
+.BULLET Aucun document ne va aussi loin qu'un papier scientifique.
+Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est quasi toujours plus adapté.
+Aussi, un papier nécessite généralement un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre.
+Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
+.I survey .
 
 
 .QUESTION "L'arnaque de Dieu."
@@ -1352,7 +1361,7 @@ Ne pas hésiter à démarrer avec des livres (très) grand public, fournissant p
 
 Wikipédia peut être une piste intéressante pour un débutant, malgré le manque de pédagogie associé au style encyclopédique.
 Lire les quelques premiers paragraphes d'une page ne donne qu'une idée superficielle du sujet, mais la bibliographie associée à la page permet d'aller plus loin.
-.ENUM Faire des fiches pour retenir le plus importants ;
+.ENUM Faire des fiches pour retenir le plus important ;
 .br
 Cela peut paraître comme une perte de temps, en réalité c'est un gain de temps considérable.
 Les fiches sont d'autant plus utiles qu'elles permettent de ne pas avoir à revenir sur un livre déjà lu.
@@ -1378,64 +1387,53 @@ que ce soit bien clair : il n'est pas question de partir dans un relativisme ab
 Cette vision du monde est démontrablement fausse.
 Comprendre les courants politiques permet à terme d'avoir un résultat sur le réel, en prenant de meilleures décisions par exemple, ou ne serait-ce que pour mieux saisir le sens des discours de chaque partie.
 
-.ig
-Plan:
-* Pourquoi, temps ?
-* complot mondial = oubliez, impossible, trop de temps à investir
-* trier vrai du faux médias, quasi impossible
-  * quelques gros problèmes peuvent être vus
-  * toutes les affirmations doivent être vérifiées, même si média de confiance
-  * TEMPS NORMAL : journal = point de vue
-     * fiabilité = plein de sources
-     * de nos jours = pas fiable car tout détenu par les mêmes personnes
-- SUJET TECHNIQUE
-  * scientifique = phénomène naturel ou technique, faut lire des livres
-  *
-    1. trouver des livres débutants
-    2. faire des fiches
-    3. lire des livres plus avancés
+.bp
+.SUBSECTION_NO_NUMBER Annexe \n[N_ANNEXE_MEDIAS] Médias : l'importance de la vérification
+Le journalisme est l'activité qui consiste à recueillir et
+.B vérifier ,
+puis éventuellement commenter, des faits pour les porter à l'attention du public.
+Cette annexe présente deux cas de journalisme déficient.
 
-  * pédagogie = répétition
-- SUJET POLITIQUE
-  * politique = pdv => comprendre les approches
-  * attention : pas relativisme, les idées ne se valent pas
-    * comprendre = effet sur le réel => décisions + comprendre chaque partie
-  * 
-..
+.QUESTION "France Soir."
 
-.ig
-_Comment réfuter une affirmation ? Un contre-exemple suffit ?
-_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
+.QUESTION "Libération."
+Le journal
+.I Libération
+a donné la parole à un regroupement de
+.B "groupes terroristes"
+revendiqués pro-charia et pour un retour à l'Islam originel
+.I "Jaych al-Ahrar" , (
+.I "Liwa Shuhada al-Islam" ,
+etc.), nommé complaisamment dans l'article comme
+.I "la résistance" " »," "« "
+.I "groupe rebelle" " »," "« "
+et sous son nom officiel
+.I "Front de libération" " »." "« "
+Par ailleurs, ce groupement terroriste est soutenu militairement par l'armée Américaine, qui leur a fourni du matériel.
+Ces informations concernant le
+.I "Front de Libération" ,
+pourtant importantes, n'ont pas été ne serait-ce qu'esquissées dans l'article.
+.[
+Libération donne la parole aux terroristes
+.]
+Et le texte est loin d'être neutre ; cela se voit jusque dans les deux titres de l'article.
+Le premier est
+.I "« La Russie ment »" ,
+dont nous noterons des guillements préventifs dans l'article car il est bel est bien question d'une simple affirmation par le groupe terroriste (mais reportée sans aucune remise en question ou retenue par
+.I Libération )
+et non une affirmation venant de la rédaction du journal.
+Le second titre,
+.I "Frappes « punitives » contre les cibles civiles" ,
+va même jusqu'à sous-entendre que la Russie attaque des civils délibérément.
+Là encore, un peu de recul sur les dires de
+.B terroristes
+aurait été bienvenue, l'article leur fait presque office de tribune.
+Le reste de l'article n'a que peu de contenu, et n'est pas fiable et ne met rien en perspectives.
+Par exemple, l'article dit que
+.I "les troupes gouvernementales piétinent depuis 3 mois" ,
+sans préciser les très grandes avancées faites pendant des années (pour mettre fin au
+.B terrorisme
+des groupes visiblement identifiés comme fiables par
+.I Libération ).
 
-monsieur anarcap :
-- ma démarche n'avait rien de scientifique
-- une observation des différents avis politiques, de leur justification, de leurs implémentations, et de la confusion possibles entre des différents camps qui peuvent paraître amis alors qu'ils sont ennemis.
-
-- légitimité de la science (recherche de réalité objective) à contester les positions des individus qui relèvent purement du subjectif
-- considères tu que la science à son mot à dire dans les choix personnels des individus ? La politique ? La morale ? Mais pour le coup, je pense qu'on pourrait en écrire un livre.
-
-- Ça serait cool aussi développer l'idée de la fiabilité des sources, où piocher de l'information et des papiers scientifiques ?
-- Qui croire dans la mesure où nous ne pouvons pas mener des expériences pertinentes nous-même ?
-- Dans quelles mesures pouvons-nous nous fier à nos propres expériences sensorielles ?
-(On ne va pas envoyer notre propre appareil photo dans l'espace pour confirmer que la terre est ronde, on est obligé de passer par un pair).
-
-À caser quelque-part :
-Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
-De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
-..
-
-
-Il faut savoir quel est le sujet précis sur lequel tu veux t'informer, et le niveau de connaissances que tu cherches à atteindre.
-Ça permettra de mieux cibler les documents à lire, leur donner une priorité.
-
-.BULLET Ne pas sous-estimer les documents grand publics.
-Pour une première approche d'un sujet ou pour comprendre le principe général, des documents comme une page wikipédia voire des articles de blog peuvent être utiles.
-Même après avoir lu une documentation plus sérieuse, relire un document plus léger peut être utile juste pour être sûr de tout comprendre.
-.BULLET Les publications scientifiques sont sous copyright et derrière des paywall bien souvent.
-En revanche, un papier peut être obtenu en tapant son nom dans scihub.
-Pour les livres, je ne sais pas s'il y a une solution satisfaisante pour les trouver.
-.BULLET Aucun document ne va aussi loin qu'un papier scientifique.
-Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est quasi toujours plus adapté.
-Aussi, un papier nécessite généralement un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre.
-Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
-.I survey .
+.SUBSECTION Les médias et leurs limites
