@@ -1,0 +1,145 @@
+SECTION 4 : introduction qui devrait mieux expliquer pourquoi lire la section.
+Exemple : Comprendre comment les spécialistes écrivent pour éviter divers biais permet de faire contraste avec les autres documents, comme les articles de journaux.
+
+SECTION 6 : Informations générales
+* qui paie quoi
+* en pratique, que fait un chercheur ?
+  -> veille, enseignement
+  TODO: dire qu'il est à un bureau à réfléchir, créer des modèles, a des charges administratives, etc.
+* difficultés du métier
+  -> le temps (publication posthume)
+  -> représentation des données
+* limites de la recherche
+  -> épistémologie, mais se résume par la réfutabilité
+  -> un chercheur = un domaine, une spécialité, des méthodes bien établies
+  -> ressources matérielles, financières etc.
+* h-index
+  -> met en avant les chercheurs productifs
+* un chercheur un domaine
+  -> domain = ... spé = ...
+  -> peuvent partager des outils
+
+* TODO: recherche = entre chercheurs
+* TODO: Science ne crée pas des opinions
+  -> La science est un processus menant aux conclusions les plus raisonnables (incluant le fait de ne pas savoir), en fondant tout raisonnement sur des faits.
+     Une conclusion en science n'est jamais appuyée sur des sentiments ou des préjugés.
+
+SECTION 7 : Science au-delà de la recherche
+
+* TODO: dépassionner les discussions
+
+* TODO: la vérité est grise
+  -> tout n'est pas des maths, impossible de réfuter mathématiquement de manière certaines tout mensonge, imprudence ou erreur
+  -> les papiers scientifiques sont grandement protégés de divers biais, mais comme vu en fin de section précédente, ils sont pour un public très restreint
+  -> en pratique, l'information vient de médias d'information ou de livres
+  -> d'où l'importance d'avoir du journalisme fait par du personnel compétent
+
+* TODO: recherche vs journalisme
+pas les mêmes objectifs
+  -> recherche = produire de la connaissance
+  -> journalisme = diversifié sur cette question,
+     principalement: relate des faits mais sans forcément leur étude approfondie, selon un prisme de lecture
+     souvent:        les opinions priment sur les faits (mineurs, peu importants, peu voire pas contextualisés, etc.)
+pas les mêmes contraintes
+  -> produire de la qualité, rapidement mais relatif à la recherche (quelques semaines, voire mois)
+  -> produire rapidement (souvent en quelques jours, voire heures)
+TODO: tableau
+
+* TODO: problèmes dans les médias
+  -> au-delà d'être non expert, d'être partial (ce qui est normal)
+  -> très peu de diversité de point de vue
+  -> 
+  -> ANNEXE: subventions énormes pour diffuser des opinions
+  -> ANNEXE:
+
+La connaissance n'a pas de raccourcis, mais des pièges.
+
+* TODO: comment trouver le vrai du faux
+  À quoi nous avons affaire ?
+    - Étalage d'opinions
+    - Des affirmations
+  # Comment réfuter une affirmation ? Un contre-exemple suffit ?
+  # D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
+
+* quelques règles de base
+  -> vérité compte
+  -> vérité grise
+  -> personne n'est infaillible
+
+* se renseigner sur un sujet
+  1.
+  2.
+  3.
+
+7.1 repérer des manipulations
+
+* se méfier de soi-même
+* effet gourou
+  -> je sais tout, orgueil
+  -> 
+* déformation des propos
+* diversions
+* informations ou citations hors contexte
+* mensonges, tromperies, malhonnêteté
+
+7.2
+
+Questions de Jérôme
+
+- financement catastrophique qui implique des mécènes (et beaucoup de subventions publiques) empêchant une vraie indépendance journalistique
+Libération, 2019, Idlib : les raisons d’une escalade meurtrière
+- appel à l'émotion
+- 
+- appels à l'émotion (Enfants tués lors d'attaques russes, effets secondaires des vaccins)
+
+
+- Zététique
+- Médias
+- Raconter qu'il y a des missions intéressantes parfois (genre étude de la nature sous plein d'angles différents).
+  Raconter qu'on fait pas mal de simulations, modèles, etc.
+- Difficulté de la recherche => dire qu'un bagage de statistiques niveau lycée pour les maths peut être suffisant.
+Section 6 : intro + outro
+Section 7 : intro + outro, se méfier de soi-même
+
+
+_Comment réfuter une affirmation ? Un contre-exemple suffit ?
+_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
+
+monsieur anarcap :
+- ma démarche n'avait rien de scientifique
+- une observation des différents avis politiques, de leur justification, de leurs implémentations, et de la confusion possibles entre des différents camps qui peuvent paraître amis alors qu'ils sont ennemis.
+
+- légitimité de la science (recherche de réalité objective) à contester les positions des individus qui relèvent purement du subjectif
+- considères tu que la science à son mot à dire dans les choix personnels des individus ? La politique ? La morale ? Mais pour le coup, je pense qu'on pourrait en écrire un livre.
+
+- Ça serait cool aussi développer l'idée de la fiabilité des sources, où piocher de l'information et des papiers scientifiques ?
+- Qui croire dans la mesure où nous ne pouvons pas mener des expériences pertinentes nous-même ?
+- Dans quelles mesures pouvons-nous nous fier à nos propres expériences sensorielles ?
+(On ne va pas envoyer notre propre appareil photo dans l'espace pour confirmer que la terre est ronde, on est obligé de passer par un pair).
+
+À caser quelque-part :
+Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
+De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
+
+Plan:
+* Pourquoi, temps ?
+* complot mondial = oubliez, impossible, trop de temps à investir
+* trier vrai du faux médias, quasi impossible
+  * quelques gros problèmes peuvent être vus
+  * toutes les affirmations doivent être vérifiées, même si média de confiance
+  * TEMPS NORMAL : journal = point de vue
+     * fiabilité = plein de sources
+     * de nos jours = pas fiable car tout détenu par les mêmes personnes
+- SUJET TECHNIQUE
+  * scientifique = phénomène naturel ou technique, faut lire des livres
+  *
+    1. trouver des livres débutants
+    2. faire des fiches
+    3. lire des livres plus avancés
+
+  * pédagogie = répétition
+- SUJET POLITIQUE
+  * politique = pdv => comprendre les approches
+  * attention : pas relativisme, les idées ne se valent pas
+    * comprendre = effet sur le réel => décisions + comprendre chaque partie
+  * 

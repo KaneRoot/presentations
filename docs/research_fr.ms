@@ -666,6 +666,49 @@ voir le paradoxe de Simpson.
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 
+.QUESTION "La vérité est grise."
+.TBD
+
+.nr table_size_offset 2
+.vs -\n[table_size_offset]p
+.ps -\n[table_size_offset]
+.br
+.TS
+allbox tab(:);
+c | c
+lw(1.6i) | lew(1.6i).
+science:médias
+T{
+produit de la connaissance
+T}:T{
+relate des faits selon un prisme de lecture, diffuse des opinions
+T}
+T{
+relecture par des experts, publication si qualité reconnue
+T}:T{
+aucune relecture, simple acceptation de la hiérarchie
+T}
+T{
+expert du sujet
+T}:T{
+expert, non expert, voire non initié
+T}
+T{
+temps long (plusieurs semaines, mois voire années)
+T}:T{
+instantané (juste quelques heures de rédaction, parfois même en direct)
+et parfois (rarement) temps long
+T}
+T{
+sujet très précis, sérieux, contextualisé et uniformisé
+T}:T{
+tout existe en terme de sujet et de qualité, souvent pour le pire
+T}
+.TE
+.vs +\n[table_size_offset]p
+.ps +\n[table_size_offset]
+
+
 .QUESTION "Quelques règles de base."
 Avant de se poser la question de comment utiliser au mieux la science au quotidien, voici quelques points de départ importants qu'il faut bien comprendre.
 
@@ -738,6 +781,7 @@ Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est quas
 Aussi, un papier nécessite généralement un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre.
 Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
 .I survey .
+.ENDBULLET
 
 
 .QUESTION "L'arnaque de Dieu."
