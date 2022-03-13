@@ -349,6 +349,7 @@ Malgré cela, les informations données forment une explication intuitive et suf
 La section suivante présente la matérialisation de toute étude, à savoir le papier scientifique.
 .SECTION Écriture de papiers
 En pratique, la science se matérialise par l'écriture de papiers de recherche, représentant la transmission du savoir.
+Comprendre comment les spécialistes écrivent pour éviter divers biais permet de faire contraste avec les autres documents, comme les articles de journaux ou de blog, et ainsi de mieux cibler leurs faiblesses.
 Cette section introduit l'art de l'écriture de papiers, ainsi que des critères pour juger de leur qualité.
 De même, différents types de papiers sont présentés, chacun ayant un objectif, une utilité particulière dans le corpus scientifique.
 
@@ -614,6 +615,32 @@ De plus, en France, le contrat universitaire classique
 inclut de l'enseignement, et les université étant en sous-effectif, le personnel fait énormément d'heures.
 La veille et l'enseignement représentent ainsi la plus grande partie du temps de travail du chercheur.
 
+Le travail de recherche a plusieurs aspects.
+La partie la plus importante est de lire, écrire, et réfléchir à un problème : cela engendre un nombre d'heures conséquent à lire des papiers et des livres (et parfois d'autres sources).
+Un sujet d'étude peut amèner à créer des simulations, des modèles et faire des graphes pour se représenter une donnée, donc à maîtriser quelques outils informatiques.
+Tout ceci nécessite de passer beaucoup de temps seul, souvent devant un ordinateur, dans une salle proche d'une salle de cours.
+Un
+.I laboratoire
+n'a pas à inclure des généticiens fous qui s'amusent avec des produits dangereux ; l'environnement de travail du chercheur est souvent un simple bureau.
+
+Une autre partie du travail consiste à présenter ses travaux aux quatre coins du monde.
+Les chercheurs voyagent régulièrement pour faire une présentation de 20 minutes face à des gens qui, parfois, sont passionnés et écoutent attentivement, soit qui veulent se faire un réseau de connaissances et visiter la ville d'accueil\*[*].
+.FOOTNOTE1
+De l'expérience de l'auteur, les conférences en informatique n'intéressent pas vraiment les participants, qui semblent là par défaut, et s'échappent souvent pour boire en ville.
+.FOOTNOTE2
+
+Certains domaines de recherche impliquent un train de vie assez différent.
+Une étude peut amener le chercheur à partir à l'autre bout du monde pour mettre des sondes sur des animaux et tracer leurs déplacements, étudier leur comportement, etc.
+Certaines études nécessitent de faire de la plongée sous-marine, passer 6 mois en Antarctique, ou travailler avec des outils particulièrement coûteux\*[*].
+.FOOTNOTE1
+Certains outils de mesure ont un financement à 7 chiffres.
+Et tout un bâtiment est construit autour pour les protéger des interférences et améliorer leur précision.
+.FOOTNOTE2
+Le cadre d'une journée de travail peut changer radicalement d'un domaine à l'autre.
+
+En dehors du cœur de son métier, un enseignant-chercheur a régulièrement des charges administratives à gérer.
+Par exemple, la gestion d'une filière proposée à l'université, ou une promotion d'étudiants.
+
 .QUESTION "Difficultés du métier de chercheur."
 Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps (veille et enseignement).
 Une étude peut également prendre du temps, parfois des dizaines d'années.
@@ -621,6 +648,10 @@ Il n'est pas rare par exemple dans le domaine de la physique d'avoir des publica
 
 Autre difficulté, trouver la bonne représentation d'une donnée.
 Présenter correctement une donnée, rendre une information évidente, est une tâche parfois complexe.
+
+La recherche n'est pas nécessairement complexe et théorique.
+Chaque spécialité a son corpus, parfois très dense, et la difficulté peut venir de la quantité d'informations à savoir pour comprendre tous les aspects du sujet traité.
+Dans bien des études, seuls quelques outils statistiques de niveau lycée sont nécessaires.
 
 .QUESTION "Limites de la recherche"
 Les limites théoriques à la science forment un domaine de recherche en soi, nommé
@@ -663,10 +694,29 @@ Les chercheurs savent manipuler des statistiques
 .UL "dans leur spécialité" ,
 voir le paradoxe de Simpson.
 .FOOTNOTE2
+
+.QUESTION "La recherche se fait entre chercheurs."
+Un chercheur ne peut s'exprimer sur la qualité d'un papier dans un autre domaine.
+À partir de cela, il est évident que les papiers sont destinés à être lu et compris par d'autres chercheurs, et du même domaine.
+Les papiers publiés ne sont donc pas destinés au grand public, qui devra se contenter d'autres sources de connaissance (livres, informations en ligne…).
+
+.QUESTION "La science n'est pas une opinion."
+La conclusion d'un papier est le résultat d'un processus d'évaluation de tous les paramètres d'un problème donné, par plusieurs experts du sujet, en fournissant tous les éléments de la réflexion.
+Par ailleurs, la conclusion d'une étude peut être qu'il n'est pas possible de statuer.
+La science est ce processus, imparfait, mais qui s'est montré et continue de se montrer fiable, jour après jour, pour créer de la
+.B connaissance .
+Réduire tout ce travail à une affaire d'opinions n'est pas une représentation honnête.
+
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
 
 .QUESTION "La vérité est grise."
+La recherche est complexe à lire, écrire et penser, parce que le monde qui nous entoure n'a rien d'évident ou de simple.
+Le
+.I "bon sens"
+est régulièrement mis à mal en science.
+Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de sujets plus simples, seulement moins bien
+.B traités .
 .TBD
 
 .nr table_size_offset 2

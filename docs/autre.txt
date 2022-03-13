@@ -1,14 +1,15 @@
-SECTION 4 : introduction qui devrait mieux expliquer pourquoi lire la section.
-Exemple : Comprendre comment les spécialistes écrivent pour éviter divers biais permet de faire contraste avec les autres documents, comme les articles de journaux.
-
 SECTION 6 : Informations générales
+* TODO: intro
 * qui paie quoi
 * en pratique, que fait un chercheur ?
   -> veille, enseignement
-  TODO: dire qu'il est à un bureau à réfléchir, créer des modèles, a des charges administratives, etc.
+  -> TODO: le chercheur est à un bureau à réfléchir, créer des modèles, simulations
+  -> TODO: le chercheur a des charges administratives
+  -> TODO: le chercheur a des missions intéressantes parfois (genre étude de la nature sous plein d'angles différents).
 * difficultés du métier
   -> le temps (publication posthume)
   -> représentation des données
+  -> TODO: un bagage de statistiques niveau lycée pour les maths peut être suffisant
 * limites de la recherche
   -> épistémologie, mais se résume par la réfutabilité
   -> un chercheur = un domaine, une spécialité, des méthodes bien établies
@@ -18,17 +19,22 @@ SECTION 6 : Informations générales
 * un chercheur un domaine
   -> domain = ... spé = ...
   -> peuvent partager des outils
+* Recherche = entre chercheurs
 
-* TODO: recherche = entre chercheurs
 * TODO: Science ne crée pas des opinions
   -> La science est un processus menant aux conclusions les plus raisonnables (incluant le fait de ne pas savoir), en fondant tout raisonnement sur des faits.
      Une conclusion en science n'est jamais appuyée sur des sentiments ou des préjugés.
 
+* TODO: outro
+
 SECTION 7 : Science au-delà de la recherche
 
-* TODO: dépassionner les discussions
+* TODO (où ??): dépassionner les discussions
 
-* TODO: la vérité est grise
+* TODO (en cours): la vérité est grise
+  -> recherche = complexe à lire, écrire, penser
+  -> s'éloigner de la recherche = sujets moins bien traités
+  -> 
   -> tout n'est pas des maths, impossible de réfuter mathématiquement de manière certaines tout mensonge, imprudence ou erreur
   -> les papiers scientifiques sont grandement protégés de divers biais, mais comme vu en fin de section précédente, ils sont pour un public très restreint
   -> en pratique, l'information vient de médias d'information ou de livres
@@ -46,8 +52,13 @@ pas les mêmes contraintes
 TODO: tableau
 
 * TODO: problèmes dans les médias
-  -> au-delà d'être non expert, d'être partial (ce qui est normal)
-  -> très peu de diversité de point de vue
+  -> au-delà d'être non expert et partial, ce qui est normal pour un média (la neutralité est un mensonge)
+  -> financement non par recettes, mais subventions et mécénat
+    -> les médias sont déficitaires, donc l'objectif des mécènes est de les utiliser comme source d'influence
+    -> très peu de diversité de point de vue (celui du mécène, ou au moins des points de vues qui sont compatibles avec ses intérêts)
+    -> temps (très) court, ce qui diminue la qualité de la rédaction
+  -> 
+  -> CSA: quasi inutile
   -> 
   -> ANNEXE: subventions énormes pour diffuser des opinions
   -> ANNEXE:
@@ -84,26 +95,16 @@ La connaissance n'a pas de raccourcis, mais des pièges.
 
 7.2
 
-Questions de Jérôme
-
 - financement catastrophique qui implique des mécènes (et beaucoup de subventions publiques) empêchant une vraie indépendance journalistique
 Libération, 2019, Idlib : les raisons d’une escalade meurtrière
 - appel à l'émotion
 - 
 - appels à l'émotion (Enfants tués lors d'attaques russes, effets secondaires des vaccins)
 
-
 - Zététique
-- Médias
-- Raconter qu'il y a des missions intéressantes parfois (genre étude de la nature sous plein d'angles différents).
-  Raconter qu'on fait pas mal de simulations, modèles, etc.
-- Difficulté de la recherche => dire qu'un bagage de statistiques niveau lycée pour les maths peut être suffisant.
-Section 6 : intro + outro
+
 Section 7 : intro + outro, se méfier de soi-même
 
-
-_Comment réfuter une affirmation ? Un contre-exemple suffit ?
-_D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
 
 monsieur anarcap :
 - ma démarche n'avait rien de scientifique
@@ -112,13 +113,13 @@ monsieur anarcap :
 - légitimité de la science (recherche de réalité objective) à contester les positions des individus qui relèvent purement du subjectif
 - considères tu que la science à son mot à dire dans les choix personnels des individus ? La politique ? La morale ? Mais pour le coup, je pense qu'on pourrait en écrire un livre.
 
-- Ça serait cool aussi développer l'idée de la fiabilité des sources, où piocher de l'information et des papiers scientifiques ?
+- Ça serait cool aussi développer l'idée de la fiabilité des sources, où piocher de l'information ?
 - Qui croire dans la mesure où nous ne pouvons pas mener des expériences pertinentes nous-même ?
 - Dans quelles mesures pouvons-nous nous fier à nos propres expériences sensorielles ?
 (On ne va pas envoyer notre propre appareil photo dans l'espace pour confirmer que la terre est ronde, on est obligé de passer par un pair).
 
 À caser quelque-part :
-Une accumulation d'anecdotes ne forment pas une preuve au même titre qu'un tas de pierres n'est pas une maison.
+Une accumulation d'anecdotes ou de témoignages ne forment pas une preuve, au même titre qu'un tas de pierres n'est pas une maison.
 De même, plusieurs suppositions ne forment pas un fait, on ne peut rien en déduire.
 
 Plan:
