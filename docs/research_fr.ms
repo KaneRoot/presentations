@@ -715,8 +715,28 @@ La recherche est complexe à lire, écrire et penser, parce que le monde qui nou
 Le
 .I "bon sens"
 est régulièrement mis à mal en science.
-Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de sujets plus simples, seulement moins bien
-.B traités .
+Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de sujets plus simples, seulement
+.B "moins bien traités" .
+.TBD
+
+.QUESTION "Science vs médias d'information."
+La science et les médias d'information n'ont pas le même objectif.
+La science produit de la connaissance, les médias, eux, ont tout un catalogue d'objectifs potentiels : produire du divertissement, relater des faits sous un certain angle, donner des opinions, être une tribune pour une personne, une cause, une prospection commerciale ou une communication gouvernementale, et caetera.
+
+En science, seuls les experts s'expriment.
+Dans les médias, rares sont les experts, la plupart des journalistes ne sont pas experts des sujets qu'ils abordent, ils peuvent même ne pas être initiés au domaine.
+Bien entendu, cet état de fait est normal, le journaliste ne travaille que très rarement sur un seul sujet, et ne peut être expert en tout (mais peut n'avoir aucune expertise).
+
+La science se protège de très nombreux biais en forçant les papiers à être relus par plusieurs experts, de laboratoires indépendants, et le papier n'est publié qu'à la condition d'apporter une vraie contribution (même modeste) et de bonne qualité.
+Dans un média, presque toute information peut paraître, le seul garde fou est la hiérarchie directe.
+
+La science travaille sur un temps long, chaque étude peut prendre quelques semaines, mois voire années pour être publiée.
+Dans un média, les contraintes de temps ne sont pas les mêmes.
+Certains journaux sont quotidiens et nécessitent de traiter un sujet en seulement quelques heures.
+Parfois un journaliste est en direct pour traiter un sujet, et ne fournit aucun recul sur les événements relatés.
+
+Chaque étude en science est sur un sujet précis et bien présenté, contextualisé, en indiquant la méthode de résolution du problème qui a été choisie et pourquoi, en indiquant le résultat suivi d'une explication détaillée et argumentée, et de manière uniformisée avec tous les autres sujets traités.
+Côté médias, c'est la fête : tous les formats imaginables existent.
 .TBD
 
 .nr table_size_offset 2
@@ -727,21 +747,21 @@ Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de suje
 allbox tab(:);
 c | c
 lw(1.6i) | lew(1.6i).
-science:médias
+Recherche:Médias
 T{
 produit de la connaissance
 T}:T{
 relate des faits selon un prisme de lecture, diffuse des opinions
 T}
 T{
-relecture par des experts, publication si qualité reconnue
-T}:T{
-aucune relecture, simple acceptation de la hiérarchie
-T}
-T{
 expert du sujet
 T}:T{
 expert, non expert, voire non initié
+T}
+T{
+relecture par des experts, publication si qualité reconnue
+T}:T{
+aucune relecture, simple acceptation de la hiérarchie
 T}
 T{
 temps long (plusieurs semaines, mois voire années)

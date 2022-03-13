@@ -3,13 +3,13 @@ SECTION 6 : Informations générales
 * qui paie quoi
 * en pratique, que fait un chercheur ?
   -> veille, enseignement
-  -> TODO: le chercheur est à un bureau à réfléchir, créer des modèles, simulations
-  -> TODO: le chercheur a des charges administratives
-  -> TODO: le chercheur a des missions intéressantes parfois (genre étude de la nature sous plein d'angles différents).
+  -> le chercheur est à un bureau à réfléchir, créer des modèles, simulations
+  -> le chercheur a des missions intéressantes parfois (genre étude de la nature sous plein d'angles différents).
+  -> le chercheur a des charges administratives
 * difficultés du métier
   -> le temps (publication posthume)
   -> représentation des données
-  -> TODO: un bagage de statistiques niveau lycée pour les maths peut être suffisant
+  -> un bagage de statistiques niveau lycée pour les maths peut être suffisant
 * limites de la recherche
   -> épistémologie, mais se résume par la réfutabilité
   -> un chercheur = un domaine, une spécialité, des méthodes bien établies
@@ -21,7 +21,7 @@ SECTION 6 : Informations générales
   -> peuvent partager des outils
 * Recherche = entre chercheurs
 
-* TODO: Science ne crée pas des opinions
+* Science n'est pas une opinion.
   -> La science est un processus menant aux conclusions les plus raisonnables (incluant le fait de ne pas savoir), en fondant tout raisonnement sur des faits.
      Une conclusion en science n'est jamais appuyée sur des sentiments ou des préjugés.
 
@@ -40,15 +40,16 @@ SECTION 7 : Science au-delà de la recherche
   -> en pratique, l'information vient de médias d'information ou de livres
   -> d'où l'importance d'avoir du journalisme fait par du personnel compétent
 
-* TODO: recherche vs journalisme
-pas les mêmes objectifs
+* recherche vs journalisme
+  TODO: pas les mêmes objectifs
   -> recherche = produire de la connaissance
   -> journalisme = diversifié sur cette question,
      principalement: relate des faits mais sans forcément leur étude approfondie, selon un prisme de lecture
      souvent:        les opinions priment sur les faits (mineurs, peu importants, peu voire pas contextualisés, etc.)
-pas les mêmes contraintes
+  TODO: pas les mêmes contraintes
   -> produire de la qualité, rapidement mais relatif à la recherche (quelques semaines, voire mois)
   -> produire rapidement (souvent en quelques jours, voire heures)
+
 TODO: tableau
 
 * TODO: problèmes dans les médias
