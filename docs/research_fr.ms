@@ -1,4 +1,18 @@
 .so macros.ms   \" First, let's import some macros.
+.nr legendps 2
+.de LEGEND1
+.QP
+.vs -\\n[legendps]p
+.ps -\\n[legendps]
+.br
+..
+.de LEGEND2
+.br
+.vs +\\n[legendps]p
+.ps +\\n[legendps]
+.br
+.LP
+..
 .nr N_ANNEXE_BIAIS 1
 .nr N_ANNEXE_ECRITURE_PAPIER 2
 .nr N_ANNEXE_MANIPULATIONS 3
@@ -615,21 +629,20 @@ De plus, en France, le contrat universitaire classique
 inclut de l'enseignement, et les université étant en sous-effectif, le personnel fait énormément d'heures.
 La veille et l'enseignement représentent ainsi la plus grande partie du temps de travail du chercheur.
 
-Le travail de recherche a plusieurs aspects.
-La partie la plus importante est de lire, écrire, et réfléchir à un problème : cela engendre un nombre d'heures conséquent à lire des papiers et des livres (et parfois d'autres sources).
+Concernant l'aspect recherche, la partie la plus importante est de lire, écrire, et réfléchir à un problème : cela engendre un nombre d'heures conséquent à lire des papiers et des livres (et parfois d'autres sources).
 Un sujet d'étude peut amèner à créer des simulations, des modèles et faire des graphes pour se représenter une donnée, donc à maîtriser quelques outils informatiques.
-Tout ceci nécessite de passer beaucoup de temps seul, souvent devant un ordinateur, dans une salle proche d'une salle de cours.
+Tout ceci nécessite de passer beaucoup de temps seul, souvent devant un ordinateur, dans un bureau.
 Un
 .I laboratoire
 n'a pas à inclure des généticiens fous qui s'amusent avec des produits dangereux ; l'environnement de travail du chercheur est souvent un simple bureau.
 
-Une autre partie du travail consiste à présenter ses travaux aux quatre coins du monde.
+Une autre partie du travail de recherche consiste à présenter ses travaux aux quatre coins du monde.
 Les chercheurs voyagent régulièrement pour faire une présentation de 20 minutes face à des gens qui, parfois, sont passionnés et écoutent attentivement, soit qui veulent se faire un réseau de connaissances et visiter la ville d'accueil\*[*].
 .FOOTNOTE1
 De l'expérience de l'auteur, les conférences en informatique n'intéressent pas vraiment les participants, qui semblent là par défaut, et s'échappent souvent pour boire en ville.
 .FOOTNOTE2
 
-Certains domaines de recherche impliquent un train de vie assez différent.
+Certains domaines impliquent, au moins le temps d'une étude, un train de vie assez différent.
 Une étude peut amener le chercheur à partir à l'autre bout du monde pour mettre des sondes sur des animaux et tracer leurs déplacements, étudier leur comportement, etc.
 Certaines études nécessitent de faire de la plongée sous-marine, passer 6 mois en Antarctique, ou travailler avec des outils particulièrement coûteux\*[*].
 .FOOTNOTE1
@@ -721,22 +734,47 @@ Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de suje
 
 .QUESTION "Science vs médias d'information."
 La science et les médias d'information n'ont pas le même objectif.
-La science produit de la connaissance, les médias, eux, ont tout un catalogue d'objectifs potentiels : produire du divertissement, relater des faits sous un certain angle, donner des opinions, être une tribune pour une personne, une cause, une prospection commerciale ou une communication gouvernementale, et caetera.
+La science produit de la connaissance, les médias, eux, ont tout un catalogue d'objectifs potentiels : produire du divertissement, relater des faits sous un certain angle, donner des opinions, être une tribune pour une personne, une cause, une prospection commerciale, une communication gouvernementale, et caetera.
 
 En science, seuls les experts s'expriment.
 Dans les médias, rares sont les experts, la plupart des journalistes ne sont pas experts des sujets qu'ils abordent, ils peuvent même ne pas être initiés au domaine.
 Bien entendu, cet état de fait est normal, le journaliste ne travaille que très rarement sur un seul sujet, et ne peut être expert en tout (mais peut n'avoir aucune expertise).
 
-La science se protège de très nombreux biais en forçant les papiers à être relus par plusieurs experts, de laboratoires indépendants, et le papier n'est publié qu'à la condition d'apporter une vraie contribution (même modeste) et de bonne qualité.
+La science se protège de très nombreux biais en forçant les papiers à être relus par plusieurs experts, de laboratoires indépendants.
+Le papier n'est publié qu'à la condition d'apporter une vraie contribution (même modeste) et de bonne qualité.
 Dans un média, presque toute information peut paraître, le seul garde fou est la hiérarchie directe.
 
 La science travaille sur un temps long, chaque étude peut prendre quelques semaines, mois voire années pour être publiée.
 Dans un média, les contraintes de temps ne sont pas les mêmes.
 Certains journaux sont quotidiens et nécessitent de traiter un sujet en seulement quelques heures.
-Parfois un journaliste est en direct pour traiter un sujet, et ne fournit aucun recul sur les événements relatés.
+Parfois un journaliste est en direct pour traiter un sujet, et ne fournit aucun recul sur les événements relatés\*[*].
+.FOOTNOTE1
+Par exemple, les reportages de moins d'une minute parlant du mécontentement des usagers de la SNCF suite à une grêve.
+Quel est l'intérêt ? Est-ce que le téléspectateur ne savait pas qu'une grêve crééait du mécontentement ?
+Pourquoi, en lieu et place de cette perte de temps manifeste, les
+.B revendications
+des grévistes ne sont pas mises en avant, apportant effectivement une information au téléspectateur ?
+.FOOTNOTE2
 
 Chaque étude en science est sur un sujet précis et bien présenté, contextualisé, en indiquant la méthode de résolution du problème qui a été choisie et pourquoi, en indiquant le résultat suivi d'une explication détaillée et argumentée, et de manière uniformisée avec tous les autres sujets traités.
-Côté médias, c'est la fête : tous les formats imaginables existent.
+La science utilise les raisonnements les plus fiables possibles pour arriver à des conclusions, quitte à admettre ne pas savoir, par honnêteté intellectuelle.
+Côté médias, tous les formats imaginables existent.
+Comme rien n'assure la qualité, le manque de sérieux est même de notoriété publique.
+Tout lecteur avisé se méfie de ce qui est écrit dans un journal, non pas nécessairement à cause d'erreurs factuelles ou de bonne foi, mais bel et bien à cause de l'incompétence voire des manipulations diverses des journalistes\*[*],
+.[
+bias bullshit lies
+.]
+et même les éditorialistes en ont conscience.
+.[
+se méfier des médias
+.]
+.FOOTNOTE1
+Attention, l'article
+.I "Bias Bullshit and Lies"
+a, selon l'auteur de ce document, quelques limites dans son étude.
+En particulier, les réponses possibles aux questions auraient pu être plus complètes.
+Par exemple, une personne peut se méfier des réseaux sociaux pour la faible qualité des informations tout en étant d'accord pour dire que la diversité des opinions est correctement représentée.
+.FOOTNOTE2
 .TBD
 
 .nr table_size_offset 2
@@ -778,6 +816,96 @@ T}
 .vs +\n[table_size_offset]p
 .ps +\n[table_size_offset]
 
+.vs -\n[table_size_offset]p
+.ps -\n[table_size_offset]
+.PS
+reset
+down
+colsize=1.3
+FAITS: "faits" \
+	"(parfois partiels," \
+	"voire rapportés)"
+AVIS: "avis d'experts" \
+	"(voire un seul expert," \
+	"des non experts," \
+	"ou des personnes intéressées)" \
+	at Here + (colsize,0)
+BIAIS: "biais divers" \
+	"(incompétence," \
+	"prisme de lecture," \
+	"intérêt personnel," \
+	"contraintes diverses," \
+	"ressenti, etc.)" \
+	at Here + (colsize,0)
+
+.ps +6
+"Journalisme" at AVIS + (0, 0.7)
+.ps -6
+
+firsttosecondarrows = 0.1
+distarrow = 0.6
+sizearrow = 0.2
+
+A: line -> from AVIS + (0,-distarrow) to AVIS + (0,-(distarrow + sizearrow))
+line from FAITS + (0,-(distarrow - firsttosecondarrows)) \
+	to FAITS + (0,-(distarrow)) \
+	to BIAIS + (0,-(distarrow)) \
+	to BIAIS + (0,-(distarrow - firsttosecondarrows))
+line from AVIS + (0,-(distarrow - firsttosecondarrows)) \
+	to AVIS + (0,-(distarrow))
+
+larger = 0.2
+journalism_top = distarrow + sizearrow
+line from FAITS + (-larger,-(journalism_top + firsttosecondarrows*3)) \
+	to FAITS + (-larger,-(journalism_top)) \
+	to BIAIS + (larger,-(journalism_top)) \
+	to BIAIS + (larger,-(journalism_top + firsttosecondarrows*3)) \
+	thickness 1.2
+.PE
+.sp -3
+.LEGEND1
+Fait divers : une promeneuse inconsciente a pris une balle perdue alors que des pancartes annoncent partout que la chasse est ouverte.
+Enquête auprès des experts de chasse de l'association
+.I "Mon fusil, mon Âme" .
+.LEGEND2
+
+.\".vs +\n[table_size_offset]p
+.\".ps +\n[table_size_offset]
+
+.G1
+coord x 1994,2021 y 0,150
+#frame ht 2.0 wid 2.2
+frame invis bot solid
+#copy "data/dead-journalists.d"
+copy "data/dead-journalists.d" thru X
+	line dotted from  $1,0 to $1,$2
+	"\(bu" size -2 at $1,$2
+	square size -5 at $1,$3
+X
+
+square size -5 at 1997,146
+"Chiffre Reporter Sans Frontières" ljust size -5 at 1998,146
+
+"\(bu" size -5 at 1997,137
+"Chiffre Wikipédia" ljust size -5 at 1998,137
+
+label top "Nombre de journalistes tués dans le monde"
+#label left "Nombre de citations"
+label bot "Année"
+
+# values
+times at 1,18
+times at 2,10
+times at 3,8
+times at 4,7
+times at 5,7
+times at 6,3
+times at 7,2
+for i from 8 to 14 by 1 do {
+  times at i,1
+}
+times at 15,0
+.G2
 
 .QUESTION "Quelques règles de base."
 Avant de se poser la question de comment utiliser au mieux la science au quotidien, voici quelques points de départ importants qu'il faut bien comprendre.
@@ -1263,7 +1391,6 @@ Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contex
 Cette annexe liste des techniques de manipulation qui peuvent être employées.
 De même, des propriétés d'un discours (ou d'une personnalité) qui peuvent être suspicieuses.
 
-.nr legendps 2
 .vs -\n[legendps]
 .ps -\n[legendps]
 .br
@@ -1387,20 +1514,6 @@ for i from 8 to 14 by 1 do {
 }
 times at 15,0
 .G2
-.nr legendps 2
-.de LEGEND1
-.QP
-.vs -\\n[legendps]p
-.ps -\\n[legendps]
-.br
-..
-.de LEGEND2
-.br
-.vs +\\n[legendps]p
-.ps +\\n[legendps]
-.br
-.LP
-..
 .LEGEND1
 Schéma représentant le classement des papiers d'un chercheur, par ordre décroissant du nombre de citations.
 .LEGEND2

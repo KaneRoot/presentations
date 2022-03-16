@@ -50,6 +50,9 @@ SECTION 7 : Science au-delà de la recherche
   -> produire de la qualité, rapidement mais relatif à la recherche (quelques semaines, voire mois)
   -> produire rapidement (souvent en quelques jours, voire heures)
 
+TODO: insister sur la méthodologie
+TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
+
 TODO: tableau
 
 * TODO: problèmes dans les médias
