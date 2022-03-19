@@ -27,6 +27,7 @@
 Ce document présente succintement la science : son objectif, la méthode scientifique, le déroulement de la recherche ainsi que la création de papiers.
 Le travail des chercheurs montre un raisonnement et des réflexions qui peuvent être utiles pour repérer des biais cognitifs présents dans la vie quotidienne, voire même des manipulations.
 Suite à la lecture de ce document, il est attendu que les discussions (autour de l'actualité par exemple) soient plus fertiles et les prises de décision plus pertinentes.
+De nombreuses annexes explorent un sujet en particulier, en complément du texte principal.
 
 .INFORMATIONS_FR \\*[WEBSITE]/research_fr.pdf \\*[EMAIL]
 .br
@@ -63,14 +64,14 @@ L'objectif est de fournir des informations utiles au plus grand nombre pour déc
 La concision est recherchée ainsi que la compréhension intuitive des informations fournies, le détail de certains concepts présentés sort du cadre de ce document.
 En cas d'imprécision néfaste à la compréhension, n'hésitez pas à contacter l'auteur.
 
-La section 2 présente le principe de biais (cognitif, méthodologique, statistique...), c'est-à-dire d'erreur de raisonnement ou de perception par exemple.
+La section 2 présente le principe de biais (cognitif, méthodologique, statistique...), c'est-à-dire d'erreur de raisonnement ou de perception.
 La section 3 présente la méthode scientifique, qui permet de prévenir au mieux les erreurs de raisonnement et ainsi d'être plus confiant quant aux connaissances acquises.
 La section 4 présente l'art de l'écriture de papiers scientifiques ainsi que la rigueur nécessaire dans la formulation d'un problème.
 Cette section est également l'occasion de voir que tous les papiers ne se valent pas.
 La section 5 présente les journaux scientifiques, bien différents des journaux traditionnels, ainsi que les critères sur lesquels un scientifique juge leur qualité.
 La section 6 répond à des questions générales qui pourraient se poser en science et autour de la recherche.
 Nous abordons par exemple l'impossibilité pour un chercheur d'être pertinent en dehors de son domaine, à quoi ressemble le travail d'un chercheur, des difficultés rencontrées dans la recherche, ou encore des limites évidentes à la science.
-La section 7 aborde la méthode scientifique au-delà de la recherche, car les biais sont partout dans notre quotidien et il est bénéfique à tous d'apprendre à les identifier.
+La section 7 aborde la méthode scientifique au-delà de la recherche, car les biais sont partout dans notre quotidien et il est bénéfique pour tout le monde d'apprendre à les identifier.
 Enfin, une conclusion sera tirée en section 8.
 .SECTION Biais
 Un biais cognitif est une erreur de raisonnement ou de perception.
@@ -128,7 +129,7 @@ penser qu'une personne dans l'erreur est un lanceur d'alerte visionnaire, envers
 
 .QUESTION "Ma petite entreprise ne connaît pas la crise."
 Le monde des affaires et de l'entreprise en général sont sujets à certains biais.
-Par exemple, le biais du survivant se retrouve dans les start-up où les différents associés se disent « si X a réussi, nous pouvons le faire aussi ».
+Par exemple, le biais du survivant se retrouve dans les jeunes entreprises où les différents associés se disent « si X a réussi, nous pouvons le faire aussi », en mettant de côté de taux de réussite réel des entreprises du secteur et tout autre facteur important.
 De plus, cela peut être combiné à un biais de confirmation si ces mêmes personnes ne s'informent que sur des entreprises ayant du succès.
 
 .QUESTION "Les statistiques, cruelles statistiques."
@@ -312,6 +313,10 @@ La science se limite à l'étude de ce qui est observable (directement ou non), 
 Par exemple, prouver l'existence (ou non) du
 .I surnaturel ,
 qui par définition ne peut s'expliquer rationnellement, ne rentre pas dans le cadre de la science.
+
+À noter que le mot
+.I matérialiste
+est ici un abus de langage, le matérialisme faisant référence à une philosophie ancienne et obsolète qui pensait que tout était composé de matière.
 
 .QUESTION "La science est descriptive."
 La recherche scientifique est dédiée à mieux comprendre le monde qui nous entoure.
@@ -695,10 +700,24 @@ Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais 
 Comme dit en section 3, un chercheur a un domaine, par exemple l'informatique, et une spécialité, comme les protocoles de communication sécurisés sur des réseaux contraints (oui, une spécialité est souvent
 .UL très
 spécifique).
-Chaque domaine a son jargon mais surtout des compétences bien distinctes des autres, un physicien n'est pas
-.UL "du tout"
-en mesure de se prononcer sur un problème de médecine.
+Chaque domaine a son jargon mais surtout des compétences bien distinctes des autres, un physicien n'est pas en mesure de se prononcer sur un problème de médecine.
 C'est également le cas au sein des spécialités, chacune a un corpus scientifique bien précis, très différent des autres : les chercheurs ne sont pas interchangeables.
+
+La complexité des études varie d'un domaine, voire d'une spécialité, à l'autre.
+Une étude comparant la vitesse d'exécution de deux outils informatiques (comme 2 algorithmes pour un traitement quelconque) est
+.UL compréhensible\*[*]
+.FOOTNOTE1
+Un papier peut être
+.I compris
+par un chercheur d'une autre spécialité, mais cela ne veut pas dire qu'il peut être
+.I jugé
+par celui-ci.
+.FOOTNOTE2
+même pour des personnes qui ne sont pas du domaine.
+En revanche, une étude en biologie portant sur le traitement d'une maladie est hors de porté des non initiés à la biologie, voire des non experts selon le jargon médical employé.
+
+Certaines erreurs de raisonnement peuvent être repérées indépendamment du domaine, si elles sont suffisamment grossières.
+Ainsi, un mauvais usage d'un outil mathématique, une corrélation annoncée comme causalité ou encore une conclusion qui ne correspond pas aux résultats de étude pourraient, dans certains cas, être des erreurs détectées par des chercheurs venant d'autres domaines.
 
 Bien entendu, les chercheurs peuvent partager certains outils.
 Ainsi, une bonne partie des chercheurs sait manipuler des statistiques\*[*], faire des graphes, faire preuve de pédagogie (pour décrire un contexte, un problème et sa solution, une expérimentation), gérer une bibliographie, avoir un certain esprit de synthèse, etc.
@@ -730,15 +749,52 @@ Le
 est régulièrement mis à mal en science.
 Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de sujets plus simples, seulement
 .B "moins bien traités" .
+L'actualité est un sujet
+.I omniprésent
+dans les médias, souvent pour parler d'un homicide ou d'un méfait quelconque.
+Scientifiquement, avant que l'enquête ne soit terminée, il n'est pas possible de replacer ce phénomène dans un contexte permettant de le comprendre, c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
+Et cela est tout le problème quand nous cherchons à analyser des sujets comme l'actualité : tout n'est pas une simple affaire de mathématiques.
+Sur ces sujets, trouver les mensonges, les imprudences, les biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
 .TBD
+Les papiers scientifiques sont protégés des biais en grande partie\*[*] mais sont pour un public restreint, là où les médias y sont très exposés et pourtant destinés à un large public.
+.FOOTNOTE1
+Sans être parfaits pour autant.
+Certains domaines sont plus succeptibles d'être corrompus que d'autres.
+Mais cela est un sujet pour un autre document.
+.FOOTNOTE2
 
 .QUESTION "Science vs médias d'information."
-La science et les médias d'information n'ont pas le même objectif.
-La science produit de la connaissance, les médias, eux, ont tout un catalogue d'objectifs potentiels : produire du divertissement, relater des faits sous un certain angle, donner des opinions, être une tribune pour une personne, une cause, une prospection commerciale, une communication gouvernementale, et caetera.
+La science produit de la connaissance.
+Les médias ont tout un catalogue d'objectifs potentiels : produire du divertissement, relater des faits, donner des opinions, être une tribune pour une personne, une cause, une prospection commerciale, une communication gouvernementale, et caetera.
+
+Chaque étude en science est sur un sujet précis et bien présenté, contextualisé, en indiquant la méthode de résolution du problème qui a été choisie et pourquoi, en indiquant le résultat suivi d'une explication détaillée et argumentée, et de manière uniformisée avec tous les autres sujets traités.
+La science utilise les raisonnements les plus fiables possibles pour arriver à des conclusions, quitte à admettre ne pas savoir, par honnêteté intellectuelle.
+Côté médias, tous les formats imaginables existent.
+Comme rien n'assure la qualité, le manque de sérieux est même de notoriété publique.
+Tout lecteur avisé se méfie de ce qui est écrit dans un journal, non pas nécessairement à cause de (rares) erreurs factuelles et de bonne foi, mais bel et bien à cause de l'incompétence voire des manipulations diverses des journalistes\*[*],
+.[
+bias bullshit lies
+.]
+et même les éditorialistes en ont conscience.
+.[
+se méfier des médias
+.]
+.FOOTNOTE1
+Attention, l'article
+.I "Bias Bullshit and Lies"
+a, selon l'auteur de ce document, quelques limites dans son étude.
+En particulier, les réponses possibles aux questions auraient pu être plus complètes.
+Par exemple, une personne peut se méfier des réseaux sociaux pour la faible qualité des informations tout en étant d'accord pour dire que la diversité des opinions est correctement représentée.
+.FOOTNOTE2
+.TBD
 
 En science, seuls les experts s'expriment.
 Dans les médias, rares sont les experts, la plupart des journalistes ne sont pas experts des sujets qu'ils abordent, ils peuvent même ne pas être initiés au domaine.
-Bien entendu, cet état de fait est normal, le journaliste ne travaille que très rarement sur un seul sujet, et ne peut être expert en tout (mais peut n'avoir aucune expertise).
+Bien entendu, cet état de fait est normal.
+Le journaliste ne travaille que très rarement sur un seul sujet, et ne peut être expert en tout (mais peut n'avoir aucune expertise).
+
+Les papiers sont pour un public restreint.
+Les médias sont destinés à un large public.
 
 La science se protège de très nombreux biais en forçant les papiers à être relus par plusieurs experts, de laboratoires indépendants.
 Le papier n'est publié qu'à la condition d'apporter une vraie contribution (même modeste) et de bonne qualité.
@@ -756,27 +812,6 @@ Pourquoi, en lieu et place de cette perte de temps manifeste, les
 des grévistes ne sont pas mises en avant, apportant effectivement une information au téléspectateur ?
 .FOOTNOTE2
 
-Chaque étude en science est sur un sujet précis et bien présenté, contextualisé, en indiquant la méthode de résolution du problème qui a été choisie et pourquoi, en indiquant le résultat suivi d'une explication détaillée et argumentée, et de manière uniformisée avec tous les autres sujets traités.
-La science utilise les raisonnements les plus fiables possibles pour arriver à des conclusions, quitte à admettre ne pas savoir, par honnêteté intellectuelle.
-Côté médias, tous les formats imaginables existent.
-Comme rien n'assure la qualité, le manque de sérieux est même de notoriété publique.
-Tout lecteur avisé se méfie de ce qui est écrit dans un journal, non pas nécessairement à cause d'erreurs factuelles ou de bonne foi, mais bel et bien à cause de l'incompétence voire des manipulations diverses des journalistes\*[*],
-.[
-bias bullshit lies
-.]
-et même les éditorialistes en ont conscience.
-.[
-se méfier des médias
-.]
-.FOOTNOTE1
-Attention, l'article
-.I "Bias Bullshit and Lies"
-a, selon l'auteur de ce document, quelques limites dans son étude.
-En particulier, les réponses possibles aux questions auraient pu être plus complètes.
-Par exemple, une personne peut se méfier des réseaux sociaux pour la faible qualité des informations tout en étant d'accord pour dire que la diversité des opinions est correctement représentée.
-.FOOTNOTE2
-.TBD
-
 .nr table_size_offset 2
 .vs -\n[table_size_offset]p
 .ps -\n[table_size_offset]
@@ -792,9 +827,19 @@ T}:T{
 relate des faits selon un prisme de lecture, diffuse des opinions
 T}
 T{
+sujet très précis, sérieux, contextualisé et uniformisé
+T}:T{
+tout existe en terme de sujet et de qualité, souvent pour le pire
+T}
+T{
 expert du sujet
 T}:T{
 expert, non expert, voire non initié
+T}
+T{
+pour des experts, mais souvent lisible par des initiés au domaine
+T}:T{
+destiné à un très large public
 T}
 T{
 relecture par des experts, publication si qualité reconnue
@@ -807,14 +852,16 @@ T}:T{
 instantané (juste quelques heures de rédaction, parfois même en direct)
 et parfois (rarement) temps long
 T}
-T{
-sujet très précis, sérieux, contextualisé et uniformisé
-T}:T{
-tout existe en terme de sujet et de qualité, souvent pour le pire
-T}
 .TE
 .vs +\n[table_size_offset]p
 .ps +\n[table_size_offset]
+.
+.defcolor color_ressenti      rgb 0.6 0.2 0.2
+.defcolor color_interet       rgb 1 0 0
+.defcolor color_prisme        rgb 0 0 1
+.defcolor color_faitpartiel   rgb 0.2 0.6 0.2
+.defcolor color_liens         rgb 0.2 0.2 0.6
+.defcolor color_contraintes   rgb 0.9 0 0.6
 
 .vs -\n[table_size_offset]p
 .ps -\n[table_size_offset]
@@ -823,19 +870,19 @@ reset
 down
 colsize=1.3
 FAITS: "faits" \
-	"(parfois partiels," \
+	"(parfois \m[color_faitpartiel]partiels\m[]," \
 	"voire rapportés)"
 AVIS: "avis d'experts" \
 	"(voire un seul expert," \
 	"des non experts," \
-	"ou des personnes intéressées)" \
+	"ou des \m[color_interet]personnes intéressées\m[])" \
 	at Here + (colsize,0)
 BIAIS: "biais divers" \
 	"(incompétence," \
-	"prisme de lecture," \
-	"intérêt personnel," \
-	"contraintes diverses," \
-	"ressenti, etc.)" \
+	"\m[color_prisme]prisme de lecture\m[]," \
+	"\m[color_liens]intérêt personnel\m[]," \
+	"\m[color_contraintes]contraintes diverses\m[]," \
+	"\m[color_ressenti]ressenti\m[], etc.)" \
 	at Here + (colsize,0)
 
 .ps +6
@@ -856,38 +903,63 @@ line from AVIS + (0,-(distarrow - firsttosecondarrows)) \
 
 larger = 0.2
 journalism_top = distarrow + sizearrow
-line from FAITS + (-larger,-(journalism_top + firsttosecondarrows*3)) \
+page_len = 0.7
+line from FAITS + (-larger,-(journalism_top + page_len)) \
 	to FAITS + (-larger,-(journalism_top)) \
 	to BIAIS + (larger,-(journalism_top)) \
-	to BIAIS + (larger,-(journalism_top + firsttosecondarrows*3)) \
+	to BIAIS + (larger,-(journalism_top + page_len)) \
+	to FAITS + (-larger,-(journalism_top + page_len)) \
 	thickness 1.2
 .PE
-.sp -3
+.sp -5.2
 .LEGEND1
-Fait divers : une promeneuse inconsciente a pris une balle perdue alors que des pancartes annoncent partout que la chasse est ouverte.
-Enquête auprès des experts de chasse de l'association
+Fait divers : une promeneuse
+.gcolor color_ressenti
+inconsciente
+.gcolor black
+a pris une balle perdue
+.gcolor color_prisme
+alors que des pancartes annoncent partout que la chasse est ouverte.
+.gcolor black
+Enquête auprès des experts de chasse de
+.gcolor color_interet
+l'association
 .I "Mon fusil, mon Âme" .
+.gcolor black
+.LEGEND2
+.LEGEND1
+Titre d'une histoire fictive dans un journal, volontairement exagéré pour illustrer divers biais.
+Cette histoire pourrait parler d'un homicide involontaire d'une jeune femme
+.gcolor color_faitpartiel
+la nuit sur une route fréquentée
+.gcolor black
+suite au tir d'un chasseur
+.gcolor color_faitpartiel
+en état d'ébriété.
+.gcolor black
+Le titre et potentiellement le contenu de cet article fictif n'indiquent pas de biais personnel de l'auteur, mais il pourrait très bien avoir des \m[color_liens]liens avec l'association\m[].
+De même, peut-être qu'un \m[color_contraintes]manque de temps\m[] est à l'origine du point de vue présenté, les journalistes n'ayant \m[color_contraintes]pas encore toutes les informations\m[] pour avoir un avis pertinent.
 .LEGEND2
 
 .\".vs +\n[table_size_offset]p
 .\".ps +\n[table_size_offset]
 
-.G1
+.vs -\n[table_size_offset]p
+.ps -\n[table_size_offset]
+.G1 2.7
 coord x 1994,2021 y 0,150
 #frame ht 2.0 wid 2.2
 frame invis bot solid
-#copy "data/dead-journalists.d"
 copy "data/dead-journalists.d" thru X
 	line dotted from  $1,0 to $1,$2
 	"\(bu" size -2 at $1,$2
-	square size -5 at $1,$3
+	times size -2 at $1,$3
 X
 
-square size -5 at 1997,146
-"Chiffre Reporter Sans Frontières" ljust size -5 at 1998,146
-
-"\(bu" size -5 at 1997,137
-"Chiffre Wikipédia" ljust size -5 at 1998,137
+"\(bu" size -2 at 1997,150
+"Chiffre \f[I]Wikipédia\f[] page \f[]\"journaliste\"\f[]" ljust size -3 at 1998,150
+times size -2 at 1997,141
+"Chiffre Reporter Sans Frontières" ljust size -3 at 1998,141
 
 label top "Nombre de journalistes tués dans le monde"
 #label left "Nombre de citations"

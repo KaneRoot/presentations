@@ -29,31 +29,45 @@ SECTION 6 : Informations générales
 
 SECTION 7 : Science au-delà de la recherche
 
-* TODO (où ??): dépassionner les discussions
+au-delà de la recherche
+  => science = comprendre le monde
+               donc un bon outil pour prendre de meilleures décisions
+               mieux réfléchir
+  => trier le vrai du faux dans ce qu'on voit au quotidien
+     ex: discussions, journaux, discours
+  => voir les manipulations
+     c-à-d les biais qu'on cherche à nous faire avaler
+  => dépassionner les discussions
 
 * TODO (en cours): la vérité est grise
   -> recherche = complexe à lire, écrire, penser
   -> s'éloigner de la recherche = sujets moins bien traités
   -> 
-  -> tout n'est pas des maths, impossible de réfuter mathématiquement de manière certaines tout mensonge, imprudence ou erreur
+  -> tout n'est pas des maths, impossible de réfuter mathématiquement de manière certaine tout mensonge, imprudence ou erreur
   -> les papiers scientifiques sont grandement protégés de divers biais, mais comme vu en fin de section précédente, ils sont pour un public très restreint
   -> en pratique, l'information vient de médias d'information ou de livres
   -> d'où l'importance d'avoir du journalisme fait par du personnel compétent
 
 * recherche vs journalisme
-  TODO: pas les mêmes objectifs
+  objectifs
   -> recherche = produire de la connaissance
   -> journalisme = diversifié sur cette question,
      principalement: relate des faits mais sans forcément leur étude approfondie, selon un prisme de lecture
      souvent:        les opinions priment sur les faits (mineurs, peu importants, peu voire pas contextualisés, etc.)
-  TODO: pas les mêmes contraintes
+  biais
+  -> science : relecture par plusieurs experts
+  -> journalisme : acceptation par la hiérarchie = pas de garde fou
+  temps
   -> produire de la qualité, rapidement mais relatif à la recherche (quelques semaines, voire mois)
   -> produire rapidement (souvent en quelques jours, voire heures)
+  sujet
+  -> science : précis, sérieux, bien traité, uniformisé
+  -> journalisme : tous les formats existent, le sérieux est parti
+
+tableau "recherche vs médias"
 
 TODO: insister sur la méthodologie
 TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
-
-TODO: tableau
 
 * TODO: problèmes dans les médias
   -> au-delà d'être non expert et partial, ce qui est normal pour un média (la neutralité est un mensonge)
