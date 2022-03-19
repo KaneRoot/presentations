@@ -1,5 +1,124 @@
-SECTION 6 : Informations générales
+SECTION 2 : Biais
+SECTION 3 : Méthode scientifique
+* intro:
+  méthode scientifique = ensemble de méthodes + vérifications
+  un problème = une méthode
+  cette section = 2 méthodes (diversité du travail)
+  + chronologie
+  suite : discussions
+  * vocabulaire
+  * science = non démocratique, matérialiste, discriptive
+  * légitimité parole scientifique
+  * se termine par le doute et la nuance
+  TODO (?): science non opinion
+  TODO (?): science se fait entre chercheurs
+  TODO (?): science s'accomode de résultats imparfaits
+
+* méthode hypothético-déductive
+* méthode double-aveugle
+* multiplicité des méthodes
+* chronologie de la recherche
+* vocabulaire
+* science != démocratie
+* science = matérialisme
+* science = descriptive
+* art du doute raisonnable
+* science s'accomode de résultats imparfaits
+* science != opinion
+  * conclusion = résultat d'un processus, évaluation de tous les
+                 paramètres, plusieurs experts, fournissant tous les
+                 éléments de la réflexion, peut ne pas statuer
+  * science = processus fiable, produit connaissance
+* un chercheur un domaine
+  -> domain = ... spé = ...
+  -> peuvent partager des outils
+* recherche = entre chercheurs
+* chercheur != science
+* limites de la recherche
+  -> épistémologie, mais se résume par la réfutabilité
+  -> un chercheur = un domaine, une spécialité, des méthodes bien établies
+  -> ressources matérielles, financières etc.
+
+* outro:
+  * chronologie + voc + doute et nuance + limites (cadre) de la recherche
+  * rien n'est absolu (ex: réfutabilité) mais infos intuitives
+  * section suivante = papier = matérialisation de toute étude
+
+SECTION 4 : écriture de papiers
+* intro:
+  * papier = transmission du savoir
+  * comprendre les papiers = contraste avec les autres documents
+  * cette section:
+    * art écriture papiers + juger qualité
+    * différents types de papiers
+  * papier = contexte, problématique, état de l'art, solution,
+             expérimentation, interprétation, conclusions,
+             travaux futurs
+  * papier = écriture rigoureuse, fond + forme
+
+* forme
+  * style sobre, phrases simples et se suivent, 1 idée = 1 §,
+    graisse + italique + soulignement, listes à puces évitées
+  * papier != roman, faut faciliter la lecture au chercheur,
+    présent, pas de forme alambiquée, simple et concis,
+    vocabulaire simple, répétition si aide à la compréhension
+  * papier != tribune, pas de références littéraires, pas de « je »,
+    neutre
+  * papier = prudent, pas de sensationalisme
+  * <liste des sections d'un papier>
+  * ordre des auteurs
+  * schémas, tableaux, équation, résultats : introduits, pertinents,
+    etc.
+  * papier = concis, discussion autour du nb de pages
+
+* fond
+  * intro = contexte + problématique
+  * état de l'art = méthodes actuelles pour résoudre le pb
+  * solution = explication + résultat attendu
+  * expérimentation = décrire dans le détail
+  * résultats + interprétations
+  * conclusion = prendre du recul
+  * annexe 2 montre un exemple
+
+* un papier = une idée
+* tous les papiers ne sont pas égaux
+* tous les papiers n'ont pas le même objectif
+* outro:
+  * cette section = forme + contenu
+  * rigueur = transmettre le savoir
+  * forme = rendre plus intelligible + donner confiance au fond
+  * annexe 2 = complément
+  * rigueur = comprendre les techniques de manipulation
+
+SECTION 5 : publications scientifiques
+* intro:
+  * papier = publication dans un journal + comité de lecture
+  * cette section = journaux (rôle, objectifs, fonctionnement),
+    moyens de rechercher des papiers
+* qu'est-ce qu'un journal scientifique
+  * publie papiers scientifiques
+  * chaque journal = domaine (+ spécialité)
+  * journal = papiers de conférences, impact factor
+* visibilité d'un journal
+* où trouver ces journaux
+* taux d'acceptation
+* arnaques (revues prédatrices, preprint)
+* conférences
+* qu'apporte un journal aux auteurs: mise en page (faux avec LaTeX),
+  visualisation de données, anglais
+* où trouver des papiers
+* juteux marché de l'édition
+* outro
+  * cette section
+    * journaux scientifiques, éditeurs, conférences, comment
+      trouver les articles
+    * fraudes (revues prédatrices, preprint, abus des journaux)
+  * section suivante = infos générales pour meilleur compréhension
+                       du métier de la recherche
+
+SECTION 6 : Informations générales (sur le métier de chercheur)
 * TODO: intro
+  * mieux comprendre les chercheurs
 * qui paie quoi
 * en pratique, que fait un chercheur ?
   -> veille, enseignement
@@ -9,21 +128,10 @@ SECTION 6 : Informations générales
 * difficultés du métier
   -> le temps (publication posthume)
   -> représentation des données
+  -> TODO: schémas parlants
   -> un bagage de statistiques niveau lycée pour les maths peut être suffisant
-* limites de la recherche
-  -> épistémologie, mais se résume par la réfutabilité
-  -> un chercheur = un domaine, une spécialité, des méthodes bien établies
-  -> ressources matérielles, financières etc.
 * h-index
   -> met en avant les chercheurs productifs
-* un chercheur un domaine
-  -> domain = ... spé = ...
-  -> peuvent partager des outils
-* Recherche = entre chercheurs
-
-* Science n'est pas une opinion.
-  -> La science est un processus menant aux conclusions les plus raisonnables (incluant le fait de ne pas savoir), en fondant tout raisonnement sur des faits.
-     Une conclusion en science n'est jamais appuyée sur des sentiments ou des préjugés.
 
 * TODO: outro
 
@@ -54,29 +162,32 @@ au-delà de la recherche
   -> journalisme = diversifié sur cette question,
      principalement: relate des faits mais sans forcément leur étude approfondie, selon un prisme de lecture
      souvent:        les opinions priment sur les faits (mineurs, peu importants, peu voire pas contextualisés, etc.)
+     TODO: actualité
+  TODO déplacement : sujet
+  -> science : précis, sérieux, bien traité, uniformisé
+  -> journalisme : tous les formats existent, le sérieux est parti
   biais
   -> science : relecture par plusieurs experts
   -> journalisme : acceptation par la hiérarchie = pas de garde fou
   temps
   -> produire de la qualité, rapidement mais relatif à la recherche (quelques semaines, voire mois)
   -> produire rapidement (souvent en quelques jours, voire heures)
-  sujet
-  -> science : précis, sérieux, bien traité, uniformisé
-  -> journalisme : tous les formats existent, le sérieux est parti
+  financement
+    -> public
+    -> recettes, mécénat et énormément de subventions
+	  -> les médias sont déficitaires, donc l'objectif des mécènes est de les utiliser comme source d'influence
+	  -> très peu de diversité de point de vue (celui du mécène, ou au moins des points de vues qui sont compatibles avec ses intérêts)
+	  -> CSA: quasi inutile
 
 tableau "recherche vs médias"
 
 TODO: insister sur la méthodologie
 TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
 
+TODO: juger un journal/article
+
 * TODO: problèmes dans les médias
   -> au-delà d'être non expert et partial, ce qui est normal pour un média (la neutralité est un mensonge)
-  -> financement non par recettes, mais subventions et mécénat
-    -> les médias sont déficitaires, donc l'objectif des mécènes est de les utiliser comme source d'influence
-    -> très peu de diversité de point de vue (celui du mécène, ou au moins des points de vues qui sont compatibles avec ses intérêts)
-    -> temps (très) court, ce qui diminue la qualité de la rédaction
-  -> 
-  -> CSA: quasi inutile
   -> 
   -> ANNEXE: subventions énormes pour diffuser des opinions
   -> ANNEXE:

@@ -65,12 +65,12 @@ La concision est recherchée ainsi que la compréhension intuitive des informati
 En cas d'imprécision néfaste à la compréhension, n'hésitez pas à contacter l'auteur.
 
 La section 2 présente le principe de biais (cognitif, méthodologique, statistique...), c'est-à-dire d'erreur de raisonnement ou de perception.
-La section 3 présente la méthode scientifique, qui permet de prévenir au mieux les erreurs de raisonnement et ainsi d'être plus confiant quant aux connaissances acquises.
+La section 3 présente la science et la méthode scientifique, qui permet de prévenir au mieux les erreurs de raisonnement et ainsi d'être plus confiant quant aux connaissances acquises.
+Les limites de la science sont également présentées dans cette section, en expliquant le cadre de toute étude scientifique.
 La section 4 présente l'art de l'écriture de papiers scientifiques ainsi que la rigueur nécessaire dans la formulation d'un problème.
 Cette section est également l'occasion de voir que tous les papiers ne se valent pas.
 La section 5 présente les journaux scientifiques, bien différents des journaux traditionnels, ainsi que les critères sur lesquels un scientifique juge leur qualité.
-La section 6 répond à des questions générales qui pourraient se poser en science et autour de la recherche.
-Nous abordons par exemple l'impossibilité pour un chercheur d'être pertinent en dehors de son domaine, à quoi ressemble le travail d'un chercheur, des difficultés rencontrées dans la recherche, ou encore des limites évidentes à la science.
+La section 6 portrait le travail de recherche en pratique, ainsi que ses difficultés.
 La section 7 aborde la méthode scientifique au-delà de la recherche, car les biais sont partout dans notre quotidien et il est bénéfique pour tout le monde d'apprendre à les identifier.
 Enfin, une conclusion sera tirée en section 8.
 .SECTION Biais
@@ -316,7 +316,16 @@ qui par définition ne peut s'expliquer rationnellement, ne rentre pas dans le c
 
 À noter que le mot
 .I matérialiste
-est ici un abus de langage, le matérialisme faisant référence à une philosophie ancienne et obsolète qui pensait que tout était composé de matière.
+est ici un abus de langage\*[*] pour dire que le domaine d'étude de la science est tout phénomène observable ou quantifiable (pas seulement la
+.I matière ,
+mais également l'énergie par exemple).
+.FOOTNOTE1
+Le mot
+.I matérialisme
+est polysémique.
+En plus du sens utilisé ici, le matérialisme est une philosophie (obsolète) qui pensait que tout était composé de matière.
+De même, le mot est également un qualificatif (souvent péjoratif) pour désigner des personnes cherchant avant tout des satisfactions matérielles, du plaisir, au lieu de nourrir leur esprit.
+.FOOTNOTE2
 
 .QUESTION "La science est descriptive."
 La recherche scientifique est dédiée à mieux comprendre le monde qui nous entoure.
@@ -324,13 +333,6 @@ Elle ne dicte pas la conduite des individus, entreprises, médias, organisations
 La distinction entre la recherche et ce qui en est fait est importante : la science est
 .UL seulement
 l'acquisition de la connaissance.
-
-.QUESTION "Un chercheur n'est pas la science."
-Aucun chercheur ne fait autorité dans tout un domaine de recherche.
-Un chercheur a une spécialité dont il connait le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
-Dans sa spécialité, a priori, le chercheur a un avis pertinent ; sa voix est légitime.
-En revanche, même dans sa spécialité, la parole d'un chercheur n'est pas au-dessus de toute critique et il peut lui-même avoir un avis qui ne fait pas consensus.
-Les arguments priment sur le statut, même pour un directeur de recherche dans un laboratoire prestigieux.
 
 .QUESTION "L'art du doute raisonnable."
 La science doute de toute affirmation péremptoire, ainsi le doute est un outil utile pour poser de meilleures questions.
@@ -361,7 +363,71 @@ Cet exemple montre également que la science se corrige elle-même.
 La science est le raffinement de méthodes et la recherche systématique d'erreurs pour s'approcher de la vérité au mieux de nos capacités.
 .EXPLANATION2
 
-Cette section a présenté des méthodes scientifiques et diverses informations pour caractériser la science (sa chronologie, le vocabulaire académique, la nécessité du doute et de la nuance, etc.).
+.QUESTION "La science n'est pas une opinion."
+La conclusion d'un papier est le résultat d'un processus d'évaluation de tous les paramètres d'un problème donné, par plusieurs experts du sujet, en fournissant tous les éléments de la réflexion.
+Par ailleurs, la conclusion d'une étude peut être qu'il n'est pas possible de statuer.
+La science est ce processus, imparfait, mais qui s'est montré et continue de se montrer fiable, jour après jour, pour créer de la
+.B connaissance .
+Réduire tout ce travail à une affaire d'opinions n'est pas une représentation honnête.
+
+.QUESTION "Un chercheur, un domaine."
+Un chercheur a un domaine, par exemple l'informatique, et une spécialité, comme les protocoles de communication sécurisés sur des réseaux contraints (oui, une spécialité est souvent
+.UL très
+spécifique).
+Chaque domaine a son jargon mais surtout des compétences bien distinctes des autres, un physicien n'est pas en mesure de se prononcer sur un problème de médecine.
+C'est également le cas au sein des spécialités, chacune a un corpus scientifique bien précis, très différent des autres : les chercheurs ne sont pas interchangeables.
+
+La complexité des études varie d'un domaine, voire d'une spécialité, à l'autre.
+Une étude comparant la vitesse d'exécution de deux outils informatiques (comme 2 algorithmes pour un traitement quelconque) est
+.UL compréhensible \*[*]
+.FOOTNOTE1
+Un papier peut être
+.I compris
+par un chercheur d'une autre spécialité, mais cela ne veut pas dire qu'il peut être pleinement
+.I jugé
+par celui-ci.
+.FOOTNOTE2
+même pour des personnes qui ne sont pas du domaine.
+En revanche, une étude en biologie portant sur le traitement d'une maladie est hors de porté des non initiés à la biologie, voire des non experts selon le jargon médical employé.
+
+Certaines erreurs de raisonnement peuvent être repérées indépendamment du domaine, si elles sont suffisamment grossières.
+Ainsi, un mauvais usage d'un outil mathématique, une corrélation annoncée comme causalité ou encore une conclusion qui ne correspond pas aux résultats de étude pourraient, dans certains cas, être des erreurs détectées par des chercheurs venant d'autres domaines.
+
+Bien entendu, les chercheurs peuvent partager certains outils.
+Ainsi, une bonne partie des chercheurs sait manipuler des statistiques\*[*], faire des graphiques, faire preuve de pédagogie (pour décrire un contexte, un problème et sa solution, une expérimentation), gérer une bibliographie, avoir un certain esprit de synthèse, etc.
+.FOOTNOTE1
+Les chercheurs savent manipuler des statistiques
+.UL "dans leur spécialité" ,
+voir le paradoxe de Simpson.
+.FOOTNOTE2
+
+.QUESTION "La recherche se fait entre chercheurs."
+Un chercheur ne peut s'exprimer sur la qualité d'un papier dans un autre domaine.
+À partir de cela, il est évident que les papiers sont destinés à être lu et compris par d'autres chercheurs, et du même domaine.
+Les papiers publiés ne sont donc pas destinés au grand public, qui devra se contenter d'autres sources de connaissance (livres, informations en ligne…).
+
+.QUESTION "Un chercheur n'est pas la science."
+Aucun chercheur ne fait autorité dans tout un domaine de recherche.
+Un chercheur a une spécialité dont il connait le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
+Dans sa spécialité, a priori, le chercheur a un avis pertinent ; sa voix est légitime.
+En revanche, même dans sa spécialité, la parole d'un chercheur n'est pas au-dessus de toute critique et il peut lui-même avoir un avis qui ne fait pas consensus.
+Les arguments priment sur le statut, même pour un directeur de recherche dans un laboratoire prestigieux.
+
+.QUESTION "Limites de la recherche"
+Les limites théoriques à la science forment un domaine de recherche en soi, nommé
+.I épistémologie .
+Bien que ce domaine ait son intérêt, il n'offre pas une représentation correcte de ce qu'est la science en pratique pour la quasi totalité des domaines de recherche et des chercheurs.
+Pour faire simple, une règle générale : la science se positionne sur ce qui peut être testé.
+Cette affirmation est simpliste mais valide dans la plupart des cas et donne un bon point de départ.
+
+En pratique, un chercheur est lié à un domaine scientifique, et se focalise sur une spécialité.
+Un domaine de travail a déjà des méthodologies de recherche en place et utilisées par tout le monde (double-aveugle, hypothético-déductive, etc.), voire un mélange de plusieurs méthodes.
+Tout chercheur ne va pas défier les limites méthodologiques à chaque papier, c'est même extrêmement rare.
+
+Les ressources matérielles (argent, matériaux, outils…), les ressources humaines et le temps sont de vraies limites à la recherche.
+Même en ayant de solides connaissances théoriques, une équipe de recherche de 4 personnes sans financement ne peut imaginer coloniser Mars en un mois.
+
+Cette section a présenté des méthodes scientifiques et diverses informations pour caractériser la science (sa chronologie, le vocabulaire académique, la nécessité du doute et de la nuance, etc.) ainsi que les limites à la science.
 Rien de ce qui a été dit n'est une vérité absolue et intemporelle.
 Par exemple, le principe de réfutabilité, bien que déjà plus ou moins appliqué depuis longtemps, n'a été théorisé qu'au 20 ème siècle et ne fait pas l'unanimité.
 Malgré cela, les informations données forment une explication intuitive et suffisante pour l'objectif initial du document.
@@ -635,7 +701,7 @@ inclut de l'enseignement, et les université étant en sous-effectif, le personn
 La veille et l'enseignement représentent ainsi la plus grande partie du temps de travail du chercheur.
 
 Concernant l'aspect recherche, la partie la plus importante est de lire, écrire, et réfléchir à un problème : cela engendre un nombre d'heures conséquent à lire des papiers et des livres (et parfois d'autres sources).
-Un sujet d'étude peut amèner à créer des simulations, des modèles et faire des graphes pour se représenter une donnée, donc à maîtriser quelques outils informatiques.
+Un sujet d'étude peut amèner à créer des simulations, des modèles, des schémas ou des graphes pour se représenter une donnée, donc à maîtriser quelques outils informatiques.
 Tout ceci nécessite de passer beaucoup de temps seul, souvent devant un ordinateur, dans un bureau.
 Un
 .I laboratoire
@@ -671,20 +737,6 @@ La recherche n'est pas nécessairement complexe et théorique.
 Chaque spécialité a son corpus, parfois très dense, et la difficulté peut venir de la quantité d'informations à savoir pour comprendre tous les aspects du sujet traité.
 Dans bien des études, seuls quelques outils statistiques de niveau lycée sont nécessaires.
 
-.QUESTION "Limites de la recherche"
-Les limites théoriques à la science forment un domaine de recherche en soi, nommé
-.I épistémologie .
-Bien que ce domaine ait son intérêt, il n'offre pas une représentation correcte de ce qu'est la science en pratique pour la quasi totalité des domaines de recherche et des chercheurs.
-Pour faire simple, une règle générale : la science se positionne sur ce qui peut être testé.
-Cette affirmation est simpliste mais valide dans la plupart des cas et donne un bon point de départ.
-
-En pratique, un chercheur est lié à un domaine scientifique, et se focalise sur une spécialité.
-Comme montré en section 3, un domaine de travail a déjà des méthodologies de recherche en place et utilisées par tout le monde (double-aveugle, hypothético-déductive, etc.), voire un mélange de plusieurs méthodes.
-Tout chercheur ne va pas défier les limites méthodologiques à chaque papier, c'est même extrêmement rare.
-
-Les ressources matérielles (argent, matériaux, outils…), les ressources humaines et le temps sont de vraies limites à la recherche.
-Même en ayant de solides connaissances théoriques, une équipe de recherche de 4 personnes sans financement ne peut imaginer coloniser Mars en un mois.
-
 .QUESTION "Le h-index, mesure de la productivité d'un chercheur."
 Au même titre que les journaux sont jugés sur leur visibilité, la portée des travaux d'un chercheur se mesure via une métrique nommée
 .I h-index " »." "« "
@@ -695,49 +747,6 @@ Le
 n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
 Le chercheur doit produire de bons papiers dans la durée.
 Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais les plus évidents.
-
-.QUESTION "Un chercheur, un domaine."
-Comme dit en section 3, un chercheur a un domaine, par exemple l'informatique, et une spécialité, comme les protocoles de communication sécurisés sur des réseaux contraints (oui, une spécialité est souvent
-.UL très
-spécifique).
-Chaque domaine a son jargon mais surtout des compétences bien distinctes des autres, un physicien n'est pas en mesure de se prononcer sur un problème de médecine.
-C'est également le cas au sein des spécialités, chacune a un corpus scientifique bien précis, très différent des autres : les chercheurs ne sont pas interchangeables.
-
-La complexité des études varie d'un domaine, voire d'une spécialité, à l'autre.
-Une étude comparant la vitesse d'exécution de deux outils informatiques (comme 2 algorithmes pour un traitement quelconque) est
-.UL compréhensible\*[*]
-.FOOTNOTE1
-Un papier peut être
-.I compris
-par un chercheur d'une autre spécialité, mais cela ne veut pas dire qu'il peut être
-.I jugé
-par celui-ci.
-.FOOTNOTE2
-même pour des personnes qui ne sont pas du domaine.
-En revanche, une étude en biologie portant sur le traitement d'une maladie est hors de porté des non initiés à la biologie, voire des non experts selon le jargon médical employé.
-
-Certaines erreurs de raisonnement peuvent être repérées indépendamment du domaine, si elles sont suffisamment grossières.
-Ainsi, un mauvais usage d'un outil mathématique, une corrélation annoncée comme causalité ou encore une conclusion qui ne correspond pas aux résultats de étude pourraient, dans certains cas, être des erreurs détectées par des chercheurs venant d'autres domaines.
-
-Bien entendu, les chercheurs peuvent partager certains outils.
-Ainsi, une bonne partie des chercheurs sait manipuler des statistiques\*[*], faire des graphes, faire preuve de pédagogie (pour décrire un contexte, un problème et sa solution, une expérimentation), gérer une bibliographie, avoir un certain esprit de synthèse, etc.
-.FOOTNOTE1
-Les chercheurs savent manipuler des statistiques
-.UL "dans leur spécialité" ,
-voir le paradoxe de Simpson.
-.FOOTNOTE2
-
-.QUESTION "La recherche se fait entre chercheurs."
-Un chercheur ne peut s'exprimer sur la qualité d'un papier dans un autre domaine.
-À partir de cela, il est évident que les papiers sont destinés à être lu et compris par d'autres chercheurs, et du même domaine.
-Les papiers publiés ne sont donc pas destinés au grand public, qui devra se contenter d'autres sources de connaissance (livres, informations en ligne…).
-
-.QUESTION "La science n'est pas une opinion."
-La conclusion d'un papier est le résultat d'un processus d'évaluation de tous les paramètres d'un problème donné, par plusieurs experts du sujet, en fournissant tous les éléments de la réflexion.
-Par ailleurs, la conclusion d'une étude peut être qu'il n'est pas possible de statuer.
-La science est ce processus, imparfait, mais qui s'est montré et continue de se montrer fiable, jour après jour, pour créer de la
-.B connaissance .
-Réduire tout ce travail à une affaire d'opinions n'est pas une représentation honnête.
 
 .SECTION Science au-delà de la recherche
 Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
