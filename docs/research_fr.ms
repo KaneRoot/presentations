@@ -171,8 +171,8 @@ La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vér
 Suivant le problème étudié, le chercheur utilise une méthode plutôt qu'une autre pour le résoudre.
 Dans cette section, deux méthodes sont introduites (hypothético-déductive et double-aveugle) pour montrer la diversité du travail de recherche.
 De même, la chronologie de la recherche est présentée, de l'intuition permettant de résoudre un problème au consensus scientifique.
-Par la suite, plusieurs discussions sont amorcées, comme le vocabulaire scientifique (différent du langage courant), le caractère non démocratique, matérialiste et descriptif de la science ou encore la légitimité de la parole d'un scientifique.
-Enfin, la section se termine par deux qualités importantes en science : le doute et la nuance.
+Par la suite, plusieurs discussions sont amorcées, comme le vocabulaire scientifique (différent du langage courant), le caractère non démocratique, matérialiste et descriptif de la science, la légitimité de la parole d'un scientifique, ou encore l'importance du doute et de la nuance.
+Enfin, la section se termine par les limites de la science.
 
 .QUESTION "La méthode hypothético-déductive."
 Cette méthode pourrait se résumer brièvement par la formulation d'une hypothèse et la déduction de ses conséquences observables.
@@ -686,9 +686,10 @@ Cette section a présenté les journaux scientifiques (objectifs, fonctionnement
 Certaines fraudes ont été présentées, comme les revues prédactrices, les documents en « preprint » ou encore l'abus (légal) des journaux envers le travail des chercheurs.
 La section suivante présente des informations générales autour de la recherche, qui étaient superflues dans les sections précédentes mais qui apportent une meilleure compréhension du métier de chercheur.
 .SECTION Informations générales
-Cette section regroupe toutes les informations autour du métier de chercheur qui ne rentrent pas dans les autres sections.
+Cette section regroupe des informations autour du métier de chercheur, donnant une image concrête du travail effectué par les chercheurs au quotidien.
+Le financement de la recherche et une métrique d'évaluation des chercheurs sont également discutés.
 
-.QUESTION "Au-delà des journaux, qui paie quoi dans la recherche ?"
+.QUESTION "Comment est financée la recherche ?"
 Les chercheurs sont payés soit par des universités (public), soit par des laboratoires (ou entreprises) privés.
 Les entreprises peuvent avoir des subventions pour embaucher des chercheurs ou mener des études.
 Dans le public, les universités sont attachées à des laboratoires.
@@ -733,23 +734,35 @@ Il n'est pas rare par exemple dans le domaine de la physique d'avoir des publica
 Autre difficulté, trouver la bonne représentation d'une donnée.
 Présenter correctement une donnée, rendre une information évidente, est une tâche parfois complexe.
 
+De même, faire un bon schéma peut être laborieux.
+Un schéma doit être parlant (le lecteur doit comprendre rapidement ce qui est représenté) avec un code couleur et une légende clairs, et doit être agréable à regarder.
+
 La recherche n'est pas nécessairement complexe et théorique.
-Chaque spécialité a son corpus, parfois très dense, et la difficulté peut venir de la quantité d'informations à savoir pour comprendre tous les aspects du sujet traité.
+Chaque spécialité a son corpus, parfois très dense, et la difficulté peut venir de la quantité d'informations à assimiler pour comprendre tous les aspects du sujet traité.
 Dans bien des études, seuls quelques outils statistiques de niveau lycée sont nécessaires.
 
 .QUESTION "Le h-index, mesure de la productivité d'un chercheur."
 Au même titre que les journaux sont jugés sur leur visibilité, la portée des travaux d'un chercheur se mesure via une métrique nommée
-.I h-index " »." "« "
+.I h-index " »" "« "
+qui se base sur les nombres de publications et de citations d'un chercheur.
 Cette métrique est expliquée graphiquement avec un exemple en annexe \n[N_ANNEXE_HINDEX].
 
 Le
 .I h-index
-n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
-Le chercheur doit produire de bons papiers dans la durée.
+est une métrique qui force le chercheur à produire de bons papiers dans la durée.
+La métrique n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
 Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais les plus évidents.
 
+Cette section a portrait le métier de chercheur dans son quotidien, et ses préoccupations premières.
+La prochaine section sort du cadre de la recherche pour étudier la confiance à accorder aux informations obtenues dans la vie de tous les jours (notamment dans les médias).
 .SECTION Science au-delà de la recherche
-Cette section introduit quelques pistes de réflexion sur divers sujets, sans prétention et sans rigueur scientifique.
+S'informer sur le monde qui nous entoure passe par divers moyens.
+La recherche scientifique n'en est pas vraiment un, c'est un outil utilisé par des intermédiaires qui, eux, diffusent des informations (pas seulement de la connaissance).
+Ces intermédiaires sont, entre autres, le journalisme, les livres et les réseaux sociaux (autrement dit le bouche à oreille).
+Cette section introduit quelques pistes de réflexion, sans prétentions, sur la qualité de ces intermédiaires, et en particulier du journalisme qui constitue la principale source de diffusion de l'information.
+Dans la suite, le journalisme est discuté dans son ensemble sous l'expression
+.I "médias d'informations"
+pour désigner tous les formats dans lesquels les journalistes s'expriment : journaux télévisuels et papiers (grande enquête ou simple pige), site internet, radio, ou encore des vidéos en ligne.
 
 .QUESTION "La vérité est grise."
 La recherche est complexe à lire, écrire et penser, parce que le monde qui nous entoure n'a rien d'évident ou de simple.
@@ -758,54 +771,33 @@ Le
 est régulièrement mis à mal en science.
 Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de sujets plus simples, seulement
 .B "moins bien traités" .
-L'actualité est un sujet
-.I omniprésent
-dans les médias, souvent pour parler d'un homicide ou d'un méfait quelconque.
-Scientifiquement, avant que l'enquête ne soit terminée, il n'est pas possible de replacer ce phénomène dans un contexte permettant de le comprendre, c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
-Et cela est tout le problème quand nous cherchons à analyser des sujets comme l'actualité : tout n'est pas une simple affaire de mathématiques.
-Sur ces sujets, trouver les mensonges, les imprudences, les biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
-.TBD
-Les papiers scientifiques sont protégés des biais en grande partie\*[*] mais sont pour un public restreint, là où les médias y sont très exposés et pourtant destinés à un large public.
-.FOOTNOTE1
-Sans être parfaits pour autant.
-Certains domaines sont plus succeptibles d'être corrompus que d'autres.
-Mais cela est un sujet pour un autre document.
-.FOOTNOTE2
+Le journalisme s'exprimant dans des médias est un parfait exemple.
 
 .QUESTION "Science vs médias d'information."
+La suite illustre les différences entre la science (plus particulièrement la recherche) et les médias d'information (le journalisme).
+
 La science produit de la connaissance.
 Les médias ont tout un catalogue d'objectifs potentiels : produire du divertissement, relater des faits, donner des opinions, être une tribune pour une personne, une cause, une prospection commerciale, une communication gouvernementale, et caetera.
 
 Chaque étude en science est sur un sujet précis et bien présenté, contextualisé, en indiquant la méthode de résolution du problème qui a été choisie et pourquoi, en indiquant le résultat suivi d'une explication détaillée et argumentée, et de manière uniformisée avec tous les autres sujets traités.
 La science utilise les raisonnements les plus fiables possibles pour arriver à des conclusions, quitte à admettre ne pas savoir, par honnêteté intellectuelle.
-Côté médias, tous les formats imaginables existent.
-Comme rien n'assure la qualité, le manque de sérieux est même de notoriété publique.
-Tout lecteur avisé se méfie de ce qui est écrit dans un journal, non pas nécessairement à cause de (rares) erreurs factuelles et de bonne foi, mais bel et bien à cause de l'incompétence voire des manipulations diverses des journalistes\*[*],
-.[
-bias bullshit lies
-.]
-et même les éditorialistes en ont conscience.
-.[
-se méfier des médias
-.]
-.FOOTNOTE1
-Attention, l'article
-.I "Bias Bullshit and Lies"
-a, selon l'auteur de ce document, quelques limites dans son étude.
-En particulier, les réponses possibles aux questions auraient pu être plus complètes.
-Par exemple, une personne peut se méfier des réseaux sociaux pour la faible qualité des informations tout en étant d'accord pour dire que la diversité des opinions est correctement représentée.
-.FOOTNOTE2
-.TBD
+Côté médias, tous les formats imaginables existent, toutes les qualités également.
 
 En science, seuls les experts s'expriment.
-Dans les médias, rares sont les experts, la plupart des journalistes ne sont pas experts des sujets qu'ils abordent, ils peuvent même ne pas être initiés au domaine.
-Bien entendu, cet état de fait est normal.
+Dans les médias, rares sont les experts, la plupart des journalistes ne sont pas experts des sujets qu'ils abordent, ils peuvent même ne pas être initiés au domaine\*[*].
+.FOOTNOTE1
 Le journaliste ne travaille que très rarement sur un seul sujet, et ne peut être expert en tout (mais peut n'avoir aucune expertise).
+.FOOTNOTE2
 
-Les papiers sont pour un public restreint.
+Les papiers scientifiques sont pour un public restreint.
 Les médias sont destinés à un large public.
 
-La science se protège de très nombreux biais en forçant les papiers à être relus par plusieurs experts, de laboratoires indépendants.
+La science se protège de très nombreux biais en forçant les papiers à être relus par plusieurs experts\*[*], de laboratoires indépendants.
+.FOOTNOTE1
+Cette méthodologie n'est pas parfaite pour autant.
+Certains domaines sont plus succeptibles d'être corrompus que d'autres.
+Mais cela est un sujet pour un autre document.
+.FOOTNOTE2
 Le papier n'est publié qu'à la condition d'apporter une vraie contribution (même modeste) et de bonne qualité.
 Dans un média, presque toute information peut paraître, le seul garde fou est la hiérarchie directe.
 
@@ -846,14 +838,14 @@ T}:T{
 expert, non expert, voire non initié
 T}
 T{
-pour des experts, mais souvent lisible par des initiés au domaine
+destiné à des experts, mais souvent lisible par des initiés au domaine
 T}:T{
 destiné à un très large public
 T}
 T{
 relecture par des experts, publication si qualité reconnue
 T}:T{
-aucune relecture, simple acceptation de la hiérarchie
+aucune relecture indépendante, simple acceptation de la hiérarchie
 T}
 T{
 temps long (plusieurs semaines, mois voire années)
@@ -864,7 +856,43 @@ T}
 .TE
 .vs +\n[table_size_offset]p
 .ps +\n[table_size_offset]
-.
+.LEGEND1
+Résumé des différences entre la recherche et le journalisme.
+.LEGEND2
+
+Toutes ces différences pointent vers la même conclusion : le journalisme est fondamentalement moins fiable que la science.
+Comme rien n'assure la qualité, le manque de sérieux est même de notoriété publique.
+Tout lecteur avisé se méfie de ce qui est écrit dans un journal, non pas nécessairement à cause de (rares) erreurs factuelles et de bonne foi, mais bel et bien à cause de l'incompétence voire des manipulations diverses des journalistes\*[*],
+.[
+bias bullshit lies
+.]
+et certains éditorialistes en ont conscience.
+.[
+se méfier des médias
+.]
+.FOOTNOTE1
+Attention, l'article
+.I "Bias Bullshit and Lies"
+a, selon l'auteur de ce document, quelques limites dans son étude.
+En particulier, les réponses possibles aux questions auraient pu être plus complètes.
+Par exemple, une personne peut se méfier des réseaux sociaux pour la faible qualité des informations tout en étant d'accord pour dire que la diversité des opinions est correctement représentée.
+.FOOTNOTE2
+
+.QUESTION "Tous les sujets ne relèvent pas de la science."
+
+.QUESTION "Les mauvaises habitudes des médias."
+Par exemple, l'actualité est un sujet
+.I omniprésent
+dans les médias, souvent pour parler d'un homicide ou d'un méfait quelconque.
+Avant que l'enquête policière ne soit terminée, il n'est pas possible de replacer ce phénomène dans un contexte permettant de le comprendre, c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
+Et cela est tout le problème quand nous cherchons à analyser des sujets comme l'actualité : tout n'est pas une simple affaire de mathématiques.
+Sur ces sujets, trouver les mensonges, les imprudences, les biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
+L'enquête produit une conclusion au mieux des capacités dont disposent les enquêteurs.
+Avant cette conclusion tout n'est que spéculation, du commentaire, pas de l'information.
+
+De même, organiser des discussions autour de sujets scientifiques sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, n'est pas de l'information.
+Au mieux, c'est du commentaire, des opinions, ce qui se retrouve sur les réseaux sociaux.
+
 .defcolor color_ressenti      rgb 0.6 0.2 0.2
 .defcolor color_interet       rgb 1 0 0
 .defcolor color_prisme        rgb 0 0 1

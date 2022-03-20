@@ -9,10 +9,11 @@ SECTION 3 : Méthode scientifique
   * vocabulaire
   * science = non démocratique, matérialiste, discriptive
   * légitimité parole scientifique
-  * se termine par le doute et la nuance
-  TODO (?): science non opinion
-  TODO (?): science se fait entre chercheurs
-  TODO (?): science s'accomode de résultats imparfaits
+  * importance du doute et de la nuance
+  * enfin, les limites
+  (pas dit): science non opinion
+  (pas dit): science se fait entre chercheurs
+  (pas dit): science s'accomode de résultats imparfaits
 
 * méthode hypothético-déductive
 * méthode double-aveugle
@@ -117,8 +118,9 @@ SECTION 5 : publications scientifiques
                        du métier de la recherche
 
 SECTION 6 : Informations générales (sur le métier de chercheur)
-* TODO: intro
+* intro
   * mieux comprendre les chercheurs
+  * financement de la recherche + évaluation des chercheurs
 * qui paie quoi
 * en pratique, que fait un chercheur ?
   -> veille, enseignement
@@ -128,49 +130,60 @@ SECTION 6 : Informations générales (sur le métier de chercheur)
 * difficultés du métier
   -> le temps (publication posthume)
   -> représentation des données
-  -> TODO: schémas parlants
+  -> schémas parlants
   -> un bagage de statistiques niveau lycée pour les maths peut être suffisant
 * h-index
   -> met en avant les chercheurs productifs
-
-* TODO: outro
+* outro
+  * portrait du quotidien d'un chercheur
+  * prochaine section = étudier la confiance à accorder aux informations
+                        dans la vie quotidienne (médias)
 
 SECTION 7 : Science au-delà de la recherche
+* intro:
+  * s'informer sur le monde qui nous entoure passe par divers moyens
+  * la recherche scientifique n'en est pas vraiment un, c'est
+    un outil utilisé par des intermédiaires qui, eux, diffusent des infos
+    (pas seulement des connaissances)
+  * ces intermédiaires = journalisme, livres, réseaux sociaux
+  * cette section = quelques pistes de réflexion, sans prétention,
+    sur la qualité de ces intermédiaires, et en particulier du journalisme
+    * journalisme sous tous les angles = médias
 
-au-delà de la recherche
-  => science = comprendre le monde
-               donc un bon outil pour prendre de meilleures décisions
-               mieux réfléchir
-  => trier le vrai du faux dans ce qu'on voit au quotidien
-     ex: discussions, journaux, discours
-  => voir les manipulations
-     c-à-d les biais qu'on cherche à nous faire avaler
-  => dépassionner les discussions
+TODO? (à ajouter à l'intro)
+  * au-delà de la recherche
+    => science = comprendre le monde
+                 donc un bon outil pour prendre de meilleures décisions
+                 mieux réfléchir
+    => trier le vrai du faux dans ce qu'on voit au quotidien
+       ex: discussions, journaux, discours
+    => voir les manipulations
+       c-à-d les biais qu'on cherche à nous faire avaler
+    => dépassionner les discussions
 
-* TODO (en cours): la vérité est grise
+* TODO (fini?): la vérité est grise
   -> recherche = complexe à lire, écrire, penser
-  -> s'éloigner de la recherche = sujets moins bien traités
-  -> 
-  -> tout n'est pas des maths, impossible de réfuter mathématiquement de manière certaine tout mensonge, imprudence ou erreur
-  -> les papiers scientifiques sont grandement protégés de divers biais, mais comme vu en fin de section précédente, ils sont pour un public très restreint
-  -> en pratique, l'information vient de médias d'information ou de livres
-  -> d'où l'importance d'avoir du journalisme fait par du personnel compétent
+    -> monde = pas évident, bon sens mis à mal
+    -> s'éloigner de la recherche = sujets moins bien traités
 
 * recherche vs journalisme
   objectifs
   -> recherche = produire de la connaissance
   -> journalisme = diversifié sur cette question,
-     principalement: relate des faits mais sans forcément leur étude approfondie, selon un prisme de lecture
-     souvent:        les opinions priment sur les faits (mineurs, peu importants, peu voire pas contextualisés, etc.)
+     principalement: relate des faits mais sans forcément leur étude approfondie,
+                     selon un prisme de lecture
+     souvent:        les opinions priment sur les faits (mineurs, peu importants,
+                     peu voire pas contextualisés, etc.)
      TODO: actualité
   TODO déplacement : sujet
   -> science : précis, sérieux, bien traité, uniformisé
-  -> journalisme : tous les formats existent, le sérieux est parti
+  -> journalisme : tous les formats existent, toutes les qualités aussi
   biais
   -> science : relecture par plusieurs experts
   -> journalisme : acceptation par la hiérarchie = pas de garde fou
   temps
-  -> produire de la qualité, rapidement mais relatif à la recherche (quelques semaines, voire mois)
+  -> produire de la qualité, rapidement mais relatif à la recherche
+     (quelques semaines, voire mois)
   -> produire rapidement (souvent en quelques jours, voire heures)
   financement
     -> public
@@ -180,6 +193,17 @@ au-delà de la recherche
 	  -> CSA: quasi inutile
 
 tableau "recherche vs médias"
+  -> du journalisme même compétent != aussi fiable que la recherche
+
+* mauvaises habitudes
+  -> actualité omniprésente, homicide
+    -> scientifiquement peu intéressant
+    -> occurence singulière
+    -> tout n'est pas des maths
+      * mensonges, imprudences, biais et erreurs impossible à détecter
+      * un temps d'étude est nécessaire
+      * conclusion = au mieux de nos capacités
+      * avant la conclusion = spéculation, rien d'intéressant
 
 TODO: insister sur la méthodologie
 TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
@@ -231,6 +255,11 @@ Libération, 2019, Idlib : les raisons d’une escalade meurtrière
 - appels à l'émotion (Enfants tués lors d'attaques russes, effets secondaires des vaccins)
 
 - Zététique
+
+TODO:
+* politique
+  * étiquettes trompeuses
+  * sujet complexe, beaucoup de ramifications innattendues
 
 Section 7 : intro + outro, se méfier de soi-même
 
