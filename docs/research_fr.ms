@@ -782,6 +782,8 @@ Les médias ont tout un catalogue d'objectifs potentiels : produire du divertis
 Chaque étude en science est sur un sujet précis et bien présenté, contextualisé, en indiquant la méthode de résolution du problème qui a été choisie et pourquoi, en indiquant le résultat suivi d'une explication détaillée et argumentée, et de manière uniformisée avec tous les autres sujets traités.
 La science utilise les raisonnements les plus fiables possibles pour arriver à des conclusions, quitte à admettre ne pas savoir, par honnêteté intellectuelle.
 Côté médias, tous les formats imaginables existent, toutes les qualités également.
+Les études approfondies, pour expliquer tous les tenants et aboutissants d'un sujet, sont très minoritaires.
+Dans le journalisme, la norme n'est pas l'étude sérieuse mais le commentaire.
 
 En science, seuls les experts s'expriment.
 Dans les médias, rares sont les experts, la plupart des journalistes ne sont pas experts des sujets qu'ils abordent, ils peuvent même ne pas être initiés au domaine\*[*].
@@ -862,11 +864,12 @@ Résumé des différences entre la recherche et le journalisme.
 
 Toutes ces différences pointent vers la même conclusion : le journalisme est fondamentalement moins fiable que la science.
 Comme rien n'assure la qualité, le manque de sérieux est même de notoriété publique.
-Tout lecteur avisé se méfie de ce qui est écrit dans un journal, non pas nécessairement à cause de (rares) erreurs factuelles et de bonne foi, mais bel et bien à cause de l'incompétence voire des manipulations diverses des journalistes\*[*],
+Tout lecteur avisé se méfie de ce qui est écrit dans un journal, non pas nécessairement à cause de (rares) erreurs factuelles et de bonne foi, mais bel et bien à cause de l'incompétence voire des manipulations diverses des journalistes\*[*].
 .[
 bias bullshit lies
 .]
-et certains éditorialistes en ont conscience.
+Tout pays confondu, parmi les 40 % de personnes faisant confiance au journalisme, 39 % le font presque par dogmatisme.
+Certains éditorialistes ont conscience de ce manque de confiance.
 .[
 se méfier des médias
 .]
@@ -877,18 +880,24 @@ a, selon l'auteur de ce document, quelques limites dans son étude.
 En particulier, les réponses possibles aux questions auraient pu être plus complètes.
 Par exemple, une personne peut se méfier des réseaux sociaux pour la faible qualité des informations tout en étant d'accord pour dire que la diversité des opinions est correctement représentée.
 .FOOTNOTE2
+La sortie du livre
+.I "la fabrique du consentement"
+marquait déjà une méfiance envers les journalistes.
+.[
+Manufacturing Consent
+.]
 
 .QUESTION "Tous les sujets ne relèvent pas de la science."
-
-.QUESTION "Les mauvaises habitudes des médias."
-Par exemple, l'actualité est un sujet
+L'actualité, par exemple pour parler d'un homicide ou d'un méfait quelconque, est un sujet
 .I omniprésent
-dans les médias, souvent pour parler d'un homicide ou d'un méfait quelconque.
-Avant que l'enquête policière ne soit terminée, il n'est pas possible de replacer ce phénomène dans un contexte permettant de le comprendre, c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
+dans les médias.
+Avant que l'enquête policière ne soit terminée, il n'est pas possible de replacer ce phénomène dans un contexte permettant de le comprendre ; c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
 Et cela est tout le problème quand nous cherchons à analyser des sujets comme l'actualité : tout n'est pas une simple affaire de mathématiques.
 Sur ces sujets, trouver les mensonges, les imprudences, les biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
 L'enquête produit une conclusion au mieux des capacités dont disposent les enquêteurs.
 Avant cette conclusion tout n'est que spéculation, du commentaire, pas de l'information.
+
+.QUESTION "Les mauvaises habitudes des médias."
 
 De même, organiser des discussions autour de sujets scientifiques sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, n'est pas de l'information.
 Au mieux, c'est du commentaire, des opinions, ce qui se retrouve sur les réseaux sociaux.

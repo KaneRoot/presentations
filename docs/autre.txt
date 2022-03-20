@@ -151,17 +151,13 @@ SECTION 7 : Science au-delà de la recherche
     * journalisme sous tous les angles = médias
 
 TODO? (à ajouter à l'intro)
-  * au-delà de la recherche
-    => science = comprendre le monde
-                 donc un bon outil pour prendre de meilleures décisions
-                 mieux réfléchir
     => trier le vrai du faux dans ce qu'on voit au quotidien
        ex: discussions, journaux, discours
     => voir les manipulations
        c-à-d les biais qu'on cherche à nous faire avaler
     => dépassionner les discussions
 
-* TODO (fini?): la vérité est grise
+* la vérité est grise
   -> recherche = complexe à lire, écrire, penser
     -> monde = pas évident, bon sens mis à mal
     -> s'éloigner de la recherche = sujets moins bien traités
@@ -175,9 +171,15 @@ TODO? (à ajouter à l'intro)
      souvent:        les opinions priment sur les faits (mineurs, peu importants,
                      peu voire pas contextualisés, etc.)
      TODO: actualité
-  TODO déplacement : sujet
+  sujet
   -> science : précis, sérieux, bien traité, uniformisé
   -> journalisme : tous les formats existent, toutes les qualités aussi
+  qui s'exprime
+  -> science : experts
+  -> journalisme : tout le monde
+  public
+  -> science : restreint
+  -> journalisme : tout le monde
   biais
   -> science : relecture par plusieurs experts
   -> journalisme : acceptation par la hiérarchie = pas de garde fou
@@ -185,18 +187,35 @@ TODO? (à ajouter à l'intro)
   -> produire de la qualité, rapidement mais relatif à la recherche
      (quelques semaines, voire mois)
   -> produire rapidement (souvent en quelques jours, voire heures)
-  financement
-    -> public
-    -> recettes, mécénat et énormément de subventions
-	  -> les médias sont déficitaires, donc l'objectif des mécènes est de les utiliser comme source d'influence
-	  -> très peu de diversité de point de vue (celui du mécène, ou au moins des points de vues qui sont compatibles avec ses intérêts)
-	  -> CSA: quasi inutile
+  TODO: financement
+    -> science : public
+    -> journalisme : recettes, mécénat et énormément de subventions
+      -> les médias sont déficitaires, donc l'objectif des mécènes est de les
+         utiliser comme source d'influence
+      -> très peu de diversité de point de vue (celui du mécène, ou au moins
+         des points de vues qui sont compatibles avec ses intérêts)
+      -> CSA: quasi inutile
 
 tableau "recherche vs médias"
-  -> du journalisme même compétent != aussi fiable que la recherche
+  * du journalisme même compétent != aussi fiable que la recherche
+  * rien n'assure la qualité == manque de sérieux connu
+    * lecteur avisé == méfiance
+    * parmi les XX % des personnes faisant confiance aux journaux
+      (tout pays confondu), 39 % le font de manière dogmatique
+    * certains éditorialistes ont conscience de ce manque de confiance
+  * Noam Chomsky annonçait déjà la faible qualité des journaux, voire leur
+    manipulation, dès 1988 avec la parution de la Fabrique du consentement.
 
-* mauvaises habitudes
-  -> actualité omniprésente, homicide
+* rien n'est vérifié => fact checking qui devient une rubrique à part entière
+  * mais fact checking == orienté
+    * très peu d'infos utiles vérifiés
+    * on a peur que les débats d'idées soient éclipsés par des guerres de
+      vérifications tout azimut
+      * donc pas trop de fact checking
+        => le niveau journalistique est embarrassant.
+
+* TODO: tout n'est pas un sujet scientifique
+  * actualité omniprésente, homicide
     -> scientifiquement peu intéressant
     -> occurence singulière
     -> tout n'est pas des maths
@@ -204,6 +223,9 @@ tableau "recherche vs médias"
       * un temps d'étude est nécessaire
       * conclusion = au mieux de nos capacités
       * avant la conclusion = spéculation, rien d'intéressant
+
+* quelques mauvaises habitudes des médias
+  * parler de la pluie et du beau temps
 
 TODO: insister sur la méthodologie
 TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
