@@ -205,6 +205,7 @@ tableau "recherche vs médias"
     * certains éditorialistes ont conscience de ce manque de confiance
   * Noam Chomsky annonçait déjà la faible qualité des journaux, voire leur
     manipulation, dès 1988 avec la parution de la Fabrique du consentement.
+  * 
 
 * rien n'est vérifié => fact checking qui devient une rubrique à part entière
   * mais fact checking == orienté
@@ -226,11 +227,47 @@ tableau "recherche vs médias"
 
 * quelques mauvaises habitudes des médias
   * parler de la pluie et du beau temps
+  * mécontentement lors d'une grêve
+  * micro-trottoir
+  * philosophes qui parlent de tout et n'importe-quoi
+  * discussions où tout le monde se coupe la parole
 
-TODO: insister sur la méthodologie
+TODO: insister sur la méthodologie foireuse qui se détecte en recherche ??
 TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
 
-TODO: juger un journal/article
+* TODO: juger un journal/article
+  * intro
+    * analyser un article fictif, trier l'information utile, l'impertinent
+      (néfaste à une lecture objective des faits), 
+  * schéma sur le journalisme
+
+  * tolérer d'autres points de vue
+    * chercher à le comprendre avant tout
+    * même s'il n'est pas moralement acceptable
+    * sans chercher à rendre le « phobiser »
+
+  * accepter de nouveaux arguments, de nouveaux points de vue
+    * en particulier avec l'actualité, il arrive d'obtenir de nouvelles infos
+    * nouvelle info = pdv qui peut changer
+    * il faut se laisser la possibilité de changer d'avis
+    => ne pas avoir un avis tranché dès le départ
+    * mais il faut se laisser une marge d'erreur possible, accepter humblement
+      d'être peut-être en tort, ou mieux : accepter de ne pas avoir d'avis,
+      suspendre son jugement
+    * ce qui ne veut pas dire être une girouette
+      * un point de vue se travaille, cela demande des efforts, avoir des
+        arguments, mais AUSSI de comprendre ceux qui ne sont pas d'accord
+      * un avis ne peut être figé sans comprendre les autres points de vue
+    C'est le fonctionnement de la science : obtenir des informations, lorsque
+    ces informations sont suffisantes pour émettre un jugement, on le fait.
+    Mais si d'autres faits sont portés à notre connaissance, il faut pouvoir
+    remettre en question notre point de vue, si cela se justifie rationnellement.
+
+  => conclusion : l'objectivité n'est pas atteignable,
+    * on ne peut que minimiser l'interprétation
+    * même le choix de ce qui est montré, voire le choix du sujet, de l'angle
+      sont déjà des choix non objectifs
+
 
 * TODO: problèmes dans les médias
   -> au-delà d'être non expert et partial, ce qui est normal pour un média (la neutralité est un mensonge)

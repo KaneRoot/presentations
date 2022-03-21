@@ -806,14 +806,7 @@ Dans un média, presque toute information peut paraître, le seul garde fou est 
 La science travaille sur un temps long, chaque étude peut prendre quelques semaines, mois voire années pour être publiée.
 Dans un média, les contraintes de temps ne sont pas les mêmes.
 Certains journaux sont quotidiens et nécessitent de traiter un sujet en seulement quelques heures.
-Parfois un journaliste est en direct pour traiter un sujet, et ne fournit aucun recul sur les événements relatés\*[*].
-.FOOTNOTE1
-Par exemple, les reportages de moins d'une minute parlant du mécontentement des usagers de la SNCF suite à une grêve.
-Quel est l'intérêt ? Est-ce que le téléspectateur ne savait pas qu'une grêve crééait du mécontentement ?
-Pourquoi, en lieu et place de cette perte de temps manifeste, les
-.B revendications
-des grévistes ne sont pas mises en avant, apportant effectivement une information au téléspectateur ?
-.FOOTNOTE2
+Parfois un journaliste est en direct pour traiter un sujet, et ne fournit aucun recul sur les événements relatés.
 
 .nr table_size_offset 2
 .vs -\n[table_size_offset]p
@@ -888,19 +881,18 @@ Manufacturing Consent
 .]
 
 .QUESTION "Tous les sujets ne relèvent pas de la science."
-L'actualité, par exemple pour parler d'un homicide ou d'un méfait quelconque, est un sujet
+Le
+.I "fait divers" ,
+comme un homicide par exemple, est un phénomène médiatique
 .I omniprésent
 dans les médias.
-Avant que l'enquête policière ne soit terminée, il n'est pas possible de replacer ce phénomène dans un contexte permettant de le comprendre ; c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
-Et cela est tout le problème quand nous cherchons à analyser des sujets comme l'actualité : tout n'est pas une simple affaire de mathématiques.
-Sur ces sujets, trouver les mensonges, les imprudences, les biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
-L'enquête produit une conclusion au mieux des capacités dont disposent les enquêteurs.
-Avant cette conclusion tout n'est que spéculation, du commentaire, pas de l'information.
+Sauf que dans le cas de l'homicide, avant la fin de l'enquête policière, impossible de replacer ce phénomène dans un contexte permettant de le comprendre ; c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
+Trouver les mensonges, imprudences, inexactitudes, biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
+Avant la conclusion des enquêteurs, tout n'est que spéculation, du commentaire, pas de l'information.
+Bien entendu, la science est utilisée pour mener l'enquête, mais cette enquête ne se fait pas sur un plateau de télévision, à l'antenne, dans un média.
 
-.QUESTION "Les mauvaises habitudes des médias."
-
-De même, organiser des discussions autour de sujets scientifiques sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, n'est pas de l'information.
-Au mieux, c'est du commentaire, des opinions, ce qui se retrouve sur les réseaux sociaux.
+L'actualité à ce défaut de ne pas être une simple affaire de mathématiques, de bonnes et de mauvaises réponses.
+Pour s'exprimer correctement sur un sujet, il faut avoir tous les éléments en mains.
 
 .defcolor color_ressenti      rgb 0.6 0.2 0.2
 .defcolor color_interet       rgb 1 0 0
@@ -908,7 +900,7 @@ Au mieux, c'est du commentaire, des opinions, ce qui se retrouve sur les réseau
 .defcolor color_faitpartiel   rgb 0.2 0.6 0.2
 .defcolor color_liens         rgb 0.2 0.2 0.6
 .defcolor color_contraintes   rgb 0.9 0 0.6
-
+.
 .vs -\n[table_size_offset]p
 .ps -\n[table_size_offset]
 .PS
@@ -930,15 +922,15 @@ BIAIS: "biais divers" \
 	"\m[color_contraintes]contraintes diverses\m[]," \
 	"\m[color_ressenti]ressenti\m[], etc.)" \
 	at Here + (colsize,0)
-
-.ps +6
-"Journalisme" at AVIS + (0, 0.7)
-.ps -6
-
+.
+.ps +4
+"Exemple fictif de journal biaisé" at AVIS + (0, 0.7)
+.ps -4
+.
 firsttosecondarrows = 0.1
 distarrow = 0.6
 sizearrow = 0.2
-
+.
 A: line -> from AVIS + (0,-distarrow) to AVIS + (0,-(distarrow + sizearrow))
 line from FAITS + (0,-(distarrow - firsttosecondarrows)) \
 	to FAITS + (0,-(distarrow)) \
@@ -946,7 +938,7 @@ line from FAITS + (0,-(distarrow - firsttosecondarrows)) \
 	to BIAIS + (0,-(distarrow - firsttosecondarrows))
 line from AVIS + (0,-(distarrow - firsttosecondarrows)) \
 	to AVIS + (0,-(distarrow))
-
+.
 larger = 0.2
 journalism_top = distarrow + sizearrow
 page_len = 0.7
@@ -973,9 +965,10 @@ l'association
 .I "Mon fusil, mon Âme" .
 .gcolor black
 .LEGEND2
-.LEGEND1
-Titre d'une histoire fictive dans un journal, volontairement exagéré pour illustrer divers biais.
-Cette histoire pourrait parler d'un homicide involontaire d'une jeune femme
+
+Le schéma précédent montre une liste simplifiée des éléments sur lequels se basent les journalistes pour écrire un article (des faits, des avis et des biais potentiels).
+Puis un titre est présenté, relatant une histoire fictive dans un journal, et l'article est volontairement exagéré pour illustrer divers biais possibles.
+Cette histoire parle d'un homicide involontaire d'une jeune femme
 .gcolor color_faitpartiel
 la nuit sur une route fréquentée
 .gcolor black
@@ -983,9 +976,79 @@ suite au tir d'un chasseur
 .gcolor color_faitpartiel
 en état d'ébriété.
 .gcolor black
-Le titre et potentiellement le contenu de cet article fictif n'indiquent pas de biais personnel de l'auteur, mais il pourrait très bien avoir des \m[color_liens]liens avec l'association\m[].
-De même, peut-être qu'un \m[color_contraintes]manque de temps\m[] est à l'origine du point de vue présenté, les journalistes n'ayant \m[color_contraintes]pas encore toutes les informations\m[] pour avoir un avis pertinent.
-.LEGEND2
+Le titre n'indique pas de biais personnel de l'auteur, mais il peut avoir des \m[color_liens]liens avec l'association\m[].
+De même, un \m[color_contraintes]manque de temps\m[] est peut-être à l'origine du point de vue présenté, les journalistes n'ayant \m[color_contraintes]pas encore toutes les informations\m[] pour avoir un avis pertinent.
+
+L'objectivité n'est pas atteignable, et ne peut être mesurée précisément.
+Des manquements à l'objectivité sont détectables, pour peu qu'ils soient grossiers.
+Mais si une information est tue (volontairement à des fins de manipulation ou non), seule une investigation d'autres sources peut le montrer.
+Un journal peut minimiser son interprétation des faits, mais même ce qui est montré, le sujet ou encore l'angle utilisé pour l'aborder, sont déjà des choix.
+
+.QUESTION "Les mauvaises habitudes des médias."
+Les médias ont des sujets fétiches, des façons de présenter une information ou d'organiser le dialogue qui ne sont pas corrects.
+Au-delà de la mauvaise transmission de l'information (voire les recommandations pour un papier en section 4), certains biais sont facilement introduits (section 2 et annexe 1), comme l'appel à l'émotion ou l'argument d'autorité.
+La suite présente quelques exemples.
+
+La pluie et le beau temps sont régulièrement discutés.
+Au printemps il commence à faire beau, en été il fait chaud, à l'automne le temps se couvre, et en hiver, surprise, il fait froid.
+Bien entendu, ces annonces bouleversantes s'accompagnent d'un petit reportage pour mieux comprendre ce que cela signifie.
+Cela prend régulièrement du temps d'antenne pour un journal télévisé.
+
+Lors d'une grêve, des reportages éclairs parlent du mécontentement des usagers du service en grêve ; la SNCF est un exemple parlant de ce phénomène.
+Le téléspectateur sait déjà bien qu'une grêve créée du mécontentement.
+La mise en scène de personnes en colère lors d'une séquence de micro-trottoir n'apporte aucune information.
+Dans le même temps, les
+.B revendications
+des grévistes ne sont pas mises en avant.
+Montrer la colère mais pas l'origine du problème est néfaste pour se faire un avis, et représente également un appel à l'émotion.
+De là à parler de manipulation, il n'y a qu'un pas.
+
+Le micro-trottoir est, en soit, un format peu intéressant pour partager de l'information.
+Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre-chose qu'une information triviale, comme un sentiment.
+Son usage lors des grêves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
+Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
+
+Autre pratique, concernant l'organisation de discussions autour de sujets scientifiques.
+Sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, n'est pas de l'information.
+Sur certains plateaux, des philosophes se retrouvent à parler de médecine, entre autres sujets dont ils n'ont strictement aucune compétence.
+Au mieux, c'est du commentaire et des opinions, ce qui se retrouve sur les réseaux sociaux, ni plus ni moins.
+Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime.
+
+Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
+Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
+
+.QUESTION "Comportement à adopter."
+Plusieurs propositions pour permettre des prises de décisions appaisées sont présentées dans la suite.
+À noter que, même si rien de ce qui est dit est transcendant, cela correspond pourtant aux principes les plus élémentaires qui permettent tout dialogue d'être fructueux et qui n'est malheureusement quasi jamais appliqué.
+Un rappel n'est pas du luxe.
+
+Comprendre avant tout.
+Comprendre les autres point de vue, sans en garder une version caricaturée, est nécessaire pour toute bonne prise de décision.
+Même si le point de vue présenté ne nous paraît pas moralement acceptable, il faut réfreiner son envie de le faire passer pour un problème mental quand ce n'est pas réellement justifié.
+Une personne qui souhaiterait limiter l'immigration n'est pas forcément raciste ou xénophobe : rien ne justifie de faire un si gros raccourcis et aussi large généralisation.
+D'autres justifications possibles (même invalides, mais répandues) peuvent mener à cette position sur le sujet.
+Accepter ou au moins tolérer le point de vue par après est une réflexion personnelle, chacun est libre d'arriver à ses propres conclusions, mais il faut commencer par comprendre avant de juger.
+
+Accepter de nouveaux arguments.
+La position la plus rationnelle sur un point de vue se base sur les éléments disponibles pour statuer.
+Même après avoir émis un jugement, en pensant avoir tous les éléments pour statuer, une nouvelle information peut arriver et mettre à mal notre position.
+Peut-être avons-nous juger trop vite le sujet.
+En tout cas il faut savoir remettre à plat les informations pour juger à nouveau.
+La position initiale ne doit pas être gardée si elle ne correspond plus aux faits.
+En pratique, et en particulier avec un sujet d'actualité, de nouvelles informations font surface régulièrement.
+Pour se laisser la possibilité de changer d'avis, (a) le premier réflexe doit être de
+.B "suspendre son jugement" ,
+ne pas statuer sur un sujet avant d'avoir suffisamment d'informations pour juger, (b) ne pas avoir une position de départ trop tranchée, (c) continuer, sincèrement, à douter de notre position.
+De cette manière, on se laisse une marge d'erreur possible.
+Chaque nouvelle information est jugée à sa juste valeur, pas de rejet systématique, pas de biais de cueillette (cherry picking), c'est une position humble.
+Cela ne veut pas dire être une girouette, un point de vue se travaille, cela demande des efforts, avoir des arguments, souvent du temps, mais aussi de comprendre
+.B sincèrement
+ceux qui ne sont pas d'accord.
+Un avis ne peut être figé sans comprendre les autres points de vue.
+
+Par ailleurs, ceci est le fonctionnement de la science.
+En premier, des informations sont obtenues, et un jugement est établit lorsque ces informations sont suffisantes.
+Si d'autres faits sont portés à notre connaissance et qu'ils n'avaient pas été envisagés auparavant, notre point de vue doit changer s'il n'est plus tenable rationnellement.
 
 .\".vs +\n[table_size_offset]p
 .\".ps +\n[table_size_offset]
