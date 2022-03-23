@@ -1,6 +1,4 @@
 .so macros.ms   \" First, let's import some macros.
-.mso fr.tmac
-.mso hdtbl.tmac
 .nr legendps 2
 .de LEGEND1
 .QP
@@ -15,12 +13,17 @@
 .br
 .LP
 ..
+.de IEME
+\\$1\u\s-4\\$2\s+4\d
+..
 .nr N_ANNEXE_BIAIS 1
 .nr N_ANNEXE_ECRITURE_PAPIER 2
 .nr N_ANNEXE_MANIPULATIONS 3
 .nr N_ANNEXE_HINDEX 4
 .nr N_ANNEXE_CONSEILS_APPRENTISSAGE 5
 .nr N_ANNEXE_MEDIAS 6
+.mso fr.tmac
+.mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
 .AUTHOR Philippe Pittoli
 .ABSTRACT1
@@ -111,7 +114,7 @@ partir du principe qu'une position est vraie par défaut.
 .BULLET
 .B "appel à l'incrédulité personnelle" " :"
 supposer une position vraie car on n'arrive pas à imaginer une autre solution.
-Autrement dit, « je ne sais pas, donc dieu ».
+Autrement dit, « je ne sais pas, donc Dieu ».
 « Je vois pas comment un poisson peut devenir un homme, donc Dieu nous a créé puis c'est tout. » ;
 .BULLET
 .B "appel à la popularité" " :"
@@ -134,7 +137,7 @@ De plus, cela peut être combiné à un biais de confirmation si ces mêmes pers
 
 .QUESTION "Les statistiques, cruelles statistiques."
 Les statistiques forment un outil très important en science, mais également dans des prises de décisions de la vie quotidienne.
-Par exemple, un marchand peut décider de mettre en avant un produit (disons une poussette) plutôt qu'un autre (un sac de randonnée) suite à une étude de marché portant sur sa clientelle.
+Par exemple, un marchand peut décider de mettre en avant un produit (disons une poussette) plutôt qu'un autre (un sac de randonnée) suite à une étude de marché portant sur sa clientèle.
 Si cette étude de marché se déroule (uniquement) via un formulaire à remplir à la sortie d'une crèche, elle conduira à la conclusion que 100 % des clients ont un enfant en bas âge, privilégiant le premier produit.
 Bien entendu, cela est lié à un biais de sélection, les personnes sondées n'étant pas représentatives des clients du marchand.
 
@@ -238,12 +241,12 @@ Le papier est ensuite envoyé à un journal.
 Le journal demande à des chercheurs d'autres laboratoires de relire le papier.
 Chaque relecteur émet une appréciation : acceptation forte, acceptation, rejet, rejet fort.
 Les relecteurs fournissent un retour (bref) au journal et un retour détaillé aux auteurs.
-Ils donnent ainsi des pistes d'amélioration, ou indiquent au moins ce qui les a dérangé lors de la lecture\*[*] (erreurs, imprécisions…).
+Ils donnent ainsi des pistes d'amélioration, ou indiquent au moins ce qui les a dérangés lors de la lecture\*[*] (erreurs, imprécisions…).
 .FOOTNOTE1
-Tous les relecteurs ne sont pas conscencieux, malheureusement.
+Tous les relecteurs ne sont pas consciencieux, malheureusement.
 Un papier peut être rejeté avec une réponse très pauvre, ne permettant pas d'améliorer significativement le travail.
 .FOOTNOTE2
-Si le papier n'est pas directement rejeté, s'en suivent des allers-retours entre les auteurs et les relecteurs.
+Si le papier n'est pas directement rejeté, s'ensuivent des allers-retours entre les auteurs et les relecteurs.
 Si le papier est rejeté, les auteurs tentent de le publier dans un autre journal.
 
 Une fois le papier accepté, son contenu a déjà passé plusieurs filtres : des experts de la spécialité concernée l'ont jugé acceptable et apportant une contribution suffisante au domaine pour être publié.
@@ -305,7 +308,7 @@ Si une hypothèse n'est pas réfutable (c'est-à-dire qui ne peut pas être vér
 Aucun vote n'est nécessaire.
 De même, aucun vote ou cérémonie officielle ne sont nécessaires pour créer un consensus scientifique : les chercheurs doivent suivre les faits, où qu'ils mènent.
 C'est ainsi que la communauté scientifique pensait que l'univers était éternel et statique, même après la publication en 1916 de la théorie de la relativité générale d'Albert Einstein, car ses travaux ne correspondaient pas aux observations.
-En 1929, les observations évoluent grâce à Edwin Hubble et au téléscope Hooker, montrant que l'univers est en expansion, changeant pratiquement du jour au lendemain le consensus scientifique sur le sujet.
+En 1929, les observations évoluent grâce à Edwin Hubble et au télescope Hooker, montrant que l'univers est en expansion, changeant pratiquement du jour au lendemain le consensus scientifique sur le sujet.
 
 .QUESTION "La science est matérialiste."
 Certaines questions, ou sujets d'étude, ne relèvent pas du domaine scientifique.
@@ -346,17 +349,17 @@ Cette théorie, au départ très imparfaite mais ayant comme fondation des conce
 De nos jours, de très nombreuses méthodes indépendantes ont convergé vers les mêmes résultats (via la datation des fossiles, l'anatomie comparée des espèces, la biogéographie, l'épigénétique, etc.), rendant cette théorie la plus solidement vérifiée de toute l'histoire de la science.
 
 Être raisonnable, c'est également ne pas accepter n'importe quelle hypothèse remettant en question tout ce que la science a acquis comme connaissance.
-Une hypothèse rejetant tous les résultats d'un domaine d'étude necessite de très solides arguments et une explication pour les résultats obtenus précédemment.
+Une hypothèse rejetant tous les résultats d'un domaine d'étude nécessite de très solides arguments et une explication pour les résultats obtenus précédemment.
 De plus, une hypothèse doit être une explication, non un appel à un plus grand mystère.
 Ainsi, justifier la création des pyramides d'Égypte par la venue d'extra-terrestres n'est pas une proposition sérieuse (et par ailleurs non réfutable).
 
 .QUESTION "La science s'accomode de résultats imparfaits."
-La science rejete les affirmations sans justification ou qui n'ont pas de sens, et tente au mieux de rejeter toute affirmation fausse.
+La science rejette les affirmations sans justification ou qui n'ont pas de sens, et tente au mieux de rejeter toute affirmation fausse.
 Mais toute proposition ne peut pas être jugée aussi facilement, parfois un raisonnement plus nuancé est nécessaire.
 La véracité d'une affirmation peut être jaugée, via des métriques, parfois imparfaites ou peu précises, mais objectives.
 De même, une théorie incomplète, menant à des calculs approximatifs et ayant des défauts, peut être acceptée.
 Un exemple de cela est le modèle héliocentrique de Copernic, suivi de la théorie de la gravitation universelle de Newton, suivi de la théorie de la relativité générale d'Einstein.
-Bien qu'imparfaites, ces théories apportent chacune une meilleure explication (ou des calculs plus précis) au mouvement des planètes dans le système solaire que leurs prédécesseurs.
+Même imparfaites, ces théories apportent chacune une meilleure explication (ou des calculs plus précis) au mouvement des planètes dans le système solaire que leurs prédécesseurs.
 Cet exemple montre également que la science se corrige elle-même.
 
 .EXPLANATION1
@@ -388,10 +391,10 @@ par un chercheur d'une autre spécialité, mais cela ne veut pas dire qu'il peut
 par celui-ci.
 .FOOTNOTE2
 même pour des personnes qui ne sont pas du domaine.
-En revanche, une étude en biologie portant sur le traitement d'une maladie est hors de porté des non initiés à la biologie, voire des non experts selon le jargon médical employé.
+En revanche, une étude en biologie portant sur le traitement d'une maladie est hors de porté des non-initiés à la biologie, voire des non experts selon le jargon médical employé.
 
 Certaines erreurs de raisonnement peuvent être repérées indépendamment du domaine, si elles sont suffisamment grossières.
-Ainsi, un mauvais usage d'un outil mathématique, une corrélation annoncée comme causalité ou encore une conclusion qui ne correspond pas aux résultats de étude pourraient, dans certains cas, être des erreurs détectées par des chercheurs venant d'autres domaines.
+Ainsi, un mauvais usage d'un outil mathématique, une corrélation annoncée comme causalité ou encore une conclusion qui ne correspond pas aux résultats de l'étude pourraient, dans certains cas, être des erreurs détectées par des chercheurs venant d'autres domaines.
 
 Bien entendu, les chercheurs peuvent partager certains outils.
 Ainsi, une bonne partie des chercheurs sait manipuler des statistiques\*[*], faire des graphiques, faire preuve de pédagogie (pour décrire un contexte, un problème et sa solution, une expérimentation), gérer une bibliographie, avoir un certain esprit de synthèse, etc.
@@ -416,7 +419,7 @@ Les arguments priment sur le statut, même pour un directeur de recherche dans u
 .QUESTION "Limites de la recherche"
 Les limites théoriques à la science forment un domaine de recherche en soi, nommé
 .I épistémologie .
-Bien que ce domaine ait son intérêt, il n'offre pas une représentation correcte de ce qu'est la science en pratique pour la quasi totalité des domaines de recherche et des chercheurs.
+Bien que ce domaine ait son intérêt, il n'offre pas une représentation correcte de ce qu'est la science en pratique pour la quasi-totalité des domaines de recherche et des chercheurs.
 Pour faire simple, une règle générale : la science se positionne sur ce qui peut être testé.
 Cette affirmation est simpliste mais valide dans la plupart des cas et donne un bon point de départ.
 
@@ -429,7 +432,9 @@ Même en ayant de solides connaissances théoriques, une équipe de recherche de
 
 Cette section a présenté des méthodes scientifiques et diverses informations pour caractériser la science (sa chronologie, le vocabulaire académique, la nécessité du doute et de la nuance, etc.) ainsi que les limites à la science.
 Rien de ce qui a été dit n'est une vérité absolue et intemporelle.
-Par exemple, le principe de réfutabilité, bien que déjà plus ou moins appliqué depuis longtemps, n'a été théorisé qu'au 20 ème siècle et ne fait pas l'unanimité.
+Par exemple, le principe de réfutabilité, bien que déjà plus ou moins appliqué depuis longtemps, n'a été théorisé qu'au
+.IEME 20 e
+siècle et ne fait pas l'unanimité.
 Malgré cela, les informations données forment une explication intuitive et suffisante pour l'objectif initial du document.
 La section suivante présente la matérialisation de toute étude, à savoir le papier scientifique.
 .SECTION Écriture de papiers
@@ -438,7 +443,7 @@ Comprendre comment les spécialistes écrivent pour éviter divers biais permet 
 Cette section introduit l'art de l'écriture de papiers, ainsi que des critères pour juger de leur qualité.
 De même, différents types de papiers sont présentés, chacun ayant un objectif, une utilité particulière dans le corpus scientifique.
 
-Un papier établit un contexte dans lequel la recherche se fait (introduction au sujet de l'étude), décrit la problématique, dresse un état de l'art (en mentionnant les travaux annexes qui répondent à la même problématique), explique la solution étudiée ainsi que l'expérimentation, interprête les résultats et en tire des conclusions, et enfin, présente de futurs travaux possibles sur le sujet.
+Un papier établit un contexte dans lequel la recherche se fait (introduction au sujet de l'étude), décrit la problématique, dresse un état de l'art (en mentionnant les travaux annexes qui répondent à la même problématique), explique la solution étudiée ainsi que l'expérimentation, interprète les résultats et en tire des conclusions, et enfin, présente de futurs travaux possibles sur le sujet.
 L'écriture est la plus rigoureuse possible, autant sur le fond que sur la forme.
 
 .QUESTION "Sur la forme."
@@ -460,7 +465,7 @@ Les listes à puces sont, dans la mesure du raisonnable, évitées ; lister des
 Un papier de recherche n'est pas un roman.
 Un chercheur lit des dizaines de papiers par an, il faut lui faciliter la lecture.
 Un papier est écrit au présent, sans formulation alambiquée et le langage utilisé est simple et concis.
-De même, l'usage de vocabulaire complexe doit être évité.
+De même, l'usage de vocabulaire complexe ou inhabituel doit être évité.
 La répétition de certains termes (en lieu et place d'adjectifs ou d'acronymes) peut être envisagée pour aider à la compréhension.
 
 Un papier n'est pas une tribune pour étaler sa culture personnelle ou se valoriser au-delà du travail effectué.
@@ -494,7 +499,7 @@ Par exemple, les données brutes d'une expérimentation peuvent faire l'objet d'
 Un papier doit mentionner les auteurs, dans l'ordre d'implication dans le travail.
 Le premier auteur est la personne la plus importante, celle ayant travaillée le plus sur le contenu (sur le fond et la forme).
 Les autres auteurs peuvent avoir une implication soit identique, soit moindre.
-Certains des auteurs peuvent avoir contribué via des conseils, ou avoir donné une direction au projet, voire même avoir sorti l'auteur principal d'une impasse dans ses travaux.
+Certains des auteurs peuvent avoir contribué via des conseils, ou avoir donné une direction au projet, ou même avoir sorti l'auteur principal d'une impasse dans ses travaux.
 Bien souvent, les
 .I seconds
 auteurs ont relu le document et donné des correctifs voire des pistes d'améliorations, parfois à de multiples et longues reprises\*[*].
@@ -509,7 +514,7 @@ Chaque schéma, tableau ou équation doit être introduit et expliqué.
 Chaque résultat doit être introduit, interprété, expliqué.
 Aucun schéma, tableau ou donnée ne doit être présenté sans justification.
 De même, les résultats doivent être précis et rigoureux.
-Par exemple, d'une manière générale, une moyenne sur des mesures avec très peu d'occurences et sans écart type n'a pas une grande valeur (trop de biais possibles).
+Par exemple, d'une manière générale, une moyenne sur des mesures avec très peu d'occurrences et sans écart type n'a pas une grande valeur (trop de biais possibles).
 
 Un papier est aussi concis que possible pour transmettre l'information.
 Seules les informations nécessaires, en rapport avec le sujet et pertinentes, doivent se retrouver dans le document final.
@@ -526,7 +531,7 @@ Puis, une expérimentation doit être conduite, en décrivant dans le détail ce
 Ensuite, les résultats et leur interprétation doivent être présentés.
 Enfin, une conclusion doit être apportée, en rappelant la problématique, la solution envisagée et le résultat.
 La conclusion doit prendre un peu de hauteur sur le sujet, un papier n'est pas un simple rapport technique.
-L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] présente des exemples (fortement abbrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
+L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] présente des exemples (fortement abrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
 
 .QUESTION "Un papier, une idée."
 Chaque papier doit présenter une seule idée\*[*].
@@ -554,7 +559,7 @@ sur un sujet précis.
 La méta-analyse apporte une position sur un sujet suivant
 .I "état actuel" "" l'
 du corpus scientifique sur le sujet traité.
-Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'ingénieurie derrière une infrastructure ou des outils.
+Enfin, d'autres papiers sont davantage des rapports techniques pour décrire l'ingénierie derrière une infrastructure ou des outils.
 Ces derniers n'apportent pas une contribution très intéressante d'un point de vue scientifique, mais peuvent être utiles en pratique pour les chercheurs et ingénieurs de recherche.
 
 Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
@@ -569,7 +574,7 @@ De même, des moyens de rechercher et d'accéder à des articles sont présenté
 
 .QUESTION "Qu'est-ce qu'un journal scientifique ?"
 Un journal scientifique est un journal qui publie des papiers scientifiques.
-Ces papiers sont envoyés au journal, et s'en suit une revue par des pairs tel que décrit au chapitre précédent, puis le papier est (éventuellement) publié dans le journal.
+Ces papiers sont envoyés au journal, et s'ensuit une revue par des pairs tel que décrit au chapitre précédent, puis le papier est (éventuellement) publié dans le journal.
 Chaque journal a un domaine, voire une spécialité de prédilection, par exemple
 .I "Ad Hoc Networks"
 est un journal spécialisé dans les réseaux de capteurs (de petits ordinateurs qui vérifient des métriques comme la température ambiante, le taux de luminosité, etc.).
@@ -624,7 +629,7 @@ Certains journaux sont qualifiés de
 .I "revues prédatrices"
 car ils n'ont pas de comité de lecture.
 Leurs publications ne valent rien, l'intérêt de la publication scientifique résidant en grande partie dans la relecture par les pairs.
-Sans cette relecture, le papier peut comporter de nombreux biais évidents, la confiance du lecteur en est sérieusement entâchée.
+Sans cette relecture, le papier peut comporter de nombreux biais évidents, la confiance du lecteur en est sérieusement entachée.
 Les scientifiques sérieux publient
 .UL exclusivement
 dans des revues à comité de lecture, de préférence avec un taux de sélection (très) faible.
@@ -654,7 +659,7 @@ Certaines publications sont en accès libre
 et sont disponibles gratuitement (parfois après une inscription) sur le site de l'éditeur.
 Sci-hub est une excellente base de données gratuite d'articles\*[*] (l'URL change régulièrement).
 .FOOTNOTE1
-Bien qu'illégale, sci-hub est une base de données parfaitement légitime.
+Même illégale, sci-hub est une base de données parfaitement légitime.
 L'accès au savoir ne devrait pas être entravé par l'avarice des éditeurs.
 Pour rappel, les chercheurs sont payés avec nos impôts, leur travail a déjà été rémunéré, et l'éditeur ne fournit quasi aucun travail.
 .FOOTNOTE2
@@ -683,10 +688,10 @@ De même, ce sont les chercheurs qui organisent les conférences, mais c'est le 
 Ceci représente une spoliation du travail des chercheurs par les journaux, en toute légalité.
 
 Cette section a présenté les journaux scientifiques (objectifs, fonctionnement, qualité), les éditeurs de ces journaux, les conférences organisées entre chercheurs et comment trouver des articles (gratuitement ou non).
-Certaines fraudes ont été présentées, comme les revues prédactrices, les documents en « preprint » ou encore l'abus (légal) des journaux envers le travail des chercheurs.
+Certaines fraudes ont été présentées, comme les revues prédatrices, les documents en « preprint » ou encore l'abus (légal) des journaux envers le travail des chercheurs.
 La section suivante présente des informations générales autour de la recherche, qui étaient superflues dans les sections précédentes mais qui apportent une meilleure compréhension du métier de chercheur.
 .SECTION Informations générales
-Cette section regroupe des informations autour du métier de chercheur, donnant une image concrête du travail effectué par les chercheurs au quotidien.
+Cette section regroupe des informations autour du métier de chercheur, donnant une image concrète du travail effectué par les chercheurs au quotidien.
 Le financement de la recherche et une métrique d'évaluation des chercheurs sont également discutés.
 
 .QUESTION "Comment est financée la recherche ?"
@@ -698,11 +703,11 @@ Dans le public, les universités sont attachées à des laboratoires.
 Une grande partie du temps consacré à la recherche se passe à lire des papiers de sa spécialité ; le chercheur fait de la veille sur son domaine.
 De plus, en France, le contrat universitaire classique
 .I "maître de conférences"
-inclut de l'enseignement, et les université étant en sous-effectif, le personnel fait énormément d'heures.
+inclut de l'enseignement, et les universités étant en sous effectif, le personnel fait énormément d'heures.
 La veille et l'enseignement représentent ainsi la plus grande partie du temps de travail du chercheur.
 
 Concernant l'aspect recherche, la partie la plus importante est de lire, écrire, et réfléchir à un problème : cela engendre un nombre d'heures conséquent à lire des papiers et des livres (et parfois d'autres sources).
-Un sujet d'étude peut amèner à créer des simulations, des modèles, des schémas ou des graphes pour se représenter une donnée, donc à maîtriser quelques outils informatiques.
+Un sujet d'étude peut amener à créer des simulations, des modèles, des schémas ou des graphes pour se représenter une donnée, donc à maîtriser quelques outils informatiques.
 Tout ceci nécessite de passer beaucoup de temps seul, souvent devant un ordinateur, dans un bureau.
 Un
 .I laboratoire
@@ -716,7 +721,7 @@ De l'expérience de l'auteur, les conférences en informatique n'intéressent pa
 
 Certains domaines impliquent, au moins le temps d'une étude, un train de vie assez différent.
 Une étude peut amener le chercheur à partir à l'autre bout du monde pour mettre des sondes sur des animaux et tracer leurs déplacements, étudier leur comportement, etc.
-Certaines études nécessitent de faire de la plongée sous-marine, passer 6 mois en Antarctique, ou travailler avec des outils particulièrement coûteux\*[*].
+Certaines études nécessitent de faire de la plongée sous marine, passer 6 mois en Antarctique, ou travailler avec des outils particulièrement coûteux\*[*].
 .FOOTNOTE1
 Certains outils de mesure ont un financement à 7 chiffres.
 Et tout un bâtiment est construit autour pour les protéger des interférences et améliorer leur précision.
@@ -753,15 +758,15 @@ est une métrique qui force le chercheur à produire de bons papiers dans la dur
 La métrique n'encense pas les chercheurs ayant énormément de publications mais peu de citations, ni les chercheurs ayant énormément de citations mais sur très peu de papiers.
 Bien entendu, cette métrique est loin d'être parfaite mais supprime les biais les plus évidents.
 
-Cette section a portrait le métier de chercheur dans son quotidien, et ses préoccupations premières.
+Cette section a montré le métier de chercheur dans son quotidien, et ses préoccupations premières.
 La prochaine section sort du cadre de la recherche pour étudier la confiance à accorder aux informations obtenues dans la vie de tous les jours (notamment dans les médias).
 .SECTION Science au-delà de la recherche
 S'informer sur le monde qui nous entoure passe par divers moyens.
 La recherche scientifique n'en est pas vraiment un, c'est un outil utilisé par des intermédiaires qui, eux, diffusent des informations (pas seulement de la connaissance).
-Ces intermédiaires sont, entre autres, le journalisme, les livres et les réseaux sociaux (autrement dit le bouche à oreille).
+Ces intermédiaires sont, entre autres, le journalisme, les livres et les réseaux sociaux (autrement dit le bouche-à-oreille).
 Cette section introduit quelques pistes de réflexion, sans prétentions, sur la qualité de ces intermédiaires, et en particulier du journalisme qui constitue la principale source de diffusion de l'information.
 Dans la suite, le journalisme est discuté dans son ensemble sous l'expression
-.I "médias d'informations"
+.I "médias"
 pour désigner tous les formats dans lesquels les journalistes s'expriment : journaux télévisuels et papiers (grande enquête ou simple pige), site internet, radio, ou encore des vidéos en ligne.
 
 .QUESTION "La vérité est grise."
@@ -773,8 +778,8 @@ Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de suje
 .B "moins bien traités" .
 Le journalisme s'exprimant dans des médias est un parfait exemple.
 
-.QUESTION "Science vs médias d'information."
-La suite illustre les différences entre la science (plus particulièrement la recherche) et les médias d'information (le journalisme).
+.QUESTION "Science vs médias."
+La suite illustre les différences entre la science (plus particulièrement la recherche) et les médias (le journalisme).
 
 La science produit de la connaissance.
 Les médias ont tout un catalogue d'objectifs potentiels : produire du divertissement, relater des faits, donner des opinions, être une tribune pour une personne, une cause, une prospection commerciale, une communication gouvernementale, et caetera.
@@ -797,7 +802,7 @@ Les médias sont destinés à un large public.
 La science se protège de très nombreux biais en forçant les papiers à être relus par plusieurs experts\*[*], de laboratoires indépendants.
 .FOOTNOTE1
 Cette méthodologie n'est pas parfaite pour autant.
-Certains domaines sont plus succeptibles d'être corrompus que d'autres.
+Certains domaines sont plus susceptibles d'être corrompus que d'autres.
 Mais cela est un sujet pour un autre document.
 .FOOTNOTE2
 Le papier n'est publié qu'à la condition d'apporter une vraie contribution (même modeste) et de bonne qualité.
@@ -886,7 +891,7 @@ Le
 comme un homicide par exemple, est un phénomène médiatique
 .I omniprésent
 dans les médias.
-Sauf que dans le cas de l'homicide, avant la fin de l'enquête policière, impossible de replacer ce phénomène dans un contexte permettant de le comprendre ; c'est une simple occurence qui est peut-être singulière et n'a pas à être généralisée.
+Sauf que dans le cas de l'homicide, avant la fin de l'enquête policière, impossible de replacer ce phénomène dans un contexte permettant de le comprendre ; c'est une simple occurrence qui est peut-être singulière et n'a pas à être généralisée.
 Trouver les mensonges, imprudences, inexactitudes, biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
 Avant la conclusion des enquêteurs, tout n'est que spéculation, du commentaire, pas de l'information.
 Bien entendu, la science est utilisée pour mener l'enquête, mais cette enquête ne se fait pas sur un plateau de télévision, à l'antenne, dans un média.
@@ -966,7 +971,7 @@ l'association
 .gcolor black
 .LEGEND2
 
-Le schéma précédent montre une liste simplifiée des éléments sur lequels se basent les journalistes pour écrire un article (des faits, des avis et des biais potentiels).
+Le schéma précédent montre une liste simplifiée des éléments sur lesquels se basent les journalistes pour écrire un article (des faits, des avis et des biais potentiels).
 Puis un titre est présenté, relatant une histoire fictive dans un journal, et l'article est volontairement exagéré pour illustrer divers biais possibles.
 Cette histoire parle d'un homicide involontaire d'une jeune femme
 .gcolor color_faitpartiel
@@ -994,8 +999,8 @@ Au printemps il commence à faire beau, en été il fait chaud, à l'automne le 
 Bien entendu, ces annonces bouleversantes s'accompagnent d'un petit reportage pour mieux comprendre ce que cela signifie.
 Cela prend régulièrement du temps d'antenne pour un journal télévisé.
 
-Lors d'une grêve, des reportages éclairs parlent du mécontentement des usagers du service en grêve ; la SNCF est un exemple parlant de ce phénomène.
-Le téléspectateur sait déjà bien qu'une grêve créée du mécontentement.
+Lors d'une grève, des reportages éclairs parlent du mécontentement des usagers du service en grève ; la SNCF est un exemple parlant de ce phénomène.
+Le téléspectateur sait déjà bien qu'une grève créée du mécontentement.
 La mise en scène de personnes en colère lors d'une séquence de micro-trottoir n'apporte aucune information.
 Dans le même temps, les
 .B revendications
@@ -1004,8 +1009,8 @@ Montrer la colère mais pas l'origine du problème est néfaste pour se faire un
 De là à parler de manipulation, il n'y a qu'un pas.
 
 Le micro-trottoir est, en soit, un format peu intéressant pour partager de l'information.
-Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre-chose qu'une information triviale, comme un sentiment.
-Son usage lors des grêves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
+Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre chose qu'une information triviale, comme un sentiment.
+Son usage lors des grèves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
 Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
 
 Autre pratique, concernant l'organisation de discussions autour de sujets scientifiques.
@@ -1018,13 +1023,13 @@ Autre problème de format, les discussions (ou débats) avec des personnes qui s
 Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
 
 .QUESTION "Comportement à adopter."
-Plusieurs propositions pour permettre des prises de décisions appaisées sont présentées dans la suite.
+Plusieurs propositions pour permettre des prises de décisions apaisées sont présentées dans la suite.
 À noter que, même si rien de ce qui est dit est transcendant, cela correspond pourtant aux principes les plus élémentaires qui permettent tout dialogue d'être fructueux et qui n'est malheureusement quasi jamais appliqué.
 Un rappel n'est pas du luxe.
 
 Comprendre avant tout.
 Comprendre les autres point de vue, sans en garder une version caricaturée, est nécessaire pour toute bonne prise de décision.
-Même si le point de vue présenté ne nous paraît pas moralement acceptable, il faut réfreiner son envie de le faire passer pour un problème mental quand ce n'est pas réellement justifié.
+Même si le point de vue présenté ne nous paraît pas moralement acceptable, il faut réfréner son envie de le faire passer pour un problème mental quand ce n'est pas réellement justifié.
 Une personne qui souhaiterait limiter l'immigration n'est pas forcément raciste ou xénophobe : rien ne justifie de faire un si gros raccourcis et aussi large généralisation.
 D'autres justifications possibles (même invalides, mais répandues) peuvent mener à cette position sur le sujet.
 Accepter ou au moins tolérer le point de vue par après est une réflexion personnelle, chacun est libre d'arriver à ses propres conclusions, mais il faut commencer par comprendre avant de juger.
@@ -1032,7 +1037,7 @@ Accepter ou au moins tolérer le point de vue par après est une réflexion pers
 Accepter de nouveaux arguments.
 La position la plus rationnelle sur un point de vue se base sur les éléments disponibles pour statuer.
 Même après avoir émis un jugement, en pensant avoir tous les éléments pour statuer, une nouvelle information peut arriver et mettre à mal notre position.
-Peut-être avons-nous juger trop vite le sujet.
+Peut-être avons-nous jugé trop vite le sujet.
 En tout cas il faut savoir remettre à plat les informations pour juger à nouveau.
 La position initiale ne doit pas être gardée si elle ne correspond plus aux faits.
 En pratique, et en particulier avec un sujet d'actualité, de nouvelles informations font surface régulièrement.
@@ -1047,7 +1052,7 @@ ceux qui ne sont pas d'accord.
 Un avis ne peut être figé sans comprendre les autres points de vue.
 
 Par ailleurs, ceci est le fonctionnement de la science.
-En premier, des informations sont obtenues, et un jugement est établit lorsque ces informations sont suffisantes.
+En premier, des informations sont obtenues, et un jugement est établi lorsque ces informations sont suffisantes.
 Si d'autres faits sont portés à notre connaissance et qu'ils n'avaient pas été envisagés auparavant, notre point de vue doit changer s'il n'est plus tenable rationnellement.
 
 .\".vs +\n[table_size_offset]p
@@ -1105,7 +1110,7 @@ Quelques cas particuliers sont adressés, par exemple l'apprentissage de modèle
 D'une manière générale, comprendre un sujet demande du temps et un investissement personnel.
 Penser répondre à n'importe quelle question en quelques minutes est une
 .B "illusion" ,
-et peut même s'avérer dangereux si des décisions importantes s'en suivent.
+et peut même s'avérer dangereux si des décisions importantes s'ensuivent.
 
 .EXPLANATION1
 La connaissance n'a pas de raccourcis, mais des pièges.
@@ -1192,7 +1197,7 @@ La politique est un sujet à la fois vaste et complexe.
 Des mesures simples peuvent impliquer de nombreuses ramifications inattendues.
 
 .CITATION1
-Des automobilistes se moquent de personnes construisant un bâteau car leur véhicule n'a pas de roues.
+Des automobilistes se moquent de personnes construisant un bateau car leur véhicule n'a pas de roues.
 .CITATION2
 .NAMECITATION "Discussions politiques entre personnes de paradigmes différents"
 
@@ -1201,7 +1206,7 @@ Ce document a présenté des biais présents dans la vie de tous les jours et da
 
 La science s'est adaptée à ces erreurs de raisonnement, et les multiples méthodes prennent en compte les biais spécifiques à chaque domaine.
 Les articles scientifiques matérialisent la réflexion des chercheurs en forçant la justification systématique des affirmations.
-Ceci lève ainsi les ambiguités et formant un outil de raisonnement pour les auteurs eux-mêmes.
+Ceci lève ainsi les ambigüités et formant un outil de raisonnement pour les auteurs eux-mêmes.
 La relecture par les pairs (experts du domaine), antérieure à la publication, permet d'ajouter des vérifications supplémentaires.
 Une faute d'inattention est vite arrivée, mais trois ou quatre chercheurs qui passent à côté d'une erreur est plus rare.
 La publication est parfois suivie d'autres analyses, des réplications par d'autres laboratoires de la même étude.
@@ -1298,7 +1303,7 @@ En premier, le plus évident,
 n'a aucun fondement scientifique ; personne n'a jamais observé de la matière qui
 .I "commence à exister" .
 De plus, nous ne savons pas si l'univers a réellement un début, il pourrait être éternel, cette hypothèse n'a jamais été écartée.
-Notre représentation du temps étant elle-même un effet de bord de certaines forces apparues lors du big bang, il n'est pas sûr que le temps, tel que nous le concevons, existait au-delà du mur de Planck.
+Notre représentation du temps étant elle-même un effet de bord de certaines forces apparues lors du Big Bang, il n'est pas sûr que le temps, tel que nous le concevons, existait au-delà du mur de Planck.
 
 Les deux prémices sont donc contestées ; elles affirment des choses qui ne sont pas démontrées.
 Pire, même en admettant ces deux prémices, c'est-à-dire en supposant que l'apparition de matière soit possible et que l'univers aurait un commencement, l'affirmation que l'univers a une cause resterait hasardeuse.
@@ -1309,7 +1314,7 @@ Enfin, en ignorant
 les problèmes de cet argument, il ne démontrerait même pas l'existence d'un dieu mais l'existence d'une
 .I cause ,
 c'est-à-dire un terme vague qui n'indique rien sur la nature de cette cause.
-C'est pour cela que cet argument est complété par d'autres affirmations (cette cause serait un dieu personnel, etc.) qui ne sont qu'un appel à l'igorance
+C'est pour cela que cet argument est complété par d'autres affirmations (cette cause serait un dieu personnel, etc.) qui ne sont qu'un appel à l'ignorance
 .I "je ne sais pas, donc dieu" ). (
 
 En clair : cet argument est un charabia teinté d'appel à l'ignorance.
@@ -1350,7 +1355,7 @@ Si l'hypothèse ne répond pas à ces critères elle est rejetée, car elle ne p
 
 Pourtant, quand bien même
 .B "strictement toutes"
-les tentatives de prouver l'existence d'un dieu ont échoué, les croyants ne veulent pas admettre que cette hypothèse n'est pas valide, et vont même jusqu'à demander de prouver l'inexistance de dieu de manière absolue.
+les tentatives de prouver l'existence d'un dieu ont échoué, les croyants ne veulent pas admettre que cette hypothèse n'est pas valide, et vont même jusqu'à demander de prouver l'inexistence de dieu de manière absolue.
 
 .SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] N'importe namaths
 .TBD
@@ -1387,7 +1392,7 @@ de l'islam de se poser la question de quelle aile contenait la maladie et quelle
 .BULLET double standard : juger deux situations identiques avec des critères différents ;
 .BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
 .BULLET inversion de la charge de la preuve : c'est à celui qui affirme quelque chose de prouver que ce qu'il dit est vrai, pas l'inverse.
-Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que dieu n'existe pas » ;
+Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que Dieu n'existe pas » ;
 .BULLET mille-feuille argumentatif : méthode consistant à donner de multiples arguments sans se soucier de leur qualité ni des réponses, dans l'objectif de saturer la conversation.
 .ENDBULLET
 
@@ -1483,7 +1488,7 @@ Etc.
 
 .GIVEEXAMPLE1
 Notre hypothèse est que donner de la nourriture aux chiens, à leur faim, juste avant de passer à table permettrait de résoudre le problème.
-Les chiens mangeraient silentieusement, sans aboyer.
+Les chiens mangeraient silencieusement, sans aboyer.
 Une fois rassasiés, ils resteraient calmes.
 .GIVEEXAMPLE2
 
@@ -1552,7 +1557,7 @@ De plus, la solution fournie est incorrecte, il n'est pas nécessaire de donner 
 Évidemment, si on souhaite respecter toutes ces consignes, le texte est bien plus verbeux.
 
 .GIVEEXAMPLE1
-Cette étude porte sur la tranquilité des propriétaires de chiens lors des repas (à 12h et 19h).
+Cette étude porte sur la tranquillité des propriétaires de chiens lors des repas (à 12h et 19h).
 À ces périodes, les chiens sont agités et aboient, ce qui est désagréable.
 
 Notre solution a consisté à nourrir les chiens peu avant les heures de repas, avec leur nourriture habituelle (1 steak de 150 grammes par chien, mais peut varier selon le chien).
@@ -1561,7 +1566,7 @@ Contrairement aux solutions précédentes, les propriétaires ont eu la paix san
 Notre solution coûte un peu d'argent, la nourriture n'est pas gratuite, mais malgré cela nous pensons que cette technique peut être satisfaisante pour la majorité des propriétaires de chiens.
 .GIVEEXAMPLE2
 
-Mieux : les problèmes adressés précédemment ont été répondu.
+Mieux : les problèmes adressés précédemment ont été répondus.
 Il est fait mention de la portée de l'étude (valable pour la majorité des propriétaires de chiens), de même que l'apport à la science que cela représente (les propriétaires peuvent désormais manger tranquillement, contrairement aux autres solutions).
 Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contexte plus général, mieux comprendre son utilité réelle.
 .
@@ -1638,9 +1643,6 @@ Cette annexe montre comment calculer graphiquement le
 .I h-index
 d'un chercheur.
 
-.de IEME
-\\$1\u\s-4\\$2\s+4\d
-..
 Pour voir le
 .I h-index
 d'un chercheur graphiquement, ses papiers sont listés par ordre décroissant de leur nombre de citations.
@@ -1656,7 +1658,7 @@ papier doit avoir au moins une citation, ce qui vaut un
 .I h-index
 de 1.
 Si c'est le cas on regarde le
-.IEME 2 ème
+.IEME 2 e
 papier, s'il a au moins 2 citations, alors le
 .I h-index
 est de deux, etc.
@@ -1704,7 +1706,7 @@ Le graphique précédent montre un calcul de
 Dans cet exemple, le chercheur a publié 15 papiers, allant de 0 à 18 citations, présentés par ordre décroissant sur le graphique.
 Le premier papier a reçu 18 citations, le second 10, le troisième 8, et caetera.
 Les 5 premiers papiers ont un nombre de citations supérieur ou égal à leur position dans la liste, mais le
-.IEME 6 ème
+.IEME 6 e
 papier n'a été cité que 3 fois.
 Le
 .I h-index
@@ -1737,14 +1739,14 @@ Devenir chercheur demande des années d'études (3 ans) après avoir déjà pass
 Condenser autant de savoir en quelques heures de vidéo ou quelques pages web est impossible.
 Prétendre lire des papiers de recherche pour vous faire votre propre avis sans un bon bagage scientifique est
 .B "tout aussi illusoire" .
-De plus, les théories du complot impliquant autant de monde démontrent surtout la mécompréhension du fonctionnement de la recherche par les personnes qui les répandent, voire leur malhonnêteté.
+De plus, les théories du complot impliquant autant de monde démontrent surtout l'incompréhension du fonctionnement de la recherche par les personnes qui les répandent, voire leur malhonnêteté.
 
-Si l'objectif est de trier le vrai du faux dans les médias, là encore, mauvaise nouvelle.
-Si vous ne disposez pas d'énormément de temps (et parfois de moyens) c'est quasi impossible.
+Si l'objectif est de trier le vrai du faux dans les médias, là encore : mauvaise nouvelle.
+Si vous ne disposez pas de beaucoup de temps (et parfois de moyens) c'est quasi impossible.
 Certains principes permettent de relever de gros problèmes, et le présent document doit déjà vous aider à y voir plus clair.
 Mais en définitive chaque affirmation dans un média doit être vérifiée, quand bien même le média en question est généralement de confiance.
 Le journalisme est normalement là pour présenter un point de vue, et la multiplicité des points de vue permettraient de jauger (de manière très imparfaite) l'actualité.
-Le fait est que de nos jours, en France, la quasi totalité des médias sont détenus par seulement quelques personnes ; l'information tend à être proche d'un média à l'autre.
+Le fait est que de nos jours, en France, la presque totalité des médias sont détenus par seulement quelques personnes ; l'information tend à être proche d'un média à l'autre.
 Les querelles entre médias sont bien souvent superficielles et les points de vue sont caricaturés voire non représentés\*[*].
 L'étude des médias est un long sujet en soi.
 Donc pour faire court : ne pas hésiter à regarder des médias en dehors des plus connus, mais en gardant en tête les principes pour éviter certains biais, et garder l'esprit ouvert à de nouveaux arguments ou points de vue.
@@ -1753,7 +1755,7 @@ Ensuite, si l'objectif est d'étudier un sujet scientifique d'une manière gén�
 La sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].1 est une discussion sur ce sujet.
 
 Enfin, si l'objectif est d'étudier un sujet politique ou littéraire, la méthode va différer légèrement.
-En politique, il moins question de savoir qui a raison ou tort mais plutôt de comprendre des points de vue, qui peuvent être complexes et nécessiter plus d'un livre pour être mis au clair (cela dépend aussi de votre niveau d'investissement).
+En politique, il est moins question de savoir qui a raison ou tort mais plutôt de comprendre des points de vue, qui peuvent être complexes et nécessiter plus d'un livre pour être mis au clair (cela dépend aussi de votre niveau d'investissement).
 Quelques conseils sont donnés en sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].2.
 
 .SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet « scientifique » (ou technique)
@@ -1773,11 +1775,11 @@ Lire les quelques premiers paragraphes d'une page ne donne qu'une idée superfic
 .br
 Cela peut paraître comme une perte de temps, en réalité c'est un gain de temps considérable.
 Les fiches sont d'autant plus utiles qu'elles permettent de ne pas avoir à revenir sur un livre déjà lu.
-Elles permettent également de structurer la pensée, et elles sont encore plus utiles sur des sujets non technique.
+Elles permettent également de structurer la pensée, et elles sont encore plus utiles sur des sujets non techniques.
 .ENUM Lire des livres plus avancés.
 .br
 Une fois que la base est acquise, et
-.B "seulement à ce moment là" ,
+.B "seulement à ce moment-là" ,
 il est pertinent de lire des livres de plus haut niveau.
 Même au niveau intermédiaire ou avancé, revenir sur des sources plus accessibles peut être pertinent pour se remémorer la base.
 .ENDENUM
@@ -1792,7 +1794,7 @@ La politique (tout comme la littérature) implique des points de vue, donc il fa
 
 .B Attention ,
 que ce soit bien clair : il n'est pas question de partir dans un relativisme absolu où toutes les idées se valent.
-Cette vision du monde est démontrablement fausse.
+Cette vision du monde est fausse.
 Comprendre les courants politiques permet à terme d'avoir un résultat sur le réel, en prenant de meilleures décisions par exemple, ou ne serait-ce que pour mieux saisir le sens des discours de chaque partie.
 
 .bp
@@ -1827,7 +1829,7 @@ Libération donne la parole aux terroristes
 Et le texte est loin d'être neutre ; cela se voit jusque dans les deux titres de l'article.
 Le premier est
 .I "« La Russie ment »" ,
-dont nous noterons des guillements préventifs dans l'article car il est bel est bien question d'une simple affirmation par le groupe terroriste (mais reportée sans aucune remise en question ou retenue par
+dont nous noterons des guillemets préventifs dans l'article, car il est bel est bien question d'une simple affirmation par le groupe terroriste (mais reportée sans aucune remise en question ou retenue par
 .I Libération )
 et non une affirmation venant de la rédaction du journal.
 Le second titre,
