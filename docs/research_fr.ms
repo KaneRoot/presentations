@@ -1,4 +1,6 @@
 .so macros.ms   \" First, let's import some macros.
+.mso fr.tmac
+.mso hdtbl.tmac
 .nr legendps 2
 .de LEGEND1
 .QP
@@ -19,8 +21,6 @@
 .nr N_ANNEXE_HINDEX 4
 .nr N_ANNEXE_CONSEILS_APPRENTISSAGE 5
 .nr N_ANNEXE_MEDIAS 6
-.mso fr.tmac
-.mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
 .AUTHOR Philippe Pittoli
 .ABSTRACT1

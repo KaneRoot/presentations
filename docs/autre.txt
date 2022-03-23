@@ -91,6 +91,10 @@ SECTION 4 : écriture de papiers
   * annexe 2 = complément
   * rigueur = comprendre les techniques de manipulation
 
+TODO: mettre ça où ??
+TODO: insister sur la méthodologie foireuse qui se détecte en recherche ??
+TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
+
 SECTION 5 : publications scientifiques
 * intro:
   * papier = publication dans un journal + comité de lecture
@@ -205,15 +209,6 @@ tableau "recherche vs médias"
     * certains éditorialistes ont conscience de ce manque de confiance
   * Noam Chomsky annonçait déjà la faible qualité des journaux, voire leur
     manipulation, dès 1988 avec la parution de la Fabrique du consentement.
-  * 
-
-* rien n'est vérifié => fact checking qui devient une rubrique à part entière
-  * mais fact checking == orienté
-    * très peu d'infos utiles vérifiés
-    * on a peur que les débats d'idées soient éclipsés par des guerres de
-      vérifications tout azimut
-      * donc pas trop de fact checking
-        => le niveau journalistique est embarrassant.
 
 * TODO: tout n'est pas un sujet scientifique
   * actualité omniprésente, homicide
@@ -232,8 +227,14 @@ tableau "recherche vs médias"
   * philosophes qui parlent de tout et n'importe-quoi
   * discussions où tout le monde se coupe la parole
 
-TODO: insister sur la méthodologie foireuse qui se détecte en recherche ??
-TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
+TODO: mettre ça où ??
+* rien n'est vérifié => fact checking qui devient une rubrique à part entière
+  * mais fact checking == orienté
+    * très peu d'infos utiles vérifiés
+    * on a peur que les débats d'idées soient éclipsés par des guerres de
+      vérifications tout azimut
+      * donc pas trop de fact checking
+        => le niveau journalistique est embarrassant.
 
 * TODO: juger un journal/article
   * intro
@@ -241,6 +242,12 @@ TODO: sociologie => les problèmes potentiels dans la recherche + tous les domai
       (néfaste à une lecture objective des faits), 
   * schéma sur le journalisme
 
+  => conclusion : l'objectivité n'est pas atteignable,
+    * on ne peut que minimiser l'interprétation
+    * même le choix de ce qui est montré, voire le choix du sujet, de l'angle
+      sont déjà des choix non objectifs
+
+* TODO: comportement à adopter pour de meilleures réflexions
   * tolérer d'autres points de vue
     * chercher à le comprendre avant tout
     * même s'il n'est pas moralement acceptable
@@ -262,11 +269,6 @@ TODO: sociologie => les problèmes potentiels dans la recherche + tous les domai
     ces informations sont suffisantes pour émettre un jugement, on le fait.
     Mais si d'autres faits sont portés à notre connaissance, il faut pouvoir
     remettre en question notre point de vue, si cela se justifie rationnellement.
-
-  => conclusion : l'objectivité n'est pas atteignable,
-    * on ne peut que minimiser l'interprétation
-    * même le choix de ce qui est montré, voire le choix du sujet, de l'angle
-      sont déjà des choix non objectifs
 
 
 * TODO: problèmes dans les médias
