@@ -409,6 +409,34 @@ Un chercheur ne peut s'exprimer sur la qualité d'un papier dans un autre domain
 À partir de cela, il est évident que les papiers sont destinés à être lu et compris par d'autres chercheurs, et du même domaine.
 Les papiers publiés ne sont donc pas destinés au grand public, qui devra se contenter d'autres sources de connaissance (livres, informations en ligne…).
 
+.QUESTION "Chercheur \(!= génie, découverte \(!= miracle."
+Les chercheurs sont des personnes qui avaient un bon niveau en classe ; ils sont sélectionnés (en partie) sur ce critère.
+Leur travail consiste en une très longue série d'exercices.
+Personne ne qualifierait de miraculeux le fait qu'un élève, connu pour être bon en classe, réussisse un exercice.
+La complexité du travail vient, bien souvent, de la somme de connaissances à acquérir pour s'y attaquer.
+Le travail derrière un papier se résume parfois à quelques jours de réflexion et de tests suivis de plusieurs semaines de rédaction\*[*].
+.FOOTNOTE1
+Note de l'auteur.
+Un de mes papiers a consisté en quelques jours de réflexion, 40
+.B minutes
+de développement informatique, quelques jours de tests, suivi de plusieurs
+.B mois
+de rédaction (j'étais très inexpérimenté).
+.FOOTNOTE2
+Certaines personnes ont un niveau excellent, c'est-à-dire un raisonnement à la fois rapide et juste, mais cela est plutôt rare même dans la communauté des chercheurs.
+
+.QUESTION "La science n'a pas de frontières."
+Seules de rares connaissances ou possessions (comme des virus) sont limitées pour des raisons de sécurité ou de stratégie économique ou militaire.
+À part sur ces quelques sujets précis, la science est internationale.
+Les papiers sont publiés dans des revues accessibles à tout le monde, quand ils ne sont pas directement en accès ouvert (gratuit).
+
+Par ailleurs, un laboratoire est souvent composé de chercheurs venant de nombreux pays, de tous les continents\*[*].
+.FOOTNOTE1
+Note de l'auteur.
+Dans mon équipe et en comptant seulement les doctorants : Algérie, Argentine, Brésil, France, Grèce, Maroc, Roumanie, Tunisie, Vietnam.
+Nous venions presque tous d'un pays différent.
+.FOOTNOTE2
+
 .QUESTION "Un chercheur n'est pas la science."
 Aucun chercheur ne fait autorité dans tout un domaine de recherche.
 Un chercheur a une spécialité dont il connait le corpus, et sur ce sujet il doit pouvoir différencier un bon article d'une fraude.
@@ -731,6 +759,37 @@ Le cadre d'une journée de travail peut changer radicalement d'un domaine à l'a
 En dehors du cœur de son métier, un enseignant-chercheur a régulièrement des charges administratives à gérer.
 Par exemple, la gestion d'une filière proposée à l'université, ou une promotion d'étudiants.
 
+.QUESTION "Le doctorat."
+Étape obligatoire pour devenir chercheur, le doctorat est une période après un master où l'étudiant acquiert de l'expérience dans la recherche.
+Cette période est de quelques années, entre 3 et 5 dans la plupart des cas.
+Certains domaines ont des doctorats plus longs, qui peuvent s'étaler sur dix ans (et ne pas être rémunérés).
+
+Durant cette période, l'étudiant fait en pratique un travail de recherche.
+Il s'informe sur les articles autour de son sujet (via des
+.I surveys ,
+livres, papiers, blogs, etc.) puis trouve des problématiques auxquelles s'attaquer.
+Le doctorant publie des articles, participe à des conférences et peut même faire des relectures pour des journaux.
+
+Le doctorant est supervisé par un directeur de thèse, et parfois un encadrant pour l'aider au quotidien.
+Le travail à effectuer est parfois éloigné de ce qui est vu durant le cursus de master, et une aide pour démarrer est la bienvenue.
+
+.QUESTION "Le post-doc."
+Après le doctorat, le jeune chercheur est désormais à l'aise dans son travail, une habitude s'est installée.
+Avant de postuler à un poste stable d'enseignant-chercheur, il est encouragé à faire un
+.I post-doc ,
+une période de recherche souvent à l'étranger qui dure entre un et cinq ans.
+
+En revenant en France pour trouver un poste dans une des universités, le chercheur a des années de recherche derrière lui.
+Mais la compétition est tout de même rude\*[*].
+.FOOTNOTE1
+Note de l'auteur.
+Le CNRS a des méthodes de recrutement qui frôlent l'absurde.
+Une conférence a été donnée à mon université pour expliquer comment y rentrer.
+Il y était dit qu'un chercheur n'était jamais pris à son premier essai, qu'il devait prendre contact avec l'équipe pour montrer sa motivation, avoir énormément de publications, etc.
+.br
+À quel moment les exigences vont trop loin ?
+.FOOTNOTE2
+
 .QUESTION "Difficultés du métier de chercheur."
 Faire de la recherche n'est pas nécessairement compliqué, mais cela prend du temps (veille et enseignement).
 Une étude peut également prendre du temps, parfois des dizaines d'années.
@@ -740,7 +799,7 @@ Autre difficulté, trouver la bonne représentation d'une donnée.
 Présenter correctement une donnée, rendre une information évidente, est une tâche parfois complexe.
 
 De même, faire un bon schéma peut être laborieux.
-Un schéma doit être parlant (le lecteur doit comprendre rapidement ce qui est représenté) avec un code couleur et une légende clairs, et doit être agréable à regarder.
+Le lecteur doit comprendre rapidement ce qui est représenté, avec un code couleur et une légende clairs, et le schéma doit être agréable à regarder.
 
 La recherche n'est pas nécessairement complexe et théorique.
 Chaque spécialité a son corpus, parfois très dense, et la difficulté peut venir de la quantité d'informations à assimiler pour comprendre tous les aspects du sujet traité.
@@ -999,6 +1058,7 @@ Au printemps il commence à faire beau, en été il fait chaud, à l'automne le 
 Bien entendu, ces annonces bouleversantes s'accompagnent d'un petit reportage pour mieux comprendre ce que cela signifie.
 Cela prend régulièrement du temps d'antenne pour un journal télévisé.
 
+.PARAGRAPH_INDENTED
 Lors d'une grève, des reportages éclairs parlent du mécontentement des usagers du service en grève ; la SNCF est un exemple parlant de ce phénomène.
 Le téléspectateur sait déjà bien qu'une grève créée du mécontentement.
 La mise en scène de personnes en colère lors d'une séquence de micro-trottoir n'apporte aucune information.
@@ -1008,17 +1068,20 @@ des grévistes ne sont pas mises en avant.
 Montrer la colère mais pas l'origine du problème est néfaste pour se faire un avis, et représente également un appel à l'émotion.
 De là à parler de manipulation, il n'y a qu'un pas.
 
+.PARAGRAPH_INDENTED
 Le micro-trottoir est, en soit, un format peu intéressant pour partager de l'information.
 Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre chose qu'une information triviale, comme un sentiment.
 Son usage lors des grèves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
 Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
 
-Autre pratique, concernant l'organisation de discussions autour de sujets scientifiques.
-Sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, n'est pas de l'information.
+.PARAGRAPH_INDENTED
+Autre pratique, la discussion (ou débat) de sujets scientifiques :
+sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, la discussion n'apporte qu'un commentaire.
 Sur certains plateaux, des philosophes se retrouvent à parler de médecine, entre autres sujets dont ils n'ont strictement aucune compétence.
 Au mieux, c'est du commentaire et des opinions, ce qui se retrouve sur les réseaux sociaux, ni plus ni moins.
 Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime.
 
+.PARAGRAPH_INDENTED
 Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
 Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
 
@@ -1027,33 +1090,71 @@ Plusieurs propositions pour permettre des prises de décisions apaisées sont pr
 À noter que, même si rien de ce qui est dit est transcendant, cela correspond pourtant aux principes les plus élémentaires qui permettent tout dialogue d'être fructueux et qui n'est malheureusement quasi jamais appliqué.
 Un rappel n'est pas du luxe.
 
-Comprendre avant tout.
+.de CENTERED
+.ce
+\\$*
+.br
+..
+.CENTERED Comprendre avant tout.
 Comprendre les autres point de vue, sans en garder une version caricaturée, est nécessaire pour toute bonne prise de décision.
-Même si le point de vue présenté ne nous paraît pas moralement acceptable, il faut réfréner son envie de le faire passer pour un problème mental quand ce n'est pas réellement justifié.
-Une personne qui souhaiterait limiter l'immigration n'est pas forcément raciste ou xénophobe : rien ne justifie de faire un si gros raccourcis et aussi large généralisation.
-D'autres justifications possibles (même invalides, mais répandues) peuvent mener à cette position sur le sujet.
-Accepter ou au moins tolérer le point de vue par après est une réflexion personnelle, chacun est libre d'arriver à ses propres conclusions, mais il faut commencer par comprendre avant de juger.
+Même si le point de vue présenté ne nous paraît pas moralement acceptable, il faut réfréner son envie de le faire passer pour un problème mental ou lui prêter des intentions cachées.
 
-Accepter de nouveaux arguments.
+Exemples pratiques sur des sujets sensibles et actuels : une personne souhaitant arrêter toute immigration n'est pas forcément raciste ou xénophobe.
+Rien ne justifie de faire un si gros raccourcis et aussi large généralisation.
+D'autres justifications peuvent mener à cette position sur le sujet.
+Vous avez peut-être de très bons arguments pour penser ces justifications invalides, mais ce n'est pas le cas de votre interlocuteur, qui peut être malgré tout sincère.
+Tout le monde n'a pas le même parcours de vie, chacun a ses sources d'informations et jauge différemment les priorités.
+De manière similaire, toute personne acceptant sans limites l'arrivée de migrants n'est pas non plus à mettre dans une case.
+Ici également, de multiples raisons (bonnes ou mauvaises) peuvent mener à cette position sur le sujet.
+Dans les deux cas, malgré deux positions radicalement différentes, les groupes ne sont pas homogènes.
+Et entre ces deux positions, comme très souvent sur un sujet politique, tout un éventail de possibilités existe.
+
+Accepter ou au moins tolérer un point de vue est une réflexion personnelle.
+Chacun est libre d'arriver à ses propres conclusions.
+Pour être sincère, il faut comprendre avant de juger.
+
+.CENTERED Accepter de nouveaux arguments.
 La position la plus rationnelle sur un point de vue se base sur les éléments disponibles pour statuer.
-Même après avoir émis un jugement, en pensant avoir tous les éléments pour statuer, une nouvelle information peut arriver et mettre à mal notre position.
+Même après avoir émis un jugement, en pensant avoir tous les éléments nécessaires, une nouvelle information peut arriver et mettre à mal notre position.
 Peut-être avons-nous jugé trop vite le sujet.
-En tout cas il faut savoir remettre à plat les informations pour juger à nouveau.
-La position initiale ne doit pas être gardée si elle ne correspond plus aux faits.
+Les informations doivent être remises à plat pour juger à nouveau, ou suspendre son jugement si ces informations sont insuffisantes.
+Dans tous les cas, la position initiale ne doit pas être gardée si elle ne correspond plus aux faits.
 En pratique, et en particulier avec un sujet d'actualité, de nouvelles informations font surface régulièrement.
-Pour se laisser la possibilité de changer d'avis, (a) le premier réflexe doit être de
+
+.CENTERED Se laisser la possibilité de changer d'avis.
+Le premier réflexe doit être de
 .B "suspendre son jugement" ,
-ne pas statuer sur un sujet avant d'avoir suffisamment d'informations pour juger, (b) ne pas avoir une position de départ trop tranchée, (c) continuer, sincèrement, à douter de notre position.
+ne pas statuer sur un sujet avant d'avoir suffisamment d'informations pour juger.
+Ne pas avoir une position de départ trop tranchée est également important.
+Nous devons également continuer,
+.B sincèrement ,
+à douter de notre position.
 De cette manière, on se laisse une marge d'erreur possible.
-Chaque nouvelle information est jugée à sa juste valeur, pas de rejet systématique, pas de biais de cueillette (cherry picking), c'est une position humble.
-Cela ne veut pas dire être une girouette, un point de vue se travaille, cela demande des efforts, avoir des arguments, souvent du temps, mais aussi de comprendre
+Chaque nouvelle information est jugée à sa juste valeur, sans rejet systématique, pas de biais de cueillette (cherry picking).
+C'est une position humble, sans pour autant être une girouette !
+
+.CENTERED Une opinion se travaille.
+Se forger une opinion demande du temps et des efforts pour aller contre ses préjugés, pour comprendre
 .B sincèrement
 ceux qui ne sont pas d'accord.
-Un avis ne peut être figé sans comprendre les autres points de vue.
+Un avis ne peut être sincère sans comprendre les autres points de vue.
+
+Une fois que les arguments des différents bords sont compris, que le sujet a été assimilé, avoir une opinion est parfaitement acceptable, même très tranchée.
+Mes maigres conseils ne doivent pas encourager un sophisme du juste milieu (voir annexe 1).
+Parfois une position tranchée se justifie très bien.
 
 Par ailleurs, ceci est le fonctionnement de la science.
-En premier, des informations sont obtenues, et un jugement est établi lorsque ces informations sont suffisantes.
-Si d'autres faits sont portés à notre connaissance et qu'ils n'avaient pas été envisagés auparavant, notre point de vue doit changer s'il n'est plus tenable rationnellement.
+Obtenir des informations, interpréter, juger.
+Si d'autres faits sont portés à notre connaissance et qu'ils n'avaient pas été intégrés à notre réflexion, notre point de vue doit changer s'il n'est plus tenable rationnellement.
+
+.CENTERED Et la science dans tout ça ?
+La science est utile pour prendre des décisions, en vous informant des conséquences de vos choix.
+Par exemple, admettons vouloir « ré-émigrer » une partie de nos concitoyens sur une base raciale.
+La psychologie peut aider à comprendre l'impact émotionnel sur les familles, l'économie peut aider à comprendre l'impact sur la disponibilité du travail, etc.
+En revanche, vos valeurs sont des prémices indépendantes.
+Si vous n'avez aucune considération pour l'économie, aucune formule mathématique ne vous donnera
+.I tort
+sur ce point, c'est votre opinion, vos valeurs, la science est hors sujet.
 
 .\".vs +\n[table_size_offset]p
 .\".ps +\n[table_size_offset]
@@ -1121,8 +1222,6 @@ Cette sous-section a pour objectif de lister des éléments qui peuvent mettre e
 Cela peut se retrouver dans des discours ou des traits de personnalité.
 
 Il faut se méfier de soi-même.
-
-Diverses manipulations peuvent être 
 
 .QUESTION "Effet gourou."
 Une personne ayant confiance en elle, parlant avec aplomb, nous est agréable.
