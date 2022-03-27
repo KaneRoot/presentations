@@ -95,6 +95,14 @@ TODO: mettre ça où ??
 TODO: insister sur la méthodologie foireuse qui se détecte en recherche ??
 TODO: sociologie => les problèmes potentiels dans la recherche + tous les domaines ne demandent pas autant de compétences pour y entrer
 
+TODO: SECTION 5 Parler de la carrière d'un chercheur
+TODO: SECTION 5 Travail international = plein de gens de tous les pays dans le laboratoire
+TODO: SECTION 5 Les chercheurs et « l'intuition ».
+Avoir des idées ce n'est ni être un génie, ni un miracle.
+Les chercheurs sont (généralement) de bons étudiants qui savent réfléchir à un problème, ils sont sélectionnés sur ce critère.
+Certaines personnes ont un niveau excellent et un raisonnement rapide, mais même cela est plutôt rare.
+Personne ne qualifierait de miraculeux le fait qu'un élève, connu pour être bon en classe, réussisse un exercice.
+
 SECTION 5 : publications scientifiques
 * intro:
   * papier = publication dans un journal + comité de lecture
@@ -363,3 +371,11 @@ Plan:
   * attention : pas relativisme, les idées ne se valent pas
     * comprendre = effet sur le réel => décisions + comprendre chaque partie
   * 
+
+TODO pente glissante
+TODO faux dilemme moins orienté Dieu
+TODO double faute
+TODO fact check => mène à quoi ??
+TODO complotisme
+TODO choix des sujets dans les journaux = choix de ce qui sera discuté, c'est déjà avoir un prisme de lecture du monde
+TODO (indépendant du journal) choix éditorial d'un média fortement regardé => sujets de discussion, focaliser l'attention sur un sujet

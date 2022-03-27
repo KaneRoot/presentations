@@ -16,6 +16,11 @@
 .de IEME
 \\$1\u\s-4\\$2\s+4\d
 ..
+.de CENTERED
+.ce
+\\$*
+.br
+..
 .nr N_ANNEXE_BIAIS 1
 .nr N_ANNEXE_ECRITURE_PAPIER 2
 .nr N_ANNEXE_MANIPULATIONS 3
@@ -27,7 +32,7 @@
 .TITLE La science et la méthode scientifique
 .AUTHOR Philippe Pittoli
 .ABSTRACT1
-Ce document présente succintement la science : son objectif, la méthode scientifique, le déroulement de la recherche ainsi que la création de papiers.
+Ce document présente succinctement la science : son objectif, la méthode scientifique, le déroulement de la recherche ainsi que la création de papiers.
 Le travail des chercheurs montre un raisonnement et des réflexions qui peuvent être utiles pour repérer des biais cognitifs présents dans la vie quotidienne, voire même des manipulations.
 Suite à la lecture de ce document, il est attendu que les discussions (autour de l'actualité par exemple) soient plus fertiles et les prises de décision plus pertinentes.
 De nombreuses annexes explorent un sujet en particulier, en complément du texte principal.
@@ -1031,34 +1036,38 @@ l'association
 .LEGEND2
 
 Le schéma précédent montre une liste simplifiée des éléments sur lesquels se basent les journalistes pour écrire un article (des faits, des avis et des biais potentiels).
-Puis un titre est présenté, relatant une histoire fictive dans un journal, et l'article est volontairement exagéré pour illustrer divers biais possibles.
-Cette histoire parle d'un homicide involontaire d'une jeune femme
-.gcolor color_faitpartiel
-la nuit sur une route fréquentée
-.gcolor black
-suite au tir d'un chasseur
-.gcolor color_faitpartiel
-en état d'ébriété.
-.gcolor black
+Puis un titre est présenté, relatant une histoire fictive dans un journal.
+L'article est volontairement exagéré pour illustrer divers biais possibles.
+Cette histoire parle d'un homicide involontaire d'une jeune femme \m[color_faitpartiel]la nuit sur une route fréquentée\m[] suite au tir d'un chasseur \m[color_faitpartiel]en état d'ébriété\m[].
 Le titre n'indique pas de biais personnel de l'auteur, mais il peut avoir des \m[color_liens]liens avec l'association\m[].
 De même, un \m[color_contraintes]manque de temps\m[] est peut-être à l'origine du point de vue présenté, les journalistes n'ayant \m[color_contraintes]pas encore toutes les informations\m[] pour avoir un avis pertinent.
 
-L'objectivité n'est pas atteignable, et ne peut être mesurée précisément.
+Cet exemple montre qu'un lecteur doit accorder sa confiance à un journal pour ne pas tomber dans certains pièges.
+Le lecteur n'a aucun moyen fiable de vérifier que le point de vue du journal est honnête et présente l'interprétation des faits la plus raisonnable.
+
+.\" Et les faits eux-mêmes peuvent ne pas avoir été obtenus dans de bonnes conditions.
+
+.QUESTION "L'objectivité est illusoire."
+Un journal peut minimiser son interprétation des faits, mais même ce qui est montré, le sujet ou encore l'angle utilisé pour l'aborder, sont déjà des choix.
+L'objectivité n'est donc pas atteignable, et ne peut être mesurée précisément.
 Des manquements à l'objectivité sont détectables, pour peu qu'ils soient grossiers.
 Mais si une information est tue (volontairement à des fins de manipulation ou non), seule une investigation d'autres sources peut le montrer.
-Un journal peut minimiser son interprétation des faits, mais même ce qui est montré, le sujet ou encore l'angle utilisé pour l'aborder, sont déjà des choix.
+
+Par ailleurs, à la connaissance de l'auteur, aucun média ne présente correctement une stricte séparation entre les faits et leur interprétation par les journalistes.
+Chaque spectateur ou lecteur doit trier ce qui relève du fait ou de l'interprétation.
 
 .QUESTION "Les mauvaises habitudes des médias."
 Les médias ont des sujets fétiches, des façons de présenter une information ou d'organiser le dialogue qui ne sont pas corrects.
 Au-delà de la mauvaise transmission de l'information (voire les recommandations pour un papier en section 4), certains biais sont facilement introduits (section 2 et annexe 1), comme l'appel à l'émotion ou l'argument d'autorité.
 La suite présente quelques exemples.
 
+.CENTERED La météo.
 La pluie et le beau temps sont régulièrement discutés.
 Au printemps il commence à faire beau, en été il fait chaud, à l'automne le temps se couvre, et en hiver, surprise, il fait froid.
 Bien entendu, ces annonces bouleversantes s'accompagnent d'un petit reportage pour mieux comprendre ce que cela signifie.
 Cela prend régulièrement du temps d'antenne pour un journal télévisé.
 
-.PARAGRAPH_INDENTED
+.CENTERED La grève.
 Lors d'une grève, des reportages éclairs parlent du mécontentement des usagers du service en grève ; la SNCF est un exemple parlant de ce phénomène.
 Le téléspectateur sait déjà bien qu'une grève créée du mécontentement.
 La mise en scène de personnes en colère lors d'une séquence de micro-trottoir n'apporte aucune information.
@@ -1068,20 +1077,20 @@ des grévistes ne sont pas mises en avant.
 Montrer la colère mais pas l'origine du problème est néfaste pour se faire un avis, et représente également un appel à l'émotion.
 De là à parler de manipulation, il n'y a qu'un pas.
 
-.PARAGRAPH_INDENTED
+.CENTERED Le micro-trottoir.
 Le micro-trottoir est, en soit, un format peu intéressant pour partager de l'information.
 Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre chose qu'une information triviale, comme un sentiment.
 Son usage lors des grèves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
 Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
 
-.PARAGRAPH_INDENTED
+.CENTERED Les débats scientifiques sans scientifique.
 Autre pratique, la discussion (ou débat) de sujets scientifiques :
 sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, la discussion n'apporte qu'un commentaire.
 Sur certains plateaux, des philosophes se retrouvent à parler de médecine, entre autres sujets dont ils n'ont strictement aucune compétence.
 Au mieux, c'est du commentaire et des opinions, ce qui se retrouve sur les réseaux sociaux, ni plus ni moins.
 Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime.
 
-.PARAGRAPH_INDENTED
+.CENTERED Les interruptions incessantes.
 Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
 Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
 
@@ -1090,28 +1099,36 @@ Plusieurs propositions pour permettre des prises de décisions apaisées sont pr
 À noter que, même si rien de ce qui est dit est transcendant, cela correspond pourtant aux principes les plus élémentaires qui permettent tout dialogue d'être fructueux et qui n'est malheureusement quasi jamais appliqué.
 Un rappel n'est pas du luxe.
 
-.de CENTERED
-.ce
-\\$*
-.br
-..
+La suite met à rude épreuve votre biais émotionnel.
+Vous êtes prévenus.
+
 .CENTERED Comprendre avant tout.
 Comprendre les autres point de vue, sans en garder une version caricaturée, est nécessaire pour toute bonne prise de décision.
 Même si le point de vue présenté ne nous paraît pas moralement acceptable, il faut réfréner son envie de le faire passer pour un problème mental ou lui prêter des intentions cachées.
 
-Exemples pratiques sur des sujets sensibles et actuels : une personne souhaitant arrêter toute immigration n'est pas forcément raciste ou xénophobe.
+Exemple pratique sur un sujet sensible et actuel : une personne souhaitant arrêter toute immigration n'est pas forcément raciste ou xénophobe.
 Rien ne justifie de faire un si gros raccourcis et aussi large généralisation.
 D'autres justifications peuvent mener à cette position sur le sujet.
 Vous avez peut-être de très bons arguments pour penser ces justifications invalides, mais ce n'est pas le cas de votre interlocuteur, qui peut être malgré tout sincère.
 Tout le monde n'a pas le même parcours de vie, chacun a ses sources d'informations et jauge différemment les priorités.
-De manière similaire, toute personne acceptant sans limites l'arrivée de migrants n'est pas non plus à mettre dans une case.
+De même, toute personne acceptant sans limites l'arrivée de migrants n'est pas non plus à mettre dans une case.
 Ici également, de multiples raisons (bonnes ou mauvaises) peuvent mener à cette position sur le sujet.
 Dans les deux cas, malgré deux positions radicalement différentes, les groupes ne sont pas homogènes.
 Et entre ces deux positions, comme très souvent sur un sujet politique, tout un éventail de possibilités existe.
 
+.EXPLANATION1
+Une vision dénuée de nuance ou la réticence à échanger des arguments peuvent être le résultat d'un biais émotionnel.
+Peut-être êtes-vous convaincu à cause d'un appel à l'émotion.
+Faites attention.
+.EXPLANATION2
+
 Accepter ou au moins tolérer un point de vue est une réflexion personnelle.
-Chacun est libre d'arriver à ses propres conclusions.
-Pour être sincère, il faut comprendre avant de juger.
+Chacun aura ses propres conclusions.
+Pour être sincère dans sa démarche, il faut comprendre avant de juger.
+
+.CITATION1
+« Je comprends que tu penses [...] pour des raisons [...], mais je ne partage pas cet avis car [...] » sera toujours préférable et constructif qu'une insulte.
+.CITATION2
 
 .CENTERED Accepter de nouveaux arguments.
 La position la plus rationnelle sur un point de vue se base sur les éléments disponibles pour statuer.
@@ -1125,13 +1142,18 @@ En pratique, et en particulier avec un sujet d'actualité, de nouvelles informat
 Le premier réflexe doit être de
 .B "suspendre son jugement" ,
 ne pas statuer sur un sujet avant d'avoir suffisamment d'informations pour juger.
-Ne pas avoir une position de départ trop tranchée est également important.
+Une fois cette phase terminée, l'engagement immédiat envers une opinion tranchée est à éviter ;
+il faut se laisser du temps même si toutes les preuves s'accumulent dans un sens.
 Nous devons également continuer,
 .B sincèrement ,
 à douter de notre position.
 De cette manière, on se laisse une marge d'erreur possible.
 Chaque nouvelle information est jugée à sa juste valeur, sans rejet systématique, pas de biais de cueillette (cherry picking).
-C'est une position humble, sans pour autant être une girouette !
+C'est une position humble, sans pour autant faire de nous une girouette.
+
+.EXPLANATION1
+Réagissez aux arguments n'allant pas dans votre sens comme vous souhaitez que les autres réagissent à vos arguments.
+.EXPLANATION2
 
 .CENTERED Une opinion se travaille.
 Se forger une opinion demande du temps et des efforts pour aller contre ses préjugés, pour comprendre
@@ -1149,7 +1171,7 @@ Si d'autres faits sont portés à notre connaissance et qu'ils n'avaient pas ét
 
 .CENTERED Et la science dans tout ça ?
 La science est utile pour prendre des décisions, en vous informant des conséquences de vos choix.
-Par exemple, admettons vouloir « ré-émigrer » une partie de nos concitoyens sur une base raciale.
+Par exemple, admettons vouloir « réémigrer » une partie de nos concitoyens sur une base raciale.
 La psychologie peut aider à comprendre l'impact émotionnel sur les familles, l'économie peut aider à comprendre l'impact sur la disponibilité du travail, etc.
 En revanche, vos valeurs sont des prémices indépendantes.
 Si vous n'avez aucune considération pour l'économie, aucune formule mathématique ne vous donnera
@@ -1489,6 +1511,7 @@ de l'islam de se poser la question de quelle aile contenait la maladie et quelle
 .BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
 .BULLET généralisation abusive
 .BULLET double standard : juger deux situations identiques avec des critères différents ;
+.BULLET double faute : corriger une erreur par une autre erreur.
 .BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
 .BULLET inversion de la charge de la preuve : c'est à celui qui affirme quelque chose de prouver que ce qu'il dit est vrai, pas l'inverse.
 Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que Dieu n'existe pas » ;
@@ -1901,7 +1924,30 @@ Comprendre les courants politiques permet à terme d'avoir un résultat sur le r
 Le journalisme est l'activité qui consiste à recueillir et
 .B vérifier ,
 puis éventuellement commenter, des faits pour les porter à l'attention du public.
-Cette annexe présente deux cas de journalisme déficient.
+Cette annexe présente quelques cas de journalisme défaillant.
+
+.QUESTION "France 3 : « Macron Dégage »."
+Cas d'école de la faute journalistique : la modification des faits.
+France 3, le 18 décembre 2018, a modifié une image de l'AFP pour y faire supprimer un mot d'une pancarte, et cela a été repéré par des téléspectateurs.
+La seule conséquence de ce manquement journalistique a été une mise en demeure du CSA, autant dire aucune conséquence.
+
+.CENTERED Note de l'auteur.
+Ici, la modification est à la fois flagrante, indéniable, et fait étonnant, cela s'est passé sur un élément
+.B mineur
+de l'information.
+Rien n'est pourtant plus normal qu'un message non flatteur sur une pancarte d'un manifestant à l'égard des dirigeants actuels.
+Pourtant les journalistes ont un tel sentiment d'impunité qu'il leur a paru normal de modifier les faits, peut-être même de leur propre initiative.
+Une partie importante du journalisme est la vérification des faits ; si la modification faite est mineure, la faute journalistique ne l'est pas,
+.B "du tout" .
+
+De plus, cette faute journalistique ne s'est pas passée sur un site internet obscur, mais sur une chaîne du service public, en toute impunité.
+
+La modification des faits n'est pas seulement du mauvais journalisme et un aveux de partialité.
+C'est un des éléments fondamentaux de propagande des dictatures, et ce mot n'est pas employé à la légère.
+
+Si les journalistes pensent normal de modifier les faits pour un élément aussi mineur, comment est-il honnêtement possible de leur faire confiance pour le reste ?
+Qu'en est-il pour les sujets où le pouvoir en place est réellement mis à mal ?
+.\" La soumission au pouvoir de la chaîne ne peut être plus totale.
 
 .QUESTION "France Soir."
 
@@ -1921,11 +1967,12 @@ et sous son nom officiel
 Par ailleurs, ce groupement terroriste est soutenu militairement par l'armée Américaine, qui leur a fourni du matériel.
 Ces informations concernant le
 .I "Front de Libération" ,
-pourtant importantes, n'ont pas été ne serait-ce qu'esquissées dans l'article.
+pourtant importantes, n'ont pas été ne serait-ce que esquissées dans l'article.
 .[
 Libération donne la parole aux terroristes
 .]
-Et le texte est loin d'être neutre ; cela se voit jusque dans les deux titres de l'article.
+
+Par ailleurs, le texte est loin d'être neutre ; cela se voit jusque dans les deux titres de l'article.
 Le premier est
 .I "« La Russie ment »" ,
 dont nous noterons des guillemets préventifs dans l'article, car il est bel est bien question d'une simple affirmation par le groupe terroriste (mais reportée sans aucune remise en question ou retenue par
@@ -1937,6 +1984,7 @@ va même jusqu'à sous-entendre que la Russie attaque des civils délibérément
 Là encore, un peu de recul sur les dires de
 .B terroristes
 aurait été bienvenue, l'article leur fait presque office de tribune.
+
 Le reste de l'article n'a que peu de contenu, et n'est pas fiable et ne met rien en perspectives.
 Par exemple, l'article dit que
 .I "les troupes gouvernementales piétinent depuis 3 mois" ,
@@ -1944,5 +1992,3 @@ sans préciser les très grandes avancées faites pendant des années (pour mett
 .B terrorisme
 des groupes visiblement identifiés comme fiables par
 .I Libération ).
-
-.SUBSECTION Les médias et leurs limites
