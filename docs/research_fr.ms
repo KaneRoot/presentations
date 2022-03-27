@@ -1935,19 +1935,19 @@ La seule conséquence de ce manquement journalistique a été une mise en demeu
 Ici, la modification est à la fois flagrante, indéniable, et fait étonnant, cela s'est passé sur un élément
 .B mineur
 de l'information.
-Rien n'est pourtant plus normal qu'un message non flatteur sur une pancarte d'un manifestant à l'égard des dirigeants actuels.
-Pourtant les journalistes ont un tel sentiment d'impunité qu'il leur a paru normal de modifier les faits, peut-être même de leur propre initiative.
+Rien n'est plus évident qu'un message non flatteur sur une pancarte d'un manifestant.
+Pourtant les journalistes ont trouvé normal de modifier les faits.
 Une partie importante du journalisme est la vérification des faits ; si la modification faite est mineure, la faute journalistique ne l'est pas,
 .B "du tout" .
 
-De plus, cette faute journalistique ne s'est pas passée sur un site internet obscur, mais sur une chaîne du service public, en toute impunité.
-
-La modification des faits n'est pas seulement du mauvais journalisme et un aveux de partialité.
-C'est un des éléments fondamentaux de propagande des dictatures, et ce mot n'est pas employé à la légère.
-
-Si les journalistes pensent normal de modifier les faits pour un élément aussi mineur, comment est-il honnêtement possible de leur faire confiance pour le reste ?
-Qu'en est-il pour les sujets où le pouvoir en place est réellement mis à mal ?
+Si les journalistes pensent normal de modifier un élément aussi mineur, comment est-il honnêtement possible de leur faire confiance pour le reste ?
+Quid des sujets plus importants, où une modification des faits ne serait pas aussi évidente ?
 .\" La soumission au pouvoir de la chaîne ne peut être plus totale.
+
+De plus, cette faute journalistique ne s'est pas passée sur un site internet obscur, mais sur une chaîne du service public.
+Le CSA a par ailleurs infligé des amendes de plusieurs millions d'euros pour des séquences contrevenant aux bonnes mœurs.
+Une simple mise en demeure pour un élément aussi grave s'apparente à une forme
+.B impunité . d'
 
 .QUESTION "France Soir."
 
@@ -1992,3 +1992,15 @@ sans préciser les très grandes avancées faites pendant des années (pour mett
 .B terrorisme
 des groupes visiblement identifiés comme fiables par
 .I Libération ).
+
+.QUESTION "Que retenir ?"
+Cette annexe a montré différents manquements journalistiques bien réels, allant de la dissimulation à la modification des faits.
+Des journalistes ont, entre autres, trafiqué des images et présenté des terroristes comme étant de confiance.
+Pourtant, cela n'a suscité aucune réaction.
+
+La modification des faits n'est pas seulement du mauvais journalisme et un aveux de partialité.
+C'est un des éléments fondamentaux des dictatures, et si ce mot a été banalisé, il n'est ici pas employé à la légère.
+.
+.\".EXPLANATION1
+.\"Ce qui n'est pas puni en pratique est autorisé.
+.\".EXPLANATION2
