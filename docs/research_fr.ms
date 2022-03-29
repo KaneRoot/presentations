@@ -953,8 +953,7 @@ Manufacturing Consent
 Le
 .I "fait divers" ,
 comme un homicide par exemple, est un phénomène médiatique
-.I omniprésent
-dans les médias.
+.I omniprésent .
 Sauf que dans le cas de l'homicide, avant la fin de l'enquête policière, impossible de replacer ce phénomène dans un contexte permettant de le comprendre ; c'est une simple occurrence qui est peut-être singulière et n'a pas à être généralisée.
 Trouver les mensonges, imprudences, inexactitudes, biais ou les erreurs est souvent complexe ; un temps d'étude est nécessaire.
 Avant la conclusion des enquêteurs, tout n'est que spéculation, du commentaire, pas de l'information.
@@ -962,6 +961,14 @@ Bien entendu, la science est utilisée pour mener l'enquête, mais cette enquêt
 
 L'actualité à ce défaut de ne pas être une simple affaire de mathématiques, de bonnes et de mauvaises réponses.
 Pour s'exprimer correctement sur un sujet, il faut avoir tous les éléments en mains.
+La science peut s'exprimer, parfois, même en l'absence de tous les éléments, mais cela reste un fonctionnement dégradé.
+S'exprimer rapidement sur un sujet pour des besoins d'audimat alors que les informations pourraient être accessibles prochainement, relève du manque de sérieux.
+L'actualité est alors du simple divertissement.
+
+.QUESTION "Repérer des biais n'est pas toujours possible."
+L'exemple suivant montre l'\c
+.UL impossibilité
+de s'assurer qu'un article ne contient aucun biais.
 
 .defcolor color_ressenti      rgb 0.6 0.2 0.2
 .defcolor color_interet       rgb 1 0 0
@@ -1044,14 +1051,14 @@ De même, un \m[color_contraintes]manque de temps\m[] est peut-être à l'origin
 
 Cet exemple montre qu'un lecteur doit accorder sa confiance à un journal pour ne pas tomber dans certains pièges.
 Le lecteur n'a aucun moyen fiable de vérifier que le point de vue du journal est honnête et présente l'interprétation des faits la plus raisonnable.
-
+.
 .\" Et les faits eux-mêmes peuvent ne pas avoir été obtenus dans de bonnes conditions.
 
 .QUESTION "L'objectivité est illusoire."
 Un journal peut minimiser son interprétation des faits, mais même ce qui est montré, le sujet ou encore l'angle utilisé pour l'aborder, sont déjà des choix.
 L'objectivité n'est donc pas atteignable, et ne peut être mesurée précisément.
 Des manquements à l'objectivité sont détectables, pour peu qu'ils soient grossiers.
-Mais si une information est tue (volontairement à des fins de manipulation ou non), seule une investigation d'autres sources peut le montrer.
+Mais si une information est tue (volontairement à des fins de manipulation ou parce que jugé impertinent), seule une investigation d'autres sources peut le montrer.
 
 Par ailleurs, à la connaissance de l'auteur, aucun média ne présente correctement une stricte séparation entre les faits et leur interprétation par les journalistes.
 Chaque spectateur ou lecteur doit trier ce qui relève du fait ou de l'interprétation.
@@ -1064,8 +1071,7 @@ La suite présente quelques exemples.
 .CENTERED La météo.
 La pluie et le beau temps sont régulièrement discutés.
 Au printemps il commence à faire beau, en été il fait chaud, à l'automne le temps se couvre, et en hiver, surprise, il fait froid.
-Bien entendu, ces annonces bouleversantes s'accompagnent d'un petit reportage pour mieux comprendre ce que cela signifie.
-Cela prend régulièrement du temps d'antenne pour un journal télévisé.
+Ces annonces bouleversantes s'accompagnent également d'un reportage pour comprendre ce que cela signifie, prenant régulièrement du temps d'antenne pour un journal télévisé.
 
 .CENTERED La grève.
 Lors d'une grève, des reportages éclairs parlent du mécontentement des usagers du service en grève ; la SNCF est un exemple parlant de ce phénomène.
@@ -1084,11 +1090,9 @@ Son usage lors des grèves, de manifestations et toute sorte de situation causan
 Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
 
 .CENTERED Les débats scientifiques sans scientifique.
-Autre pratique, la discussion (ou débat) de sujets scientifiques :
-sans expert, ou au moins une personne ayant une connaissance approfondie du sujet pour expliquer la situation, la discussion n'apporte qu'un commentaire.
-Sur certains plateaux, des philosophes se retrouvent à parler de médecine, entre autres sujets dont ils n'ont strictement aucune compétence.
-Au mieux, c'est du commentaire et des opinions, ce qui se retrouve sur les réseaux sociaux, ni plus ni moins.
-Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime.
+Sur certains plateaux, des philosophes se retrouvent à parler de médecine ou autres sujets dont ils n'ont strictement aucune compétence, en lieu et place de scientifiques spécialisés sur les sujets traités, ou au moins d'une personne ayant une connaissance approfondie du sujet pour expliquer la situation.
+Au mieux, c'est du commentaire, des opinions, ce qui se retrouve ni plus ni moins sur les réseaux sociaux.
+Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime, et ainsi accepter plus facilement des arguments faibles.
 
 .CENTERED Les interruptions incessantes.
 Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
@@ -1099,7 +1103,10 @@ Plusieurs propositions pour permettre des prises de décisions apaisées sont pr
 À noter que, même si rien de ce qui est dit est transcendant, cela correspond pourtant aux principes les plus élémentaires qui permettent tout dialogue d'être fructueux et qui n'est malheureusement quasi jamais appliqué.
 Un rappel n'est pas du luxe.
 
-La suite met à rude épreuve votre biais émotionnel.
+La suite met à rude épreuve votre biais émotionnel, à dessein.
+Pour correctement s'informer, il est
+.B nécessaire
+de savoir contenir ses émotions, voyez cela comme un exercice.
 Vous êtes prévenus.
 
 .CENTERED Comprendre avant tout.
@@ -1113,14 +1120,16 @@ Vous avez peut-être de très bons arguments pour penser ces justifications inva
 Tout le monde n'a pas le même parcours de vie, chacun a ses sources d'informations et jauge différemment les priorités.
 De même, toute personne acceptant sans limites l'arrivée de migrants n'est pas non plus à mettre dans une case.
 Ici également, de multiples raisons (bonnes ou mauvaises) peuvent mener à cette position sur le sujet.
-Dans les deux cas, malgré deux positions radicalement différentes, les groupes ne sont pas homogènes.
+Aucun des deux groupes n'est homogène.
 Et entre ces deux positions, comme très souvent sur un sujet politique, tout un éventail de possibilités existe.
 
 .EXPLANATION1
+Attention !
+Les émotions obscurcissent le jugement.
+.EXPLANATION2
+
 Une vision dénuée de nuance ou la réticence à échanger des arguments peuvent être le résultat d'un biais émotionnel.
 Peut-être êtes-vous convaincu à cause d'un appel à l'émotion.
-Faites attention.
-.EXPLANATION2
 
 Accepter ou au moins tolérer un point de vue est une réflexion personnelle.
 Chacun aura ses propres conclusions.
@@ -1136,12 +1145,16 @@ Même après avoir émis un jugement, en pensant avoir tous les éléments néce
 Peut-être avons-nous jugé trop vite le sujet.
 Les informations doivent être remises à plat pour juger à nouveau, ou suspendre son jugement si ces informations sont insuffisantes.
 Dans tous les cas, la position initiale ne doit pas être gardée si elle ne correspond plus aux faits.
-En pratique, et en particulier avec un sujet d'actualité, de nouvelles informations font surface régulièrement.
+En pratique, et en particulier avec un sujet d'actualité, de nouvelles informations\*[*] font surface régulièrement.
+.FOOTNOTE1
+Peut-être que ces nouvelles informations ne le sont que pour vous.
+Par exemple, si vous êtes exposé pour la première fois à un argument ou un point de vue qui n'est pas le vôtre, bien que déjà répandu.
+.FOOTNOTE2
 
 .CENTERED Se laisser la possibilité de changer d'avis.
-Le premier réflexe doit être de
+Face à une problématique n'ayant pas sucité chez nous de réflexion sérieuse, le premier réflexe doit être de
 .B "suspendre son jugement" ,
-ne pas statuer sur un sujet avant d'avoir suffisamment d'informations pour juger.
+ne pas statuer avant d'avoir suffisamment d'informations pour juger.
 Une fois cette phase terminée, l'engagement immédiat envers une opinion tranchée est à éviter ;
 il faut se laisser du temps même si toutes les preuves s'accumulent dans un sens.
 Nous devons également continuer,
@@ -1174,9 +1187,21 @@ La science est utile pour prendre des décisions, en vous informant des conséqu
 Par exemple, admettons vouloir « réémigrer » une partie de nos concitoyens sur une base raciale.
 La psychologie peut aider à comprendre l'impact émotionnel sur les familles, l'économie peut aider à comprendre l'impact sur la disponibilité du travail, etc.
 En revanche, vos valeurs sont des prémices indépendantes.
-Si vous n'avez aucune considération pour l'économie, aucune formule mathématique ne vous donnera
+Si vous n'avez aucune considération pour l'économie, ou que vous jugez d'autres aspects prioritaires, aucune formule mathématique ne vous donnera
 .I tort
-sur ce point, c'est votre opinion, vos valeurs, la science est hors sujet.
+sur ce point.
+C'est votre opinion, vos valeurs, la science est hors sujet.
+
+.EXPLANATION1
+Avoir des valeurs très marquées ne dispense pas de comprendre d'autres points de vue.
+.EXPLANATION2
+
+Tout jugement doit se faire en pleine connaissance de cause.
+
+.EXPLANATION1
+Le problème n'est pas le manque de connaissances, mais l'illusion de la connaissance.
+Soyez curieux, allez voir ce que disent ceux qui ne pensent pas comme vous.
+.EXPLANATION2
 
 .\".vs +\n[table_size_offset]p
 .\".ps +\n[table_size_offset]
@@ -1216,14 +1241,6 @@ for i from 8 to 14 by 1 do {
 times at 15,0
 .G2
 
-.QUESTION "Quelques règles de base."
-Avant de se poser la question de comment utiliser au mieux la science au quotidien, voici quelques points de départ importants qu'il faut bien comprendre.
-
-.ENUM La vérité compte plus que les sentiments.
-.ENUM La vérité est souvent grise.
-.ENUM Personne n'est infaillible.
-.ENDENUM
-
 .QUESTION "Se renseigner sur un sujet."
 La manière de s'informer dépend de l'objectif recherché.
 Se poser une question ponctuelle sur un sujet n'implique pas le même investissement que vouloir devenir un expert dans un domaine.
@@ -1236,8 +1253,24 @@ Penser répondre à n'importe quelle question en quelques minutes est une
 et peut même s'avérer dangereux si des décisions importantes s'ensuivent.
 
 .EXPLANATION1
-La connaissance n'a pas de raccourcis, mais des pièges.
+La connaissance ne connaît pas de raccourcis, seulement des pièges.
 .EXPLANATION2
+
+Quel est le sujet, quel est le niveau de connaissances à atteindre ?
+Ça permettra de mieux cibler les documents à lire, leur donner une priorité.
+
+.BULLET Ne pas sous-estimer les documents grand publics.
+Pour une première approche d'un sujet ou pour comprendre le principe général, des documents comme une page wikipédia voire des articles de blog peuvent être utiles.
+Même après avoir lu une documentation plus sérieuse, relire un document plus léger peut être utile juste pour être sûr de tout comprendre.
+.BULLET Les publications scientifiques sont sous copyright et derrière des paywall bien souvent.
+En revanche, un papier peut être obtenu en tapant son nom dans scihub.
+Pour les livres, je ne sais pas s'il y a une solution satisfaisante pour les trouver.
+.BULLET Aucun document ne va aussi loin qu'un papier scientifique.
+Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est quasi toujours plus adapté.
+Aussi, un papier nécessite généralement un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre.
+Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
+.I survey .
+.ENDBULLET
 
 .SUBSECTION Repérer des manipulations
 Cette sous-section a pour objectif de lister des éléments qui peuvent mettre en doute la véracité ou le bien-fondé d'un propos.
@@ -1270,22 +1303,6 @@ Qui aime bien châtie bien.
 .BULLET diversion (éviter le sujet via de longs discours hors sujet par exemple, débit de parole ou montage rapide)
 .BULLET informations ou citations hors contexte
 .BULLET tromperies
-.ENDBULLET
-
-Quel est le sujet, quel est le niveau de connaissances à atteindre ?
-Ça permettra de mieux cibler les documents à lire, leur donner une priorité.
-
-.BULLET Ne pas sous-estimer les documents grand publics.
-Pour une première approche d'un sujet ou pour comprendre le principe général, des documents comme une page wikipédia voire des articles de blog peuvent être utiles.
-Même après avoir lu une documentation plus sérieuse, relire un document plus léger peut être utile juste pour être sûr de tout comprendre.
-.BULLET Les publications scientifiques sont sous copyright et derrière des paywall bien souvent.
-En revanche, un papier peut être obtenu en tapant son nom dans scihub.
-Pour les livres, je ne sais pas s'il y a une solution satisfaisante pour les trouver.
-.BULLET Aucun document ne va aussi loin qu'un papier scientifique.
-Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est quasi toujours plus adapté.
-Aussi, un papier nécessite généralement un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre.
-Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
-.I survey .
 .ENDBULLET
 
 

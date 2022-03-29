@@ -153,13 +153,12 @@ SECTION 6 : Informations générales (sur le métier de chercheur)
 
 SECTION 7 : Science au-delà de la recherche
 * intro:
-  * s'informer sur le monde qui nous entoure passe par divers moyens
-  * la recherche scientifique n'en est pas vraiment un, c'est
-    un outil utilisé par des intermédiaires qui, eux, diffusent des infos
-    (pas seulement des connaissances)
+  * s'informer = divers moyens
+  * recherche scientifique != moyen de s'informer
+    plutôt un outil pour des intermédiaires
   * ces intermédiaires = journalisme, livres, réseaux sociaux
   * cette section = quelques pistes de réflexion, sans prétention,
-    sur la qualité de ces intermédiaires, et en particulier du journalisme
+    sur qualité des intermédiaires (journalisme)
     * journalisme sous tous les angles = médias
 
 TODO? (à ajouter à l'intro)
@@ -173,42 +172,50 @@ TODO? (à ajouter à l'intro)
   -> recherche = complexe à lire, écrire, penser
     -> monde = pas évident, bon sens mis à mal
     -> s'éloigner de la recherche = sujets moins bien traités
+    -> journalisme = bon exemple
 
-* recherche vs journalisme
+* science vs médias
   objectifs
-  -> recherche = produire de la connaissance
-  -> journalisme = diversifié sur cette question,
-     principalement: relate des faits mais sans forcément leur étude approfondie,
-                     selon un prisme de lecture
-     souvent:        les opinions priment sur les faits (mineurs, peu importants,
-                     peu voire pas contextualisés, etc.)
-     TODO: actualité
+    -> recherche = produire de la connaissance
+    -> journalisme = diversifié sur cette question,
+       principalement: relate des faits mais sans étude approfondie,
+                       selon un prisme de lecture
+       souvent:        les opinions priment sur les faits
+       TODO ??: actualité
   sujet
-  -> science : précis, sérieux, bien traité, uniformisé
-  -> journalisme : tous les formats existent, toutes les qualités aussi
+    -> science : précis, bien traité, uniformisé
+    -> journalisme : tous formats existent, toutes qualités aussi
+                     norme = commentaire
   qui s'exprime
-  -> science : experts
-  -> journalisme : tout le monde
+    -> science : experts
+    -> journalisme : tout le monde
   public
-  -> science : restreint
-  -> journalisme : tout le monde
+    -> science : restreint
+    -> journalisme : tout le monde
   biais
-  -> science : relecture par plusieurs experts
-  -> journalisme : acceptation par la hiérarchie = pas de garde fou
+    -> science : relecture par plusieurs experts
+    -> journalisme : acceptation par la hiérarchie = pas de garde fou
   temps
-  -> produire de la qualité, rapidement mais relatif à la recherche
-     (quelques semaines, voire mois)
-  -> produire rapidement (souvent en quelques jours, voire heures)
-  TODO: financement
-    -> science : public
+    -> produire de la qualité, rapidement mais relatif à la recherche
+       (quelques semaines, voire mois)
+    -> produire rapidement (souvent en quelques jours, voire heures)
+  TODO: indépendance, financement
+    -> science : public, parfois privé
     -> journalisme : recettes, mécénat et énormément de subventions
       -> les médias sont déficitaires, donc l'objectif des mécènes est de les
          utiliser comme source d'influence
       -> très peu de diversité de point de vue (celui du mécène, ou au moins
          des points de vues qui sont compatibles avec ses intérêts)
       -> CSA: quasi inutile
+  TODO: indépendance
+    -> science : indépendant, format qui limite fortement les possibilités
+                 d'orienter une conclusion
+    -> journalisme : dépendant d'un mécène,
+                     recrutement orienté idéologiquement, etc.
+                     TODO ref Branco?
 
 tableau "recherche vs médias"
+* conclusion
   * du journalisme même compétent != aussi fiable que la recherche
   * rien n'assure la qualité == manque de sérieux connu
     * lecteur avisé == méfiance
@@ -222,18 +229,18 @@ tableau "recherche vs médias"
   * actualité omniprésente, homicide
     -> scientifiquement peu intéressant
     -> occurence singulière
-    -> tout n'est pas des maths
       * mensonges, imprudences, biais et erreurs impossible à détecter
       * un temps d'étude est nécessaire
       * conclusion = au mieux de nos capacités
       * avant la conclusion = spéculation, rien d'intéressant
+      * science mène l'enquête = pas sur un plateau télé
 
-* quelques mauvaises habitudes des médias
-  * parler de la pluie et du beau temps
-  * mécontentement lors d'une grêve
-  * micro-trottoir
-  * philosophes qui parlent de tout et n'importe-quoi
-  * discussions où tout le monde se coupe la parole
+  * l'actualité != maths, bonnes et mauvaises réponses
+    -> faut avoir tous les éléments pour s'exprimer sur un sujet
+    -> TODO: la science peut s'exprimer même sans tous les éléments
+       MAIS = mode dégradé + si on peut les avoir mais qu'on rush pour l'audimat,
+       c'est juste du manque de sérieux
+       -> actualité = divertissement
 
 TODO: mettre ça où ??
 * rien n'est vérifié => fact checking qui devient une rubrique à part entière
@@ -249,41 +256,91 @@ TODO: mettre ça où ??
     * analyser un article fictif, trier l'information utile, l'impertinent
       (néfaste à une lecture objective des faits), 
   * schéma sur le journalisme
+  * conclusion : lecteur == doit accorder sa confiance, aucun moyen de vérifier
 
-  => conclusion : l'objectivité n'est pas atteignable,
-    * on ne peut que minimiser l'interprétation
-    * même le choix de ce qui est montré, voire le choix du sujet, de l'angle
-      sont déjà des choix non objectifs
+* objectivité == illusoire
+  * on ne peut que minimiser l'interprétation
+  * objectivité non atteignable, pas mesurable précisément
+  * même le choix de ce qui est montré, voire le choix du sujet,
+    de l'angle sont déjà des choix non objectifs
+  * manquements à l'objectivité visibles si grossiers
+  * information manquante == détectable si investigation approfondie
 
-* TODO: comportement à adopter pour de meilleures réflexions
-  * tolérer d'autres points de vue
-    * chercher à le comprendre avant tout
-    * même s'il n'est pas moralement acceptable
-    * sans chercher à rendre le « phobiser »
+  * par ailleurs, aucun média distingue faits et interprétations
+    -> chaque lecteur doit faire cet effort
 
-  * accepter de nouveaux arguments, de nouveaux points de vue
-    * en particulier avec l'actualité, il arrive d'obtenir de nouvelles infos
-    * nouvelle info = pdv qui peut changer
-    * il faut se laisser la possibilité de changer d'avis
-    => ne pas avoir un avis tranché dès le départ
-    * mais il faut se laisser une marge d'erreur possible, accepter humblement
-      d'être peut-être en tort, ou mieux : accepter de ne pas avoir d'avis,
-      suspendre son jugement
-    * ce qui ne veut pas dire être une girouette
-      * un point de vue se travaille, cela demande des efforts, avoir des
-        arguments, mais AUSSI de comprendre ceux qui ne sont pas d'accord
-      * un avis ne peut être figé sans comprendre les autres points de vue
-    C'est le fonctionnement de la science : obtenir des informations, lorsque
-    ces informations sont suffisantes pour émettre un jugement, on le fait.
-    Mais si d'autres faits sont portés à notre connaissance, il faut pouvoir
-    remettre en question notre point de vue, si cela se justifie rationnellement.
-
+* quelques mauvaises habitudes des médias
+  * parler de la pluie et du beau temps
+  * mécontentement lors d'une grêve
+  * micro-trottoir
+  * philosophes qui parlent de tout et n'importe-quoi
+  * interruptions incessantes lors de discussions
 
 * TODO: problèmes dans les médias
   -> au-delà d'être non expert et partial, ce qui est normal pour un média (la neutralité est un mensonge)
   -> 
   -> ANNEXE: subventions énormes pour diffuser des opinions
   -> ANNEXE:
+
+* comportement à adopter pour de meilleures réflexions
+  * comprendre avant tout
+    * sans caricaturer
+    * même s'il n'est pas moralement acceptable
+    * sans chercher à rendre le « phobiser »
+
+    les exemples mettent votre biais émotionnel à l'épreuve
+
+    exemples
+    * TODO: nuances
+    * TODO: attentions aux biais, notamment les appels à l'émotion
+  * accepter de nouveaux arguments
+
+  * accepter de nouveaux arguments
+    * un pdv se base sur les éléments disponibles
+    * nouvelle information
+      * après avoir émis un jugement (car éléments suffisants pour statuer)
+      -> si elle met à mal notre vision du monde => jugement trop hâtif
+      -> infos à remettre à plat pour juger à nouveau, ou suspendre jugement
+      => position initale à changer
+    * en pratique, sur un sujet d'actualité, cela arrive souvent
+
+  * se laissera la possibilité de changer d'avis
+    1. suspendre son jugement avant d'avoir les infos
+    2. engagement limité, ne pas avoir une opinion tranchée trop vite
+    3. continuer sincèrement à douter
+       => marge d'erreur possible
+       => jugement de toute nouvelle info à sa juste valeur
+         * pas de rejet systématique
+         * pas de biais de cueillette
+       * position humble
+       * ce qui ne veut pas dire être une girouette
+
+  * un point de vue se travaille
+    * demande des efforts
+      * aller contre ses préjugés, comprendre les autres pdv
+      * un avis ne peut être sincère sans comprendre les autres points de vue
+
+    * une fois les pdv et arguments compris
+      * avoir un pdv, même très tranché, est acceptable
+
+    => fonctionnement de la science
+      1. obtenir des informations
+      2. interpréter
+      3. juger
+      4. si de nouvelles informations, réévaluer
+
+  * et la science dans tout ça ?
+    * utile pour prendre des décisions
+      => TODO: peut aider à trouver la cause d'un problème
+      => informe sur les conséquences de ses choix
+         ex: réémigration, conséquences psychologiques + économiques
+    * valeurs == prémices
+      => science != pertinent pour en juger
+
+* TODO: Tous les biais ne sont pas négatifs.
+  * Nous == mauvais penseurs
+  * on peut utiliser ça à des fins utiles
+  * manipuler éthique ? à vous de voir
 
 La connaissance n'a pas de raccourcis, mais des pièges.
 
@@ -374,7 +431,6 @@ Plan:
 
 TODO pente glissante
 TODO faux dilemme moins orienté Dieu
-TODO double faute
 TODO fact check => mène à quoi ??
 TODO complotisme
 TODO choix des sujets dans les journaux = choix de ce qui sera discuté, c'est déjà avoir un prisme de lecture du monde
