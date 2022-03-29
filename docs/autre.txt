@@ -199,6 +199,14 @@ TODO? (à ajouter à l'intro)
     -> produire de la qualité, rapidement mais relatif à la recherche
        (quelques semaines, voire mois)
     -> produire rapidement (souvent en quelques jours, voire heures)
+  TODO: place de l'information
+    -> science : autant de place que nécessaire,
+                 par défaut 6 à 15 pages denses, souvent davantage
+    -> journalisme :
+      => télévisé : quelques minutes (y compris quand le sujet est vaste)
+                    à plus d'une heure pour une longue enquête
+      => papier : une colonne (y compris quand le sujet est vaste)
+                  à quelques pages
   TODO: indépendance, financement
     -> science : public, parfois privé
     -> journalisme : recettes, mécénat et énormément de subventions
@@ -214,6 +222,9 @@ TODO? (à ajouter à l'intro)
                      recrutement orienté idéologiquement, etc.
                      TODO ref Branco?
 
+  TODO: parler du décodex/décodeurs, qui note journaux et sites
+  TODO: parler du fact checking utilisé à des fins politiques
+
 tableau "recherche vs médias"
 * conclusion
   * du journalisme même compétent != aussi fiable que la recherche
@@ -225,7 +236,7 @@ tableau "recherche vs médias"
   * Noam Chomsky annonçait déjà la faible qualité des journaux, voire leur
     manipulation, dès 1988 avec la parution de la Fabrique du consentement.
 
-* TODO: tout n'est pas un sujet scientifique
+* tous les sujets ne relèvent pas de la science
   * actualité omniprésente, homicide
     -> scientifiquement peu intéressant
     -> occurence singulière
@@ -237,10 +248,10 @@ tableau "recherche vs médias"
 
   * l'actualité != maths, bonnes et mauvaises réponses
     -> faut avoir tous les éléments pour s'exprimer sur un sujet
-    -> TODO: la science peut s'exprimer même sans tous les éléments
-       MAIS = mode dégradé + si on peut les avoir mais qu'on rush pour l'audimat,
-       c'est juste du manque de sérieux
-       -> actualité = divertissement
+    -> la science peut s'exprimer même sans tous les éléments
+       MAIS en mode dégradé
+       rush pour l'audimat = manque de sérieux
+         => actualité = divertissement
 
 TODO: mettre ça où ??
 * rien n'est vérifié => fact checking qui devient une rubrique à part entière
@@ -251,11 +262,12 @@ TODO: mettre ça où ??
       * donc pas trop de fact checking
         => le niveau journalistique est embarrassant.
 
-* TODO: juger un journal/article
+* repérer des biais n'est pas toujours possible
   * intro
     * analyser un article fictif, trier l'information utile, l'impertinent
-      (néfaste à une lecture objective des faits), 
+      (néfaste à une lecture objective des faits),
   * schéma sur le journalisme
+  * explication du schéma
   * conclusion : lecteur == doit accorder sa confiance, aucun moyen de vérifier
 
 * objectivité == illusoire
@@ -276,9 +288,10 @@ TODO: mettre ça où ??
   * philosophes qui parlent de tout et n'importe-quoi
   * interruptions incessantes lors de discussions
 
+  TRANSITION : il nous reste alors
+
 * TODO: problèmes dans les médias
   -> au-delà d'être non expert et partial, ce qui est normal pour un média (la neutralité est un mensonge)
-  -> 
   -> ANNEXE: subventions énormes pour diffuser des opinions
   -> ANNEXE:
 
@@ -293,7 +306,6 @@ TODO: mettre ça où ??
     exemples
     * TODO: nuances
     * TODO: attentions aux biais, notamment les appels à l'émotion
-  * accepter de nouveaux arguments
 
   * accepter de nouveaux arguments
     * un pdv se base sur les éléments disponibles
@@ -337,6 +349,9 @@ TODO: mettre ça où ??
     * valeurs == prémices
       => science != pertinent pour en juger
 
+* TODO: technique pour vérifier des informations publiques
+        OSINT, open source intelligence
+
 * TODO: Tous les biais ne sont pas négatifs.
   * Nous == mauvais penseurs
   * on peut utiliser ça à des fins utiles
@@ -351,22 +366,25 @@ La connaissance n'a pas de raccourcis, mais des pièges.
   # Comment réfuter une affirmation ? Un contre-exemple suffit ?
   # D'autres méthodes de démonstration (démonstration par l'absurde, transposer le raisonnement de n à (n+1) etc.)
 
-* quelques règles de base
-  -> vérité compte
-  -> vérité grise
-  -> personne n'est infaillible
-
 * se renseigner sur un sujet
-  1.
-  2.
-  3.
+  1. livres
+     => tous les niveaux
+     => informations assez complètes sur un sujet souvent vaste
+     => pédagogique
+  2. grand public => wikipédia, blog et documentaires
+     => informations qui vont de superficielles à avancé
+     => pour une première approche ou en complément
+     => wikipédia en particulier n'est pas pédagogique
+  3. publication scientifique
+     => informations complètes voire exhaustives, sérieux, contextualisé,
+        pédagogique mais sujet trop précis, destiné avant tout à des experts
 
 7.1 repérer des manipulations
 
 * se méfier de soi-même
 * effet gourou
   -> je sais tout, orgueil
-  -> 
+  
 * déformation des propos
 * diversions
 * informations ou citations hors contexte
@@ -377,7 +395,7 @@ La connaissance n'a pas de raccourcis, mais des pièges.
 - financement catastrophique qui implique des mécènes (et beaucoup de subventions publiques) empêchant une vraie indépendance journalistique
 Libération, 2019, Idlib : les raisons d’une escalade meurtrière
 - appel à l'émotion
-- 
+
 - appels à l'émotion (Enfants tués lors d'attaques russes, effets secondaires des vaccins)
 
 - Zététique
@@ -427,7 +445,7 @@ Plan:
   * politique = pdv => comprendre les approches
   * attention : pas relativisme, les idées ne se valent pas
     * comprendre = effet sur le réel => décisions + comprendre chaque partie
-  * 
+ 
 
 TODO pente glissante
 TODO faux dilemme moins orienté Dieu

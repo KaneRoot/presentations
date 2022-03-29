@@ -27,6 +27,7 @@
 .nr N_ANNEXE_HINDEX 4
 .nr N_ANNEXE_CONSEILS_APPRENTISSAGE 5
 .nr N_ANNEXE_MEDIAS 6
+.nr N_ANNEXE_MEDIAS_HABITUDES 7
 .mso fr.tmac
 .mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
@@ -962,13 +963,13 @@ Bien entendu, la science est utilisée pour mener l'enquête, mais cette enquêt
 L'actualité à ce défaut de ne pas être une simple affaire de mathématiques, de bonnes et de mauvaises réponses.
 Pour s'exprimer correctement sur un sujet, il faut avoir tous les éléments en mains.
 La science peut s'exprimer, parfois, même en l'absence de tous les éléments, mais cela reste un fonctionnement dégradé.
-S'exprimer rapidement sur un sujet pour des besoins d'audimat alors que les informations pourraient être accessibles prochainement, relève du manque de sérieux.
+S'exprimer précipitamment sur un sujet pour des besoins d'audimat alors que les informations pourraient être accessibles prochainement, relève du manque de sérieux.
 L'actualité est alors du simple divertissement.
 
 .QUESTION "Repérer des biais n'est pas toujours possible."
 L'exemple suivant montre l'\c
 .UL impossibilité
-de s'assurer qu'un article ne contient aucun biais.
+de s'assurer qu'un article ne contienne de biais.
 
 .defcolor color_ressenti      rgb 0.6 0.2 0.2
 .defcolor color_interet       rgb 1 0 0
@@ -1051,14 +1052,18 @@ De même, un \m[color_contraintes]manque de temps\m[] est peut-être à l'origin
 
 Cet exemple montre qu'un lecteur doit accorder sa confiance à un journal pour ne pas tomber dans certains pièges.
 Le lecteur n'a aucun moyen fiable de vérifier que le point de vue du journal est honnête et présente l'interprétation des faits la plus raisonnable.
-.
-.\" Et les faits eux-mêmes peuvent ne pas avoir été obtenus dans de bonnes conditions.
+
+Par ailleurs, distinguer les affirmations des explications est nécessaire.
+L'article affirme que l'homicide est accidentel, mais rien de ce qui est écrit n'appuie ce fait.
+De même, toute information n'est pas nécessairement pertinente.
+Dire que des pancartes annonçaient la chasse est pertinent s'il est considéré normal pour un promeneur d'éviter de sortir pendant la période de chasse.
+Cette information est donc une invitation plus ou moins subtile à adopter ce point de vue.
 
 .QUESTION "L'objectivité est illusoire."
 Un journal peut minimiser son interprétation des faits, mais même ce qui est montré, le sujet ou encore l'angle utilisé pour l'aborder, sont déjà des choix.
 L'objectivité n'est donc pas atteignable, et ne peut être mesurée précisément.
 Des manquements à l'objectivité sont détectables, pour peu qu'ils soient grossiers.
-Mais si une information est tue (volontairement à des fins de manipulation ou parce que jugé impertinent), seule une investigation d'autres sources peut le montrer.
+Mais si une information est tue (à des fins de manipulation ou parce que jugé impertinente), seule une investigation d'autres sources peut le montrer.
 
 Par ailleurs, à la connaissance de l'auteur, aucun média ne présente correctement une stricte séparation entre les faits et leur interprétation par les journalistes.
 Chaque spectateur ou lecteur doit trier ce qui relève du fait ou de l'interprétation.
@@ -1066,40 +1071,52 @@ Chaque spectateur ou lecteur doit trier ce qui relève du fait ou de l'interpré
 .QUESTION "Les mauvaises habitudes des médias."
 Les médias ont des sujets fétiches, des façons de présenter une information ou d'organiser le dialogue qui ne sont pas corrects.
 Au-delà de la mauvaise transmission de l'information (voire les recommandations pour un papier en section 4), certains biais sont facilement introduits (section 2 et annexe 1), comme l'appel à l'émotion ou l'argument d'autorité.
-La suite présente quelques exemples.
 
-.CENTERED La météo.
-La pluie et le beau temps sont régulièrement discutés.
-Au printemps il commence à faire beau, en été il fait chaud, à l'automne le temps se couvre, et en hiver, surprise, il fait froid.
-Ces annonces bouleversantes s'accompagnent également d'un reportage pour comprendre ce que cela signifie, prenant régulièrement du temps d'antenne pour un journal télévisé.
+L'annexe \n[N_ANNEXE_MEDIAS_HABITUDES] présente quelques exemples de mauvais journalisme télévisuel.
+Ces exemples mettent en lumière ce qui devrait apparaître comme une évidence : le journalisme télévisuel est avant tout du divertissement.
 
-.CENTERED La grève.
-Lors d'une grève, des reportages éclairs parlent du mécontentement des usagers du service en grève ; la SNCF est un exemple parlant de ce phénomène.
-Le téléspectateur sait déjà bien qu'une grève créée du mécontentement.
-La mise en scène de personnes en colère lors d'une séquence de micro-trottoir n'apporte aucune information.
-Dans le même temps, les
-.B revendications
-des grévistes ne sont pas mises en avant.
-Montrer la colère mais pas l'origine du problème est néfaste pour se faire un avis, et représente également un appel à l'émotion.
-De là à parler de manipulation, il n'y a qu'un pas.
+.QUESTION "Se renseigner sur un sujet."
+Les journaux, papiers ou télévisés, ne servent qu'à informer sur l'actualité et de manière peu fiable.
+Mais alors, où trouver des informations pertinentes ?
 
-.CENTERED Le micro-trottoir.
-Le micro-trottoir est, en soit, un format peu intéressant pour partager de l'information.
-Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre chose qu'une information triviale, comme un sentiment.
-Son usage lors des grèves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
-Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
+La manière de s'informer dépend de l'objectif recherché.
+Se poser une question ponctuelle sur un sujet n'implique pas le même investissement que vouloir devenir un expert dans un domaine.
+L'annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] émet quelques suggestions (sans prétention aucune) sur comment se renseigner.
+Quelques cas particuliers sont adressés, par exemple l'apprentissage de modèles politiques, ou en cas de forte contrainte de temps.
 
-.CENTERED Les débats scientifiques sans scientifique.
-Sur certains plateaux, des philosophes se retrouvent à parler de médecine ou autres sujets dont ils n'ont strictement aucune compétence, en lieu et place de scientifiques spécialisés sur les sujets traités, ou au moins d'une personne ayant une connaissance approfondie du sujet pour expliquer la situation.
-Au mieux, c'est du commentaire, des opinions, ce qui se retrouve ni plus ni moins sur les réseaux sociaux.
-Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime, et ainsi accepter plus facilement des arguments faibles.
+D'une manière générale, comprendre un sujet demande du temps et un investissement personnel.
+Penser répondre à n'importe quelle question en quelques minutes est une
+.B "illusion" ,
+et peut même s'avérer dangereux si des décisions importantes s'ensuivent.
 
-.CENTERED Les interruptions incessantes.
-Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
-Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
+.EXPLANATION1
+La connaissance ne connaît pas de raccourcis, seulement des pièges.
+.EXPLANATION2
 
-.QUESTION "Comportement à adopter."
-Plusieurs propositions pour permettre des prises de décisions apaisées sont présentées dans la suite.
+Connaître le sujet et le niveau de connaissances à atteindre permet de mieux cibler les documents à lire, et leur donner une priorité.
+
+.BULLET D'une manière générale, les livres sont conseillés.
+Ils sont de tout niveau, pédagogiques, et couvrent des sujets vastes de manière souvent complète (sans pour autant être exhaustif).
+Ils permettent une vue d'ensemble sur un sujet, relier les savoirs pour les consolider.
+.BULLET Ne pas sous-estimer les documents grand publics : wikipédia, blogs, documentaires.
+Ces documents peuvent être utiles pour une première approche, comprendre rapidement un principe général ou en complément d'un bon livre.
+Même après avoir lu une documentation plus sérieuse, relire un document plus léger peut être utile juste pour être sûr de tout comprendre.
+Ces documents ne sont pas toujours pédagogiques ou très complets, et le niveau de connaissances varie, ce sont avant tout de bons compléments.
+.BULLET Enfin, aucun document ne va aussi loin qu'un papier scientifique.
+Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est presque toujours plus adapté.
+Aussi, un papier nécessite parfois un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre, mais tous les domaines ne sont pas aussi exigeants.
+Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
+.I survey .
+.ENDBULLET
+
+Le plus important à retenir : comprendre un sujet demande du temps et un bon libraire (ou un moteur de recherche).
+La répétition est mère de tout apprentissage.
+
+.QUESTION "Se forger une opinion."
+S'informer correctement
+.B doit
+nous mettre en face de documents, discussions ou discours défiant notre point de vue.
+La suite présente plusieurs propositions pour des discussions apaisées.
 À noter que, même si rien de ce qui est dit est transcendant, cela correspond pourtant aux principes les plus élémentaires qui permettent tout dialogue d'être fructueux et qui n'est malheureusement quasi jamais appliqué.
 Un rappel n'est pas du luxe.
 
@@ -1199,7 +1216,6 @@ Avoir des valeurs très marquées ne dispense pas de comprendre d'autres points 
 Tout jugement doit se faire en pleine connaissance de cause.
 
 .EXPLANATION1
-Le problème n'est pas le manque de connaissances, mais l'illusion de la connaissance.
 Soyez curieux, allez voir ce que disent ceux qui ne pensent pas comme vous.
 .EXPLANATION2
 
@@ -1241,51 +1257,20 @@ for i from 8 to 14 by 1 do {
 times at 15,0
 .G2
 
-.QUESTION "Se renseigner sur un sujet."
-La manière de s'informer dépend de l'objectif recherché.
-Se poser une question ponctuelle sur un sujet n'implique pas le même investissement que vouloir devenir un expert dans un domaine.
-L'annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] émet quelques suggestions (sans prétention aucune) sur comment se renseigner.
-Quelques cas particuliers sont adressés, par exemple l'apprentissage de modèles politiques, ou en cas de forte contrainte de temps.
+.QUESTION "Les manipulations"
+Des éléments d'un discours ou des traits de personnalité peuvent mettre en doute la véracité ou le bien-fondé d'un propos.
 
-D'une manière générale, comprendre un sujet demande du temps et un investissement personnel.
-Penser répondre à n'importe quelle question en quelques minutes est une
-.B "illusion" ,
-et peut même s'avérer dangereux si des décisions importantes s'ensuivent.
-
-.EXPLANATION1
-La connaissance ne connaît pas de raccourcis, seulement des pièges.
-.EXPLANATION2
-
-Quel est le sujet, quel est le niveau de connaissances à atteindre ?
-Ça permettra de mieux cibler les documents à lire, leur donner une priorité.
-
-.BULLET Ne pas sous-estimer les documents grand publics.
-Pour une première approche d'un sujet ou pour comprendre le principe général, des documents comme une page wikipédia voire des articles de blog peuvent être utiles.
-Même après avoir lu une documentation plus sérieuse, relire un document plus léger peut être utile juste pour être sûr de tout comprendre.
-.BULLET Les publications scientifiques sont sous copyright et derrière des paywall bien souvent.
-En revanche, un papier peut être obtenu en tapant son nom dans scihub.
-Pour les livres, je ne sais pas s'il y a une solution satisfaisante pour les trouver.
-.BULLET Aucun document ne va aussi loin qu'un papier scientifique.
-Mais il est rare d'avoir besoin de ce niveau de connaissances, un livre est quasi toujours plus adapté.
-Aussi, un papier nécessite généralement un niveau BAC+2 voire BAC+5 dans le domaine pour comprendre.
-Pour tenter sa chance avec des papiers scientifiques, le mot clé à utiliser pour rechercher des papiers sur un sujet :
-.I survey .
-.ENDBULLET
-
-.SUBSECTION Repérer des manipulations
-Cette sous-section a pour objectif de lister des éléments qui peuvent mettre en doute la véracité ou le bien-fondé d'un propos.
-Cela peut se retrouver dans des discours ou des traits de personnalité.
-
+Les êtres humains sont des créatures perfectibles à bien des égards.
 Il faut se méfier de soi-même.
 
-.QUESTION "Effet gourou."
+.CENTERED "Effet gourou."
 Une personne ayant confiance en elle, parlant avec aplomb, nous est agréable.
 De même, si cette personne raconte quelques anecdotes intéressantes pour accompagner un discours, cela peut nous paraître sympathique.
 Et c'est parce que c'est appréciable qu'il faut se méfier.
 Un personnage qui apparaît sympathique peut raconter du baratin, son public baisse sa garde.
-Un gourou et pas nécessairement de
+Un gourou ne vise pas nécessairement
 .I tout
-le public, peut déjà être très lucratif\*[*].
+le public, un tout petit groupe d'adeptes peut déjà être très lucratif\*[*].
 .FOOTNOTE1
 Les jeux
 .I freemium
@@ -1880,15 +1865,14 @@ Prétendre lire des papiers de recherche pour vous faire votre propre avis sans 
 .B "tout aussi illusoire" .
 De plus, les théories du complot impliquant autant de monde démontrent surtout l'incompréhension du fonctionnement de la recherche par les personnes qui les répandent, voire leur malhonnêteté.
 
-Si l'objectif est de trier le vrai du faux dans les médias, là encore : mauvaise nouvelle.
-Si vous ne disposez pas de beaucoup de temps (et parfois de moyens) c'est quasi impossible.
+Si l'objectif est de trier le vrai du faux dans les médias, vous devez disposer de suffisamment de temps (et parfois de moyens).
 Certains principes permettent de relever de gros problèmes, et le présent document doit déjà vous aider à y voir plus clair.
-Mais en définitive chaque affirmation dans un média doit être vérifiée, quand bien même le média en question est généralement de confiance.
+Chaque affirmation dans un média doit être vérifiée, quand bien même le média en question est généralement de confiance.
 Le journalisme est normalement là pour présenter un point de vue, et la multiplicité des points de vue permettraient de jauger (de manière très imparfaite) l'actualité.
 Le fait est que de nos jours, en France, la presque totalité des médias sont détenus par seulement quelques personnes ; l'information tend à être proche d'un média à l'autre.
-Les querelles entre médias sont bien souvent superficielles et les points de vue sont caricaturés voire non représentés\*[*].
+Les querelles entre médias sont bien souvent superficielles et les points de vue sont caricaturés voire non représentés.
 L'étude des médias est un long sujet en soi.
-Donc pour faire court : ne pas hésiter à regarder des médias en dehors des plus connus, mais en gardant en tête les principes pour éviter certains biais, et garder l'esprit ouvert à de nouveaux arguments ou points de vue.
+Donc pour faire court : ne pas hésiter à regarder des médias indépendants et peu connus, en gardant en tête les principes pour éviter certains biais et manipulations, et en restant ouvert à de nouveaux arguments ou points de vue.
 
 Ensuite, si l'objectif est d'étudier un sujet scientifique d'une manière générale, c'est-à-dire un sujet technique ou lié à la compréhension de la nature par exemple, il est important de partir du début avec des livres accessibles au grand public.
 La sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].1 est une discussion sur ce sujet.
@@ -1910,6 +1894,8 @@ Ne pas hésiter à démarrer avec des livres (très) grand public, fournissant p
 
 Wikipédia peut être une piste intéressante pour un débutant, malgré le manque de pédagogie associé au style encyclopédique.
 Lire les quelques premiers paragraphes d'une page ne donne qu'une idée superficielle du sujet, mais la bibliographie associée à la page permet d'aller plus loin.
+
+Wikipédia, un article de blog ou une vidéo en ligne peuvent être utilisés en complément pour expliquer un mot ou un concept mal introduit dans le livre.
 .ENUM Faire des fiches pour retenir le plus important ;
 .br
 Cela peut paraître comme une perte de temps, en réalité c'est un gain de temps considérable.
@@ -1939,8 +1925,8 @@ Comprendre les courants politiques permet à terme d'avoir un résultat sur le r
 .bp
 .SUBSECTION_NO_NUMBER Annexe \n[N_ANNEXE_MEDIAS] Médias : l'importance de la vérification
 Le journalisme est l'activité qui consiste à recueillir et
-.B vérifier ,
-puis éventuellement commenter, des faits pour les porter à l'attention du public.
+.HIGHLIGHT \f[B]vérifier\fP\c
+, puis éventuellement commenter, des faits pour les porter à l'attention du public.
 Cette annexe présente quelques cas de journalisme défaillant.
 
 .QUESTION "France 3 : « Macron Dégage »."
@@ -2017,7 +2003,55 @@ Pourtant, cela n'a suscité aucune réaction.
 
 La modification des faits n'est pas seulement du mauvais journalisme et un aveux de partialité.
 C'est un des éléments fondamentaux des dictatures, et si ce mot a été banalisé, il n'est ici pas employé à la légère.
+
+.[
+$LIST$
+.]
 .
 .\".EXPLANATION1
 .\"Ce qui n'est pas puni en pratique est autorisé.
 .\".EXPLANATION2
+
+.bp
+.SUBSECTION_NO_NUMBER Annexe \n[N_ANNEXE_MEDIAS_HABITUDES] Médias : quelques mauvaises habitudes
+Les exemples suivants illustrent des problèmes dans les journaux télévisuels.
+Chaque exemple présente le traitement d'une information ou une méthode employée, qui échouent à traiter ou à correctement transmettre une information, trahissant a minima un manque de sérieux.
+
+.CENTERED La météo.
+La pluie et le beau temps sont régulièrement discutés.
+Au printemps il commence à faire beau, en été il fait chaud, à l'automne le temps se couvre, et en hiver, surprise, il fait froid.
+Ces annonces bouleversantes s'accompagnent également d'un reportage pour comprendre ce que cela signifie, prenant régulièrement du temps d'antenne pour un journal télévisé.
+
+.CENTERED La grève.
+Lors d'une grève, des reportages éclairs parlent du mécontentement des usagers du service en grève ; la SNCF est un exemple parlant de ce phénomène.
+Le téléspectateur sait déjà bien qu'une grève créée du mécontentement.
+La mise en scène de personnes en colère lors d'une séquence de micro-trottoir n'apporte aucune information.
+Dans le même temps, les
+.B revendications
+des grévistes ne sont pas mises en avant.
+Montrer la colère mais pas l'origine du problème est néfaste pour se faire un avis, et représente également un appel à l'émotion.
+De là à parler de manipulation, il n'y a qu'un pas.
+
+.CENTERED Le micro-trottoir.
+Le micro-trottoir est, en soit, un format peu intéressant pour partager de l'information.
+Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre chose qu'une information triviale, comme un sentiment.
+Son usage lors des grèves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
+Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
+
+.CENTERED Les débats scientifiques sans scientifique.
+Sur certains plateaux, des philosophes se retrouvent à parler de médecine ou autres sujets dont ils n'ont strictement aucune compétence, en lieu et place de scientifiques spécialisés sur les sujets traités, ou au moins d'une personne ayant une connaissance approfondie du sujet pour expliquer la situation.
+Au mieux, c'est du commentaire, des opinions, ce qui se retrouve ni plus ni moins sur les réseaux sociaux.
+Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime, et ainsi accepter plus facilement des arguments faibles.
+
+.CENTERED Les interruptions incessantes.
+Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
+Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
+
+.QUESTION "Que conclure ?"
+Ces exemples montrent que l'information n'est pas toujours la priorité du journal télévisuel, le sérieux se substituant au divertissement.
+Ces distractions seraient bien moins graves si elles ne prenaient pas la forme d'une transmission légitime de l'information.
+Pire, le spectateur peut finir le journal en pensant être informé.
+
+.EXPLANATION1
+Le problème n'est pas le manque de connaissances, mais l'illusion de la connaissance.
+.EXPLANATION2
