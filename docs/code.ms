@@ -82,28 +82,24 @@ panneau = cercle (obligation) avec double trait oblique
 \h'0.8'\\$*
 ..
 
+.SECTION Info aléatoires
 .BULLET serrer les écrous d'une roue = à faire quand la roue est au sol pour pas qu'elle tourne
-.BULLET danger passage à niveau = imprudence des conduteurs
-.BULLET il ne neige plus = feux de croisement mais pas feux de brouillard
-.BULLET regard doit "traverser" le pare-brise au milieu de celui-ci
 .BULLET Sur une autoroute, je vais rencontrer une borne d'appel d'urgence tous les 2km
-.BULLET le véhicule doit avoir gilet jaune + triangle de présignalisation, pas d'éthylotest ou fusibles
-.BULLET invalidation du permis 1ère année (6 points perdus) = repasser les épreuves théorique et pratique
-.SPACE + restituer le permis à la préfecture dans les 10 jours suivant la réception de la lettre
-.BULLET piéton qui traverse = s'arrêter pour ne pas le laisser sur la chaussée
-.SPACE + il a le droit s'il n'y a pas de passage piéton à moins de 50m
-.BULLET conduite accompagnée = accompagnateur peut subir un test de dépistage de stupéfiants
-.BULLET place handicapée = faut avoir la carte, sinon stationnement très gênant = 135€
-.BULLET sortie de véhicule = regard rétroviseur et angle mort (véhicule, cycliste etc.)
-.SPACE + main droite pour ouvrir la portière
-.BULLET sécurité enfant = portière s'ouvre que de l'extérieur
-.BULLET essuie-glaces = en temps de pluie + brouillard par exemple
-.BULLET vérifier les niveaux d'huile et de liquide de refroidissement
-.SPACE = sur terrain plat, moteur à froid (huile redescend où on la contrôle + éviter brûlure)
+.BULLET regard doit "traverser" le pare-brise au milieu de celui-ci
 .BULLET zones de rencontre
 .SPACE = 20km/h pour éviter accidents mortels
 .SPACE = cohabitation entre usagers
 .BULLET objet léger et encombrant = coffre de toit (forme aérodynamique)
+
+.SECTION TODO
+.BULLET danger passage à niveau = imprudence des conduteurs
+.BULLET il ne neige plus = feux de croisement mais pas feux de brouillard
+.BULLET invalidation du permis 1ère année (6 points perdus) = repasser les épreuves théorique et pratique
+.SPACE + restituer le permis à la préfecture dans les 10 jours suivant la réception de la lettre
+.BULLET piéton qui traverse = s'arrêter pour ne pas le laisser sur la chaussée
+.SPACE + il a le droit s'il n'y a pas de passage piéton à moins de 50m
+.BULLET sortie de véhicule = regard rétroviseur et angle mort (véhicule, cycliste etc.)
+.SPACE + main droite pour ouvrir la portière
 .ENDBULLET
 
 .SECTION Panneaux
@@ -113,6 +109,7 @@ panneau = cercle (obligation) avec double trait oblique
 .ENDBULLET
 
 .SECTION Sécurité
+.BULLET sécurité enfant = portière s'ouvre que de l'extérieur
 .BULLET enfants à l'arrière, à l'avant à partir de 10 ans
 .BULLET 80km/h distance de sécurité = 44m
 .BULLET A l'arrêt, champ visuel = 180°, 30 km/h = 120°, 80 km/h = 60°, 100 km/h = 45°, 130 km/h = 30°
@@ -140,6 +137,10 @@ panneau = cercle (obligation) avec double trait oblique
 .SPACE = amplifie le freinage sans bloquer les roues (AFU = couplé avec l’ABS)
 .SPACE = allumer automatiquement les feux de détresse
 .SPACE = ne freine pas automatiquement à la place du conducteur
+.BULLET essuie-glaces = en temps de pluie + brouillard par exemple
+.BULLET vérifier les niveaux d'huile et de liquide de refroidissement
+.SPACE = sur terrain plat, moteur à froid (huile redescend où on la contrôle + éviter brûlure)
+.BULLET le véhicule doit avoir gilet jaune + triangle de présignalisation, pas d'éthylotest ou fusibles
 .ENDBULLET
 
 .SECTION Punitions
@@ -150,6 +151,8 @@ panneau = cercle (obligation) avec double trait oblique
 .ENDBULLET
 
 .SECTION Administratif
+.BULLET conduite accompagnée = accompagnateur peut subir un test de dépistage de stupéfiants
+.BULLET place handicapée = faut avoir la carte, sinon stationnement très gênant = 135€
 .BULLET deux roues = peuvent circuler entre 2 voies
 .SPACE = circulation dense et ralentie à < 50km/h ou 2 voies <= 70 km/h
 .SPACE => si 3 voies, entre 2 voies de gauche
