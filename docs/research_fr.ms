@@ -1257,20 +1257,54 @@ for i from 8 to 14 by 1 do {
 times at 15,0
 .G2
 
-.QUESTION "Les manipulations"
-Des éléments d'un discours ou des traits de personnalité peuvent mettre en doute la véracité ou le bien-fondé d'un propos.
-
+.QUESTION "Les manipulations."
 Les êtres humains sont des créatures perfectibles à bien des égards.
-Il faut se méfier de soi-même.
+Il faut se méfier de tout le monde, y compris soi-même.
+Dans la suite, des manipulations classiques de la vie quotidienne sont discutées.
+Des éléments d'un discours ou des traits de personnalité peuvent mettre en doute la véracité ou le bien-fondé d'un propos.
 
 .CENTERED "Effet gourou."
 Une personne ayant confiance en elle, parlant avec aplomb, nous est agréable.
 De même, si cette personne raconte quelques anecdotes intéressantes pour accompagner un discours, cela peut nous paraître sympathique.
 Et c'est parce que c'est appréciable qu'il faut se méfier.
-Un personnage qui apparaît sympathique peut raconter du baratin, son public baisse sa garde.
-Un gourou ne vise pas nécessairement
+La sympathie fait baisser la vigilance du public, qui devient bien plus indulgent face aux sophismes.
+
+.CITATION1
+Qui aime bien châtie bien.
+.CITATION2
+
+
+.CENTERED "Repérer un gourou."
+Le gourou a un objectif, comme une faveur à demander, vous faire entreprendre des actions, vendre un produit ou une formation, ou encore un intéressement en nature.
+La malhonnêteté fait partie de sa trousse à outils pour parvenir à ses fins, et c'est bien là tout le problème.
+
+Le gourou peut parler de concepts fumeux, ou présentés de manière trompeuse ou détournée.
+Par exemple, les mots
+.I quantique
+et
+.I énergie
+désignent des concepts précis en physique, mais sont détournés par des gourous et des pseudo-sciences pour désigner tout et n'importe quoi.
+
+Le gourou a une forte confiance en lui, parle avec aplomb pour se mettre en valeur.
+Il étale son savoir, parfois sur de nombreux sujets comme s'il était compétent dans tous les domaines.
+De même, des anecdotes ou des histoires personnelles enrobent son discours pour attirer la sympathie.
+
+En cas de désaccord, pour parler d'arguments ou de point de vue opposés aux siens, le gourou n'hésite pas à user de sophismes.
+Tout est bon pour tromper ou faire oublier le discours adverse.
+Les tactiques qu'un gourou peut employer incluent, par exemple, la diversion via de longs discours pour éviter de répondre directement à un argument pertinent, la déformation des propos ou encore les citations hors contexte.
+
+La forme peut prendre une place importante dans la manipulation.
+Ainsi, un débit de parole élevé, l'étalage de références, de citations ou d'informations non suffisamment introduites ou expliquées (voire déformées) sont d'autant de façons de faire oublier la faiblesse du discours.
+Pour une vidéo ou un podcast, un montage très rapide et sans pause pour assimiler le discours a le même effet.
+
+La moquerie et le sarcasme peuvent également être présents pour flatter l'ego du public, lui donner un sentiment de supériorité.
+
+Comme nous pouvons le voir, tous ces éléments vont à l'encontre des bonnes pratiques pour écrire un document scientifique.
+Le format même d'un papier empêche l'apparition de gourous.
+
+Par ailleurs, un gourou ne vise pas nécessairement
 .I tout
-le public, un tout petit groupe d'adeptes peut déjà être très lucratif\*[*].
+le public, un petit groupe d'adeptes peut déjà être très lucratif\*[*].
 .FOOTNOTE1
 Les jeux
 .I freemium
@@ -1278,21 +1312,8 @@ par exemple attirent qu'une petite fraction des joueurs à payer, mais cette fra
 Parfois plus d'une dizaine de milliers d'euros... pour un jeu gratuit.
 .FOOTNOTE2
 
-.CITATION1
-Qui aime bien châtie bien.
-.CITATION2
-
-
-.BULLET effet gourou (forte confiance en soi, aplomb pour parler de tout un tas de sujets différents, raconter sa vie pour faire diversion et s'attirer la sympathie, etc.)
-.BULLET déformations des propos
-.BULLET diversion (éviter le sujet via de longs discours hors sujet par exemple, débit de parole ou montage rapide)
-.BULLET informations ou citations hors contexte
-.BULLET tromperies
-.ENDBULLET
-
-
-.QUESTION "L'arnaque de Dieu."
-La section 2 présente un petit florilège d'arguments fallacieux brandits par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
+.CENTERED "L'arnaque de Dieu."
+La section 2 présente un petit florilège d'arguments fallacieux brandis par les apologistes pour justifier l'existence (ou des propriétés) d'une divinité.
 Des
 .UL dizaines
 d'autres arguments sans valeur sont avancés.
@@ -1300,21 +1321,26 @@ Ils se retrouvent encore et toujours dans les conversations, débats et même li
 .[
 sophismes
 .]
-.TBD
 .UL "malgré leurs réfutations" .
 La validité des arguments n'a donc aucune valeur aux yeux des apologistes.
-Ce document n'a pas pour objectif de tous les répertorier,
-De même, le manque d'honnêteté des apologistes à ce sujet est flagrant : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
+
+Le manque d'honnêteté des apologistes est flagrant : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
 Les mots sont changés pour paraître plus savant mais pas pour apporter un sens plus intéressant.
 Ainsi, les apologistes continuent de parler de l'argument de l'improbabilité, en changeant quelques mots (en plus abstraits) pour les récalcitrants.
 C'est ainsi que l'argument de l'improbabilité devient l'argument de la
 .I contingence ,
 alors que l'argument est strictement identique.
-Cette tentative de manipulation grossière est évidente.
+Cette tentative de manipulation est grossière et évidente.
 
-.SUBSECTION Pseudo-sciences
-.TBD
-.SUBSECTION Politique
+.CENTERED "Pseudo-sciences"
+Parfois, des concepts se font passer pour de la science, et tentent d'en reprendre les codes.
+Les repérer est parfois difficile, la première étape pour vérifier en cas de doute est de consulter la page Wikipédia en rapport.
+
+.EXPLANATION1
+À retenir : il n'y a pas de médecines alternatives, seulement des alternatives à la médecine.
+.EXPLANATION2
+
+.CENTERED Politique
 .TBD
 La politique est un sujet à la fois vaste et complexe.
 Des mesures simples peuvent impliquer de nombreuses ramifications inattendues.
