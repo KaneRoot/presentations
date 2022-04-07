@@ -1,4 +1,39 @@
 .so macros.ms   \" First, let's import some macros.
+.ds SPACE_SS_NUMBER_TITLE 0.5\" not a number register because of leading 0
+.nr CURRENT_SECTION 0
+.nr CURRENT_SUBSECTION 0 +1
+.de SS
+.SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\\n+[CURRENT_SUBSECTION]\
+\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+..
+.de APPENDIX
+.nr CURRENT_SECTION \\$1
+.nr CURRENT_SUBSECTION 0       \" reset current subsection numbering
+.bp                            \" new page
+.shift                         \" remove first parameter (appendix number)
+.SECTION_NO_NUMBER Annexe \\n[CURRENT_SECTION]. \\$*
+..
+.de INNERBULLET
+.in +1
+.br
+\(bu
+.in +1
+.sp -1
+\\$*
+.in -2
+..
+.de EENUM           \" Numbered list
+.nr LIST_NUMBER +1
+.br
+\\n[LIST_NUMBER]
+.in +1
+.sp -1
+\\$*
+.in -1
+..
+.de EENDENUM
+.nr LIST_NUMBER 0
+..
 .nr legendps 2
 .de LEGEND1
 .QP
@@ -1324,7 +1359,7 @@ sophismes
 .UL "malgré leurs réfutations" .
 La validité des arguments n'a donc aucune valeur aux yeux des apologistes.
 
-Le manque d'honnêteté des apologistes est flagrant : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
+Le manque d'honnêteté est flagrant dans ce cas : lorsqu'un argument a trop été discuté, qu'il est devenu trop évident même par les personnes les moins perspicaces, l'argument est détourné.
 Les mots sont changés pour paraître plus savant mais pas pour apporter un sens plus intéressant.
 Ainsi, les apologistes continuent de parler de l'argument de l'improbabilité, en changeant quelques mots (en plus abstraits) pour les récalcitrants.
 C'est ainsi que l'argument de l'improbabilité devient l'argument de la
@@ -1336,26 +1371,43 @@ Cette tentative de manipulation est grossière et évidente.
 Parfois, des concepts se font passer pour de la science, et tentent d'en reprendre les codes.
 Les repérer est parfois difficile, la première étape pour vérifier en cas de doute est de consulter la page Wikipédia en rapport.
 
+Une règle générale : aucune science n'est fondée sur des « énergies », une forme de mysticisme, la mémoire de l'eau (homéopathie), ou encore sur des techniques ancestrale exotiques.
+De même, aucune science ne prétend guérir seulement parce que le produit fourni est « naturel » (sophisme d'appel à la nature).
+Au niveau publicitaire, une entreprise peut vanter son produit comme étant naturel, mais cela n'a aucune valeur scientifique ; le produit doit avoir une vraie efficacité prouvée par ailleurs, sans cela ce n'est qu'un placébo.
+
 .EXPLANATION1
 À retenir : il n'y a pas de médecines alternatives, seulement des alternatives à la médecine.
 .EXPLANATION2
 
 .CENTERED Politique
+La politique est la gestion d'un État, de ses citoyens, ou encore la relation avec les autres pays.
+De très nombreux domaines interviennent dans les prises de décision : économie, écologie, santé, culture, finance, militaire, droit, et caetera.
+
+La politique est une affaire de choix liés à des points de vue sur comment la société devrait fonctionner.
+De ce fait, ce n'est pas un simple processus mécanique ou logique ; la politique ne peut être déléguée à des chercheurs ou des experts en gestion.
+Ces points de vue sont nommés « idéologies », des ensembles cohérents d'opinions, menant à une politique cohérente selon ces idées\*[*].
+.FOOTNOTE1
+Le mot
+.I idéologie
+est parfois connoté négativement dans des conversations, ce n'est pas le cas ici.
+.FOOTNOTE2
+Un même problème peut se résoudre de multiples manières, sans qu'une méthode soit particulièrement meilleure qu'une autre.
 .TBD
-La politique est un sujet à la fois vaste et complexe.
+
+.TBD
 Des mesures simples peuvent impliquer de nombreuses ramifications inattendues.
 
 .CITATION1
 Des automobilistes se moquent de personnes construisant un bateau car leur véhicule n'a pas de roues.
 .CITATION2
-.NAMECITATION "Discussions politiques entre personnes de paradigmes différents"
+.NAMECITATION "Discussions politiques entre personnes d'idéologies différentes"
 
 .SECTION Conclusion
 Ce document a présenté des biais présents dans la vie de tous les jours et dans de nombreux domaines.
 
 La science s'est adaptée à ces erreurs de raisonnement, et les multiples méthodes prennent en compte les biais spécifiques à chaque domaine.
 Les articles scientifiques matérialisent la réflexion des chercheurs en forçant la justification systématique des affirmations.
-Ceci lève ainsi les ambigüités et formant un outil de raisonnement pour les auteurs eux-mêmes.
+Ceci lève ainsi les ambigüités et forme un outil de raisonnement pour les auteurs eux-mêmes.
 La relecture par les pairs (experts du domaine), antérieure à la publication, permet d'ajouter des vérifications supplémentaires.
 Une faute d'inattention est vite arrivée, mais trois ou quatre chercheurs qui passent à côté d'une erreur est plus rare.
 La publication est parfois suivie d'autres analyses, des réplications par d'autres laboratoires de la même étude.
@@ -1375,34 +1427,11 @@ Le document a présenté également le cadre de travail des chercheurs, partagea
 $LIST$
 .]
 
-.bp
-.SECTION_NO_NUMBER Annexe 1 : quelques biais de plus
-.nr CURRENT_SUBSECTION 0 +1
+.APPENDIX \n[N_ANNEXE_BIAIS] Quelques biais de plus
 .
-.de INNERBULLET
-.in +1
-.br
-\(bu
-.in +1
-.sp -1
-\\$*
-.in -2
-..
-.de EENUM           \" Numbered list
-.nr LIST_NUMBER +1
-.br
-\\n[LIST_NUMBER]
-.in +1
-.sp -1
-\\$*
-.in -1
-..
-.de EENDENUM
-.nr LIST_NUMBER 0
-..
 De nombreux biais ont été présentés en section 2 permettant de saisir l'idée générale, il n'était pas nécessaire d'en présenter davantage.
 Cette annexe présente quelques biais de plus, dont certains qui sont répandus dans divers débats.
-.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] Ergotage linguistique
+.SS Ergotage linguistique
 Voici l'argument
 .I ontologique ,
 tel que donné par les apologistes (sous une forme ou une autre).
@@ -1491,22 +1520,39 @@ Dire que l'athéisme est lié à la croyance qu'un dieu n'existe pas, sans se so
 Refuser une définition, ce n'est pas faire disparaître le concept auquel il était associé.
 La personne disant ne pas être convaincue qu'un dieu existe, peu importe le mot associé, n'a pas changé son point de vue car on lui a refusé sa définition du mot
 .I athéisme .
+De plus, cette définition est valable parce qu'elle est usuelle, de nombreux athées définissent ce mot de cette façon.
+
+À l'inverse, le mot
+.I Dieu
+n'est jamais employé comme un simple synonyme de
+.I concept ,
+dans les textes bibliques ou par les croyants.
+Pourtant certaines justifications de l'existence d'un dieu partent du principe que Dieu est un concept, les concepts existent, donc Dieu existe.
+Cette définition de Dieu est si éloignée de la conception usuelle qu'elle n'a aucune valeur ; les religions amènent bien plus qu'une définition abstraite, et attribuent énormément de propriétés différentes à leur dieu (création de l'univers, des êtres vivants, miracles, etc.).
+Ici, le simple fait que le mot existe est une justification qu'une divinité existe, et avec ce même raisonnement, n'importe quel personnage fictif existe également.
+
+De même, redéfinir Dieu comme étant l'univers comme le font les panthéistes est vain.
+Le mot
+.I univers
+existe déjà, lui ajouter un synonyme n'apporte aucune valeur à sa définition.
 
 .HORIZONTALLINE
-.TBD
 
 Dieu est absolu : sa réfutation doit l'être également.
 
-À part dans certains formalismes mathématiques (comme en logique propositionnelle, où il est possible de dire qu'une proposition est vraie ou fausse), sinon rien en science n'est absolu.
+À part dans certains formalismes mathématiques, comme en logique propositionnelle où il est possible de dire qu'une proposition est vraie ou fausse, sinon rien en science n'est absolu.
 Même les découvertes scientifiques faisant actuellement consensus ne sont pas considérées comme des vérités absolues (y compris la théorie de l'évolution).
-Toute hypothèse est considérée comme raisonnable si elle explique un phénomène (sans faire appel elle-même à un plus grand mystère) et s'il est possible, au moins en théorie, de l'expérimenter.
-Si l'hypothèse ne répond pas à ces critères elle est rejetée, car elle ne permet pas de créer de la connaissance, elle est vide de sens.
+Toute hypothèse est considérée comme raisonnable si elle explique un phénomène, sans faire appel elle-même à un plus grand mystère, et s'il est possible de l'expérimenter (au moins en théorie).
+Si l'hypothèse ne répond pas à ces critères elle est rejetée, car elle ne permet pas de créer de la connaissance, elle est donc inutile.
 
 Pourtant, quand bien même
 .B "strictement toutes"
-les tentatives de prouver l'existence d'un dieu ont échoué, les croyants ne veulent pas admettre que cette hypothèse n'est pas valide, et vont même jusqu'à demander de prouver l'inexistence de dieu de manière absolue.
+les tentatives de prouver l'existence d'un dieu ont échoué, les croyants ne veulent pas admettre que cette hypothèse n'est pas valide.
+Pire, des croyants demandent occasionnellement aux non croyants de prouver l'inexistence de dieu de manière absolue.
 
-.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] N'importe namaths
+Demander une preuve de l'inexistence de Dieu, qui plus est de manière absolue, est à la fois une inversion de la charge de la preuve, une incompréhension du fonctionnement de la science et un avœu d'échec.
+
+.SS N'importe quoi mathématique
 .TBD
 Les mathématiques et la science en général ont été utilisés à de nombreuses reprises dans des arguments douteux.
 
@@ -1514,10 +1560,10 @@ Les mathématiques et la science en général ont été utilisés à de nombreus
 .BULLET argument de contingence
 .ENDBULLET
 
-.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] Les erreurs d'attribution
+.SS Les erreurs d'attribution
 .TBD
 
-.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] Concordisme
+.SS Concordisme
 Le concordisme est le fait de réinterpréter les textes religieux à la lumière de nos connaissances actuelles.
 Prétendre que ce qui est découvert par la science était déjà présent dans des textes bibliques est un jeu auquel de nombreux croyants s'adonnent.
 La suite donne quelques exemples.
@@ -1533,7 +1579,7 @@ Quand bien même la citation dit bien que la maladie et son remède sont dans le
 .I savants " »" "« "
 de l'islam de se poser la question de quelle aile contenait la maladie et quelle aile contenait le remède (prouvant à quel point la citation n'a pas aidé du tout à comprendre quoi que ce soit au fonctionnement des maladies), le texte est considéré comme un miracle.
 
-.SUBSECTION_NO_NUMBER 1.\n+[CURRENT_SUBSECTION] biais en vrac
+.SS Biais en vrac
 .TBD
 
 .BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
@@ -1546,8 +1592,7 @@ Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne p
 .BULLET mille-feuille argumentatif : méthode consistant à donner de multiples arguments sans se soucier de leur qualité ni des réponses, dans l'objectif de saturer la conversation.
 .ENDBULLET
 
-.bp
-.SECTION_NO_NUMBER Annexe 2 : écriture d'un papier
+.APPENDIX \n[N_ANNEXE_ECRITURE_PAPIER] Écriture d'un papier
 Cette annexe présente quelques exemples pour comprendre la logique et le type d'informations nécessaires dans un papier.
 Ces exemples (volontairement très concis pour rester digeste) sont des tentatives, très imparfaites, d'écriture d'un papier.
 Chaque exemple est accompagné des erreurs commises ainsi qu'une meilleure version (bien que toujours incomplète).
@@ -1721,8 +1766,7 @@ Il est fait mention de la portée de l'étude (valable pour la majorité des pro
 Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contexte plus général, mieux comprendre son utilité réelle.
 .
 
-.bp
-.SECTION_NO_NUMBER Annexe 3 : résumé des manipulations
+.APPENDIX \n[N_ANNEXE_MANIPULATIONS] Résumé des manipulations
 .TBD
 Cette annexe liste des techniques de manipulation qui peuvent être employées.
 De même, des propriétés d'un discours (ou d'une personnalité) qui peuvent être suspicieuses.
@@ -1787,8 +1831,7 @@ T}
 .vs +\n[legendps]
 .ps +\n[legendps]
 
-.bp
-.SECTION_NO_NUMBER Annexe 4 : calcul du h-index
+.APPENDIX \n[N_ANNEXE_HINDEX] Calcul du h-index
 Cette annexe montre comment calculer graphiquement le
 .I h-index
 d'un chercheur.
@@ -1865,8 +1908,7 @@ du chercheur est donc de 5, car c'est le nombre de papiers ayant un nombre de ci
 L'avantage de cette métrique est de mesurer la productivité d'un chercheur : il doit produire du contenu de bonne qualité dans la durée.
 Écrire des dizaines d'articles inutiles ou se reposer sur un seul bon article ne mène pas à une bonne note.
 
-.bp
-.SECTION_NO_NUMBER Annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] : se renseigner sur un sujet
+.APPENDIX \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] Se renseigner sur un sujet
 .nr CURRENT_SUBSECTION 0
 .TBD
 Se renseigner sur un sujet est une tâche parfois complexe, parfois même impossible à cause de contraintes de temps.
@@ -1948,8 +1990,7 @@ que ce soit bien clair : il n'est pas question de partir dans un relativisme ab
 Cette vision du monde est fausse.
 Comprendre les courants politiques permet à terme d'avoir un résultat sur le réel, en prenant de meilleures décisions par exemple, ou ne serait-ce que pour mieux saisir le sens des discours de chaque partie.
 
-.bp
-.SUBSECTION_NO_NUMBER Annexe \n[N_ANNEXE_MEDIAS] Médias : l'importance de la vérification
+.APPENDIX \n[N_ANNEXE_MEDIAS] Médias : l'importance de la vérification
 Le journalisme est l'activité qui consiste à recueillir et
 .HIGHLIGHT \f[B]vérifier\fP\c
 , puis éventuellement commenter, des faits pour les porter à l'attention du public.
@@ -2038,8 +2079,7 @@ $LIST$
 .\"Ce qui n'est pas puni en pratique est autorisé.
 .\".EXPLANATION2
 
-.bp
-.SUBSECTION_NO_NUMBER Annexe \n[N_ANNEXE_MEDIAS_HABITUDES] Médias : quelques mauvaises habitudes
+.APPENDIX \n[N_ANNEXE_MEDIAS_HABITUDES] Médias : quelques mauvaises habitudes
 Les exemples suivants illustrent des problèmes dans les journaux télévisuels.
 Chaque exemple présente le traitement d'une information ou une méthode employée, qui échouent à traiter ou à correctement transmettre une information, trahissant a minima un manque de sérieux.
 
