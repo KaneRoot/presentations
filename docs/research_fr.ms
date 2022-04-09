@@ -1499,12 +1499,28 @@ En clair : cet argument est un charabia teinté d'appel à l'ignorance.
 
 .HORIZONTALLINE
 
-Autre pirouette linguistique, traiter des adjectifs comme des noms.
+Autre pirouette linguistique, la première
+.I cause ,
+où comment traiter des adjectifs comme des noms.
+
+Cette tentative de justification pour une divinité peut se résumer comme suit.
+Nous comprenons qu'il doit exister dans la nature un arbre le plus grand : tous ont une taille, cette taille diffère d'un individu à l'autre, donc il doit exister un individu (ou un groupe) plus grand que les autres.
+De manière analogue, notre monde répond jusqu'à preuve du contraire à une forme de causalité.
+Chez moi j'ai des chaises en bois, si elles sont là c'est parce que je les ai achetées, elles étaient en magasin parce que quelqu'un les a fabriquées, la fabrication de ces chaises vient du bois d'un arbre, l'arbre a poussé suite à la réutilisation du carbone dans l'air, carbone qui lui-même provient de notre atmosphère, etc.
+
 .I arbre "" L'
 le plus grand,
 la première
 .I cause .
-.TBD
+
+Cet argument n'est pas valide, il utilise un adjectif (cause) comme si cela était un nom (arbre).
+Il revient à se demander quel est le bleu le plus bleu, la fraîcheur la plus fraiche.
+Concrêtement, la seule chose possible à dire concernant le début de notre univers est qu'il nous est impossible pour le moment (peut-être pour toujours) de savoir ce qui se passe avant le mur de Planck.
+Le principe de causalité est lié à notre représentation du temps, impossible de se prononcer sur le fonctionnement du monde avant l'apparition du temps lui-même.
+Le concept même
+.I avant "" d'
+le temps est en soi difficile à concevoir, et reflète peut-être une simple limitation dans notre compréhension du monde et des lois physiques qui le régissent.
+Dans tous les cas, nous ne pouvons nous exprimer sur ce sujet.
 
 .HORIZONTALLINE
 
@@ -1520,7 +1536,7 @@ Dire que l'athéisme est lié à la croyance qu'un dieu n'existe pas, sans se so
 Refuser une définition, ce n'est pas faire disparaître le concept auquel il était associé.
 La personne disant ne pas être convaincue qu'un dieu existe, peu importe le mot associé, n'a pas changé son point de vue car on lui a refusé sa définition du mot
 .I athéisme .
-De plus, cette définition est valable parce qu'elle est usuelle, de nombreux athées définissent ce mot de cette façon.
+De plus, cette définition est valable parce qu'elle est usuelle, de nombreux athées définissent leur position de cette façon.
 
 À l'inverse, le mot
 .I Dieu
@@ -1591,6 +1607,15 @@ de l'islam de se poser la question de quelle aile contenait la maladie et quelle
 Pourtant, une remarque qui arrive souvent dans une conversation : « vous ne pouvez pas prouver que Dieu n'existe pas » ;
 .BULLET mille-feuille argumentatif : méthode consistant à donner de multiples arguments sans se soucier de leur qualité ni des réponses, dans l'objectif de saturer la conversation.
 .ENDBULLET
+
+La religion est l'art d'entraîner l'esprit à réfléchir à rebourd.
+Pour les « miracles » et autres « prophécies », au lieu se de demander
+.I si
+cela est bien arrivé, le croyant se demande
+.I comment
+cela a pu arriver.
+Des histoires clairement fantaisistes passent ainsi pour des faits avérés.
+Par la suite, face à un manque d'explication rationnelle, le croyant est invité à penser que la seule explication possible est l'intervention d'une divinité ; combinant un appel à l'ignorance et un faux dilemme.
 
 .APPENDIX \n[N_ANNEXE_ECRITURE_PAPIER] Écriture d'un papier
 Cette annexe présente quelques exemples pour comprendre la logique et le type d'informations nécessaires dans un papier.
