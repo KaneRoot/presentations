@@ -1,17 +1,45 @@
 .so macros.ms   \" First, let's import some macros.
 .ds SPACE_SS_NUMBER_TITLE 0.5\" not a number register because of leading 0
-.nr CURRENT_SECTION 0
+.nr CURRENT_SECTION 0 +1
+.nr CURRENT_APPENDIX 0
+.af CURRENT_APPENDIX I
 .nr CURRENT_SUBSECTION 0 +1
+.nr CURRENT_SSSECTION 0 +1
+.rm SECTION
+.de SECTION
+.ie !(\\n[CURRENT_SECTION]=0) .sp +1
+.br
+.ps +2
+.fam H   \" helvetica family
+\fB\\n+[CURRENT_SECTION].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*\fP
+.fam     \" back to previous font family
+.ps -2
+.PARAGRAPH_INDENTED
+..
 .de SS
-.SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\\n+[CURRENT_SUBSECTION]\
-\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+.ie (\\n[CURRENT_APPENDIX]=0) \
+.SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
+\\n+[CURRENT_SUBSECTION]\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+.el \
+.SUBSECTION_NO_NUMBER \\n[CURRENT_APPENDIX].\
+\\n+[CURRENT_SUBSECTION]\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+..
+.de SSS
+.ie (\\n[CURRENT_APPENDIX]=0) \
+.SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
+\\n[CURRENT_SUBSECTION].\\n+[CURRENT_SSSECTION]\h'\
+\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+.el \
+.SUBSECTION_NO_NUMBER \\n[CURRENT_APPENDIX].\
+\\n[CURRENT_SUBSECTION].\\n+[CURRENT_SSSECTION]\h'\
+\\*[SPACE_SS_NUMBER_TITLE]' \\$*
 ..
 .de APPENDIX
-.nr CURRENT_SECTION \\$1
+.nr CURRENT_APPENDIX +1
 .nr CURRENT_SUBSECTION 0       \" reset current subsection numbering
+.nr CURRENT_SSSECTION 0        \" reset current subsubsection numbering
 .bp                            \" new page
-.shift                         \" remove first parameter (appendix number)
-.SECTION_NO_NUMBER Annexe \\n[CURRENT_SECTION]. \\$*
+.SECTION_NO_NUMBER Annexe \\n[CURRENT_APPENDIX]. \\$*
 ..
 .de INNERBULLET
 .in +1
@@ -56,13 +84,20 @@
 \\$*
 .br
 ..
-.nr N_ANNEXE_BIAIS 1
-.nr N_ANNEXE_ECRITURE_PAPIER 2
-.nr N_ANNEXE_MANIPULATIONS 3
-.nr N_ANNEXE_HINDEX 4
-.nr N_ANNEXE_CONSEILS_APPRENTISSAGE 5
-.nr N_ANNEXE_MEDIAS 6
-.nr N_ANNEXE_MEDIAS_HABITUDES 7
+.nr N_APPENDIX_BIAIS 1
+.af N_APPENDIX_BIAIS I
+.nr N_APPENDIX_ECRITURE_PAPIER 2
+.af N_APPENDIX_ECRITURE_PAPIER I
+.nr N_APPENDIX_MANIPULATIONS 3
+.af N_APPENDIX_MANIPULATIONS I
+.nr N_APPENDIX_HINDEX 4
+.af N_APPENDIX_HINDEX I
+.nr N_APPENDIX_CONSEILS_APPRENTISSAGE 5
+.af N_APPENDIX_CONSEILS_APPRENTISSAGE I
+.nr N_APPENDIX_MEDIAS 6
+.af N_APPENDIX_MEDIAS I
+.nr N_APPENDIX_MEDIAS_HABITUDES 7
+.af N_APPENDIX_MEDIAS_HABITUDES I
 .mso fr.tmac
 .mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
@@ -208,7 +243,7 @@ De plus, des erreurs peuvent se glisser dans l'acquisition d'une donnée ou son 
 Il n'existe malheureusement aucune manière automatique de détecter toutes ces erreurs.
 Par conséquent, la vigilance reste nécessaire.
 
-Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants (complétés par de nombreux autres exemples dans l'annexe \n[N_ANNEXE_BIAIS]).
+Les quelques biais présentés dans cette section ne forment qu'un petit sous ensemble des biais existants (complétés par de nombreux autres exemples dans l'annexe \n[N_APPENDIX_BIAIS]).
 La suite du document présente une manière, imparfaite mais suffisante, utilisée en science pour limiter ces erreurs dans le cadre de la recherche.
 .SECTION Science et méthode scientifique
 La méthode scientifique regroupe un ensemble de méthodes d'analyses et de vérifications différentes pour comprendre le monde qui nous entoure.
@@ -600,7 +635,7 @@ Puis, une expérimentation doit être conduite, en décrivant dans le détail ce
 Ensuite, les résultats et leur interprétation doivent être présentés.
 Enfin, une conclusion doit être apportée, en rappelant la problématique, la solution envisagée et le résultat.
 La conclusion doit prendre un peu de hauteur sur le sujet, un papier n'est pas un simple rapport technique.
-L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] présente des exemples (fortement abrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
+L'annexe \n[N_APPENDIX_ECRITURE_PAPIER] présente des exemples (fortement abrégés) de sections d'un papier fictif, pour mieux comprendre le travail d'écriture à faire.
 
 .QUESTION "Un papier, une idée."
 Chaque papier doit présenter une seule idée\*[*].
@@ -633,7 +668,7 @@ Ces derniers n'apportent pas une contribution très intéressante d'un point de 
 
 Cette section a présenté la forme et le contenu attendu d'un papier scientifique.
 La rigueur d'écriture est nécessaire pour la bonne transmission du savoir ; la forme aide à rendre plus intelligible et à donner confiance au fond.
-L'annexe \n[N_ANNEXE_ECRITURE_PAPIER] apporte un complément à cette section, montrant un papier en cours d'écriture mettant en œuvre la plupart des règles dictées précédemment.
+L'annexe \n[N_APPENDIX_ECRITURE_PAPIER] apporte un complément à cette section, montrant un papier en cours d'écriture mettant en œuvre la plupart des règles dictées précédemment.
 Comprendre la nécessité d'une telle rigueur permet de mettre en lumière certaines techniques de manipulation, présentées par la suite.
 .SECTION Publications scientifiques
 Chaque papier est publié dans un journal à comité de lecture
@@ -850,7 +885,7 @@ Dans bien des études, seuls quelques outils statistiques de niveau lycée sont 
 Au même titre que les journaux sont jugés sur leur visibilité, la portée des travaux d'un chercheur se mesure via une métrique nommée
 .I h-index " »" "« "
 qui se base sur les nombres de publications et de citations d'un chercheur.
-Cette métrique est expliquée graphiquement avec un exemple en annexe \n[N_ANNEXE_HINDEX].
+Cette métrique est expliquée graphiquement avec un exemple en annexe \n[N_APPENDIX_HINDEX].
 
 Le
 .I h-index
@@ -1105,9 +1140,9 @@ Chaque spectateur ou lecteur doit trier ce qui relève du fait ou de l'interpré
 
 .QUESTION "Les mauvaises habitudes des médias."
 Les médias ont des sujets fétiches, des façons de présenter une information ou d'organiser le dialogue qui ne sont pas corrects.
-Au-delà de la mauvaise transmission de l'information (voire les recommandations pour un papier en section 4), certains biais sont facilement introduits (section 2 et annexe 1), comme l'appel à l'émotion ou l'argument d'autorité.
+Au-delà de la mauvaise transmission de l'information (voire les recommandations pour un papier en section 4), certains biais sont facilement introduits (section 2 et annexe \n[N_APPENDIX_BIAIS]), comme l'appel à l'émotion ou l'argument d'autorité.
 
-L'annexe \n[N_ANNEXE_MEDIAS_HABITUDES] présente quelques exemples de mauvais journalisme télévisuel.
+L'annexe \n[N_APPENDIX_MEDIAS_HABITUDES] présente quelques exemples de mauvais journalisme télévisuel.
 Ces exemples mettent en lumière ce qui devrait apparaître comme une évidence : le journalisme télévisuel est avant tout du divertissement.
 
 .QUESTION "Se renseigner sur un sujet."
@@ -1116,7 +1151,7 @@ Mais alors, où trouver des informations pertinentes ?
 
 La manière de s'informer dépend de l'objectif recherché.
 Se poser une question ponctuelle sur un sujet n'implique pas le même investissement que vouloir devenir un expert dans un domaine.
-L'annexe \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] émet quelques suggestions (sans prétention aucune) sur comment se renseigner.
+L'annexe \n[N_APPENDIX_CONSEILS_APPRENTISSAGE] émet quelques suggestions (sans prétention aucune) sur comment se renseigner.
 Quelques cas particuliers sont adressés, par exemple l'apprentissage de modèles politiques, ou en cas de forte contrainte de temps.
 
 D'une manière générale, comprendre un sujet demande du temps et un investissement personnel.
@@ -1427,7 +1462,7 @@ Le document a présenté également le cadre de travail des chercheurs, partagea
 $LIST$
 .]
 
-.APPENDIX \n[N_ANNEXE_BIAIS] Quelques biais de plus
+.APPENDIX Quelques biais de plus
 .
 De nombreux biais ont été présentés en section 2 permettant de saisir l'idée générale, il n'était pas nécessaire d'en présenter davantage.
 Cette annexe présente quelques biais de plus, dont certains qui sont répandus dans divers débats.
@@ -1576,8 +1611,102 @@ Les mathématiques et la science en général ont été utilisés à de nombreus
 .BULLET argument de contingence
 .ENDBULLET
 
+.SS Cueillette
+
+.PS 2 2
+reset
+
+circlerad = 0.1
+copy thru % circle shaded "black" outline "black" at ($1,$2) % until "END"
+1 1
+1 2
+1 3.34
+1 5
+1 6.64
+1 7
+1 8
+1 9
+2 1
+2 2
+2 3.84
+2 4.7
+2 6.64
+2 7
+2 9
+3 1
+3 3.34
+3 4
+3 5
+3 6.64
+3 7
+3 9
+4 3.24
+4 4
+4 5
+4 6.64
+4 7
+4 8
+4 9
+5 1
+5 4
+5 5
+5 6.64
+5 7
+5 8
+5.4 3.34
+6 4
+6 5
+6 6.64
+6 7
+6 8
+6 9
+7 2
+7 3.4
+7 5
+7 6.64
+7 8
+7 9
+8 1
+8 2
+8 4
+8 5
+8 6.64
+8 8
+8 9
+9 1
+9 2
+9 5
+9 6.64
+9 7
+9 8
+9 9
+END
+
+
+D: line thick 2 from (1, 3.34) to (1, 5) to (2, 4.7) to (2, 3.84) to (1, 3.34)
+I: line thick 2 from (3, 3.34) to (3, 5)
+E: line thick 2 from (4, 3.24) to (4, 5) to (5, 5)
+   line thick 2 from (4, 4) to (5, 4)
+   line thick 2 from (4, 3.24) to (5.4, 3.34)
+U: line thick 2 from (6, 5) to (6, 4) to (7, 3.4) to (7, 5)
+
+box height 10 width 10 with .sw at (0,0)
+move to last box .se
+# srand(1)
+.PE
+
 .SS Les erreurs d'attribution
+Un biais d'attribution est le fait de donner à tort un attribut, comme une capacité ou une intention, à une personne ou un groupe de personnes.
+
+.SSS Erreur fondamentale d'attribution
+Par exemple, un enfant voyant deux 
 .TBD
+
+.SSS Biais d'auto-complaisance
+Par exemple, un spectateur d'un match de football pense que la défaite est due à un arbitre complaisant avec l'autre équipe.
+
+.SSS Biais d'attribution hostile
+Par exemple, un enfant voit deux autres enfants chuchoter et pensent qu'ils se moquent de lui.
 
 .SS Concordisme
 Le concordisme est le fait de réinterpréter les textes religieux à la lumière de nos connaissances actuelles.
@@ -1617,7 +1746,7 @@ cela a pu arriver.
 Des histoires clairement fantaisistes passent ainsi pour des faits avérés.
 Par la suite, face à un manque d'explication rationnelle, le croyant est invité à penser que la seule explication possible est l'intervention d'une divinité ; combinant un appel à l'ignorance et un faux dilemme.
 
-.APPENDIX \n[N_ANNEXE_ECRITURE_PAPIER] Écriture d'un papier
+.APPENDIX Écriture d'un papier
 Cette annexe présente quelques exemples pour comprendre la logique et le type d'informations nécessaires dans un papier.
 Ces exemples (volontairement très concis pour rester digeste) sont des tentatives, très imparfaites, d'écriture d'un papier.
 Chaque exemple est accompagné des erreurs commises ainsi qu'une meilleure version (bien que toujours incomplète).
@@ -1791,7 +1920,7 @@ Il est fait mention de la portée de l'étude (valable pour la majorité des pro
 Cela aide à prendre du recul sur le sujet, mettre cette solution dans un contexte plus général, mieux comprendre son utilité réelle.
 .
 
-.APPENDIX \n[N_ANNEXE_MANIPULATIONS] Résumé des manipulations
+.APPENDIX Résumé des manipulations
 .TBD
 Cette annexe liste des techniques de manipulation qui peuvent être employées.
 De même, des propriétés d'un discours (ou d'une personnalité) qui peuvent être suspicieuses.
@@ -1856,7 +1985,7 @@ T}
 .vs +\n[legendps]
 .ps +\n[legendps]
 
-.APPENDIX \n[N_ANNEXE_HINDEX] Calcul du h-index
+.APPENDIX Calcul du h-index
 Cette annexe montre comment calculer graphiquement le
 .I h-index
 d'un chercheur.
@@ -1933,8 +2062,7 @@ du chercheur est donc de 5, car c'est le nombre de papiers ayant un nombre de ci
 L'avantage de cette métrique est de mesurer la productivité d'un chercheur : il doit produire du contenu de bonne qualité dans la durée.
 Écrire des dizaines d'articles inutiles ou se reposer sur un seul bon article ne mène pas à une bonne note.
 
-.APPENDIX \n[N_ANNEXE_CONSEILS_APPRENTISSAGE] Se renseigner sur un sujet
-.nr CURRENT_SUBSECTION 0
+.APPENDIX Se renseigner sur un sujet
 .TBD
 Se renseigner sur un sujet est une tâche parfois complexe, parfois même impossible à cause de contraintes de temps.
 Cette annexe présente quelques pistes pour s'informer au mieux.
@@ -1968,13 +2096,13 @@ L'étude des médias est un long sujet en soi.
 Donc pour faire court : ne pas hésiter à regarder des médias indépendants et peu connus, en gardant en tête les principes pour éviter certains biais et manipulations, et en restant ouvert à de nouveaux arguments ou points de vue.
 
 Ensuite, si l'objectif est d'étudier un sujet scientifique d'une manière générale, c'est-à-dire un sujet technique ou lié à la compréhension de la nature par exemple, il est important de partir du début avec des livres accessibles au grand public.
-La sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].1 est une discussion sur ce sujet.
+La sous-section \n[N_APPENDIX_CONSEILS_APPRENTISSAGE].1 est une discussion sur ce sujet.
 
 Enfin, si l'objectif est d'étudier un sujet politique ou littéraire, la méthode va différer légèrement.
 En politique, il est moins question de savoir qui a raison ou tort mais plutôt de comprendre des points de vue, qui peuvent être complexes et nécessiter plus d'un livre pour être mis au clair (cela dépend aussi de votre niveau d'investissement).
-Quelques conseils sont donnés en sous-section \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].2.
+Quelques conseils sont donnés en sous-section \n[N_APPENDIX_CONSEILS_APPRENTISSAGE].2.
 
-.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet « scientifique » (ou technique)
+.SS Sujet « scientifique » (ou technique)
 Si c'est un sujet lié à l'explication d'un phénomène naturel ou de la technique d'une manière générale, le plus simple est de lire des livres sur le sujet.
 La démarche à suivre pour apprendre sereinement un sujet :
 .ENUM Trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
@@ -2006,7 +2134,7 @@ Même au niveau intermédiaire ou avancé, revenir sur des sources plus accessib
 La pédagogie passe par la répétition.
 .EXPLANATION2
 
-.SUBSECTION_NO_NUMBER \n[N_ANNEXE_CONSEILS_APPRENTISSAGE].\n+[CURRENT_SUBSECTION] Sujet politique (ou littéraire)
+.SS Sujet politique (ou littéraire)
 .TBD
 La politique (tout comme la littérature) implique des points de vue, donc il faut a minima avoir une base de compréhension des différentes approches.
 
@@ -2015,7 +2143,7 @@ que ce soit bien clair : il n'est pas question de partir dans un relativisme ab
 Cette vision du monde est fausse.
 Comprendre les courants politiques permet à terme d'avoir un résultat sur le réel, en prenant de meilleures décisions par exemple, ou ne serait-ce que pour mieux saisir le sens des discours de chaque partie.
 
-.APPENDIX \n[N_ANNEXE_MEDIAS] Médias : l'importance de la vérification
+.APPENDIX Médias : l'importance de la vérification
 Le journalisme est l'activité qui consiste à recueillir et
 .HIGHLIGHT \f[B]vérifier\fP\c
 , puis éventuellement commenter, des faits pour les porter à l'attention du public.
@@ -2104,7 +2232,7 @@ $LIST$
 .\"Ce qui n'est pas puni en pratique est autorisé.
 .\".EXPLANATION2
 
-.APPENDIX \n[N_ANNEXE_MEDIAS_HABITUDES] Médias : quelques mauvaises habitudes
+.APPENDIX Médias : quelques mauvaises habitudes
 Les exemples suivants illustrent des problèmes dans les journaux télévisuels.
 Chaque exemple présente le traitement d'une information ou une méthode employée, qui échouent à traiter ou à correctement transmettre une information, trahissant a minima un manque de sérieux.
 
