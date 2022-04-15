@@ -7,14 +7,28 @@
 .nr CURRENT_SSSECTION 0 +1
 .rm SECTION
 .de SECTION
+.nr CURRENT_SUBSECTION 0       \" reset current subsection numbering
+.nr CURRENT_SSSECTION 0        \" reset current subsubsection numbering
 .ie !(\\n[CURRENT_SECTION]=0) .sp +1
 .br
+.ie (\\n[CURRENT_APPENDIX]=0) \
+.ds RH \\n+[CURRENT_SECTION].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+.el \{
+.ds RH \\n[CURRENT_APPENDIX].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+.bp  \" new page
+\}
 .ps +2
 .fam H   \" helvetica family
-\fB\\n+[CURRENT_SECTION].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*\fP
+.ft B
+\\*[RH]
+.ft
 .fam     \" back to previous font family
 .ps -2
 .PARAGRAPH_INDENTED
+..
+.de APPENDIX
+.nr CURRENT_APPENDIX +1
+.SECTION \\$*
 ..
 .de SS
 .ie (\\n[CURRENT_APPENDIX]=0) \
@@ -25,21 +39,22 @@
 \\n+[CURRENT_SUBSECTION]\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
 ..
 .de SSS
+.br
+.ps -2
+.fam H   \" helvetica family
+.ft B
 .ie (\\n[CURRENT_APPENDIX]=0) \
 .SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
 \\n[CURRENT_SUBSECTION].\\n+[CURRENT_SSSECTION]\h'\
 \\*[SPACE_SS_NUMBER_TITLE]' \\$*
 .el \
-.SUBSECTION_NO_NUMBER \\n[CURRENT_APPENDIX].\
+\\n[CURRENT_APPENDIX].\
 \\n[CURRENT_SUBSECTION].\\n+[CURRENT_SSSECTION]\h'\
 \\*[SPACE_SS_NUMBER_TITLE]' \\$*
-..
-.de APPENDIX
-.nr CURRENT_APPENDIX +1
-.nr CURRENT_SUBSECTION 0       \" reset current subsection numbering
-.nr CURRENT_SSSECTION 0        \" reset current subsubsection numbering
-.bp                            \" new page
-.SECTION_NO_NUMBER Annexe \\n[CURRENT_APPENDIX]. \\$*
+.ft
+.fam     \" back to previous font family
+.ps +2
+.PARAGRAPH_INDENTED
 ..
 .de INNERBULLET
 .in +1
@@ -84,6 +99,34 @@
 \\$*
 .br
 ..
+.de GIVEEXAMPLE1
+.in +1
+.ll -1
+.KS          \" start a keep
+.\" .ft I        \" citation in italics
+.mk C        \" set a marker for line drawing
+.in +1       \" indent a bit
+.gcolor citation
+..
+.de GIVEEXAMPLE2
+.mk D        \" set second marker to come back here
+.\" .ft          \" back to previous font
+.in -1       \" remove indent
+.gcolor black\" remove previous color
+.gcolor citationbar
+.\" r     = move upward
+.\" Z D t = drawing thickness
+.\" L     = draw the line
+\r\
+\Z'\D't 1p''\
+\L'|\\nCu'     \" draw line
+.gcolor black  \" remove previous color
+.sp -2         \" get two lines back
+\Z'\D't 0.5p''    \" get the previous drawing thickness back
+.KE            \" end of the keep
+.ll +1
+.in -1
+..
 .nr N_APPENDIX_BIAIS 1
 .af N_APPENDIX_BIAIS I
 .nr N_APPENDIX_ECRITURE_PAPIER 2
@@ -98,6 +141,8 @@
 .af N_APPENDIX_MEDIAS I
 .nr N_APPENDIX_MEDIAS_HABITUDES 7
 .af N_APPENDIX_MEDIAS_HABITUDES I
+.nr N_APPENDIX_MEDIAS_DIVERS 8
+.af N_APPENDIX_MEDIAS_DIVERS I
 .mso fr.tmac
 .mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
@@ -1612,7 +1657,11 @@ Les mathématiques et la science en général ont été utilisés à de nombreus
 .ENDBULLET
 
 .SS Cueillette
-
+Le biais de « cueillette » (nommé
+.I "cherry picking"
+en anglais) est le fait de rechercher uniquement les éléments en faveur d'une hypothèse en mettant de côté toute donnée contradictoire.
+En ce sens, la cueillette est proche du biais de confirmation.
+Le problème de cette approche est évident : en ignorant toute preuve que notre hypothèse est fausse, toutes les hypothèses sont perçues comme vraies.
 .PS 2 2
 reset
 
@@ -1694,6 +1743,10 @@ box height 10 width 10 with .sw at (0,0)
 move to last box .se
 # srand(1)
 .PE
+.LEGEND1
+Illustration du biais de cueillette.
+En ne sélectionnant que les données en faveur d'une hypothèse, on s'assure de toujours la percevoir comme vraie, peu importe sa véracité.
+.LEGEND2
 
 .SS Les erreurs d'attribution
 Un biais d'attribution est le fait de donner à tort un attribut, comme une capacité ou une intention, à une personne ou un groupe de personnes.
@@ -1729,6 +1782,9 @@ de l'islam de se poser la question de quelle aile contenait la maladie et quelle
 
 .BULLET homme de paille : déformer les propos de son interlocuteur pour s'attaquer à un argument plus facile à attaquer, quand bien même il n'a pas été dit.
 .BULLET généralisation abusive
+.BULLET cause unique : faussement réduire la causalité d'un événement à un seul facteur.
+Par exemple, si une personne fait tomber une carafe d'eau, est-ce que le problème vient de son manque de réflexes, de sa maladresse, d'un problème avec la poignée de la carafe ?
+En réalité, peut-être une combinaison de tous ces critères.
 .BULLET double standard : juger deux situations identiques avec des critères différents ;
 .BULLET double faute : corriger une erreur par une autre erreur.
 .BULLET faux dilemme : « si Dieu n'existe pas, alors tout arrive par hasard » ou encore « sans Dieu il n'y a pas de morale » ;
@@ -1752,34 +1808,6 @@ Ces exemples (volontairement très concis pour rester digeste) sont des tentativ
 Chaque exemple est accompagné des erreurs commises ainsi qu'une meilleure version (bien que toujours incomplète).
 
 En premier, une introduction.
-.de GIVEEXAMPLE1
-.in +1
-.ll -1
-.KS          \" start a keep
-.\" .ft I        \" citation in italics
-.mk C        \" set a marker for line drawing
-.in +1       \" indent a bit
-.gcolor citation
-..
-.de GIVEEXAMPLE2
-.mk D        \" set second marker to come back here
-.\" .ft          \" back to previous font
-.in -1       \" remove indent
-.gcolor black\" remove previous color
-.gcolor citationbar
-.\" r     = move upward
-.\" Z D t = drawing thickness
-.\" L     = draw the line
-\r\
-\Z'\D't 1p''\
-\L'|\\nCu'     \" draw line
-.gcolor black  \" remove previous color
-.sp -2         \" get two lines back
-\Z'\D't 0.5p''    \" get the previous drawing thickness back
-.KE            \" end of the keep
-.ll +1
-.in -1
-..
 
 .GIVEEXAMPLE1
 Il y a des aboiements dehors.
@@ -2172,7 +2200,70 @@ Le CSA a par ailleurs infligé des amendes de plusieurs millions d'euros pour de
 Une simple mise en demeure pour un élément aussi grave s'apparente à une forme
 .B impunité . d'
 
-.QUESTION "France Soir."
+.QUESTION "Le décodex."
+Le décodex est un outil en ligne, créé en 2017 par le journal Le Monde, posant un label qualité sur les journaux et site web.
+L'idée est de juger un site ou une personne et lui donner une appréciation (fiable, non fiable, mitigé ou parodique).
+
+Le site web a une rubrique « méthodologie détaillée », mais qui n'indique pourtant nullement la méthodologie utilisée pour alimenter la base de données de l'outil\*[*].
+.FOOTNOTE1
+Aïe.
+Pour un outil annoncé comme ayant nécessité un an de travail, cela fait tâche.
+.FOOTNOTE2
+
+Le décodex se présente comme un moteur de recherche.
+Par exemple, en recherchant Michel Collon sur le site, une description est fournie.
+.CITATION1
+Un site alimenté par Michel Collon, militant anti-américain et antisioniste, proche des positions du conspirationniste Thierry Meyssan. 
+.CITATION2
+.NAMECITATION "Site du Décodex, du journal Le Monde"
+
+Dans cet exemple, une personne et l'entiéreté de son œuvre se résument à une seule phrase, via des étiquettes simplistes.
+Pour apporter une justification, le décodex fournit deux références :
+.BULLET un article de Libération,
+.[
+libération réseaux syrie
+.]
+clairement à charge, très peu factuel et flou.
+L'article n'invite pas à la réflexion sur le fond et se contente de simplement pointer du doigt les personnes ne partageant pas leur avis.
+.BULLET un article du journal Le Monde
+.[
+monde soutiens régime syrien
+.]
+(ceux ayant créé le décodex, ils se citent eux-même donc), très court (3 paragraphes) et peu factuel et sans donner de source pour le peu d'affirmations avancés.
+.ENDBULLET
+
+Les deux articles jouent sur un biais de déshonneur par association pour appuyer leurs propos.
+Par exemple, les deux articles mentionnent (de manière insistante) les orientations politiques de l'hébergeur des sites web qu'ils critiquent.
+De même, les articles mentionnent des personnalités controversées qui partageraient un point de vue, sans citer clairement le sujet qui les rapprocherait.
+
+.CITATION1
+AVANT son spectaculaire retournement, Pierre Piccinin a appartenu à la galaxie hétéroclite des soutiens au régime de Bachar Al-Assad.
+Le spectre est large, il va de l'extrême gauche à l'extrême droite, en passant par le catholicisme ultra et islamophobe.
+On y trouve notamment le militant belge de la gauche radicale Michel Collon [...]
+.CITATION2
+.NAMECITATION "« Le petit monde composite des soutiens au régime syrien », Le Monde, 5 juin 2012"
+.LEGEND1
+Dans ce début d'article, la personne critiquée est citée juste après avoir fortement appuyé sur l'extrémisme des « soutiens au régime de Bachar Al-Assad ».
+Plusieurs biais sont présents.
+L'article fait un appel à l'émotion en insistant sur l'extrémisme des « soutiens au régime ».
+De plus, cela forme une généralisation abusive, l'article insiste sur le caractère extrêmiste de ces personnes qui pourtant ne forment même pas un groupe cohérent (l'article dit lui-même que de nombreuses personnes de divers bords politique sont concernées).
+De la même manière, l'article incite au déshonneur par association : la personne dont il est question (Michel Collon) n'est pas directement citée comme étant extrémiste, mais comme ayant un point de vue (non présenté dans l'article) que des extrémistes partagent.
+
+L'article est flou.
+L'expression « soutien au régime » n'est pas précisée.
+Est-ce que cela concerne uniquement les personnes acceptant Bachar Al-Assad à la tête du pays, ou est-ce valable aussi pour les personnes émettant une critique quant à l'intervention de l'OTAN ?
+De même, ces personnes sont décrites non pas par leur appartenance à un groupe bien identifié, mais par des attributs péjoratifs (ce sont des extrêmes, des radicaux, des « ultra », des islamophobes, etc.).
+
+Enfin, l'article ne parle pas du fond.
+À aucun moment les points de vue supposés de ces personnes ne sont critiqués, ils ne sont même pas présentés !
+.LEGEND2
+
+En s'appuyant sur des articles aussi faibles\*[*], les auteurs du décodex montrent que l'outil est une tentative de manipulation grossière.
+L'objectif est de persuader les internautes de l'invalitidé d'une opinion sans se justifier.
+Aucun argument n'est donné, les points de vue ne sont même pas présentés, et toute l'œuvre d'une personne est résumée de la manière la plus grotesque qui soit.
+.FOOTNOTE1
+N'ayons pas peur des mots, ces articles sont minables.
+.FOOTNOTE2
 
 .QUESTION "Libération."
 Le journal
@@ -2182,13 +2273,14 @@ a donné la parole à un regroupement de
 revendiqués pro-charia et pour un retour à l'Islam originel
 .I "Jaych al-Ahrar" , (
 .I "Liwa Shuhada al-Islam" ,
-etc.), nommé complaisamment dans l'article comme
+etc.), dans l'objectif de mettre en doute la parole de l'armée Russe venue pour neutraliser la menace que représentent ces terroristes.
+L'article les a nommé complaisamment comme
 .I "la résistance" " »," "« "
 .I "groupe rebelle" " »," "« "
 et sous son nom officiel
 .I "Front de libération" " »." "« "
 Par ailleurs, ce groupement terroriste est soutenu militairement par l'armée Américaine, qui leur a fourni du matériel.
-Ces informations concernant le
+Aucune de ces informations concernant le
 .I "Front de Libération" ,
 pourtant importantes, n'ont pas été ne serait-ce que esquissées dans l'article.
 .[
@@ -2204,16 +2296,12 @@ et non une affirmation venant de la rédaction du journal.
 Le second titre,
 .I "Frappes « punitives » contre les cibles civiles" ,
 va même jusqu'à sous-entendre que la Russie attaque des civils délibérément.
-Là encore, un peu de recul sur les dires de
-.B terroristes
-aurait été bienvenue, l'article leur fait presque office de tribune.
+Là encore, un peu de recul sur les dires de terroristes aurait été bienvenue, l'article leur fait presque office de tribune.
 
-Le reste de l'article n'a que peu de contenu, et n'est pas fiable et ne met rien en perspectives.
+Le reste de l'article n'a que peu de contenu et ne met rien en perspectives.
 Par exemple, l'article dit que
 .I "les troupes gouvernementales piétinent depuis 3 mois" ,
-sans préciser les très grandes avancées faites pendant des années (pour mettre fin au
-.B terrorisme
-des groupes visiblement identifiés comme fiables par
+sans préciser les très grandes avancées faites pendant des années (pour mettre fin au terrorisme des groupes visiblement identifiés comme fiables par
 .I Libération ).
 
 .QUESTION "Que retenir ?"
@@ -2224,6 +2312,11 @@ Pourtant, cela n'a suscité aucune réaction.
 La modification des faits n'est pas seulement du mauvais journalisme et un aveux de partialité.
 C'est un des éléments fondamentaux des dictatures, et si ce mot a été banalisé, il n'est ici pas employé à la légère.
 
+.CENTERED Note de l'auteur.
+Un journaliste publiant un article comme ceux cités n'a pas sa place dans une rédaction sérieuse, et il en va de même pour les supérieurs hiérarchiques ayant validé ce désastre.
+Peu importe le journal ou le point de vue exprimé.
+Ces articles sont des caricatures de propagande de guerre.
+
 .[
 $LIST$
 .]
@@ -2232,7 +2325,7 @@ $LIST$
 .\"Ce qui n'est pas puni en pratique est autorisé.
 .\".EXPLANATION2
 
-.APPENDIX Médias : quelques mauvaises habitudes
+.APPENDIX Médias : mauvaises habitudes
 Les exemples suivants illustrent des problèmes dans les journaux télévisuels.
 Chaque exemple présente le traitement d'une information ou une méthode employée, qui échouent à traiter ou à correctement transmettre une information, trahissant a minima un manque de sérieux.
 
