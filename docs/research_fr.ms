@@ -18,6 +18,12 @@
 .mso fr.tmac
 .mso hdtbl.tmac
 .TITLE La science et la méthode scientifique
+.de HD
+.sp -2.8
+\l'7.5i'
+.sp +1.5
+.br
+..
 .AUTHOR Philippe Pittoli
 .ABSTRACT1
 Ce document présente succinctement la science : son objectif, la méthode scientifique, le déroulement de la recherche ainsi que la création de papiers.
@@ -827,7 +833,8 @@ Le
 .I "bon sens"
 est régulièrement mis à mal en science.
 Lorsque l'on s'éloigne de la recherche, ce n'est pas pour se rapprocher de sujets plus simples, seulement
-.B "moins bien traités" .
+.B "moins bien traités" ,
+ou avec des données fondamentalement moins fiables.
 Le journalisme s'exprimant dans des médias est un parfait exemple.
 
 .QUESTION "Science vs médias."
@@ -865,6 +872,25 @@ Dans un média, les contraintes de temps ne sont pas les mêmes.
 Certains journaux sont quotidiens et nécessitent de traiter un sujet en seulement quelques heures.
 Parfois un journaliste est en direct pour traiter un sujet, et ne fournit aucun recul sur les événements relatés.
 
+La science est fondée principalement sur la raison pure et des preuves (au sens mathématique), des observations et des expérimentations reproductibles.
+Certains domaines sont forcés de jongler avec des données de qualité moindre : l'étude de l'Histoire, la sociologie ou encore la psychologie, par exemple, se basent parfois et en partie sur des témoignages.
+Lorsque des témoignages sont nécessaires pour une étude, les conditions dans lequelles se déroule l'étude sont contrôlées pour éviter des biais, ou recoupées avec d'autres sources.
+Le journalisme est fondé en partie sur le renseignement via des informations publiques (nommé en anglais
+.I OSINT ,
+pour « Open-Source Intelligence »).
+L'OSINT inclut des documents accessibles publiquement, comme
+(a) le produit de médias,
+(b) des documents glânés sur Internet (blogs, vidéos, groupes de discussions, etc.),
+(c) des données gouvernementales (rapports, budgets, discours, site web, etc.),
+(d) des publications académiques (conférences, thèses, papiers académiques),
+(e) des données commerciales (comme des évaluations financières),
+ou encore (f) de la littérature grise, c'est-à-dire des documents moins officiels ou à destination d'un public restreint (cela inclut des rapports techniques, des documents de travail, des travaux non publiés, des prépublications, etc.).
+Le journalisme se base également sur des observations et des témoignages, et pas nécessairement récoltés par les journalistes eux-mêmes.
+Des entreprises privées, comme l'Agence France-Presse (AFP) ou Reuters, fournissent des données (photos, vidéos, infographies, etc.) et vérifient des informations à destination de médias à travers le monde.
+Ces entreprises comblent le manque de budget des presses locales accordé au journalisme à l'international, mais forment par conséquent un filtre supplémentaire dans l'acquisition de l'information.
+.\" Le journalisme moderne est souvent critiqué pour être 
+.\" De très nombreux biais peuvent se glisser dans toutes les étapes de la transmission d'une information.
+
 .nr table_size_offset 2
 .vs -\n[table_size_offset]p
 .ps -\n[table_size_offset]
@@ -885,7 +911,7 @@ T}:T{
 tout existe en terme de sujet et de qualité, souvent pour le pire
 T}
 T{
-expert du sujet
+les auteurs sont experts du sujet
 T}:T{
 expert, non expert, voire non initié
 T}
@@ -900,10 +926,15 @@ T}:T{
 aucune relecture indépendante, simple acceptation de la hiérarchie
 T}
 T{
-temps long (plusieurs semaines, mois voire années)
+publication sur un temps long (plusieurs semaines, mois voire années)
 T}:T{
 instantané (juste quelques heures de rédaction, parfois même en direct)
 et parfois (rarement) temps long
+T}
+T{
+fondé principalement sur la logique et des preuves mathématiques, des observations et expérimentations reproductibles en conditions contrôlées
+T}:T{
+fondé sur des documents publiques plus ou moins officiels et parfois des documents officieux, des informations récoltées par des tiers, des observations d'événements uniques, des témoignages
 T}
 .TE
 .vs +\n[table_size_offset]p
@@ -1046,7 +1077,7 @@ De même, toute information n'est pas nécessairement pertinente.
 Dire que des pancartes annonçaient la chasse est pertinent s'il est considéré normal pour un promeneur d'éviter de sortir pendant la période de chasse.
 Cette information est donc une invitation plus ou moins subtile à adopter ce point de vue.
 
-.QUESTION "L'objectivité est illusoire."
+.QUESTION "L'objectivité est une illusion."
 Un journal peut minimiser son interprétation des faits, mais même ce qui est montré, le sujet ou encore l'angle utilisé pour l'aborder, sont déjà des choix.
 L'objectivité n'est donc pas atteignable, et ne peut être mesurée précisément.
 Des manquements à l'objectivité sont détectables, pour peu qu'ils soient grossiers.
@@ -1083,7 +1114,7 @@ La connaissance ne connaît pas de raccourcis, seulement des pièges.
 Connaître le sujet et le niveau de connaissances à atteindre permet de mieux cibler les documents à lire, et leur donner une priorité.
 
 .BULLET D'une manière générale, les livres sont conseillés.
-Ils sont de tout niveau, pédagogiques, et couvrent des sujets vastes de manière souvent complète (sans pour autant être exhaustif).
+Ils sont de tout niveau, pédagogiques, et couvrent des sujets vastes de manière souvent complète (sans pour autant être exhaustifs).
 Ils permettent une vue d'ensemble sur un sujet, relier les savoirs pour les consolider.
 .BULLET Ne pas sous-estimer les documents grand publics : wikipédia, blogs, documentaires.
 Ces documents peuvent être utiles pour une première approche, comprendre rapidement un principe général ou en complément d'un bon livre.
@@ -1260,7 +1291,6 @@ La sympathie fait baisser la vigilance du public, qui devient bien plus indulgen
 Qui aime bien châtie bien.
 .CITATION2
 
-
 .CENTERED "Repérer un gourou."
 Le gourou a un objectif, comme une faveur à demander, vous faire entreprendre des actions, vendre un produit ou une formation, ou encore un intéressement en nature.
 La malhonnêteté fait partie de sa trousse à outils pour parvenir à ses fins, et c'est bien là tout le problème.
@@ -1285,6 +1315,10 @@ Ainsi, un débit de parole élevé, l'étalage de références, de citations ou 
 Pour une vidéo ou un podcast, un montage très rapide et sans pause pour assimiler le discours a le même effet.
 
 La moquerie et le sarcasme peuvent également être présents pour flatter l'ego du public, lui donner un sentiment de supériorité.
+Créer un homme de paille en caricaturant une position est une méthode efficace pour se moquer et faire adhérer un public à ses idées, presque sans effort.
+
+Exagérer ou minimiser quelque chose, comme l'importance d'un événement par exemple, est un signe potentiel de malhonnêteté.
+Par exemple, si une personne commet une erreur dans la réfutation de ce que dit un gourou (ce qui peut arriver), le gourou peut exagérer l'importance de cette erreur jusqu'à masquer ses arguments valides.
 
 Comme nous pouvons le voir, tous ces éléments vont à l'encontre des bonnes pratiques pour écrire un document scientifique.
 Le format même d'un papier empêche l'apparition de gourous.

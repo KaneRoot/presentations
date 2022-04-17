@@ -5,7 +5,6 @@
 .nr DI 0
 .nr FF 3   \" footnotes' type: numbered, with point, indented
 .
-.
 .nr LIST_NUMBER 0
 .
 .R1
@@ -131,9 +130,17 @@ accumulate
 ..
 .
 .de NAMECITATION
-.ps -2
-\(em\h'1'\\$*
-.ps
+\(em\h'1'
+.QP
+.sp -1
+.vs -\\n[legendps]p
+.ps -\\n[legendps]
+.in -1.2
+\\$*
+.br
+.LP
+.vs +\\n[legendps]p
+.ps +\\n[legendps]
 ..
 .
 .de EXPLANATION1
@@ -384,9 +391,11 @@ Compilé pour la dernière fois le
 .de ABSTRACT2
 .AE
 ..
+.ds CH Page %
 .de TITLE
 .TL
 \\$*
+.ds LH \\$*
 ..
 .de AUTHOR
 .AU
