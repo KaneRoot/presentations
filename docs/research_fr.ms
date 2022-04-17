@@ -1179,7 +1179,7 @@ ceux qui ne sont pas d'accord.
 Un avis ne peut être sincère sans comprendre les autres points de vue.
 
 Une fois que les arguments des différents bords sont compris, que le sujet a été assimilé, avoir une opinion est parfaitement acceptable, même très tranchée.
-Mes maigres conseils ne doivent pas encourager un sophisme du juste milieu (voir annexe 1).
+Mes maigres conseils ne doivent pas encourager un sophisme du juste milieu (voir annexe \n[N_APPENDIX_BIAIS]).
 Parfois une position tranchée se justifie très bien.
 
 Par ailleurs, ceci est le fonctionnement de la science.
@@ -1833,6 +1833,12 @@ allbox tab(:);
 c | c
 lw(0.5i) | lew(2.7i).
 Propriété : Raison de se méfier
+T{
+affirmation infondée
+T}:T{
+Chaque affirmation doit être étayée, solidement justifiée.
+Une affirmation infondée peut se cacher entre quelques vérités, c'est même important comme première approche lors d'une manipulation.
+T}
 T{
 confiance excessive
 T}:T{

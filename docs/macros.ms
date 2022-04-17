@@ -447,7 +447,7 @@ Compilé pour la dernière fois le
 .nr CURRENT_SSSECTION 0        \" reset current subsubsection numbering
 .ie !(\\n[CURRENT_SECTION]=0) .sp +1
 .br
-.ie (\\n[CURRENT_APPENDIX]=0) \
+.ie (\\n[APPENDIX_TIME]=0) \
 .ds RH \\n+[CURRENT_SECTION].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
 .el \{
 .ds RH \\n[CURRENT_APPENDIX].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
@@ -462,12 +462,14 @@ Compilé pour la dernière fois le
 .ps -2
 .PARAGRAPH_INDENTED
 ..
+.nr APPENDIX_TIME 0
 .de APPENDIX
 .nr CURRENT_APPENDIX +1
+.nr APPENDIX_TIME 1
 .SECTION \\$*
 ..
 .de SS
-.ie (\\n[CURRENT_APPENDIX]=0) \
+.ie (\\n[APPENDIX_TIME]=0) \
 .SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
 \\n+[CURRENT_SUBSECTION]\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
 .el \
@@ -479,7 +481,7 @@ Compilé pour la dernière fois le
 .ps -2
 .fam H   \" helvetica family
 .ft B
-.ie (\\n[CURRENT_APPENDIX]=0) \
+.ie (\\n[APPENDIX_TIME]=0) \
 .SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
 \\n[CURRENT_SUBSECTION].\\n+[CURRENT_SSSECTION]\h'\
 \\*[SPACE_SS_NUMBER_TITLE]' \\$*
