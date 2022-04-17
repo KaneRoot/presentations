@@ -83,23 +83,20 @@ panneau = cercle (obligation) avec double trait oblique
 ..
 
 .SECTION Info aléatoires
-.BULLET serrer les écrous d'une roue = à faire quand la roue est au sol pour pas qu'elle tourne
 .BULLET Sur une autoroute, je vais rencontrer une borne d'appel d'urgence tous les 2km
-.BULLET regard doit "traverser" le pare-brise au milieu de celui-ci
 .BULLET zones de rencontre
 .SPACE = 20km/h pour éviter accidents mortels
 .SPACE = cohabitation entre usagers
-.BULLET objet léger et encombrant = coffre de toit (forme aérodynamique)
-
-.SECTION TODO
-.BULLET danger passage à niveau = imprudence des conduteurs
-.BULLET il ne neige plus = feux de croisement mais pas feux de brouillard
-.BULLET invalidation du permis 1ère année (6 points perdus) = repasser les épreuves théorique et pratique
-.SPACE + restituer le permis à la préfecture dans les 10 jours suivant la réception de la lettre
 .BULLET piéton qui traverse = s'arrêter pour ne pas le laisser sur la chaussée
 .SPACE + il a le droit s'il n'y a pas de passage piéton à moins de 50m
+.ENDBULLET
+
+.SECTION Bonnes pratiques
 .BULLET sortie de véhicule = regard rétroviseur et angle mort (véhicule, cycliste etc.)
 .SPACE + main droite pour ouvrir la portière
+.BULLET regard doit "traverser" le pare-brise au milieu de celui-ci
+.BULLET serrer les écrous d'une roue = à faire quand la roue est au sol pour pas qu'elle tourne
+.BULLET objet léger et encombrant = coffre de toit (forme aérodynamique)
 .ENDBULLET
 
 .SECTION Panneaux
@@ -109,6 +106,8 @@ panneau = cercle (obligation) avec double trait oblique
 .ENDBULLET
 
 .SECTION Sécurité
+.BULLET il ne neige plus = feux de croisement mais pas feux de brouillard
+.BULLET danger passage à niveau = imprudence des conduteurs
 .BULLET sécurité enfant = portière s'ouvre que de l'extérieur
 .BULLET enfants à l'arrière, à l'avant à partir de 10 ans
 .BULLET 80km/h distance de sécurité = 44m
@@ -151,6 +150,8 @@ panneau = cercle (obligation) avec double trait oblique
 .ENDBULLET
 
 .SECTION Administratif
+.BULLET invalidation du permis 1ère année (6 points perdus) = repasser les épreuves théorique et pratique
+.SPACE + restituer le permis à la préfecture dans les 10 jours suivant la réception de la lettre
 .BULLET conduite accompagnée = accompagnateur peut subir un test de dépistage de stupéfiants
 .BULLET place handicapée = faut avoir la carte, sinon stationnement très gênant = 135€
 .BULLET deux roues = peuvent circuler entre 2 voies
