@@ -1,33 +1,12 @@
 .so macros.ms   \" First, let's import some macros.
 .mso fr.tmac
 .mso hdtbl.tmac
-.nr legendps 2
-.de LEGEND1
-.QP
-.vs -\\n[legendps]p
-.ps -\\n[legendps]
-.br
-..
-.de LEGEND2
-.br
-.vs +\\n[legendps]p
-.ps +\\n[legendps]
-.br
-.LP
-..
-.defcolor color_ressenti      rgb 0.6 0.2 0.2
-.defcolor color_interet       rgb 1 0 0
-.defcolor color_prisme        rgb 0 0 1
-.defcolor color_faitpartiel   rgb 0.2 0.6 0.2
-.defcolor color_liens         rgb 0.2 0.2 0.6
-.defcolor color_contraintes   rgb 0.9 0 0.6
-.
 .TITLE Code de la route : quelques notes
 .AUTHOR Philippe Pittoli
 .ABSTRACT1
 Quelques notes sur le code de la route.
 
-.INFORMATIONS_FR \\*[WEBSITE]/research_fr.pdf \\*[EMAIL]
+.INFORMATIONS_FR \\*[WEBSITE]/code.pdf \\*[EMAIL]
 .ABSTRACT2
 .\".TWO_COLUMNS
 .\".vs -\n[table_size_offset]p
