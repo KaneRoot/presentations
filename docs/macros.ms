@@ -139,8 +139,6 @@ accumulate
 \\$*
 .br
 .LP
-.vs +\\n[legendps]p
-.ps +\\n[legendps]
 ..
 .
 .de EXPLANATION1
@@ -465,6 +463,7 @@ Compilé pour la dernière fois le
 .ps +2
 .fam H   \" helvetica family
 .ft B
+.ne 4    \" should be at least a few lines left at the bottom of the page
 \\*[RH]
 .ft
 .fam     \" back to previous font family

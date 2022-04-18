@@ -617,6 +617,12 @@ c'est-à-dire un taux de visibilité pour les papiers publiés, qui se mesure pa
 \f[CW]\s-2\\$*\s+2\f[]
 ..
 
+.de CITE_WEBSITE
+.\" 1st arg: name, 2nd: URL
+.nr indentation 8
+\\$1\h'|\\n[indentation]m'\(em\h'1'
+.WRITE_URL \\$2
+..
 .ds CITESEERX Citeseer\u\s-3x\s+3\d
 
 .QUESTION "La visibilité d'un journal."
@@ -626,19 +632,16 @@ size 8 { roman "Visibilité d'un journal" = roman "nb citations" over roman "nb 
 .EN
 Scopus\*[*]
 .FOOTNOTE1
-Scopus \h'1'\(em\h'1'
-.WRITE_URL www.scopus.com
+.CITE_WEBSITE Scopus www.scopus.com
 .FOOTNOTE2
 est une base de données qui référence les documents (livres, articles scientifiques, etc.) permettant de faire ce calcul.
 Google Scholar\*[*]
 .FOOTNOTE1
-Google Scholar \h'1'\(em\h'1'
-.WRITE_URL scholar.google.com
+.CITE_WEBSITE "Google Scholar" scholar.google.com
 .FOOTNOTE2
 et \*[CITESEERX]\*[*]
 .FOOTNOTE1
-\*[CITESEERX] \h'1'\(em\h'1'
-.WRITE_URL citeseerx.ist.psu.edu
+.CITE_WEBSITE "\*[CITESEERX]" citeseerx.ist.psu.edu
 .FOOTNOTE2
 sont d'autres bases de données bibliographiques, accessibles gratuitement, permettant de faire des recherches.
 
@@ -692,14 +695,12 @@ Pour rappel, les chercheurs sont payés avec nos impôts, leur travail a déjà 
 .FOOTNOTE2
 HAL\*[*]
 .FOOTNOTE1
-HAL \h'1'\(em\h'1'
-.WRITE_URL hal.archives-ouvertes.fr
+.CITE_WEBSITE HAL hal.archives-ouvertes.fr
 .FOOTNOTE2
 est un site pour accéder gratuitement à des articles scientifiques (publiés ou non) et des thèses.
 Les thèses françaises\*[*]
 .FOOTNOTE1
-Thèses françaises \h'1'\(em\h'1'
-.WRITE_URL theses.fr
+.CITE_WEBSITE "Thèses françaises" theses.fr
 .FOOTNOTE2
 sont également publiées et accessibles gratuitement.
 Enfin, les bases de données bibliographiques présentées précédemment (Scopus, Google Scholar et \*[CITESEERX]) sont d'une grande aide pour rechercher des articles en rapport avec un sujet, des mots clés ou par auteur.
@@ -872,6 +873,14 @@ Dans un média, les contraintes de temps ne sont pas les mêmes.
 Certains journaux sont quotidiens et nécessitent de traiter un sujet en seulement quelques heures.
 Parfois un journaliste est en direct pour traiter un sujet, et ne fournit aucun recul sur les événements relatés.
 
+La science produit des papiers de quelques pages à plusieurs dizaines par sujet d'étude.
+Chaque étude est donc méticuleuse, et s'étend sur autant de place que nécessaire.
+Les annexes ajoutent des informations, voire le détail des données utilisées.
+La distinction entre les données et l'interprétation des résultats est claire.
+Le journalisme produit du contenu dans des formats variés, allant de quelques secondes à plusieurs heures de vidéo, ou de quelques lignes dans un journal à plusieurs livres.
+Cette variation s'explique par l'intérêt porté au sujet par le journaliste et son équipe de rédaction, la complexité du sujet, les informations disponibles, etc.
+Ainsi, les annonces du début du printemps ou des conséquences d'une guerre sur la sécurité alimentaire mondiale n'auront pas le même traitement, ce qui se justifie très bien.
+
 La science est fondée principalement sur la raison pure et des preuves (au sens mathématique), des observations et des expérimentations reproductibles.
 Certains domaines sont forcés de jongler avec des données de qualité moindre : l'étude de l'Histoire, la sociologie ou encore la psychologie, par exemple, se basent parfois et en partie sur des témoignages.
 Lorsque des témoignages sont nécessaires pour une étude, les conditions dans lequelles se déroule l'étude sont contrôlées pour éviter des biais, ou recoupées avec d'autres sources.
@@ -930,6 +939,12 @@ publication sur un temps long (plusieurs semaines, mois voire années)
 T}:T{
 instantané (juste quelques heures de rédaction, parfois même en direct)
 et parfois (rarement) temps long
+T}
+T{
+le traitement prend autant de place que nécessaire
+T}:T{
+chaque média a des contraintes de format, souvent drastiques,
+et parfois un journaliste produit un livre pour accorder la place nécessaire au traitement de l'information
 T}
 T{
 fondé principalement sur la logique et des preuves mathématiques, des observations et expérimentations reproductibles en conditions contrôlées
@@ -1237,9 +1252,6 @@ Tout jugement doit se faire en pleine connaissance de cause.
 Soyez curieux, allez voir ce que disent ceux qui ne pensent pas comme vous.
 .EXPLANATION2
 
-.\".vs +\n[table_size_offset]p
-.\".ps +\n[table_size_offset]
-
 .vs -\n[table_size_offset]p
 .ps -\n[table_size_offset]
 .G1 2.7
@@ -1274,7 +1286,7 @@ for i from 8 to 14 by 1 do {
 }
 times at 15,0
 .G2
-
+.in 0
 .QUESTION "Les manipulations."
 Les êtres humains sont des créatures perfectibles à bien des égards.
 Il faut se méfier de tout le monde, y compris soi-même.
@@ -2270,6 +2282,14 @@ Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habit
 .CENTERED Les interruptions incessantes.
 Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
 Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
+
+.CENTERED Le prisme médiatique.
+Les sujets mis en avant dans les médias ne dépendent pas de l'intérêt du public, ou de l'intérêt que le public porte à ces sujets.
+Les sujets sont choisis par les journalistes et leur équipe de rédaction, et cela est organique : par moments l'intérêt du public prime, quitte à froisser un politicien proche du média, et parfois c'est l'inverse.
+C'est ainsi que certaines informations sont éclipsées, sans recours à la manipulation de données ou à une interprétation biaisée de l'information, simplement en parlant d'un autre sujet.
+Un exemple de cela est Julian Assange, un journaliste ayant publié des preuves de massacres de civils de l'armée américaine en Irak, enfermé depuis plus de 10 ans pour des raisons politiques.
+Enfermer un journaliste pour avoir révélé un problème grave dans un conflit armé est en contradiction directe avec la notion de pays démocratique.
+Aucun des présidents qui se sont succédés ne lui a offert l'asile politique, et personne n'en parle dans les médias traditionnels.
 
 .QUESTION "Que conclure ?"
 Ces exemples montrent que l'information n'est pas toujours la priorité du journal télévisuel, le sérieux se substituant au divertissement.
