@@ -1049,7 +1049,7 @@ line from FAITS + (0,-(distarrow - firsttosecondarrows)) \
 line from AVIS + (0,-(distarrow - firsttosecondarrows)) \
 	to AVIS + (0,-(distarrow))
 .
-larger = 0.2
+larger = 0.4
 journalism_top = distarrow + sizearrow
 page_len = 0.7
 line from FAITS + (-larger,-(journalism_top + page_len)) \
@@ -2057,7 +2057,7 @@ Quelques conseils sont donnés en sous-section \n[N_APPENDIX_CONSEILS_APPRENTISS
 .SS Sujet « scientifique » (ou technique)
 Si c'est un sujet lié à l'explication d'un phénomène naturel ou de la technique d'une manière générale, le plus simple est de lire des livres sur le sujet.
 La démarche à suivre pour apprendre sereinement un sujet :
-.ENUM Trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
+.EENUM Trouver plusieurs livres spécifiquement sur le sujet, de niveau débutant ;
 .br
 Généralement, trouver des livres en rapport avec un sujet est une tâche aisée.
 Parfois des livres font office de référence, mais en étant réellement débutant le mieux est d'en consulter plusieurs.
@@ -2069,12 +2069,12 @@ Wikipédia peut être une piste intéressante pour un débutant, malgré le manq
 Lire les quelques premiers paragraphes d'une page ne donne qu'une idée superficielle du sujet, mais la bibliographie associée à la page permet d'aller plus loin.
 
 Wikipédia, un article de blog ou une vidéo en ligne peuvent être utilisés en complément pour expliquer un mot ou un concept mal introduit dans le livre.
-.ENUM Faire des fiches pour retenir le plus important ;
+.EENUM Faire des fiches pour retenir le plus important ;
 .br
 Cela peut paraître comme une perte de temps, en réalité c'est un gain de temps considérable.
 Les fiches sont d'autant plus utiles qu'elles permettent de ne pas avoir à revenir sur un livre déjà lu.
 Elles permettent également de structurer la pensée, et elles sont encore plus utiles sur des sujets non techniques.
-.ENUM Lire des livres plus avancés.
+.EENUM Lire des livres plus avancés.
 .br
 Une fois que la base est acquise, et
 .B "seulement à ce moment-là" ,
@@ -2184,10 +2184,11 @@ Enfin, l'article ne parle pas du fond.
 
 En s'appuyant sur des articles aussi faibles\*[*], les auteurs du décodex montrent que l'outil est une tentative de manipulation grossière.
 L'objectif est de persuader les internautes de l'invalitidé d'une opinion sans se justifier.
-Aucun argument n'est donné, les points de vue ne sont même pas présentés, et toute l'œuvre d'une personne est résumée de la manière la plus grotesque qui soit.
+Aucun argument n'est donné, les points de vue ne sont pas présentés, et toute l'œuvre d'une personne est résumée de la manière la plus grotesque qui soit.
 .FOOTNOTE1
 N'ayons pas peur des mots, ces articles sont minables.
 .FOOTNOTE2
+Tout est dans la forme, rien dans le fond.
 
 .QUESTION "Libération."
 Le journal
@@ -2235,6 +2236,13 @@ Pourtant, cela n'a suscité aucune réaction.
 
 La modification des faits n'est pas seulement du mauvais journalisme et un aveux de partialité.
 C'est un des éléments fondamentaux des dictatures, et si ce mot a été banalisé, il n'est ici pas employé à la légère.
+
+.QUESTION "Peut-on encore faire confiance en nos médias ?"
+La question est pertinente, la réponse ne peut être tranchée et définitive.
+Cela peut dépendre des sujets.
+Comme cela a été expliqué en section 7, le journalisme s'attaque à de très nombreux sujets, souvent triviaux, bénins, sans importance pour les détenteurs du journal ou de leurs proches.
+Sur ces sujets, aucune raison objective de douter de leur bonne volonté, mais la rédaction n'ayant pas pour objectif l'intérêt du public, la méfiance est saine et doit primer.
+Même dans un hypothétique journal ayant pour objectif l'intérêt général, sans pression politique ou financière, la lecture critique des articles doit être une habitude, à l'instar des chercheurs lisant des papiers.
 
 .CENTERED Note de l'auteur.
 Un journaliste publiant un article comme ceux cités n'a pas sa place dans une rédaction sérieuse, et il en va de même pour les supérieurs hiérarchiques ayant validé ce désastre.
@@ -2287,9 +2295,9 @@ Si une personne ne peut garder la parole sans interruption pendant plus de quelq
 Les sujets mis en avant dans les médias ne dépendent pas de l'intérêt du public, ou de l'intérêt que le public porte à ces sujets.
 Les sujets sont choisis par les journalistes et leur équipe de rédaction, et cela est organique : par moments l'intérêt du public prime, quitte à froisser un politicien proche du média, et parfois c'est l'inverse.
 C'est ainsi que certaines informations sont éclipsées, sans recours à la manipulation de données ou à une interprétation biaisée de l'information, simplement en parlant d'un autre sujet.
-Un exemple de cela est Julian Assange, un journaliste ayant publié des preuves de massacres de civils de l'armée américaine en Irak, enfermé depuis plus de 10 ans pour des raisons politiques.
+Un exemple de cela est Julian Assange, un journaliste ayant publié des preuves de massacres de civils de l'armée américaine en Afghanistan et en Irak, enfermé depuis plus de 10 ans pour des raisons politiques.
 Enfermer un journaliste pour avoir révélé un problème grave dans un conflit armé est en contradiction directe avec la notion de pays démocratique.
-Aucun des présidents qui se sont succédés ne lui a offert l'asile politique, et personne n'en parle dans les médias traditionnels.
+Aucun des présidents qui se sont succédés ne lui a offert l'asile politique, et les médias traditionnels accordent une place toute relative à cette information.
 
 .QUESTION "Que conclure ?"
 Ces exemples montrent que l'information n'est pas toujours la priorité du journal télévisuel, le sérieux se substituant au divertissement.

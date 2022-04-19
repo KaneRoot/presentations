@@ -5,7 +5,7 @@
 .nr DI 0
 .nr FF 3   \" footnotes' type: numbered, with point, indented
 .
-.nr LIST_NUMBER 0
+.nr LIST_NUMBER 0 +1
 .
 .R1
 no-label-in-reference
@@ -136,6 +136,7 @@ accumulate
 .vs -\\n[legendps]p
 .ps -\\n[legendps]
 .in -1.2
+.ll +1.2
 \\$*
 .br
 .LP
@@ -512,20 +513,23 @@ Compilé pour la dernière fois le
 .in -2
 ..
 .de EENUM           \" Numbered list
-.nr LIST_NUMBER +1
+.nr ENUM_INDENTATION 2
+.ie !(\\n[LIST_NUMBER]=0) .in -\\n[ENUM_INDENTATION]
 .br
-\\n[LIST_NUMBER]
-.in +1
+\\n+[LIST_NUMBER].
+.in +\\n[ENUM_INDENTATION]
 .sp -1
 \\$*
-.in -1
 ..
 .de EENDENUM
 .nr LIST_NUMBER 0
+.in -\\n[ENUM_INDENTATION]
 ..
 .nr legendps 2
 .de LEGEND1
 .QP
+.in -1.2
+.ll +1.2
 .vs -\\n[legendps]p
 .ps -\\n[legendps]
 .br
