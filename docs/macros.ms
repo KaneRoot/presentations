@@ -130,13 +130,12 @@ accumulate
 ..
 .
 .de NAMECITATION
-\(em\h'1'
 .QP
-.sp -1
 .vs -\\n[legendps]p
 .ps -\\n[legendps]
 .in -1.2
 .ll +1.2
+\h'|-2'\(em\h'|-0.4'
 \\$*
 .br
 .LP
@@ -528,10 +527,10 @@ Compilé pour la dernière fois le
 .nr legendps 2
 .de LEGEND1
 .QP
-.in -1.2
-.ll +1.2
 .vs -\\n[legendps]p
 .ps -\\n[legendps]
+.in -1.2
+.ll +1.2
 .br
 ..
 .de LEGEND2
