@@ -1232,10 +1232,17 @@ Par ailleurs, ceci est le fonctionnement de la science.
 Obtenir des informations, interpréter, juger.
 Si d'autres faits sont portés à notre connaissance et qu'ils n'avaient pas été intégrés à notre réflexion, notre point de vue doit changer s'il n'est plus tenable rationnellement.
 
+.CENTERED Personne n'est parfait.
+L'avis d'une personne peut être biaisé, peut-être s'exprime-t-elle mal ou est visiblement malhonnête, cela ne dit pourtant rien sur le sujet de la conversation.
+Une personne peut avoir raison avec de mauvais arguments, tout comme elle pourrait avoir tort en utilisant pourtant de bons arguments.
+La position la plus raisonnable est de penser que ni vous ni les personnes avec qui vous interagissez au quotidien (votre entourage, vos collègues, des gens sur les réseaux sociaux, etc.) n'êtes expertes des sujets que vous abordez.
+Une certaine indulgence doit être accordée à chacun sur la manière de s'exprimer et sur les arguments utilisés.
+Repérer des biais n'est pas toujours évident, et tout le monde n'a pas le loisir de creuser sérieusement tous les sujets de discussion.
+
 .CENTERED Et la science dans tout ça ?
 La science est utile pour prendre des décisions, en vous informant des conséquences de vos choix.
 Par exemple, admettons vouloir « réémigrer » une partie de nos concitoyens sur une base raciale.
-La psychologie peut aider à comprendre l'impact émotionnel sur les familles, l'économie peut aider à comprendre l'impact sur la disponibilité du travail, etc.
+La psychologie peut aider à comprendre l'impact émotionnel sur les familles, l'économie peut aider à comprendre l'impact sur la disponibilité du travail selon la répartition des personnes concernées dans les différents secteurs d'activité, etc.
 En revanche, vos valeurs sont des prémices indépendantes.
 Si vous n'avez aucune considération pour l'économie, ou que vous jugez d'autres aspects prioritaires, aucune formule mathématique ne vous donnera
 .I tort
@@ -2246,8 +2253,9 @@ Même dans un hypothétique journal ayant pour objectif l'intérêt général, s
 
 .CENTERED Note de l'auteur.
 Un journaliste publiant un article comme ceux cités n'a pas sa place dans une rédaction sérieuse, et il en va de même pour les supérieurs hiérarchiques ayant validé ce désastre.
-Peu importe le journal ou le point de vue exprimé.
+Peu importe le journal ou l'orientation politique.
 Ces articles sont des caricatures de propagande de guerre.
+Les auteurs sont suffisamment intelligents pour ne pas diffamer une personne, mais la volonté de nuire à la réputation, de salir un nom sans aucun argument, était évidente.
 
 .[
 $LIST$
@@ -2261,12 +2269,12 @@ $LIST$
 Les exemples suivants illustrent des problèmes dans les journaux télévisuels.
 Chaque exemple présente le traitement d'une information ou une méthode employée, qui échouent à traiter ou à correctement transmettre une information, trahissant a minima un manque de sérieux.
 
-.CENTERED La météo.
+.QUESTION "La météo."
 La pluie et le beau temps sont régulièrement discutés.
 Au printemps il commence à faire beau, en été il fait chaud, à l'automne le temps se couvre, et en hiver, surprise, il fait froid.
 Ces annonces bouleversantes s'accompagnent également d'un reportage pour comprendre ce que cela signifie, prenant régulièrement du temps d'antenne pour un journal télévisé.
 
-.CENTERED La grève.
+.QUESTION "La grève."
 Lors d'une grève, des reportages éclairs parlent du mécontentement des usagers du service en grève ; la SNCF est un exemple parlant de ce phénomène.
 Le téléspectateur sait déjà bien qu'une grève créée du mécontentement.
 La mise en scène de personnes en colère lors d'une séquence de micro-trottoir n'apporte aucune information.
@@ -2276,28 +2284,31 @@ des grévistes ne sont pas mises en avant.
 Montrer la colère mais pas l'origine du problème est néfaste pour se faire un avis, et représente également un appel à l'émotion.
 De là à parler de manipulation, il n'y a qu'un pas.
 
-.CENTERED Le micro-trottoir.
+.QUESTION "Le micro-trottoir."
 Le micro-trottoir est, en soit, un format peu intéressant pour partager de l'information.
 Le principe de couper quelques secondes de parole d'une conversation informelle et non préparée ne permet pas de transmettre autre chose qu'une information triviale, comme un sentiment.
 Son usage lors des grèves, de manifestations et toute sorte de situation causant un désagrément prend alors tout son sens : le journaliste veut montrer des personnes sous le coup de l'émotion, donc pas en situation de fournir un avis éclairé.
 Là encore, le journaliste ne fournit, au mieux, qu'un simple commentaire, voire provoque un appel à l'émotion.
 
-.CENTERED Les débats scientifiques sans scientifique.
+.QUESTION "Les débats scientifiques sans scientifique."
 Sur certains plateaux, des philosophes se retrouvent à parler de médecine ou autres sujets dont ils n'ont strictement aucune compétence, en lieu et place de scientifiques spécialisés sur les sujets traités, ou au moins d'une personne ayant une connaissance approfondie du sujet pour expliquer la situation.
 Au mieux, c'est du commentaire, des opinions, ce qui se retrouve ni plus ni moins sur les réseaux sociaux.
 Reconnaissant le philosophe comme une figure d'autorité, surtout s'il a l'habitude d'être présent sur un plateau, un spectateur inattentif peut penser que sa parole dans ce contexte est légitime, et ainsi accepter plus facilement des arguments faibles.
 
-.CENTERED Les interruptions incessantes.
+.QUESTION "Les interruptions incessantes."
 Autre problème de format, les discussions (ou débats) avec des personnes qui se coupent régulièrement la parole.
 Si une personne ne peut garder la parole sans interruption pendant plus de quelques dizaines de secondes, aucune pensée structurée ne peut être partagée.
 
-.CENTERED Le prisme médiatique.
+.QUESTION "Le prisme médiatique."
 Les sujets mis en avant dans les médias ne dépendent pas de l'intérêt du public, ou de l'intérêt que le public porte à ces sujets.
 Les sujets sont choisis par les journalistes et leur équipe de rédaction, et cela est organique : par moments l'intérêt du public prime, quitte à froisser un politicien proche du média, et parfois c'est l'inverse.
 C'est ainsi que certaines informations sont éclipsées, sans recours à la manipulation de données ou à une interprétation biaisée de l'information, simplement en parlant d'un autre sujet.
 Un exemple de cela est Julian Assange, un journaliste ayant publié des preuves de massacres de civils de l'armée américaine en Afghanistan et en Irak, enfermé depuis plus de 10 ans pour des raisons politiques.
 Enfermer un journaliste pour avoir révélé un problème grave dans un conflit armé est en contradiction directe avec la notion de pays démocratique.
 Aucun des présidents qui se sont succédés ne lui a offert l'asile politique, et les médias traditionnels accordent une place toute relative à cette information.
+
+.QUESTION "In AFP we trust."
+Une critique possible de nos médias traditionnels serait d'être de simples relais de l'Agence France-Presse, en tout cas pour les informations à l'internationale.
 
 .QUESTION "Que conclure ?"
 Ces exemples montrent que l'information n'est pas toujours la priorité du journal télévisuel, le sérieux se substituant au divertissement.
