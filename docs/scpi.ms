@@ -2,6 +2,12 @@
 .mso fr.tmac
 .mso hdtbl.tmac
 .TITLE Informations sur des Société Civiles de Placement Immobilier
+.de HD
+.sp -2.8
+\l'7.5i'
+.sp +1.5
+.br
+..
 .ABSTRACT1
 Résumé de documentations et d'informations trouvables en ligne pour décider de futurs placements.
 .ABSTRACT2
@@ -50,15 +56,15 @@ tab(:);
 r | c | l | l
 _ _ _ _
 r | lew(3i) | l | l.
-                  SCPI : avantages divers                                                             : lieu d'investissement : tx occupation
-                   PFO :T{
+SCPI : avantages divers : lieu d'investissement : tx occupation
+PFO  :T{
 diversification typo (bureaux, résidences étudiantes, résidences séniors...)
 T}: FR, DE, IT, ES...     : ??
-         Pierval Santé :T{
+Pierval Santé :T{
 fond de partage (dons aux associations \(-> réduction d'impôts)
-T}: FR, DE                : 99 %
-Novapierre Allemagne 2 : ??                                                                           : DE                    : ??
-             Eurovalys : ??                                                                           : ??                    : ??
+T}: FR, DE : 99 %
+Novapierre Allemagne 2 : ?? : DE : ??
+             Eurovalys : ?? : ?? : ??
 .TE
 .ps +3
 
@@ -76,16 +82,15 @@ tab(:);
 r | c | l | l
 _ _ _ _
 r | lew(3i) | l | l.
-                  SCPI : avantages divers                                                             : lieu d'investissement : tx occupation
-Novapierre Allemagne 2 : ??                                                                           : DE                    : ??
-             Eurovalys : ??                                                                           : ??                    : ??
+                  SCPI : avantages divers : lieu d'investissement : tx occupation
+Novapierre Allemagne 2 : ??               : DE                    : ??
+             Eurovalys : ??               : ??                    : ??
 .TE
 .ps +3
 
 .BULLET Des SCPI qui investissent en Allemagne :
 .D Novapierre Allemagne 2
 .D Eurovalys
-.DD Test
 .ED
 .BULLET
 .ENDBULLET
@@ -152,9 +157,9 @@ Le quotient familial désigne le nombre de parts affectées à chaque foyer fisc
 L'objectif est d'ajuster le montant de l'impôt aux capacités contributives de chaque foyer (situation, charges de famille).
 
 .SS Site de l'Autorité des Marchés Financiers amf-france.org
-Avant d'investir
-.D lire la note d'information de la SCPI
-.ED
+.EXPLANATION1
+Avant d'investir : lire la note d'information de la SCPI.
+.EXPLANATION2
 
 Le capital de la SCPI peut être :
 .D fixe : il faut attendre la création de nouvelles parts ou acquérir des parts auprès d’un détenteur qui souhaite les céder
@@ -177,4 +182,57 @@ La revente de parts :
 .DD Le prix de vente des parts est fixé par la société de gestion.
 .DD S’il n’existe pas d’acheteur, les parts peuvent quand même être rachetées par la société de gestion si elle a créé un fonds de remboursement prévu à cet effet.
 .D une SCPI a peu de liquidités, les conditions de cession (délais, prix) varient en fonction du marché de l'immobilier et du marché des parts de SCPI, ainsi que de la facilité à trouver un acheteur pour vos parts.
+.ED
+
+.SS Site comparatif-scpi.com
+Une SCPI en assurance-vie a pour avantage d'être assurée en cas d'illiquidité, c'est-à-dire qu'on devrait toujours pouvoir revendre nos parts.
+
+.SSS Risques potentiels
+.D \fBRisque de perte en capital\fP : le prix des parts de SCPI peut varier à la hausse, comme à la baisse. La valorisation des parts de SCPI dépend des conditions du marché de l'immobilier, sans tenir compte de la qualité intrinsèque des biens détenus.
+.D \fBRisque de rendement\fP : aucun rendement n'est garanti. Une SCPI peut ne pas servir le moindre rendement. Les performances passées ne préjugent strictement en rien des performances à venir.
+.D \fBRisque d'illiquidité\fP : En achetant des parts de SCPI en direct, vous n'êtes pas certain de pouvoir les revendre. Les cessions peuvent être organisées par le gestionnaire, mais restent de gré à gré. En cas de retournement du marché de l'immobilier, vous ne pourrez probablement pas revendre vos parts (hormis investissement via un contrat d'assurance-vie, l'assureur prenant à sa charge ce risque d'illiquité).
+.D \fBRisque de crédit\fP : le financement de parts de SCPI à crédit représente une prise de risque importante, fortement déconseillée aux investisseurs n'ayant pas le capital nécessaire pour solder le crédit à tout moment.
+.ED
+
+.SSS Quelques définitions
+
+.D \fBLe report à nouveau\fP (RAN) : représente la réserve financière d’une SCPI.
+Si une SCPI redistribue toutes ses richesses chaque année, son report à nouveau sera faible.
+Potentiellement un imprévu viendra de fait faire écouler son rendement sur une année.
+Les SCPI prévoyantes possèdent un report à nouveau élevé (de l’ordre de 10%) permettant ainsi d’absorber une chute temporaire de rendement (vacance locative, loyers renégociés, etc.).
+Les niveaux généralement attendus oscillent entre 5% et 15%.
+En dessous, la SCPI est trop fragile, au-dessus, elle peut être pessimiste sur son avenir, ce qui n’est pas un bon signe.
+.D \fBTaux d’occupation Financier\fP (TOF) : ce qui est réellement payé.
+Le taux d’occupation financier (TOF) se détermine par la division du montant total des loyers et indemnités d’occupation facturés ainsi que des indemnités compensatrices de loyers par le montant total des loyers facturables dans l’hypothèse où l’intégralité du patrimoine de la SCPI serait loué.
+Pour le site \f[CW]comparatif-scpi.com\fP, le TOF doit être supérieur à 90%.
+.EQ
+size 8 { roman "Taux Occupation Financier" = roman "loyers + indemnités (occupation + compensatrices)" over roman "total loyers facturables à 100% taux occupation" }
+.EN
+.DD indemnité d'occupation = dédommagement dû au propriétaire pour l’occupation d’un bien immobilier par une personne ne payant pas son loyer
+.D \fBSCPI à crédit\fP.
+Sur le papier, emprunter via un crédit un capital à 2.50% pour le placer à un rendement annuel espéré entre 4 et 5%, cela doit être un placement gagnant sans souci.
+Par ailleurs, le financement de l’immobilier à crédit bénéficie en France du système de déficit foncier, permettant de réduire son assiette de revenus imposables, les intérêts d’emprunts venant en déduction des revenus, dans la limite de 10.700€.
+
+Mais dans la pratique, ce n’est pas si évident que cela.
+Plusieurs facteurs sont en cause : le rendement des SCPI, sur la durée du placement, est inconnu.
+Le marché de l’immobilier est cyclique, investir sur une période longue revient à prendre un risque important d’être confronté à un retournement du marché.
+De même, la revente des parts de SCPI en fin de placement peut être génératrice de plus ou de moins-values.
+Personne ne peut savoir à l’avance.
+
+Pour finir, ce type de financement nécessite un effort d’épargne.
+Il convient impérativement de ne pas sous-estimer cet effort sur lequel repose tout le projet d’investissement.
+Le contexte financier (objectif, fiscal, marital, etc.) de l’investisseur doit être impérativement stable pour se lancer dans ce type d’investissement.
+.ED
+
+.EXPLANATION1
+Le site considère qu'il ne faudrait avoir que 10% de ses avoirs financiers en SCPI, et que tabler sur 4% de rendement sur le long terme est ambitieux.
+.EXPLANATION2
+
+.SECTION Loi Pinel vu sur la-loi-pinel.com
+.D \fBC'est quoi\fP ?
+Un dispositif de défiscalisation immobilière qui permet de bénéficier d'une réduction d'impôt de 16 %, 18 % ou 21 % en fonction de la durée de son engagement.
+.D \fBÀ quoi ça sert\fP ?
+Contribuer à augmenter l'offre de logements accessibles aux ménages modestes tout en réduisant ses impôts et en se construisant un patrimoine.
+.D \fBComment ça fonctionne\fP ?
+Acheter un bien neuf ou en VEFA (vente en l'état futur d'achèvement) et le mettre en location pendant 6, 9 ou 12 ans en respectant certaines conditions.
 .ED
