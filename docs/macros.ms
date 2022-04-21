@@ -396,25 +396,22 @@ Compilé pour la dernière fois le
 .ds LH \\$*
 ..
 .de AUTHOR
-.AU
-.ie '\\$1'' \
-.
-.el \
-\\$*
+.  AU
+.  ie !'\\$1'' \\$*
 ..
 .de FOOTNOTE1
-.FS
+.  FS
 ..
 .de FOOTNOTE2
-.FE
+.  FE
 ..
 .de VOCABULARY1
-.KS
-.BULLET
-.UL "\\$*" :
+.  KS
+.  BULLET
+.  UL "\\$*" :
 ..
 .de VOCABULARY2
-.KE
+.  KE
 ..
 .
 .
@@ -450,129 +447,129 @@ Compilé pour la dernière fois le
 .nr CURRENT_SSSECTION 0 +1
 .rm SECTION
 .de SECTION
-.nr CURRENT_SUBSECTION 0       \" reset current subsection numbering
-.nr CURRENT_SSSECTION 0        \" reset current subsubsection numbering
-.ie !(\\n[CURRENT_SECTION]=0) .sp +1
-.br
-.ie (\\n[APPENDIX_TIME]=0) \
-.ds RH \\n+[CURRENT_SECTION].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
-.el \{
-.ds RH \\n[CURRENT_APPENDIX].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
-.bp  \" new page
-\}
-.ps +2
-.fam H   \" helvetica family
-.ft B
-.ne 4    \" should be at least a few lines left at the bottom of the page
+.  nr CURRENT_SUBSECTION 0       \" reset current subsection numbering
+.  nr CURRENT_SSSECTION 0        \" reset current subsubsection numbering
+.  ie !(\\n[CURRENT_SECTION]=0) .sp +1
+.    br
+.    ie (\\n[APPENDIX_TIME]=0) \
+.    ds RH \\n+[CURRENT_SECTION].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+.    el \{
+.    ds RH \\n[CURRENT_APPENDIX].\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
+.    bp  \}
+.  ps +2
+.  fam H   \" helvetica family
+.  ft B
+.  ne 4    \" should be at least a few lines left at the bottom of the page
 \\*[RH]
-.ft
-.fam     \" back to previous font family
-.ps -2
-.PARAGRAPH_INDENTED
+.  ft
+.  fam     \" back to previous font family
+.  ps -2
+.  PARAGRAPH_INDENTED
 ..
 .nr APPENDIX_TIME 0
 .de APPENDIX
-.nr CURRENT_APPENDIX +1
-.nr APPENDIX_TIME 1
-.SECTION \\$*
+.  nr CURRENT_APPENDIX +1
+.  nr APPENDIX_TIME 1
+.  SECTION \\$*
 ..
 .de SS
-.ie (\\n[APPENDIX_TIME]=0) \
-.SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
+.  nr CURRENT_SSSECTION 0
+.  ie (\\n[APPENDIX_TIME]=0) \
+.  SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
 \\n+[CURRENT_SUBSECTION]\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
 .el \
-.SUBSECTION_NO_NUMBER \\n[CURRENT_APPENDIX].\
+.  SUBSECTION_NO_NUMBER \\n[CURRENT_APPENDIX].\
 \\n+[CURRENT_SUBSECTION]\h'\\*[SPACE_SS_NUMBER_TITLE]' \\$*
 ..
 .de SSS
-.br
-.ps -2
-.fam H   \" helvetica family
-.ft B
-.ie (\\n[APPENDIX_TIME]=0) \
-.SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
+.  br
+.  ps -2
+.  fam H   \" helvetica family
+.  ft B
+.  ie (\\n[APPENDIX_TIME]=0) \
+.    SUBSECTION_NO_NUMBER \\n[CURRENT_SECTION].\
 \\n[CURRENT_SUBSECTION].\\n+[CURRENT_SSSECTION]\h'\
 \\*[SPACE_SS_NUMBER_TITLE]' \\$*
-.el \
+.  el \
 \\n[CURRENT_APPENDIX].\
 \\n[CURRENT_SUBSECTION].\\n+[CURRENT_SSSECTION]\h'\
 \\*[SPACE_SS_NUMBER_TITLE]' \\$*
-.ft
-.fam     \" back to previous font family
-.ps +2
-.PARAGRAPH_INDENTED
+.  ft
+.  fam     \" back to previous font family
+.  ps +2
+.  PARAGRAPH_INDENTED
 ..
 .de INNERBULLET
-.in +1
-.br
+.  in +1
+.  br
 \(bu
-.in +1
-.sp -1
+.  in +1
+.  sp -1
 \\$*
-.in -2
+.  in -2
 ..
 .de EENUM           \" Numbered list
-.nr ENUM_INDENTATION 2
-.ie !(\\n[LIST_NUMBER]=0) .in -\\n[ENUM_INDENTATION]
-.br
+.  nr ENUM_INDENTATION 2
+.  ie !(\\n[LIST_NUMBER]=0) .in -\\n[ENUM_INDENTATION]
+.  br
 \\n+[LIST_NUMBER].
-.in +\\n[ENUM_INDENTATION]
-.sp -1
+.  in +\\n[ENUM_INDENTATION]
+.  sp -1
 \\$*
 ..
 .de EENDENUM
-.nr LIST_NUMBER 0
-.in -\\n[ENUM_INDENTATION]
+.  nr LIST_NUMBER 0
+.  in -\\n[ENUM_INDENTATION]
 ..
 .nr legendps 2
 .de LEGEND1
-.QP
-.vs -\\n[legendps]p
-.ps -\\n[legendps]
-.in -1.2
-.ll +1.2
-.br
+.  QP
+.  vs -\\n[legendps]p
+.  ps -\\n[legendps]
+.  in -1.2
+.  ll +1.2
+.  br
 ..
 .de LEGEND2
-.br
-.vs +\\n[legendps]p
-.ps +\\n[legendps]
-.br
-.LP
+.  br
+.  vs +\\n[legendps]p
+.  ps +\\n[legendps]
+.  br
+.  LP
 ..
 .de IEME
 \\$1\u\s-4\\$2\s+4\d
 ..
 .de CENTERED
-.ce
+.  ce
 \\$*
-.br
+.  br
 ..
 .de GIVEEXAMPLE1
-.in +1
-.ll -1
-.KS          \" start a keep
-.\" .ft I        \" citation in italics
-.mk C        \" set a marker for line drawing
-.in +1       \" indent a bit
-.gcolor citation
+.  in +1
+.  ll -1
+.  KS          \" start a keep
+.  \" .ft I        \" citation in italics
+.  mk C        \" set a marker for line drawing
+.  in +1       \" indent a bit
+.  gcolor citation
 ..
 .de GIVEEXAMPLE2
-.mk D        \" set second marker to come back here
-.\" .ft          \" back to previous font
-.in -1       \" remove indent
-.gcolor black\" remove previous color
-.gcolor citationbar
-.\" r     = move upward
-.\" Z D t = drawing thickness
-.\" L     = draw the line
+.  mk D        \" set second marker to come back here
+.  \" .ft          \" back to previous font
+.  in -1       \" remove indent
+.  gcolor black\" remove previous color
+.  gcolor citationbar
+.  \" r     = move upward
+.  \" Z D t = drawing thickness
+.  \" L     = draw the line
 \r\
 \Z'\D't 1p''\
 \L'|\\nCu'     \" draw line
-.gcolor black  \" remove previous color
-.sp -2         \" get two lines back
+.  gcolor black  \" remove previous color
+.  sp -2         \" get two lines back
 \Z'\D't 0.5p''    \" get the previous drawing thickness back
-.KE            \" end of the keep
-.ll +1
-.in -1
+.  KE            \" end of the keep
+.  ll +1
+.  in -1
 ..
