@@ -1350,6 +1350,9 @@ Les jeux
 .I freemium
 par exemple attirent qu'une petite fraction des joueurs à payer, mais cette fraction dépense beaucoup.
 Parfois plus d'une dizaine de milliers d'euros... pour un jeu gratuit.
+.[
+Chasing the Whale
+.]
 .FOOTNOTE2
 
 .CENTERED "L'arnaque de Dieu."
@@ -1396,11 +1399,31 @@ Le mot
 .I idéologie
 est parfois connoté négativement dans des conversations, ce n'est pas le cas ici.
 .FOOTNOTE2
-Un même problème peut se résoudre de multiples manières, sans qu'une méthode soit particulièrement meilleure qu'une autre.
-.TBD
+Un même problème peut se résoudre de multiples manières, sans qu'une méthode soit nécessairement meilleure qu'une autre.
+Par exemple, admettons avoir un problème de chômage structurel de masse et vouloir le résoudre.
+Réduire le temps de travail à 25 heures par semaine pour donner du travail à tout le monde, ou accorder un salaire à vie pour ne plus être dépendant du marché du travail, sont deux propositions qui se valent\*[*].
+.FOOTNOTE1
+L'une des deux propositions peut être marginalement meilleure dans son ensemble.
+Dans cet exemple, sans étude approfondie et sans s'étaler davantage sur le contexte économique, nous pouvons les considérer équivalentes.
+.FOOTNOTE2
+Les deux solutions ne découlent pas de la même manière de réfléchir au problème, mais les deux se défendent.
 
+Des mesures simples peuvent déjà impliquer de nombreuses ramifications, parfois inattendues.
+Par exemple, le « nouveau management public », instauré sous le gouvernement de Nicolas Sarkozy, avait pour objectif de chiffrer toutes les activités des services publics afin de révéler les gaspillages, et ainsi faire des économies.
+Au sein de la police, cela a été nommé la « politique du chiffre ».
+Cette simple mesure demandant aux agents de chiffrer leurs activités a mené à mettre des amendes plutôt qu'à arrêter des trafiquants de drogue ou aider la population.
+Bien se faire voir de la hiérarchie consistait à faire du chiffre, et comme donner une contravention et arrêter un trafiquant étaient comptabilisés de la même manière, la méthode demandant moins de moyens a très vite été privilégiée.
+Donc, des contraventions sont données à des personnes âgées pour alimenter des statistiques, ressorties par des politiciens à des fins électoralistes pour bien se faire voir de la population.
+Pour le dire crument, on emmerde la population pour bien se faire voir de la population, CQFD.
+Et cela est lié à un
+.UL détail
+de fonctionnement de la police, pas une volonté de refondation majeure du métier.
+.[
+remise en cause de la politique du chiffre
+.]
+
+Les idéologies mènent à des prismes de lecture très différents d'une même situation.
 .TBD
-Des mesures simples peuvent impliquer de nombreuses ramifications inattendues.
 
 .CITATION1
 Des automobilistes se moquent de personnes construisant un bateau car leur véhicule n'a pas de roues.
@@ -2137,8 +2160,7 @@ L'idée est de juger un site ou une personne et lui donner une appréciation (fi
 
 Le site web a une rubrique « méthodologie détaillée », mais qui n'indique pourtant nullement la méthodologie utilisée pour alimenter la base de données de l'outil\*[*].
 .FOOTNOTE1
-Aïe.
-Pour un outil annoncé comme ayant nécessité un an de travail, cela fait tâche.
+Pour des personnes se vantant de sortir un outil (annoncé comme) ayant nécessité un an de travail pour départager les médias sérieux des manipulateurs, cela fait tâche de ne pas savoir ce qu'est une méthodologie.
 .FOOTNOTE2
 
 Le décodex se présente comme un moteur de recherche.
@@ -2160,7 +2182,7 @@ L'article n'invite pas à la réflexion sur le fond et se contente de simplement
 .[
 monde soutiens régime syrien
 .]
-(ceux ayant créé le décodex, ils se citent eux-même donc), très court (3 paragraphes) et peu factuel et sans donner de source pour le peu d'affirmations avancés.
+(ceux ayant créé le décodex, ils se citent eux-même donc), très court (3 paragraphes), peu factuel et qui ne donne pas de sources pour le peu d'affirmations avancées.
 .ENDBULLET
 
 Les deux articles jouent sur un biais de déshonneur par association pour appuyer leurs propos.
@@ -2255,7 +2277,7 @@ Même dans un hypothétique journal ayant pour objectif l'intérêt général, s
 Un journaliste publiant un article comme ceux cités n'a pas sa place dans une rédaction sérieuse, et il en va de même pour les supérieurs hiérarchiques ayant validé ce désastre.
 Peu importe le journal ou l'orientation politique.
 Ces articles sont des caricatures de propagande de guerre.
-Les auteurs sont suffisamment intelligents pour ne pas diffamer une personne, mais la volonté de nuire à la réputation, de salir un nom sans aucun argument, était évidente.
+Les auteurs sont suffisamment intelligents pour ne diffamer personne, mais la volonté de nuire à la réputation, de salir un nom sans aucun argument, était évidente.
 
 .[
 $LIST$
